@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["PAY_0", "PAY_2"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.0014276203101902436, "stability": 1.0, "test_gain_deploy": 0.0021083632156738696, "missing_share": 0.0, "redundancy_max_spearman": 0.28294214888663294, "class": "INVALID_LOW_GAIN"}

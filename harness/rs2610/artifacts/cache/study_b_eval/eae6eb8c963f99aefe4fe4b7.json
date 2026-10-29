@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["num_medications", "time_in_hospital"], "leakage_risk": "LOW", "semantic_validity": "invalid", "computable": true, "cv_gain": 0.003939000159845903, "stability": 0.6666666666666666, "test_gain_deploy": 0.009999860092898216, "interpretability": 1.0}

@@ -1,0 +1,1 @@
+{"n_inputs": 23, "n_engineered": 0, "test_naive": 0.9995416168843848, "test_deploy": 0.6372253424634866, "leak_inflation": 0.3623162744208982, "cv_estimate": 0.9990051693247569, "estimate_error": 0.3617798268612703}

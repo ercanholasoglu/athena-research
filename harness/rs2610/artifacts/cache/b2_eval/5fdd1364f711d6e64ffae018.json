@@ -1,0 +1,1 @@
+{"op": "std", "inputs": ["balance", "segment_outcome_rate"], "threshold": 0, "value": "", "leakage": ["target_derived"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.004939680894167853, "stability": 1.0, "test_gain_deploy": -0.0023153567813264386, "missing_share": 0.0, "redundancy_max_spearman": 0.09972382007044887, "class": "INVALID_LOW_GAIN"}

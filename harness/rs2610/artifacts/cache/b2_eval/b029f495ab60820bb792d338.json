@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["ratio(PAY_AMT1, BILL_AMT1)", "ratio(PAY_AMT2, BILL_AMT2)", "ratio(PAY_AMT3, BILL_AMT3)", "ratio(PAY_AMT4, BILL_AMT4)", "ratio(PAY_AMT5, BILL_AMT5)", "ratio(PAY_AMT6, BILL_AMT6)"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

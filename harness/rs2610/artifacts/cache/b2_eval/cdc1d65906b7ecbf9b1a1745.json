@@ -1,0 +1,1 @@
+{"op": "max", "inputs": ["BILL_AMT5", "BILL_AMT4"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.0006919351306537239, "stability": 0.3333333333333333, "test_gain_deploy": 0.00302968051435748, "missing_share": 0.0, "redundancy_max_spearman": 0.884230703983891, "class": "VALID_NOT_USEFUL"}

@@ -1,0 +1,1 @@
+{"op": "gt_threshold", "inputs": ["segment_outcome_rate"], "threshold": 0.5, "value": "", "leakage": ["target_derived"], "semantic_validity": "invalid", "executable": false, "failure": "degenerate", "class": "NOT_EXECUTABLE"}

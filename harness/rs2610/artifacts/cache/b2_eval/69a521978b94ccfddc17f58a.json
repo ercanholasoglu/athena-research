@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["pdays", "duration"], "threshold": 0, "value": "", "leakage": ["post_outcome"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.1369703825815437, "stability": 1.0, "test_gain_deploy": -0.04623000257337717, "missing_share": 0.00013333333333333334, "redundancy_max_spearman": 0.6616418333579657, "class": "INVALID_HIGH_APPARENT"}

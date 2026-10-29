@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["segment_outcome_rate", "education"], "threshold": 0, "value": "", "leakage": ["target_derived"], "semantic_validity": "invalid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

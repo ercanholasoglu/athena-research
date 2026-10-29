@@ -1,0 +1,1 @@
+{"op": "sum", "inputs": ["PAY_AMT1", "PAY_AMT2", "PAY_AMT3"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.0017668664992922152, "stability": 0.0, "test_gain_deploy": 0.0021200070361944157, "missing_share": 0.0, "redundancy_max_spearman": 0.631911856475813, "class": "VALID_NOT_USEFUL"}

@@ -1,0 +1,1 @@
+{"op": "product", "inputs": ["Frequency_of_use", "Seconds_of_Use"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.0003486719680270145, "stability": 0.6666666666666666, "test_gain_deploy": 0.0004736688690245572, "missing_share": 0.0, "redundancy_max_spearman": 0.8021043675321406, "class": "VALID_NOT_USEFUL"}

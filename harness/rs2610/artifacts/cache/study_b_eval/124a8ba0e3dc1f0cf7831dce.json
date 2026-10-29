@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["MZFONDS", "MGEMOMV"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": true, "cv_gain": -0.014699072079388031, "stability": 0.0, "test_gain_deploy": -0.0056925518248911455, "interpretability": 1.0}

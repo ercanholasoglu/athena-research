@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["duration"], "threshold": null, "value": null, "leakage": ["post_outcome"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.0, "stability": 0.0, "test_gain_deploy": 0.0, "missing_share": 0.0, "redundancy_max_spearman": 0.0, "class": "INVALID_LOW_GAIN"}

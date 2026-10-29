@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["balance", "age"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": -0.005075624029489652, "stability": 0.0, "test_gain_deploy": 0.001321159507740921, "interpretability": 1.0}

@@ -1,0 +1,1 @@
+{"op": "count_positive", "inputs": ["BILL_AMT2", "PAY_AMT5"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0019526208967830898, "stability": 0.6666666666666666, "test_gain_deploy": -0.0015781535312588968, "missing_share": 0.0, "redundancy_max_spearman": 0.5760228667885826, "class": "VALID_NOT_USEFUL"}

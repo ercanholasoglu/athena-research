@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["hr"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": false, "failure": "arity"}

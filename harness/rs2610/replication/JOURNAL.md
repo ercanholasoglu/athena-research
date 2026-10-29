@@ -163,3 +163,24 @@ Times are Europe/Istanbul.
   or E_FULL run is byte-identical across models. Later calls embed each model's own earlier outputs, and ToT
   selection also embeds the enum of surviving branches. The system prompt, stage and token cap are identical. The
   public docs state it this way.
+
+## 2026-10-29 ~19:00: evaluation nondeterminism found by the clean-clone test; evaluation cache published
+
+- **Finding.** The first public clean-clone reproduction had no evaluation cache, because `artifacts/cache/` was not
+  published, so it recomputed every Study B and B2 feature and downstream evaluation. The regenerated tables differed
+  from the published ones.
+  - 261 of 9367 Study B fact values changed, and 73 of 7941 B2 values.
+  - Continuous scores moved by a median of about 0.001 (B) and 0.0004 (B2), at most 0.0022 in B2.
+  - Threshold- and sign-derived quantities moved by a step on small cells (for example, one two-unit development
+    deployment-collapse rate went 0.0 → 0.5).
+  - No Holm-adjusted p-value crossed 0.05. Three article-cited values moved in the third decimal (for example
+    C_DICT leak inflation 0.008 → 0.009).
+  - Likely source: multithreaded LightGBM fits (`n_jobs=4`) in the evaluators. This was observed, not isolated.
+- **Decision (owner).** The release was stopped before any push. The published results stay those computed from the
+  cache and were not overwritten by the recomputation. The cache is published as a reproducibility artifact.
+- **What was published.** Tracing the published analyses (`tools/trace_cache_reads.py`) over the 1000 cached
+  records showed 957 read and 0 recomputed.
+  - The 43 unread records are all Study B evaluations written on 2026-10-27 before the 23:26 Study B freeze
+    (development work). They are not published; they are listed by SHA-256 in the public manifest.
+  - Every published record is listed with its SHA-256, type, write time and frozen evaluator.
+- **Check added.** Reproduction now fails if any evaluation is recomputed or any record differs from the manifest.

@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["txn_count_1h", "txn_count_24h"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": 0.005355451271690644, "stability": 0.6666666666666666, "test_gain_deploy": 0.019095677639383135, "interpretability": 1.0}

@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["Seconds_of_Use", "Frequency_of_use"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0025476339599200446, "stability": 1.0, "test_gain_deploy": -0.000886610959968892, "missing_share": 0.04888888888888889, "redundancy_max_spearman": 0.2708052262969514, "class": "VALID_NOT_USEFUL"}

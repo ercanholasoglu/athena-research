@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["Call_Failure"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0, "stability": 0.0, "test_gain_deploy": -0.00036436066848033466, "missing_share": 0.0, "redundancy_max_spearman": 0.41696801848979503, "class": "VALID_NOT_USEFUL"}

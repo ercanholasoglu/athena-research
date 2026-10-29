@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["visit", "history"], "threshold": 0, "value": "", "leakage": ["post_outcome"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.3340012993945432, "stability": 1.0, "test_gain_deploy": -0.041221413890973224, "missing_share": 0.0, "redundancy_max_spearman": 0.07780929141494261, "class": "INVALID_HIGH_APPARENT"}

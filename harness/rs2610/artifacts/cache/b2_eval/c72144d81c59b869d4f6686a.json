@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["balance", "gt_threshold(housing, 'yes')"], "threshold": 0, "value": "yes", "leakage": [], "semantic_validity": "unknown", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

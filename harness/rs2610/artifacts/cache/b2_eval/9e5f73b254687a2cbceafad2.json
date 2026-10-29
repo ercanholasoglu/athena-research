@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["y"], "threshold": null, "value": null, "leakage": ["target"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.22577107759631257, "stability": 1.0, "test_gain_deploy": -0.2166780090935092, "missing_share": 0.0, "redundancy_max_spearman": 0.16712792242063293, "class": "INVALID_HIGH_APPARENT"}

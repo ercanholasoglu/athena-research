@@ -1,13 +1,18 @@
 {
  "note": "Every published file that differs from its private original. Frozen files are never redacted.",
- "journals": {
+ "harness_files": {
+  ".gitignore": {
+   "original_sha256": "63b8780f1c9eaf7c1deb671a096dba6304fd4fdd28de876ecd8807a1a451a30d",
+   "public_sha256": "b96323f54143240bf3703208501800ac1f99e10ac218f5f7f7f88adc6947f8b8",
+   "change": "the published evaluation cache is tracked (docs/REPRODUCIBILITY.md#evaluation-cache)"
+  },
   "JOURNAL.md": {
    "original_sha256": "450138bba5b2925dbf4eed788f3cc767c2b998b2fc5c78d4a1a7f115f8ad0e5a",
    "public_sha256": "725870ac3fe06f8d57d1424f354c85b3e86089588fd21b3b1c53597c9161b45f"
   },
   "replication/JOURNAL.md": {
-   "original_sha256": "815fb68c69bcf2d5f55fb2c9f9fae056273c125eecdaab0dfd67172d206e087f",
-   "public_sha256": "d87069eafbe9bf07de84f12cad3d3df0c72874da5e02f1f8f7b8aa81e0b84539"
+   "original_sha256": "a5c568937d54490d83074a8b2834376a51e4d946d5a55c47d40f5549d273918b",
+   "public_sha256": "17d91190c41e4e916317f0aff7779e79a9a01b36fa2b9cb8d2692990b4ad90b0"
   }
  },
  "jev_evidence": [

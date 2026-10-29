@@ -1,0 +1,1 @@
+{"op": "product", "inputs": ["Customer_Value", "load_weekday"], "threshold": 0, "value": "", "leakage": ["artifact"], "semantic_validity": "invalid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

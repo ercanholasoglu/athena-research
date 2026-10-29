@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["LIMIT_BAL", "sum(PAY_AMT1, PAY_AMT2, PAY_AMT3, PAY_AMT4, PAY_AMT5, PAY_AMT6)"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

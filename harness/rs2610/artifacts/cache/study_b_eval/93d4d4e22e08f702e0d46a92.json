@@ -1,0 +1,1 @@
+{"op": "sum", "inputs": ["number_outpatient", "number_emergency", "number_inpatient"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": 0.006291136504245028, "stability": 1.0, "test_gain_deploy": -0.0005078627791147428, "interpretability": 0.5}

@@ -1,0 +1,1 @@
+{"op": "count_positive", "inputs": ["Call_Failure", "Complains"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.00027492120276643533, "stability": 0.3333333333333333, "test_gain_deploy": 9.716284492822247e-05, "missing_share": 0.0, "redundancy_max_spearman": 0.30797969434856004, "class": "VALID_NOT_USEFUL"}

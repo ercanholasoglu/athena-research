@@ -1,0 +1,1 @@
+{"op": "std", "inputs": ["Seconds_of_Use", "Frequency_of_use"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": -0.0001947554366786841, "stability": 0.6666666666666666, "test_gain_deploy": 0.00019432568985633392, "missing_share": 0.0, "redundancy_max_spearman": 0.7540234777269499, "class": "INVALID_LOW_GAIN"}

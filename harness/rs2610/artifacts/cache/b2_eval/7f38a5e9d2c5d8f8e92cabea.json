@@ -1,0 +1,1 @@
+{"op": "product", "inputs": ["recency", "history"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0007399129991769726, "stability": 0.3333333333333333, "test_gain_deploy": -0.0023449580791440328, "missing_share": 0.0, "redundancy_max_spearman": 0.08240380543448556, "class": "VALID_NOT_USEFUL"}

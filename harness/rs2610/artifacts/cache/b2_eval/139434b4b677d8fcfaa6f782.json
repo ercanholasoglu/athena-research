@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["balance", "campaign"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": -0.0018592276321572527, "stability": 0.3333333333333333, "test_gain_deploy": 0.002758359891904427, "missing_share": 0.0, "redundancy_max_spearman": 0.0919877098305094, "class": "INVALID_LOW_GAIN"}

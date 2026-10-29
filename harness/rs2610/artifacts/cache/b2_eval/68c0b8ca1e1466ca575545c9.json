@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["load_weekday"], "threshold": null, "value": null, "leakage": ["artifact"], "semantic_validity": "invalid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

@@ -1,0 +1,1 @@
+{"op": "count_positive", "inputs": ["Frequency_of_use", "Frequency_of_SMS"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.0006024873221246082, "stability": 0.0, "test_gain_deploy": 0.0003036338904003344, "missing_share": 0.0, "redundancy_max_spearman": 0.4488369703690503, "class": "VALID_NOT_USEFUL"}

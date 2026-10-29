@@ -1,0 +1,1 @@
+{"op": "log1p", "inputs": ["record_key"], "threshold": null, "value": null, "leakage": ["identifier"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.009969147121063374, "stability": 1.0, "test_gain_deploy": -0.13222648659152725, "missing_share": 0.0, "redundancy_max_spearman": 0.3274122812432258, "class": "INVALID_HIGH_APPARENT"}

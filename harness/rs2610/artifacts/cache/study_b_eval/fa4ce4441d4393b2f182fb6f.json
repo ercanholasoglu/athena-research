@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["capital_gain", "capital_loss"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": -3.096622001356556e-05, "stability": 0.3333333333333333, "test_gain_deploy": 0.0011727679774828914, "interpretability": 1.0}

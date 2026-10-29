@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["Frequency_of_SMS", "Frequency_of_use"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.000853279480675484, "stability": 0.0, "test_gain_deploy": -0.0006194131364165578, "missing_share": 0.04888888888888889, "redundancy_max_spearman": 0.5089441014822786, "class": "VALID_NOT_USEFUL"}

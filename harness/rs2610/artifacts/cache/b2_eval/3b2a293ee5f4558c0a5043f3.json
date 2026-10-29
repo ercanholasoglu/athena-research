@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["mens"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "unknown", "executable": true, "cv_gain": 0.0, "stability": 0.0, "test_gain_deploy": 0.0, "missing_share": 0.0, "redundancy_max_spearman": 0.8217685096057354, "class": "VALID_NOT_USEFUL"}

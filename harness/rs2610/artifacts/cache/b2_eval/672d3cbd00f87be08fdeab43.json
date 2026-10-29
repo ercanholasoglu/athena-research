@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["BILL_AMT1", "BILL_AMT6"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0017487798869048794, "stability": 0.6666666666666666, "test_gain_deploy": -0.001222601154651226, "missing_share": 0.0, "redundancy_max_spearman": 0.35053822898821346, "class": "VALID_NOT_USEFUL"}

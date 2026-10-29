@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["PAY_2", "PAY_6", "PAY_AMT6", "PAY_3", "record_key", "PAY_0"], "threshold": 0, "value": "", "leakage": ["identifier"], "semantic_validity": "invalid", "executable": false, "failure": "arity", "class": "NOT_EXECUTABLE"}

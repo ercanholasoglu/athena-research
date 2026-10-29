@@ -1,0 +1,1 @@
+{"op": "product", "inputs": ["history", "newbie"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "unknown", "executable": true, "cv_gain": -0.004085927958408712, "stability": 0.3333333333333333, "test_gain_deploy": 0.004578997161778564, "missing_share": 0.0, "redundancy_max_spearman": 0.1435836844655226, "class": "VALID_NOT_USEFUL"}

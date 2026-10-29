@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["duration", "campaign"], "threshold": 0, "value": "", "leakage": ["post_outcome"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.13801675679610137, "stability": 1.0, "test_gain_deploy": -0.02215254460577165, "missing_share": 0.0, "redundancy_max_spearman": 0.046122434358642106, "class": "INVALID_HIGH_APPARENT"}

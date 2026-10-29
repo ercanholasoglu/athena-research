@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["Frequency_of_SMS", "Subscription_Length"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": -2.649127410710624e-05, "stability": 0.6666666666666666, "test_gain_deploy": -0.00026719782355233423, "missing_share": 0.0, "redundancy_max_spearman": 0.7983764406930354, "class": "INVALID_LOW_GAIN"}

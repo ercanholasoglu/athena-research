@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["segment_outcome_rate", "gt_threshold(channel, 0)"], "threshold": 0, "value": "", "leakage": ["target_derived"], "semantic_validity": "invalid", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

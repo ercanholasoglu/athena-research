@@ -1,0 +1,1 @@
+{"op": "eq_value", "inputs": ["channel", "segment"], "threshold": 0, "value": "Web", "leakage": [], "semantic_validity": "valid", "executable": false, "failure": "arity", "class": "NOT_EXECUTABLE"}

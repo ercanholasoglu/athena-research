@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["month", "y"], "threshold": null, "value": null, "leakage": ["target"], "semantic_validity": "invalid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

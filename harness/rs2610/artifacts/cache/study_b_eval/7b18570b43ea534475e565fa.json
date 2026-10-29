@@ -1,0 +1,1 @@
+{"op": "log1p", "inputs": ["record_key"], "leakage_risk": "HIGH", "semantic_validity": "invalid", "computable": true, "cv_gain": 0.20839407943246155, "stability": 1.0, "test_gain_deploy": -0.17907462179206712, "interpretability": 1.0}

@@ -73,6 +73,28 @@ are a limitation: nothing here speaks to either provider's top tier.
    This confirms the frozen inputs after the fact. It does not replace the missing verify-before-run, which stays a
    recorded deviation.
 
+## Evaluation nondeterminism
+
+Found while preparing this release, on 2026-10-29, after all runs and analyses.
+
+1. **The first clean-clone test.** It recomputed every Study B and B2 feature and downstream evaluation from
+   scratch, because the evaluation cache was not yet part of the repository. The regenerated tables differed from
+   the published ones:
+   - 261 of 9367 Study B fact values changed, and 73 of 7941 B2 values.
+   - Continuous scores moved by about 0.001 (median); threshold- and sign-derived quantities moved by a step on
+     small cells.
+   - No Holm-adjusted p-value crossed 0.05.
+   - Three article-cited values changed in the third decimal.
+2. **Release stopped.** The release was not pushed.
+3. **Cache published.** The evaluation records the published analyses actually read (957 of 1000; the 43 others are
+   pre-freeze Study B development evaluations) were added to the repository as a documented reproducibility
+   artifact with a per-record manifest. The published results were not overwritten by the recomputation.
+4. **Check added.** `tools/trace_cache_reads.py --check` now proves, on every reproduction, that each evaluation is
+   served from those records and none is recomputed.
+
+Details and the exact drift: [REPRODUCIBILITY](REPRODUCIBILITY.md#evaluation-cache). The finding is also recorded
+in the replication journal.
+
 ## Other recorded changes
 
 - Development-phase fixes to Study A scoring, GoT token caps and the GoT claim-resolution stage were all made before
@@ -81,7 +103,7 @@ are a limitation: nothing here speaks to either provider's top tier.
 - The URL list used for the restore was originally kept in a private staging script. In this repository it is
   [`tools/datasets.py`](../tools/datasets.py), with the same URLs.
 
-## Redactions in the published journals
+## Changes to published harness files
 
 | file | original phrase (paraphrased) | published as |
 |---|---|---|
@@ -90,6 +112,7 @@ are a limitation: nothing here speaks to either provider's top tier.
 | `JOURNAL.md` | the tool behind an unrelated benchmark on the same Ollama server (named) | "another process" |
 | `replication/JOURNAL.md` | the local environment file (path) whose key value was empty | "the local environment-file value (NOT PUBLIC)" |
 | `replication/JOURNAL.md` | the hosted environment (host name) the key was copied from | "the owner's hosted environment file (NOT PUBLIC)" |
+| `.gitignore` (harness) | ignored the whole evaluation cache | the two published cache folders are tracked |
 
 No credential appeared in either journal. The original files' SHA-256s are listed in
 [`REDACTIONS.json`](REDACTIONS.json).

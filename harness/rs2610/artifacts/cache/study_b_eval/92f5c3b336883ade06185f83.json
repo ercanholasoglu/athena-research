@@ -1,0 +1,1 @@
+{"op": "sum", "inputs": ["A8", "A11"], "leakage_risk": "LOW", "semantic_validity": "invalid", "computable": true, "cv_gain": 0.0015746031746032656, "stability": 0.6666666666666666, "test_gain_deploy": 0.003809523809523818, "interpretability": 1.0}

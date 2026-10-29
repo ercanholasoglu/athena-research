@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["merchant_category", "is_fraud"], "leakage_risk": "HIGH", "semantic_validity": "invalid", "computable": false, "failure": "non_numeric_input"}

@@ -1,0 +1,1 @@
+{"op": "sum", "inputs": ["Seconds_of_Use", "eq_value(load_weekday, 'Sat') + eq_value(load_weekday, 'Sun')"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

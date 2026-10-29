@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["spend"], "leakage_risk": "HIGH", "semantic_validity": "invalid", "computable": true, "cv_gain": 0.4202100067936429, "stability": 1.0, "test_gain_deploy": 0.0009193227416565142, "interpretability": 1.0}

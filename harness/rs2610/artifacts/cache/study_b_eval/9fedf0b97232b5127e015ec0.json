@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["TotalCharges", "Contract"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": false, "failure": "non_numeric_input"}

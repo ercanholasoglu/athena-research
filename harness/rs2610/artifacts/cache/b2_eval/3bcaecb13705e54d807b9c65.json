@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["Frequency_of_SMS", "Subscription_Length"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": -0.0005455283312529128, "stability": 0.3333333333333333, "test_gain_deploy": -0.0008258841818887808, "missing_share": 0.0, "redundancy_max_spearman": 0.7376314024723224, "class": "INVALID_LOW_GAIN"}

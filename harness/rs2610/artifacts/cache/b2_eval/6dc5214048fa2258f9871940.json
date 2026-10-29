@@ -1,0 +1,1 @@
+{"op": "product", "inputs": ["newbie", "visit"], "threshold": null, "value": null, "leakage": ["post_outcome"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.18663638552692943, "stability": 1.0, "test_gain_deploy": -0.045385443512869994, "missing_share": 0.0, "redundancy_max_spearman": 0.1269518632948946, "class": "INVALID_HIGH_APPARENT"}

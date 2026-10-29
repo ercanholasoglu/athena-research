@@ -5,8 +5,9 @@
 #   bash tools/reproduce.sh            # full: data, freeze verification, statistics, figures, reports, checks
 #   bash tools/reproduce.sh --no-data  # skip dataset download/verification and the steps that need the raw data
 #
-# Needs the environment from requirements-lock.txt (see docs/REPRODUCIBILITY.md). The B2 and Study B analyses
-# re-evaluate every proposed feature with gradient-boosted models; budget roughly an hour on a laptop.
+# Needs the environment from requirements-lock.txt (see docs/REPRODUCIBILITY.md). Study B and B2 read their scored
+# feature and downstream evaluations from the committed evaluation cache (docs/REPRODUCIBILITY.md#evaluation-cache);
+# with it, the two analyses take minutes instead of most of an hour.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 PY="${PY:-python}"
@@ -17,11 +18,12 @@ if [[ "${1:-}" != "--no-data" ]]; then
   "$PY" tools/prepare_data.py
   step "freeze verification (sources, prompts, datasets, configuration)"
   (cd harness && "$PY" -m rs2610.freeze --verify A && "$PY" -m rs2610.freeze --verify B && "$PY" -m rs2610.replication.freeze --verify)
-  step "statistics: original studies"
-  (cd harness && "$PY" -m rs2610.study_a.analyze && "$PY" -m rs2610.study_b.analyze && "$PY" -m rs2610.study_a.structure_fig \
-    && "$PY" -m rs2610.analyze_extra)
-  step "statistics: frontier replication"
-  (cd harness && "$PY" -m rs2610.replication.a2.analyze && "$PY" -m rs2610.replication.b2.analyze && "$PY" -m rs2610.replication.cross)
+  step "statistics: Study A"
+  (cd harness && "$PY" -m rs2610.study_a.analyze && "$PY" -m rs2610.study_a.structure_fig)
+  step "statistics: Study B and B2, from the committed evaluation records (reads traced; any recomputation fails)"
+  "$PY" tools/trace_cache_reads.py --check
+  step "statistics: cross-study extras, A2, cross-study"
+  (cd harness && "$PY" -m rs2610.analyze_extra && "$PY" -m rs2610.replication.a2.analyze && "$PY" -m rs2610.replication.cross)
   step "prompt examples (replayed against the ledgers)"
   "$PY" tools/export_prompts.py
 fi
@@ -40,7 +42,9 @@ step "public-release audit"
 
 step "difference from the committed files (empty = reproduced exactly)"
 if git rev-parse --git-dir >/dev/null 2>&1; then
-  git status --porcelain -- harness research docs README.md
+  diff="$(git status --porcelain -- harness research docs data README.md)"
+  if [[ -n "$diff" ]]; then echo "$diff"; echo "NOT REPRODUCED EXACTLY"; exit 1; fi
+  echo "REPRODUCED EXACTLY: no committed file changed"
 else
   echo "not a git checkout: compare against a fresh clone"
 fi

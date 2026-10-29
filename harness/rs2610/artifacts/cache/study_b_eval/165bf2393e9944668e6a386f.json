@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["amount", "account_avg_amount_90d"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": -0.016524812365673158, "stability": 0.0, "test_gain_deploy": 0.003630541963226541, "interpretability": 1.0}

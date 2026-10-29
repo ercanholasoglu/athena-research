@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["BILL_AMT1", "sum(BILL_AMT2, BILL_AMT3, BILL_AMT4, BILL_AMT5, BILL_AMT6)"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

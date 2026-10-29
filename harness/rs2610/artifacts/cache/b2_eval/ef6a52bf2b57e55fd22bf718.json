@@ -1,0 +1,1 @@
+{"op": "eq_value", "inputs": ["Customer_Value"], "threshold": 1000, "value": "1", "leakage": [], "semantic_validity": "valid", "executable": false, "failure": "degenerate", "class": "NOT_EXECUTABLE"}

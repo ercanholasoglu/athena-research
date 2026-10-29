@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["recency", "history"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": -0.030248016566305786, "stability": 0.0, "test_gain_deploy": 0.016977783577463823, "missing_share": 0.0, "redundancy_max_spearman": 0.11803613458363743, "class": "INVALID_LOW_GAIN"}

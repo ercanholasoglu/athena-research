@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["Charge_Amount", "record_key"], "threshold": null, "value": null, "leakage": ["identifier"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.001438271169987108, "stability": 0.6666666666666666, "test_gain_deploy": -0.001991838321026007, "missing_share": 0.0, "redundancy_max_spearman": 0.5649058589483006, "class": "INVALID_LOW_GAIN"}

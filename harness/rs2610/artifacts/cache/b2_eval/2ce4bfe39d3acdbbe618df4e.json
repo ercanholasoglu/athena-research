@@ -1,0 +1,1 @@
+{"op": "gt_threshold", "inputs": ["pdays"], "threshold": 180, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0, "stability": 0.0, "test_gain_deploy": 0.0036133081137827983, "missing_share": 0.0, "redundancy_max_spearman": 0.7544199951564241, "class": "VALID_NOT_USEFUL"}

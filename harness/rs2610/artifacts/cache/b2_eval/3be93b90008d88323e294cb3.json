@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["BILL_AMT6", "BILL_AMT5", "BILL_AMT4", "PAY_AMT3", "PAY_AMT5", "PAY_AMT6"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": false, "failure": "arity", "class": "NOT_EXECUTABLE"}

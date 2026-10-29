@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["ProductRelated", "ProductRelated_Duration"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": -0.0006038942070123824, "stability": 0.3333333333333333, "test_gain_deploy": 0.001324149559716048, "interpretability": 1.0}

@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["target", "history_segment"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "invalid", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

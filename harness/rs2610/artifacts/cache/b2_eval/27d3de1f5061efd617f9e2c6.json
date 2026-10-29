@@ -1,0 +1,1 @@
+{"op": "count_positive", "inputs": ["mens", "womens"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.023204235938769375, "stability": 0.0, "test_gain_deploy": -0.011628225622288269, "missing_share": 0.0, "redundancy_max_spearman": 0.37386084577380313, "class": "VALID_NOT_USEFUL"}

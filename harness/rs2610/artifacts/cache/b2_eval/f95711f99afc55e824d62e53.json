@@ -1,0 +1,1 @@
+{"op": "gt_threshold", "inputs": ["recency"], "threshold": 3, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.0006090389784946248, "stability": 0.3333333333333333, "test_gain_deploy": -0.0004710795028219916, "missing_share": 0.0, "redundancy_max_spearman": 0.19848526300479116, "class": "VALID_NOT_USEFUL"}

@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["campaign", "job"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

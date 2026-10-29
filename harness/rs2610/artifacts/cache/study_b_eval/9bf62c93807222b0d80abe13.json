@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["Customer_Value", "Seconds_of_Use"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": 0.0006323414339998538, "stability": 0.6666666666666666, "test_gain_deploy": -0.00044937815779233503, "interpretability": 1.0}

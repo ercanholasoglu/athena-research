@@ -1,0 +1,1 @@
+{"op": "product", "inputs": ["history_segment", "spend"], "threshold": 0, "value": "", "leakage": ["post_outcome"], "semantic_validity": "invalid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

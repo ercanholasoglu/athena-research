@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["1 - load_weekday == Fri"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": false, "failure": "unknown_column"}

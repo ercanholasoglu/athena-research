@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["campaign"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": false, "failure": "degenerate"}

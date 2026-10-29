@@ -1,0 +1,1 @@
+{"op": "product", "inputs": ["Charge_Amount", "Subscription_Length"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": true, "cv_gain": -0.0006330096229164214, "stability": 0.0, "test_gain_deploy": 0.00014574426739222268, "missing_share": 0.0, "redundancy_max_spearman": 0.575668049662931, "class": "VALID_NOT_USEFUL"}

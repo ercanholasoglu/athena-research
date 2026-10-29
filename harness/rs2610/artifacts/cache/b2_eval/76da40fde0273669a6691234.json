@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["PAY_AMT1", "BILL_AMT1"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0015129206848275567, "stability": 0.6666666666666666, "test_gain_deploy": -0.0001102004442117277, "missing_share": 0.06773333333333334, "redundancy_max_spearman": 0.4438487149318566, "class": "VALID_NOT_USEFUL"}

@@ -1,0 +1,1 @@
+{"op": "max", "inputs": ["Call_Failure", "Subscription_Length"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": -0.0002224485274500143, "stability": 0.6666666666666666, "test_gain_deploy": 2.429071123211113e-05, "missing_share": 0.0, "redundancy_max_spearman": 0.1802204375728064, "class": "INVALID_LOW_GAIN"}

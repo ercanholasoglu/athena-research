@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["ProductRelated", "Administrative_Duration + Informational_Duration + ProductRelated_Duration"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": false, "failure": "unknown_column"}

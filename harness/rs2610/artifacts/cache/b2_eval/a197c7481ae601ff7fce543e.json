@@ -1,0 +1,1 @@
+{"op": "eq_value", "inputs": ["deactivation_reason"], "threshold": 0, "value": "none", "leakage": ["post_outcome"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.014492595750731621, "stability": 1.0, "test_gain_deploy": -0.05373105324523908, "missing_share": 0.0, "redundancy_max_spearman": 0.5169193267815716, "class": "INVALID_HIGH_APPARENT"}

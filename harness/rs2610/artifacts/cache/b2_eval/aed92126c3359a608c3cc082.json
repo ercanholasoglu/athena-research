@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["campaign", "pdays"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.0004315507150349414, "stability": 0.6666666666666666, "test_gain_deploy": 0.0007713305315149022, "missing_share": 0.0, "redundancy_max_spearman": 0.6770565496943262, "class": "VALID_NOT_USEFUL"}

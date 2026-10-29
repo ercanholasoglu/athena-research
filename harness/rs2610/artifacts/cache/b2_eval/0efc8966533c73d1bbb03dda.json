@@ -1,0 +1,1 @@
+{"op": "std", "inputs": ["PAY_0", "PAY_2", "PAY_3", "PAY_4", "PAY_5", "PAY_6"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.0032057298388042943, "stability": 1.0, "test_gain_deploy": -0.0020116779202805635, "missing_share": 0.0, "redundancy_max_spearman": 0.30761204679756393, "class": "INVALID_LOW_GAIN"}

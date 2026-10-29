@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["PAY_AMT4"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0008373612707946269, "stability": 1.0, "test_gain_deploy": 0.002111690021536883, "missing_share": 0.0, "redundancy_max_spearman": 0.4906848633629386, "class": "VALID_NOT_USEFUL"}

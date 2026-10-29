@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["sick_diagnosis"], "leakage_risk": "HIGH", "semantic_validity": "invalid", "computable": true, "cv_gain": 0.0037568391312008767, "stability": 1.0, "test_gain_deploy": -0.24618597571767376, "interpretability": 1.0}

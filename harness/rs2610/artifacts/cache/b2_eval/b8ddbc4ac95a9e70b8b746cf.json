@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["record_key", "day"], "threshold": null, "value": null, "leakage": ["identifier"], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.1695411685903866, "stability": 1.0, "test_gain_deploy": -0.068093127581483, "missing_share": 0.0, "redundancy_max_spearman": 0.13974258294066666, "class": "INVALID_HIGH_APPARENT"}

@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["Charge_Amount", "Customer_Value"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": true, "cv_gain": 7.67654716136897e-05, "stability": 0.6666666666666666, "test_gain_deploy": 0.0003036338904004454, "missing_share": 0.0419047619047619, "redundancy_max_spearman": 0.47726795771953695, "class": "VALID_NOT_USEFUL"}

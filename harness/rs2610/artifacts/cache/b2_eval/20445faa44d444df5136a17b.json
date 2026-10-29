@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["history", "history_segment"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

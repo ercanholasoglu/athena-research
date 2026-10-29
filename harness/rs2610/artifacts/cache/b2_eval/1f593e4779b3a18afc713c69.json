@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["Seconds_of_Use", "Subscription_Length"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0007059382767717152, "stability": 0.6666666666666666, "test_gain_deploy": 0.00047366886902444616, "missing_share": 0.0, "redundancy_max_spearman": 0.8390708360690716, "class": "VALID_NOT_USEFUL"}

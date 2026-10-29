@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["mens", "womens"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": true, "cv_gain": -0.021587132444145785, "stability": 0.3333333333333333, "test_gain_deploy": -0.011628225622288269, "missing_share": 0.45028125, "redundancy_max_spearman": 0.4843690131190999, "class": "VALID_NOT_USEFUL"}

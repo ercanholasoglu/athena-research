@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["A1", "A3", "A4", "A5", "A6", "A7", "A9", "A11", "A12", "A14", "A15", "A17", "A18", "A19", "A20"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": false, "failure": "non_numeric_input"}

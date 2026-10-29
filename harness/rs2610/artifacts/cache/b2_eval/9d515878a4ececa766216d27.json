@@ -1,0 +1,1 @@
+{"op": "product", "inputs": ["womens", "newbie"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "unknown", "executable": true, "cv_gain": -0.019738127661279175, "stability": 0.0, "test_gain_deploy": -0.0018323383246882097, "missing_share": 0.0, "redundancy_max_spearman": 0.4177516626242867, "class": "VALID_NOT_USEFUL"}

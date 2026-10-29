@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["load_weekday", "Status"], "threshold": 0, "value": "", "leakage": ["artifact"], "semantic_validity": "invalid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

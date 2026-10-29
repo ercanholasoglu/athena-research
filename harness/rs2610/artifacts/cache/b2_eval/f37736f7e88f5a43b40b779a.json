@@ -1,0 +1,1 @@
+{"op": "count_positive", "inputs": ["loan"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

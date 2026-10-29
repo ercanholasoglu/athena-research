@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["deactivation_reason"], "threshold": null, "value": null, "leakage": ["post_outcome"], "semantic_validity": "invalid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

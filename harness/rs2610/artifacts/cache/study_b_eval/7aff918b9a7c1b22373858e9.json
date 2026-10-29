@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["PPERSAUT", "PBESAUT", "PMOTSCO", "PVRAAUT", "PAANHANG", "PTRACTOR", "PWERKT", "PBROM", "PLEVEN", "PPERSONG", "PGEZONG", "PWAOREG", "PBRAND", "PZEILPL", "PLEZIER", "PFIETS", "PINBOED", "PBYSTAND"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": false, "failure": "unknown_column"}

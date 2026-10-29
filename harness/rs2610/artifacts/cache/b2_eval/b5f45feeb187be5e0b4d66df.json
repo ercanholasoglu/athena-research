@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["pdays"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "valid", "executable": false, "failure": "degenerate", "class": "NOT_EXECUTABLE"}

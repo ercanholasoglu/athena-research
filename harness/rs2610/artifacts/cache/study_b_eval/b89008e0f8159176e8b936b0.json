@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["target", "EDUCATION"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": false, "failure": "unknown_column"}

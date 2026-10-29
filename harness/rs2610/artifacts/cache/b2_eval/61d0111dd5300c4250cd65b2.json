@@ -1,0 +1,1 @@
+{"op": "eq_value", "inputs": ["load_weekday"], "threshold": 0, "value": "Fri", "leakage": ["artifact"], "semantic_validity": "invalid", "executable": true, "cv_gain": -0.00996655442974248, "stability": 0.3333333333333333, "test_gain_deploy": -0.04089822638349716, "missing_share": 0.0, "redundancy_max_spearman": 0.019102980763321686, "class": "INVALID_LOW_GAIN"}

@@ -1,0 +1,1 @@
+{"op": "gt_threshold", "inputs": ["segment"], "threshold": 0.5, "value": "", "leakage": [], "semantic_validity": "valid", "executable": false, "failure": "non_numeric_input", "class": "NOT_EXECUTABLE"}

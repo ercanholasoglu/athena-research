@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["campaign", "previous"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.0022897219240877917, "stability": 0.3333333333333333, "test_gain_deploy": 0.008261427807899069, "missing_share": 0.8146, "redundancy_max_spearman": 0.13612081377859836, "class": "VALID_NOT_USEFUL"}

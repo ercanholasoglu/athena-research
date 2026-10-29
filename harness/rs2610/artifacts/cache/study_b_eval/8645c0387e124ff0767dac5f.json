@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["spend", "history_segment"], "leakage_risk": "HIGH", "semantic_validity": "invalid", "computable": false, "failure": "non_numeric_input"}

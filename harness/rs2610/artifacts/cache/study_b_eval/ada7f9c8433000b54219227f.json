@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["Customer_Value", "Subscription_Length"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": -0.0003467523676820387, "stability": 0.0, "test_gain_deploy": 0.0010445005829771148, "interpretability": 1.0}

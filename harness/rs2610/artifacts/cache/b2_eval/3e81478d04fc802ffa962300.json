@@ -1,0 +1,1 @@
+{"op": "max", "inputs": ["PAY_0", "PAY_2"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": 0.004505032966517312, "stability": 1.0, "test_gain_deploy": 0.0020736396794789336, "missing_share": 0.0, "redundancy_max_spearman": 0.566059501854081, "class": "INVALID_LOW_GAIN"}

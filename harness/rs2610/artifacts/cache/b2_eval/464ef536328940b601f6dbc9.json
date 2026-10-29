@@ -1,0 +1,1 @@
+{"op": "eq_value", "inputs": ["recency"], "threshold": 0, "value": "12", "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": 0.0, "stability": 0.0, "test_gain_deploy": 0.0, "missing_share": 0.0, "redundancy_max_spearman": 0.08003024485528894, "class": "VALID_NOT_USEFUL"}

@@ -1,0 +1,1 @@
+{"op": "is_zero", "inputs": ["Charge_Amount"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "unknown", "executable": true, "cv_gain": 0.0, "stability": 0.0, "test_gain_deploy": 0.0, "missing_share": 0.0, "redundancy_max_spearman": 0.5168195051838279, "class": "VALID_NOT_USEFUL"}

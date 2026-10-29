@@ -1,0 +1,1 @@
+{"op": "diff", "inputs": ["spend", "history"], "leakage_risk": "HIGH", "semantic_validity": "invalid", "computable": true, "cv_gain": 0.2929363420123888, "stability": 1.0, "test_gain_deploy": -0.0005400232712404751, "interpretability": 1.0}

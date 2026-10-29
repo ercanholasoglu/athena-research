@@ -6,7 +6,9 @@ __pycache__/
 catboost_info/
 # machine-local outputs
 data/raw-sha256.observed.json
-harness/rs2610/artifacts/cache/
+harness/rs2610/artifacts/cache/*
+!harness/rs2610/artifacts/cache/study_b_eval/
+!harness/rs2610/artifacts/cache/b2_eval/
 harness/rs2610/artifacts/replication/logs/
 harness/rs2610/outputs/.digest_probe.jsonl
 *.log

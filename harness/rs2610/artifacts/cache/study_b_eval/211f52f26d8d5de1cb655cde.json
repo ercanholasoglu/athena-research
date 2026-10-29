@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["BILL_AMT1", "LIMIT_BAL"], "leakage_risk": "LOW", "semantic_validity": "valid", "computable": true, "cv_gain": 0.00570754827659022, "stability": 1.0, "test_gain_deploy": -0.0017744350771757844, "interpretability": 1.0}

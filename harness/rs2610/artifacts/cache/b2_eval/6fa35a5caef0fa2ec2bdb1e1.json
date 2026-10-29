@@ -1,0 +1,1 @@
+{"op": "eq_value", "inputs": ["month", "load_weekday"], "threshold": 0, "value": "", "leakage": ["artifact"], "semantic_validity": "invalid", "executable": false, "failure": "arity", "class": "NOT_EXECUTABLE"}

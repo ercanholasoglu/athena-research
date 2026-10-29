@@ -1,0 +1,1 @@
+{"op": "sum", "inputs": ["eq_value(x9, '1) $0 - $100')", "eq_value(x9, '2) $100 - $200')", "eq_value(x9, '3) $200 - $350')", "eq_value(x9, '4) $350 - $500')"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

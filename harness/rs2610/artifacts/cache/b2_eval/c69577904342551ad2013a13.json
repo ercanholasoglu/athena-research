@@ -1,0 +1,1 @@
+{"op": "sum", "inputs": ["gt_threshold(x2, 0.3)"], "threshold": 0.3, "value": "", "leakage": [], "semantic_validity": "unknown", "executable": false, "failure": "unknown_column", "class": "NOT_EXECUTABLE"}

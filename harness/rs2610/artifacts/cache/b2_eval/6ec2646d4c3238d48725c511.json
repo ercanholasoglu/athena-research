@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["Call_Failure", "Subscription_Length"], "threshold": null, "value": null, "leakage": [], "semantic_validity": "valid", "executable": true, "cv_gain": -0.000309385021374083, "stability": 0.0, "test_gain_deploy": -8.501748931200037e-05, "missing_share": 0.0, "redundancy_max_spearman": 0.5625738313253473, "class": "VALID_NOT_USEFUL"}

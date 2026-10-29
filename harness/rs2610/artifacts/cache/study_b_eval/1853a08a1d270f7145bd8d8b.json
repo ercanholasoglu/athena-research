@@ -1,0 +1,1 @@
+{"op": "ratio", "inputs": ["MonthlyCharges", "TotalCharges / tenure"], "leakage_risk": "LOW", "semantic_validity": "unknown", "computable": false, "failure": "unknown_column"}

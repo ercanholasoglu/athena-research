@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["Call_Failure", "Subscription_Length"], "leakage_risk": "LOW", "semantic_validity": "invalid", "computable": true, "cv_gain": -0.00040049023075002427, "stability": 0.3333333333333333, "test_gain_deploy": -0.0014695880295374497, "interpretability": 1.0}

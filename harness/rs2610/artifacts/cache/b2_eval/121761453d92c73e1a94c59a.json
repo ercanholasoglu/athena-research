@@ -1,0 +1,1 @@
+{"op": "sum", "inputs": ["Complains", "segment_outcome_rate"], "threshold": 0, "value": "", "leakage": ["target_derived"], "semantic_validity": "invalid", "executable": true, "cv_gain": -0.0015023735940923693, "stability": 0.3333333333333333, "test_gain_deploy": -0.04176180528565876, "missing_share": 0.0, "redundancy_max_spearman": 0.2618227457439504, "class": "INVALID_LOW_GAIN"}

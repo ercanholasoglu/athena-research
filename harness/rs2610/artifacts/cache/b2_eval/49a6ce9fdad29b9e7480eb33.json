@@ -1,0 +1,1 @@
+{"op": "mean", "inputs": ["Frequency_of_use", "Subscription_Length"], "threshold": 0, "value": "", "leakage": [], "semantic_validity": "invalid", "executable": true, "cv_gain": -0.00022310271664346035, "stability": 0.3333333333333333, "test_gain_deploy": 0.00036436066848033466, "missing_share": 0.0, "redundancy_max_spearman": 0.9081856907804211, "class": "INVALID_LOW_GAIN"}

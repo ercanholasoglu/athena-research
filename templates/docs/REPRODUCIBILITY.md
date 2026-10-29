@@ -80,9 +80,57 @@ In order, the script:
 
 **Reproduced exactly** means step 8 prints nothing.
 
-The Study B and B2 analyses re-evaluate every proposed and invented feature with gradient-boosted models on held-out
-data. Their result caches are not committed, so expect roughly an hour on a laptop. Bootstrap and permutation
-procedures use fixed seeds.
+Study B and B2 read their scored evaluations from the committed [evaluation cache](#evaluation-cache).
+`tools/trace_cache_reads.py --check` runs both analyses with every cache read and write traced. It fails if:
+
+- a record differs from its manifest entry;
+- an evaluation had to be recomputed;
+- a published record is never read.
+
+Bootstrap and permutation procedures use fixed seeds.
+
+## Evaluation cache
+
+[`harness/rs2610/artifacts/cache/study_b_eval/`](../harness/rs2610/artifacts/cache/study_b_eval/) and
+[`b2_eval/`](../harness/rs2610/artifacts/cache/b2_eval/) hold one JSON record per evaluation. Each record is one of:
+
+- a proposed or invented feature evaluation: leakage and validity checks, cross-validated gain, stability, held-out
+  deployed gain and, for B2, its class;
+- a feature that could not be executed, with the failure;
+- a downstream model fitted on a run's accepted features: CV estimate, held-out naive and deployed score, leak
+  inflation.
+
+**What these records are:**
+
+- **Not model output.** What the models proposed is in the run records and ledgers. These records are what the
+  frozen evaluators ([`study_b/evaluate.py`](../harness/rs2610/study_b/evaluate.py),
+  [`replication/b2/evaluate.py`](../harness/rs2610/replication/b2/evaluate.py)) computed from those proposals and
+  the data. Each record is keyed by a hash of its inputs.
+- **The published authority.** The published Study B and B2 statistics were generated from exactly these records.
+  The last record was written seconds before the result tables: Study B on 2026-10-28, B2 on 2026-10-29.
+  [`data/evaluation-cache-manifest.json`](../data/evaluation-cache-manifest.json) lists every record with its path,
+  SHA-256, size, study, record type, purpose, write time, and the frozen evaluator that produced it (with that file's
+  SHA-256 from the freeze record). Library versions are in `requirements-lock.txt`.
+- **Selected by use.** The private cache held 1000 records. Tracing the published analyses showed 957 of them read.
+  The other 43 are Study B development evaluations written on 2026-10-27, before the Study B freeze, and no
+  published analysis reads them. They are not published; their SHA-256s and write times are listed under
+  `excluded_records` in the manifest, and the trace is in
+  [`data/evaluation-cache-selection.json`](../data/evaluation-cache-selection.json).
+
+**Recomputing without the cache.** Delete the two folders and run the analyses: every evaluation is recomputed. The
+first public clean-clone test did this and did **not** reproduce the published tables exactly ([HISTORY](HISTORY.md#evaluation-nondeterminism)):
+
+- **Continuous scores** (gains, deployed scores, leak inflation) moved by a median of about 0.001 (Study B) and 0.0004
+  (B2), at most 0.0022 in B2.
+- **Threshold- or sign-based quantities** derived from those scores can change by a whole step on small cells. For
+  example, a deployment-collapse rate on a two-unit development cell moved from 0.0 to 0.5, and some sign-test
+  counts shifted by one.
+- **Tests.** No Holm-adjusted p-value crossed 0.05, and no reported conclusion changed. Three values cited in the
+  articles moved in the third decimal, for example C_DICT leak inflation 0.008 → 0.009.
+
+The likely source is run-to-run nondeterminism in the boosted-model fits: the evaluators fit LightGBM with
+`n_jobs=4`. This was observed, not isolated by a controlled experiment. The published numbers stay those computed
+from the cache; a clean recomputation is a robustness check of them, not a replacement.
 
 ## Traceability
 
