@@ -1,0 +1,16 @@
+[project]
+name = "athena-research"
+version = "1.0.0"
+description = "Controlled experiments on reasoning topology, semantic context, and model capability in tabular AI decisions"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
+# The exact environment of the runs is requirements-lock.txt; these are the direct dependencies.
+dependencies = [
+  "numpy", "pandas", "scipy", "scikit-learn", "statsmodels", "lightgbm", "xgboost", "catboost",
+  "matplotlib", "openpyxl", "xlrd", "pyarrow", "openai", "anthropic",
+]
+
+[tool.setuptools.packages.find]
+where = ["harness"]
+include = ["rs2610*"]

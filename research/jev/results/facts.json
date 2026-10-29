@@ -1,0 +1,676 @@
+{
+  "a.calls": 309,
+  "a.hpo_mean_conf": 0.71,
+  "ab.cases": 279,
+  "ab.expl.a": 22.6,
+  "ab.expl.b": 58.1,
+  "ab.expl.delta_pp": 35.5,
+  "ab.expl.ece_a": 0.2803,
+  "ab.expl.ece_b": 0.2035,
+  "ab.expl.local": 77.4,
+  "ab.expl.n": 31,
+  "ab.expl.overlap": false,
+  "ab.expl.ratio": 2.57,
+  "ab.expl.rules": 61.3,
+  "ab.expl.tokens_a": 401.4,
+  "ab.expl.tokens_b": 624.4,
+  "ab.expl.tokens_ratio": 1.556,
+  "ab.expl.wilson_a": [
+    11.4,
+    39.8
+  ],
+  "ab.expl.wilson_b": [
+    40.8,
+    73.6
+  ],
+  "ab.hpo.a": 19.4,
+  "ab.hpo.b": 29.0,
+  "ab.hpo.delta_pp": 9.7,
+  "ab.hpo.ece_a": 0.5923,
+  "ab.hpo.ece_b": 0.3306,
+  "ab.hpo.local": 51.6,
+  "ab.hpo.n": 31,
+  "ab.hpo.overlap": true,
+  "ab.hpo.ratio": 1.5,
+  "ab.hpo.rules": 6.5,
+  "ab.hpo.tokens_a": 386.8,
+  "ab.hpo.tokens_b": 637.8,
+  "ab.hpo.tokens_ratio": 1.649,
+  "ab.hpo.wilson_a": [
+    9.2,
+    36.3
+  ],
+  "ab.hpo.wilson_b": [
+    16.1,
+    46.6
+  ],
+  "ab.retry.a": 40.0,
+  "ab.retry.b": 85.7,
+  "ab.retry.delta_pp": 45.7,
+  "ab.retry.ece_a": 0.3251,
+  "ab.retry.ece_b": 0.1603,
+  "ab.retry.local": 85.7,
+  "ab.retry.n": 35,
+  "ab.retry.overlap": false,
+  "ab.retry.ratio": 2.14,
+  "ab.retry.rules": 94.3,
+  "ab.retry.tokens_a": 386.7,
+  "ab.retry.tokens_b": 595.7,
+  "ab.retry.tokens_ratio": 1.54,
+  "ab.retry.wilson_a": [
+    25.6,
+    56.4
+  ],
+  "ab.retry.wilson_b": [
+    70.6,
+    93.7
+  ],
+  "ab.tokens_a": 410.6,
+  "ab.tokens_b": 657.8,
+  "ab.tokens_ratio": 1.602,
+  "b.calls": 309,
+  "case.expl.correct": 28,
+  "case.expl.linear": 12,
+  "case.expl.linear_perm_B": 12,
+  "case.expl.linear_skip": 12,
+  "case.expl.same_as_rules": true,
+  "case.expl.same_correct_set": true,
+  "case.expl.skip_chosen": 0,
+  "case.expl.skip_needed": 20,
+  "case.expl.tree_shap_preds_B": 36,
+  "case.hpo.E_light": 48,
+  "case.hpo.jev_B.light": 35,
+  "case.hpo.jev_C.light": 31,
+  "case.hpo.jev_D.light": 40,
+  "case.hpo.jev_E.light": 48,
+  "case.hpo.light_share": 41.7,
+  "case.v2dev.expl_skip_preds": 16,
+  "v2.binary": 13,
+  "v2.bootstrap": 10000,
+  "v2.calls": 640,
+  "v2.const.expl": 58.3,
+  "v2.const.hpo": 29.2,
+  "v2.datasets": 16,
+  "v2.dev": 10,
+  "v2.expl.b_vs_local": -8.3,
+  "v2.expl.b_vs_local.ci": [
+    -20.8,
+    0.0
+  ],
+  "v2.expl.dev_cases": 80,
+  "v2.expl.final_cases": 48,
+  "v2.expl.jev_B": 58.3,
+  "v2.expl.jev_B.calls": 48,
+  "v2.expl.jev_B.ci": [
+    52.1,
+    66.7
+  ],
+  "v2.expl.jev_B.conf": 0.75,
+  "v2.expl.jev_B.ece": 0.291,
+  "v2.expl.jev_B.mult": 1.0,
+  "v2.expl.jev_B.out_tokens": 66.5,
+  "v2.expl.jev_B.p50": 114.2,
+  "v2.expl.jev_B.tokens": 623.8,
+  "v2.expl.jev_C": 58.3,
+  "v2.expl.jev_C.calls": 48,
+  "v2.expl.jev_C.ci": [
+    52.1,
+    66.7
+  ],
+  "v2.expl.jev_C.conf": 0.83,
+  "v2.expl.jev_C.ece": 0.279,
+  "v2.expl.jev_C.mult": 1.4,
+  "v2.expl.jev_C.out_tokens": 66.6,
+  "v2.expl.jev_C.p50": 122.0,
+  "v2.expl.jev_C.tokens": 872.8,
+  "v2.expl.jev_C.vs_b": 0.0,
+  "v2.expl.jev_C.vs_b.ci": [
+    0.0,
+    0.0
+  ],
+  "v2.expl.jev_D": 58.3,
+  "v2.expl.jev_D.calls": 48,
+  "v2.expl.jev_D.ci": [
+    52.1,
+    66.7
+  ],
+  "v2.expl.jev_D.conf": 0.79,
+  "v2.expl.jev_D.ece": 0.22,
+  "v2.expl.jev_D.mult": 2.46,
+  "v2.expl.jev_D.out_tokens": 66.5,
+  "v2.expl.jev_D.p50": 117.8,
+  "v2.expl.jev_D.tokens": 1535.4,
+  "v2.expl.jev_D.vs_b": 0.0,
+  "v2.expl.jev_D.vs_b.ci": [
+    0.0,
+    0.0
+  ],
+  "v2.expl.jev_E": 58.3,
+  "v2.expl.jev_E.calls": 96,
+  "v2.expl.jev_E.ci": [
+    52.1,
+    66.7
+  ],
+  "v2.expl.jev_E.conf": 0.91,
+  "v2.expl.jev_E.ece": 0.332,
+  "v2.expl.jev_E.mult": 6.03,
+  "v2.expl.jev_E.out_tokens": 231.7,
+  "v2.expl.jev_E.p50": 263.9,
+  "v2.expl.jev_E.tokens": 3764.2,
+  "v2.expl.jev_E.vs_b": 0.0,
+  "v2.expl.jev_E.vs_b.ci": [
+    0.0,
+    0.0
+  ],
+  "v2.expl.labels": {
+    "SKIP": 20,
+    "TREE_SHAP_EXACT": 28
+  },
+  "v2.expl.local_bounded": 66.7,
+  "v2.expl.local_bounded.ci": [
+    58.3,
+    77.1
+  ],
+  "v2.expl.local_bounded.conf": 0.79,
+  "v2.expl.local_bounded.ece": 0.176,
+  "v2.expl.local_bounded_v2dev": 91.7,
+  "v2.expl.local_bounded_v2dev.ci": [
+    83.3,
+    100.0
+  ],
+  "v2.expl.local_bounded_v2dev.conf": 0.78,
+  "v2.expl.local_bounded_v2dev.ece": 0.203,
+  "v2.expl.lodo": {
+    "jev_B-vs-local_bounded": {
+      "fragile": false,
+      "full": -0.0833,
+      "without": {
+        "bank_marketing": -0.025,
+        "breast_cancer": -0.1,
+        "credit_approval": -0.1,
+        "spambase": -0.1,
+        "thyroid_sick": -0.075,
+        "vehicle": -0.1
+      }
+    },
+    "jev_C-vs-jev_B": {
+      "fragile": false,
+      "full": 0.0,
+      "without": {
+        "bank_marketing": 0.0,
+        "breast_cancer": 0.0,
+        "credit_approval": 0.0,
+        "spambase": 0.0,
+        "thyroid_sick": 0.0,
+        "vehicle": 0.0
+      }
+    },
+    "jev_C-vs-local_bounded": {
+      "fragile": false,
+      "full": -0.0833,
+      "without": {
+        "bank_marketing": -0.025,
+        "breast_cancer": -0.1,
+        "credit_approval": -0.1,
+        "spambase": -0.1,
+        "thyroid_sick": -0.075,
+        "vehicle": -0.1
+      }
+    },
+    "jev_D-vs-jev_B": {
+      "fragile": false,
+      "full": 0.0,
+      "without": {
+        "bank_marketing": 0.0,
+        "breast_cancer": 0.0,
+        "credit_approval": 0.0,
+        "spambase": 0.0,
+        "thyroid_sick": 0.0,
+        "vehicle": 0.0
+      }
+    },
+    "jev_D-vs-local_bounded": {
+      "fragile": false,
+      "full": -0.0833,
+      "without": {
+        "bank_marketing": -0.025,
+        "breast_cancer": -0.1,
+        "credit_approval": -0.1,
+        "spambase": -0.1,
+        "thyroid_sick": -0.075,
+        "vehicle": -0.1
+      }
+    },
+    "jev_E-vs-jev_B": {
+      "fragile": false,
+      "full": 0.0,
+      "without": {
+        "bank_marketing": 0.0,
+        "breast_cancer": 0.0,
+        "credit_approval": 0.0,
+        "spambase": 0.0,
+        "thyroid_sick": 0.0,
+        "vehicle": 0.0
+      }
+    },
+    "jev_E-vs-local_bounded": {
+      "fragile": false,
+      "full": -0.0833,
+      "without": {
+        "bank_marketing": -0.025,
+        "breast_cancer": -0.1,
+        "credit_approval": -0.1,
+        "spambase": -0.1,
+        "thyroid_sick": -0.075,
+        "vehicle": -0.1
+      }
+    }
+  },
+  "v2.expl.mcnemar": {
+    "jev_B-vs-local_bounded": {
+      "a_only": 1,
+      "b_only": 5,
+      "p": 0.21875
+    },
+    "jev_C-vs-jev_B": {
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0
+    },
+    "jev_C-vs-local_bounded": {
+      "a_only": 1,
+      "b_only": 5,
+      "p": 0.21875
+    },
+    "jev_D-vs-jev_B": {
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0
+    },
+    "jev_D-vs-local_bounded": {
+      "a_only": 1,
+      "b_only": 5,
+      "p": 0.21875
+    },
+    "jev_E-vs-jev_B": {
+      "a_only": 0,
+      "b_only": 0,
+      "p": 1.0
+    },
+    "jev_E-vs-local_bounded": {
+      "a_only": 1,
+      "b_only": 5,
+      "p": 0.21875
+    }
+  },
+  "v2.expl.per_dataset": {
+    "jev_B": {
+      "bank_marketing": 0.5,
+      "breast_cancer": 0.625,
+      "credit_approval": 0.5,
+      "spambase": 0.75,
+      "thyroid_sick": 0.5,
+      "vehicle": 0.625
+    },
+    "jev_C": {
+      "bank_marketing": 0.5,
+      "breast_cancer": 0.625,
+      "credit_approval": 0.5,
+      "spambase": 0.75,
+      "thyroid_sick": 0.5,
+      "vehicle": 0.625
+    },
+    "jev_D": {
+      "bank_marketing": 0.5,
+      "breast_cancer": 0.625,
+      "credit_approval": 0.5,
+      "spambase": 0.75,
+      "thyroid_sick": 0.5,
+      "vehicle": 0.625
+    },
+    "jev_E": {
+      "bank_marketing": 0.5,
+      "breast_cancer": 0.625,
+      "credit_approval": 0.5,
+      "spambase": 0.75,
+      "thyroid_sick": 0.5,
+      "vehicle": 0.625
+    },
+    "local_bounded": {
+      "bank_marketing": 0.875,
+      "breast_cancer": 0.625,
+      "credit_approval": 0.5,
+      "spambase": 0.75,
+      "thyroid_sick": 0.625,
+      "vehicle": 0.625
+    },
+    "local_bounded_v2dev": {
+      "bank_marketing": 1.0,
+      "breast_cancer": 1.0,
+      "credit_approval": 0.75,
+      "spambase": 1.0,
+      "thyroid_sick": 1.0,
+      "vehicle": 0.75
+    },
+    "rules": {
+      "bank_marketing": 0.5,
+      "breast_cancer": 0.625,
+      "credit_approval": 0.5,
+      "spambase": 0.75,
+      "thyroid_sick": 0.5,
+      "vehicle": 0.625
+    }
+  },
+  "v2.expl.rules": 58.3,
+  "v2.expl.rules.ci": [
+    52.1,
+    66.7
+  ],
+  "v2.expl.shipped.max": 87.5,
+  "v2.expl.shipped.min": 50.0,
+  "v2.expl.total": 128,
+  "v2.expl.v2dev.min": 75.0,
+  "v2.expl.v2dev.n100": 4,
+  "v2.expl.v2dev.n_rest": 2,
+  "v2.feat_max": 500,
+  "v2.feat_min": 4,
+  "v2.holdout": 6,
+  "v2.holdout_names": [
+    "breast_cancer",
+    "bank_marketing",
+    "spambase",
+    "thyroid_sick",
+    "vehicle",
+    "credit_approval"
+  ],
+  "v2.hpo.b_vs_local": 2.1,
+  "v2.hpo.b_vs_local.ci": [
+    -16.7,
+    18.8
+  ],
+  "v2.hpo.dev_cases": 80,
+  "v2.hpo.final_cases": 48,
+  "v2.hpo.jev_B": 45.8,
+  "v2.hpo.jev_B.calls": 48,
+  "v2.hpo.jev_B.ci": [
+    31.3,
+    58.3
+  ],
+  "v2.hpo.jev_B.conf": 0.61,
+  "v2.hpo.jev_B.ece": 0.197,
+  "v2.hpo.jev_B.mult": 1.0,
+  "v2.hpo.jev_B.out_tokens": 48.0,
+  "v2.hpo.jev_B.p50": 126.0,
+  "v2.hpo.jev_B.tokens": 636.7,
+  "v2.hpo.jev_C": 45.8,
+  "v2.hpo.jev_C.calls": 48,
+  "v2.hpo.jev_C.ci": [
+    29.2,
+    64.6
+  ],
+  "v2.hpo.jev_C.conf": 0.55,
+  "v2.hpo.jev_C.ece": 0.22,
+  "v2.hpo.jev_C.mult": 1.48,
+  "v2.hpo.jev_C.out_tokens": 48.2,
+  "v2.hpo.jev_C.p50": 123.0,
+  "v2.hpo.jev_C.tokens": 943.7,
+  "v2.hpo.jev_C.vs_b": 0.0,
+  "v2.hpo.jev_C.vs_b.ci": [
+    -8.3,
+    10.4
+  ],
+  "v2.hpo.jev_D": 39.6,
+  "v2.hpo.jev_D.calls": 48,
+  "v2.hpo.jev_D.ci": [
+    25.0,
+    52.1
+  ],
+  "v2.hpo.jev_D.conf": 0.51,
+  "v2.hpo.jev_D.ece": 0.136,
+  "v2.hpo.jev_D.mult": 2.52,
+  "v2.hpo.jev_D.out_tokens": 48.3,
+  "v2.hpo.jev_D.p50": 126.6,
+  "v2.hpo.jev_D.tokens": 1606.1,
+  "v2.hpo.jev_D.vs_b": -6.3,
+  "v2.hpo.jev_D.vs_b.ci": [
+    -14.6,
+    0.0
+  ],
+  "v2.hpo.jev_E": 41.7,
+  "v2.hpo.jev_E.calls": 96,
+  "v2.hpo.jev_E.ci": [
+    25.0,
+    56.3
+  ],
+  "v2.hpo.jev_E.conf": 0.8,
+  "v2.hpo.jev_E.ece": 0.381,
+  "v2.hpo.jev_E.mult": 5.94,
+  "v2.hpo.jev_E.out_tokens": 179,
+  "v2.hpo.jev_E.p50": 256.2,
+  "v2.hpo.jev_E.tokens": 3780.4,
+  "v2.hpo.jev_E.vs_b": -4.2,
+  "v2.hpo.jev_E.vs_b.ci": [
+    -14.6,
+    4.2
+  ],
+  "v2.hpo.labels": {
+    "DEEP": 7,
+    "LIGHT": 20,
+    "NONE": 14,
+    "STANDARD": 7
+  },
+  "v2.hpo.local_bounded": 43.8,
+  "v2.hpo.local_bounded.ci": [
+    22.9,
+    62.5
+  ],
+  "v2.hpo.local_bounded.conf": 0.6,
+  "v2.hpo.local_bounded.ece": 0.187,
+  "v2.hpo.local_bounded_v2dev": 27.1,
+  "v2.hpo.local_bounded_v2dev.ci": [
+    10.4,
+    45.8
+  ],
+  "v2.hpo.local_bounded_v2dev.conf": 0.64,
+  "v2.hpo.local_bounded_v2dev.ece": 0.424,
+  "v2.hpo.lodo": {
+    "jev_B-vs-local_bounded": {
+      "fragile": true,
+      "full": 0.0208,
+      "without": {
+        "bank_marketing": 0.0,
+        "breast_cancer": -0.025,
+        "credit_approval": 0.025,
+        "spambase": 0.1,
+        "thyroid_sick": 0.05,
+        "vehicle": -0.025
+      }
+    },
+    "jev_C-vs-jev_B": {
+      "fragile": true,
+      "full": 0.0,
+      "without": {
+        "bank_marketing": 0.0,
+        "breast_cancer": 0.0,
+        "credit_approval": 0.025,
+        "spambase": 0.0,
+        "thyroid_sick": 0.025,
+        "vehicle": -0.05
+      }
+    },
+    "jev_C-vs-local_bounded": {
+      "fragile": true,
+      "full": 0.0208,
+      "without": {
+        "bank_marketing": 0.0,
+        "breast_cancer": -0.025,
+        "credit_approval": 0.05,
+        "spambase": 0.1,
+        "thyroid_sick": 0.075,
+        "vehicle": -0.075
+      }
+    },
+    "jev_D-vs-jev_B": {
+      "fragile": false,
+      "full": -0.0625,
+      "without": {
+        "bank_marketing": -0.075,
+        "breast_cancer": -0.025,
+        "credit_approval": -0.05,
+        "spambase": -0.075,
+        "thyroid_sick": -0.075,
+        "vehicle": -0.075
+      }
+    },
+    "jev_D-vs-local_bounded": {
+      "fragile": true,
+      "full": -0.0417,
+      "without": {
+        "bank_marketing": -0.075,
+        "breast_cancer": -0.05,
+        "credit_approval": -0.025,
+        "spambase": 0.025,
+        "thyroid_sick": -0.025,
+        "vehicle": -0.1
+      }
+    },
+    "jev_E-vs-jev_B": {
+      "fragile": false,
+      "full": -0.0417,
+      "without": {
+        "bank_marketing": -0.05,
+        "breast_cancer": 0.0,
+        "credit_approval": -0.05,
+        "spambase": -0.025,
+        "thyroid_sick": -0.075,
+        "vehicle": -0.05
+      }
+    },
+    "jev_E-vs-local_bounded": {
+      "fragile": true,
+      "full": -0.0208,
+      "without": {
+        "bank_marketing": -0.05,
+        "breast_cancer": -0.025,
+        "credit_approval": -0.025,
+        "spambase": 0.075,
+        "thyroid_sick": -0.025,
+        "vehicle": -0.075
+      }
+    }
+  },
+  "v2.hpo.mcnemar": {
+    "jev_B-vs-local_bounded": {
+      "a_only": 9,
+      "b_only": 8,
+      "p": 1.0
+    },
+    "jev_C-vs-jev_B": {
+      "a_only": 2,
+      "b_only": 2,
+      "p": 1.0
+    },
+    "jev_C-vs-local_bounded": {
+      "a_only": 11,
+      "b_only": 10,
+      "p": 1.0
+    },
+    "jev_D-vs-jev_B": {
+      "a_only": 6,
+      "b_only": 9,
+      "p": 0.607239
+    },
+    "jev_D-vs-local_bounded": {
+      "a_only": 5,
+      "b_only": 7,
+      "p": 0.774414
+    },
+    "jev_E-vs-jev_B": {
+      "a_only": 5,
+      "b_only": 7,
+      "p": 0.774414
+    },
+    "jev_E-vs-local_bounded": {
+      "a_only": 6,
+      "b_only": 7,
+      "p": 1.0
+    }
+  },
+  "v2.hpo.per_dataset": {
+    "jev_B": {
+      "bank_marketing": 0.125,
+      "breast_cancer": 0.5,
+      "credit_approval": 0.625,
+      "spambase": 0.375,
+      "thyroid_sick": 0.5,
+      "vehicle": 0.625
+    },
+    "jev_C": {
+      "bank_marketing": 0.125,
+      "breast_cancer": 0.5,
+      "credit_approval": 0.5,
+      "spambase": 0.375,
+      "thyroid_sick": 0.375,
+      "vehicle": 0.875
+    },
+    "jev_D": {
+      "bank_marketing": 0.125,
+      "breast_cancer": 0.25,
+      "credit_approval": 0.5,
+      "spambase": 0.375,
+      "thyroid_sick": 0.5,
+      "vehicle": 0.625
+    },
+    "jev_E": {
+      "bank_marketing": 0.125,
+      "breast_cancer": 0.25,
+      "credit_approval": 0.625,
+      "spambase": 0.25,
+      "thyroid_sick": 0.625,
+      "vehicle": 0.625
+    },
+    "local_bounded": {
+      "bank_marketing": 0.0,
+      "breast_cancer": 0.25,
+      "credit_approval": 0.625,
+      "spambase": 0.75,
+      "thyroid_sick": 0.625,
+      "vehicle": 0.375
+    },
+    "local_bounded_v2dev": {
+      "bank_marketing": 0.125,
+      "breast_cancer": 0.375,
+      "credit_approval": 0.125,
+      "spambase": 0.625,
+      "thyroid_sick": 0.375,
+      "vehicle": 0.0
+    },
+    "rules": {
+      "bank_marketing": 0.375,
+      "breast_cancer": 0.125,
+      "credit_approval": 0.375,
+      "spambase": 0.25,
+      "thyroid_sick": 0.5,
+      "vehicle": 0.125
+    }
+  },
+  "v2.hpo.rules": 29.2,
+  "v2.hpo.rules.ci": [
+    18.8,
+    39.6
+  ],
+  "v2.hpo.total": 128,
+  "v2.hpo.v2dev.vehicle": 0.0,
+  "v2.input_tokens": 895816,
+  "v2.max_p_holm": 1.0,
+  "v2.min_p_holm": 1.0,
+  "v2.model": "jev-1.13.0",
+  "v2.multiclass": 3,
+  "v2.output_tokens": 48668,
+  "v2.repeat_same": 47,
+  "v2.repeat_total": 48,
+  "v2.rows_max": 45211,
+  "v2.rows_min": 500,
+  "v2.significant": 0,
+  "v2.tests": 14
+}

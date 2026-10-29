@@ -1,0 +1,53 @@
+{
+ "properties": {
+  "column_roles": {
+   "items": {
+    "properties": {
+     "column": {
+      "type": "string"
+     },
+     "meaning_guess": {
+      "type": "string"
+     },
+     "role": {
+      "enum": [
+       "identifier",
+       "pre_outcome_feature",
+       "post_outcome",
+       "target_derived",
+       "artifact",
+       "time",
+       "group_key",
+       "treatment",
+       "unknown"
+      ],
+      "type": "string"
+     }
+    },
+    "required": [
+     "column",
+     "role",
+     "meaning_guess"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "dataset_meaning": {
+   "type": "string"
+  },
+  "row_meaning": {
+   "type": "string"
+  },
+  "target_meaning": {
+   "type": "string"
+  }
+ },
+ "required": [
+  "dataset_meaning",
+  "target_meaning",
+  "row_meaning",
+  "column_roles"
+ ],
+ "type": "object"
+}

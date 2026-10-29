@@ -1,0 +1,42 @@
+{
+ "note": "Every published file that differs from its private original. Frozen files are never redacted.",
+ "journals": {
+  "JOURNAL.md": {
+   "original_sha256": "450138bba5b2925dbf4eed788f3cc767c2b998b2fc5c78d4a1a7f115f8ad0e5a",
+   "public_sha256": "725870ac3fe06f8d57d1424f354c85b3e86089588fd21b3b1c53597c9161b45f"
+  },
+  "replication/JOURNAL.md": {
+   "original_sha256": "815fb68c69bcf2d5f55fb2c9f9fae056273c125eecdaab0dfd67172d206e087f",
+   "public_sha256": "d87069eafbe9bf07de84f12cad3d3df0c72874da5e02f1f8f7b8aa81e0b84539"
+  }
+ },
+ "jev_evidence": [
+  {
+   "file": "jev-ablation-2026-10-21.json",
+   "original_sha256": "51a565917bfdb4ccaa37238d680866063fb84fe20362c6b1ee37e537432e5a32",
+   "public_sha256": "7b03d422290ae996b2a09ba4f5c61aab3d4b7ce262c360a8d834c881c0073784",
+   "fields": [
+    "/athena_sha"
+   ]
+  },
+  {
+   "file": "jev-semantics-ablation-2026-10-21.json",
+   "original_sha256": "4fb9da1822774e0c44ef288bc39e1ff7d8b2945f0c5ef6cf6bf12895b89e1190",
+   "public_sha256": "4bccbdaf7f13224ea55a094198ea3a9ba40c139aa80a0834eb4f064df73df486",
+   "fields": [
+    "/athena_sha",
+    "/experiment_a_reference/athena_sha",
+    "/run_environment_note"
+   ]
+  },
+  {
+   "file": "jev-generalization-cde-2026-10-21.json",
+   "original_sha256": "c75650e1b05131a93fbb03cff1f4767e4ff307e5cb5385b7f1c6311650bb0ba6",
+   "public_sha256": "1107e01bca9efc8f8615ef4dcb4a882912918419548fae23138b7da92c7aedd1",
+   "fields": [
+    "/execution/jev_calls_from"
+   ]
+  }
+ ],
+ "jev_derivation_source_script_sha256": "aac071be85044f86969849420477d843097c88fec874cec8696c9dadc47242ff"
+}

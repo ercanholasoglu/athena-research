@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this material, please cite it as below."
+title: "Athena Research — Tabular AI Decision-Making"
+abstract: >-
+  Controlled experiments on reasoning topology, semantic context, and model capability in LLM-assisted
+  decisions for tabular machine learning: a retrospective on a typed bounded-decision model (JEV), Studies A and B
+  with a local 7B model, their frontier replications A2 and B2, and a cross-study comparison.
+type: software
+authors:
+  - name: "Let's Optimize Something"
+    website: "https://letsoptimizesomething.blog"
+repository-code: "https://github.com/ercanholasoglu/athena-research"
+url: "https://letsoptimizesomething.blog"
+version: "rs2610-v1.0"
+date-released: "2026-10-29"
+license: Apache-2.0
+keywords:
+  - large language models
+  - AutoML
+  - tabular data
+  - reasoning topology
+  - semantic context
+  - reproducibility

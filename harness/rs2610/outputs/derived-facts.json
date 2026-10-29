@@ -1,0 +1,2946 @@
+{
+ "ax.DEVELOPMENT.COT.accuracy_per_1k_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 5.416827606311261
+ },
+ "ax.DEVELOPMENT.COT.calls_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.DEVELOPMENT.COT.compute_vs_direct": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 3.997416616646147
+ },
+ "ax.DEVELOPMENT.COT.output_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 4.8564661297963045
+ },
+ "ax.DEVELOPMENT.COT.total_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.4095454364367954
+ },
+ "ax.DEVELOPMENT.DIRECT.accuracy_per_1k_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.DEVELOPMENT.DIRECT.calls_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.DEVELOPMENT.DIRECT.compute_vs_direct": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 1.0
+ },
+ "ax.DEVELOPMENT.DIRECT.output_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.DEVELOPMENT.DIRECT.total_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.DEVELOPMENT.GOT.accuracy_per_1k_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 14.996760167828377
+ },
+ "ax.DEVELOPMENT.GOT.calls_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 4.971014492753623
+ },
+ "ax.DEVELOPMENT.GOT.compute_vs_direct": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 12.163211097916374
+ },
+ "ax.DEVELOPMENT.GOT.output_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 14.47963050686878
+ },
+ "ax.DEVELOPMENT.GOT.total_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 7.092585952750886
+ },
+ "ax.DEVELOPMENT.TOT.accuracy_per_1k_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 10.686878256750354
+ },
+ "ax.DEVELOPMENT.TOT.calls_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 5.0
+ },
+ "ax.DEVELOPMENT.TOT.compute_vs_direct": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 9.004550726124458
+ },
+ "ax.DEVELOPMENT.TOT.output_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 10.686878256750354
+ },
+ "ax.DEVELOPMENT.TOT.total_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 5.956057527588541
+ },
+ "ax.UNSEEN.COT.accuracy_per_1k_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 4.633540618280662
+ },
+ "ax.UNSEEN.COT.calls_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.UNSEEN.COT.compute_vs_direct": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 3.8780181127629834
+ },
+ "ax.UNSEEN.COT.output_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 4.613823424160319
+ },
+ "ax.UNSEEN.COT.total_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.4029397724918715
+ },
+ "ax.UNSEEN.DIRECT.accuracy_per_1k_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.UNSEEN.DIRECT.calls_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.UNSEEN.DIRECT.compute_vs_direct": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 1.0
+ },
+ "ax.UNSEEN.DIRECT.output_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.UNSEEN.DIRECT.total_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 1.0
+ },
+ "ax.UNSEEN.GOT.accuracy_per_1k_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 14.67505439078028
+ },
+ "ax.UNSEEN.GOT.calls_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 4.993399339933993
+ },
+ "ax.UNSEEN.GOT.compute_vs_direct": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 12.100583897334548
+ },
+ "ax.UNSEEN.GOT.output_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 14.113031031133376
+ },
+ "ax.UNSEEN.GOT.total_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 7.179583712363437
+ },
+ "ax.UNSEEN.TOT.accuracy_per_1k_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 10.366517893857122
+ },
+ "ax.UNSEEN.TOT.calls_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 4.996699669966997
+ },
+ "ax.UNSEEN.TOT.compute_vs_direct": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 8.806548129723838
+ },
+ "ax.UNSEEN.TOT.output_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 10.145953683349521
+ },
+ "ax.UNSEEN.TOT.total_tokens_mean_vs_direct": {
+  "source": "outputs/study_a/study-a-results.csv",
+  "value": 5.928108872456745
+ },
+ "bx.DEVELOPMENT.A_RAW.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.4
+ },
+ "bx.DEVELOPMENT.A_RAW.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.A_RAW.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.A_RAW.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9
+ },
+ "bx.DEVELOPMENT.A_RAW.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.2
+ },
+ "bx.DEVELOPMENT.A_RAW.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 15
+ },
+ "bx.DEVELOPMENT.A_RAW.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 20
+ },
+ "bx.DEVELOPMENT.A_RAW.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.85
+ },
+ "bx.DEVELOPMENT.A_RAW.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.A_RAW.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 9
+ },
+ "bx.DEVELOPMENT.A_RAW.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.3333333333333333
+ },
+ "bx.DEVELOPMENT.A_RAW.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1.0
+ },
+ "bx.DEVELOPMENT.A_RAW.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 4
+ },
+ "bx.DEVELOPMENT.A_RAW.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.A_RAW.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 2
+ },
+ "bx.DEVELOPMENT.A_RAW.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 4
+ },
+ "bx.DEVELOPMENT.A_RAW.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9
+ },
+ "bx.DEVELOPMENT.B_SELF.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.4
+ },
+ "bx.DEVELOPMENT.B_SELF.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.4
+ },
+ "bx.DEVELOPMENT.B_SELF.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.B_SELF.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9
+ },
+ "bx.DEVELOPMENT.B_SELF.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.B_SELF.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 15
+ },
+ "bx.DEVELOPMENT.B_SELF.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 20
+ },
+ "bx.DEVELOPMENT.B_SELF.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.8
+ },
+ "bx.DEVELOPMENT.B_SELF.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.B_SELF.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 7
+ },
+ "bx.DEVELOPMENT.B_SELF.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.42857142857142855
+ },
+ "bx.DEVELOPMENT.B_SELF.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1.0
+ },
+ "bx.DEVELOPMENT.B_SELF.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 4
+ },
+ "bx.DEVELOPMENT.B_SELF.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.B_SELF.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 2
+ },
+ "bx.DEVELOPMENT.B_SELF.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 3
+ },
+ "bx.DEVELOPMENT.B_SELF.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9
+ },
+ "bx.DEVELOPMENT.C_DICT.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.2
+ },
+ "bx.DEVELOPMENT.C_DICT.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.C_DICT.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.2
+ },
+ "bx.DEVELOPMENT.C_DICT.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9
+ },
+ "bx.DEVELOPMENT.C_DICT.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.4
+ },
+ "bx.DEVELOPMENT.C_DICT.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 12
+ },
+ "bx.DEVELOPMENT.C_DICT.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 15
+ },
+ "bx.DEVELOPMENT.C_DICT.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.8
+ },
+ "bx.DEVELOPMENT.C_DICT.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.C_DICT.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 2
+ },
+ "bx.DEVELOPMENT.C_DICT.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.5
+ },
+ "bx.DEVELOPMENT.C_DICT.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1.0
+ },
+ "bx.DEVELOPMENT.C_DICT.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 5
+ },
+ "bx.DEVELOPMENT.C_DICT.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.C_DICT.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 4
+ },
+ "bx.DEVELOPMENT.C_DICT.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.C_DICT.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9
+ },
+ "bx.DEVELOPMENT.D_RULES.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.6
+ },
+ "bx.DEVELOPMENT.D_RULES.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.D_RULES.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.D_RULES.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9
+ },
+ "bx.DEVELOPMENT.D_RULES.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.2
+ },
+ "bx.DEVELOPMENT.D_RULES.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 11
+ },
+ "bx.DEVELOPMENT.D_RULES.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 16
+ },
+ "bx.DEVELOPMENT.D_RULES.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.8
+ },
+ "bx.DEVELOPMENT.D_RULES.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.D_RULES.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 3
+ },
+ "bx.DEVELOPMENT.D_RULES.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1.0
+ },
+ "bx.DEVELOPMENT.D_RULES.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.875
+ },
+ "bx.DEVELOPMENT.D_RULES.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 5
+ },
+ "bx.DEVELOPMENT.D_RULES.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.D_RULES.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 3
+ },
+ "bx.DEVELOPMENT.D_RULES.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 2
+ },
+ "bx.DEVELOPMENT.D_RULES.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9
+ },
+ "bx.DEVELOPMENT.E_FULL.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.E_FULL.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.E_FULL.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.E_FULL.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 1.0
+ },
+ "bx.DEVELOPMENT.E_FULL.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.DEVELOPMENT.E_FULL.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 14
+ },
+ "bx.DEVELOPMENT.E_FULL.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 19
+ },
+ "bx.DEVELOPMENT.E_FULL.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 1.0
+ },
+ "bx.DEVELOPMENT.E_FULL.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.E_FULL.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 2
+ },
+ "bx.DEVELOPMENT.E_FULL.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1.0
+ },
+ "bx.DEVELOPMENT.E_FULL.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.42105263157894735
+ },
+ "bx.DEVELOPMENT.E_FULL.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 7
+ },
+ "bx.DEVELOPMENT.E_FULL.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0
+ },
+ "bx.DEVELOPMENT.E_FULL.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 5
+ },
+ "bx.DEVELOPMENT.E_FULL.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 2
+ },
+ "bx.DEVELOPMENT.E_FULL.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 1.0
+ },
+ "bx.DEVELOPMENT.candidate_judgements": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 150
+ },
+ "bx.DEVELOPMENT.cv_gain_ranked_n": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 103
+ },
+ "bx.DEVELOPMENT.cv_gain_top_all_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 20
+ },
+ "bx.DEVELOPMENT.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 90
+ },
+ "bx.DEVELOPMENT.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.8555555555555555
+ },
+ "bx.UNSEEN.A_RAW.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.5
+ },
+ "bx.UNSEEN.A_RAW.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.3125
+ },
+ "bx.UNSEEN.A_RAW.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.1875
+ },
+ "bx.UNSEEN.A_RAW.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.8928571428571429
+ },
+ "bx.UNSEEN.A_RAW.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0625
+ },
+ "bx.UNSEEN.A_RAW.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 41
+ },
+ "bx.UNSEEN.A_RAW.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 63
+ },
+ "bx.UNSEEN.A_RAW.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.671875
+ },
+ "bx.UNSEEN.A_RAW.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 6
+ },
+ "bx.UNSEEN.A_RAW.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 24
+ },
+ "bx.UNSEEN.A_RAW.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.4166666666666667
+ },
+ "bx.UNSEEN.A_RAW.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1.0
+ },
+ "bx.UNSEEN.A_RAW.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 15
+ },
+ "bx.UNSEEN.A_RAW.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1
+ },
+ "bx.UNSEEN.A_RAW.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 13
+ },
+ "bx.UNSEEN.A_RAW.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 16
+ },
+ "bx.UNSEEN.A_RAW.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.8928571428571429
+ },
+ "bx.UNSEEN.B_SELF.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.5
+ },
+ "bx.UNSEEN.B_SELF.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0625
+ },
+ "bx.UNSEEN.B_SELF.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.25
+ },
+ "bx.UNSEEN.B_SELF.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.8571428571428571
+ },
+ "bx.UNSEEN.B_SELF.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0
+ },
+ "bx.UNSEEN.B_SELF.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 42
+ },
+ "bx.UNSEEN.B_SELF.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 62
+ },
+ "bx.UNSEEN.B_SELF.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.796875
+ },
+ "bx.UNSEEN.B_SELF.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.UNSEEN.B_SELF.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 21
+ },
+ "bx.UNSEEN.B_SELF.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.6666666666666666
+ },
+ "bx.UNSEEN.B_SELF.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1.0
+ },
+ "bx.UNSEEN.B_SELF.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 15
+ },
+ "bx.UNSEEN.B_SELF.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1
+ },
+ "bx.UNSEEN.B_SELF.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 11
+ },
+ "bx.UNSEEN.B_SELF.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 15
+ },
+ "bx.UNSEEN.B_SELF.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.8571428571428571
+ },
+ "bx.UNSEEN.C_DICT.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.3125
+ },
+ "bx.UNSEEN.C_DICT.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.125
+ },
+ "bx.UNSEEN.C_DICT.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.25
+ },
+ "bx.UNSEEN.C_DICT.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 1.0
+ },
+ "bx.UNSEEN.C_DICT.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.25
+ },
+ "bx.UNSEEN.C_DICT.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 38
+ },
+ "bx.UNSEEN.C_DICT.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 62
+ },
+ "bx.UNSEEN.C_DICT.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.765625
+ },
+ "bx.UNSEEN.C_DICT.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.UNSEEN.C_DICT.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 16
+ },
+ "bx.UNSEEN.C_DICT.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.25
+ },
+ "bx.UNSEEN.C_DICT.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1.0
+ },
+ "bx.UNSEEN.C_DICT.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 16
+ },
+ "bx.UNSEEN.C_DICT.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0
+ },
+ "bx.UNSEEN.C_DICT.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 13
+ },
+ "bx.UNSEEN.C_DICT.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 11
+ },
+ "bx.UNSEEN.C_DICT.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 1.0
+ },
+ "bx.UNSEEN.D_RULES.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.375
+ },
+ "bx.UNSEEN.D_RULES.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.125
+ },
+ "bx.UNSEEN.D_RULES.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.125
+ },
+ "bx.UNSEEN.D_RULES.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9642857142857143
+ },
+ "bx.UNSEEN.D_RULES.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.0625
+ },
+ "bx.UNSEEN.D_RULES.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 46
+ },
+ "bx.UNSEEN.D_RULES.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 70
+ },
+ "bx.UNSEEN.D_RULES.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.828125
+ },
+ "bx.UNSEEN.D_RULES.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.UNSEEN.D_RULES.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 24
+ },
+ "bx.UNSEEN.D_RULES.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.5833333333333334
+ },
+ "bx.UNSEEN.D_RULES.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.9142857142857143
+ },
+ "bx.UNSEEN.D_RULES.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 16
+ },
+ "bx.UNSEEN.D_RULES.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0
+ },
+ "bx.UNSEEN.D_RULES.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 11
+ },
+ "bx.UNSEEN.D_RULES.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 13
+ },
+ "bx.UNSEEN.D_RULES.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9642857142857143
+ },
+ "bx.UNSEEN.E_FULL.accept_rate.artifact": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.4375
+ },
+ "bx.UNSEEN.E_FULL.accept_rate.identifier": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.1875
+ },
+ "bx.UNSEEN.E_FULL.accept_rate.post_outcome": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.25
+ },
+ "bx.UNSEEN.E_FULL.accept_rate.semantic": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9642857142857143
+ },
+ "bx.UNSEEN.E_FULL.accept_rate.target_leak": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.1875
+ },
+ "bx.UNSEEN.E_FULL.features_computable": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 36
+ },
+ "bx.UNSEEN.E_FULL.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 60
+ },
+ "bx.UNSEEN.E_FULL.invalid_candidate_rejection": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.734375
+ },
+ "bx.UNSEEN.E_FULL.judgements_missing": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0
+ },
+ "bx.UNSEEN.E_FULL.leaky_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 19
+ },
+ "bx.UNSEEN.E_FULL.leaky_self_flagged_likely": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.42105263157894735
+ },
+ "bx.UNSEEN.E_FULL.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.9833333333333333
+ },
+ "bx.UNSEEN.E_FULL.retained": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 13
+ },
+ "bx.UNSEEN.E_FULL.retained_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 1
+ },
+ "bx.UNSEEN.E_FULL.retained_valid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 11
+ },
+ "bx.UNSEEN.E_FULL.strong_but_invalid": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 12
+ },
+ "bx.UNSEEN.E_FULL.valid_candidate_acceptance": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 0.9642857142857143
+ },
+ "bx.UNSEEN.candidate_judgements": {
+  "source": "outputs/study_b/candidate-judgements.csv",
+  "value": 460
+ },
+ "bx.UNSEEN.cv_gain_ranked_n": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 316
+ },
+ "bx.UNSEEN.cv_gain_top_all_leaky": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 100
+ },
+ "bx.UNSEEN.features_proposed": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 317
+ },
+ "bx.UNSEEN.proposals_copying_candidates": {
+  "source": "outputs/study_b/generated-features.csv",
+  "value": 0.9779179810725552
+ },
+ "bx.matched.DEVELOPMENT.anonymized.A_RAW.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.0
+ },
+ "bx.matched.DEVELOPMENT.anonymized.A_RAW.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8571428571428572
+ },
+ "bx.matched.DEVELOPMENT.anonymized.B_SELF.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.DEVELOPMENT.anonymized.B_SELF.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.anonymized.C_DICT.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.DEVELOPMENT.anonymized.C_DICT.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9285714285714286
+ },
+ "bx.matched.DEVELOPMENT.anonymized.D_RULES.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.anonymized.D_RULES.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9285714285714286
+ },
+ "bx.matched.DEVELOPMENT.anonymized.E_FULL.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.DEVELOPMENT.anonymized.E_FULL.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8571428571428571
+ },
+ "bx.matched.DEVELOPMENT.incomplete.A_RAW.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.DEVELOPMENT.incomplete.A_RAW.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.incomplete.B_SELF.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.incomplete.B_SELF.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.incomplete.C_DICT.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.incomplete.C_DICT.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9285714285714286
+ },
+ "bx.matched.DEVELOPMENT.incomplete.D_RULES.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.incomplete.D_RULES.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9285714285714286
+ },
+ "bx.matched.DEVELOPMENT.incomplete.E_FULL.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.incomplete.E_FULL.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9285714285714286
+ },
+ "bx.matched.DEVELOPMENT.misleading.A_RAW.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.0
+ },
+ "bx.matched.DEVELOPMENT.misleading.A_RAW.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8571428571428572
+ },
+ "bx.matched.DEVELOPMENT.misleading.B_SELF.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.DEVELOPMENT.misleading.B_SELF.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.misleading.C_DICT.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.DEVELOPMENT.misleading.C_DICT.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9285714285714286
+ },
+ "bx.matched.DEVELOPMENT.misleading.D_RULES.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.DEVELOPMENT.misleading.D_RULES.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9285714285714286
+ },
+ "bx.matched.DEVELOPMENT.misleading.E_FULL.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.DEVELOPMENT.misleading.E_FULL.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8571428571428571
+ },
+ "bx.matched.UNSEEN.anonymized.A_RAW.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.UNSEEN.anonymized.A_RAW.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8928571428571428
+ },
+ "bx.matched.UNSEEN.anonymized.B_SELF.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.anonymized.B_SELF.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8571428571428571
+ },
+ "bx.matched.UNSEEN.anonymized.C_DICT.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.anonymized.C_DICT.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9642857142857143
+ },
+ "bx.matched.UNSEEN.anonymized.D_RULES.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.anonymized.D_RULES.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9285714285714286
+ },
+ "bx.matched.UNSEEN.anonymized.E_FULL.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.75
+ },
+ "bx.matched.UNSEEN.anonymized.E_FULL.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.9642857142857143
+ },
+ "bx.matched.UNSEEN.incomplete.A_RAW.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.5
+ },
+ "bx.matched.UNSEEN.incomplete.A_RAW.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.75
+ },
+ "bx.matched.UNSEEN.incomplete.B_SELF.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.incomplete.B_SELF.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.7142857142857142
+ },
+ "bx.matched.UNSEEN.incomplete.C_DICT.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.75
+ },
+ "bx.matched.UNSEEN.incomplete.C_DICT.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.75
+ },
+ "bx.matched.UNSEEN.incomplete.D_RULES.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.incomplete.D_RULES.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.7857142857142857
+ },
+ "bx.matched.UNSEEN.incomplete.E_FULL.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.incomplete.E_FULL.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8214285714285714
+ },
+ "bx.matched.UNSEEN.misleading.A_RAW.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.0
+ },
+ "bx.matched.UNSEEN.misleading.A_RAW.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8571428571428572
+ },
+ "bx.matched.UNSEEN.misleading.B_SELF.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.misleading.B_SELF.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.7857142857142857
+ },
+ "bx.matched.UNSEEN.misleading.C_DICT.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.75
+ },
+ "bx.matched.UNSEEN.misleading.C_DICT.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8928571428571428
+ },
+ "bx.matched.UNSEEN.misleading.D_RULES.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.misleading.D_RULES.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8571428571428571
+ },
+ "bx.matched.UNSEEN.misleading.E_FULL.all_traps_blocked": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 1.0
+ },
+ "bx.matched.UNSEEN.misleading.E_FULL.core_semantic_accuracy": {
+  "source": "outputs/study_b/study-b-per-dataset.csv",
+  "value": 0.8928571428571428
+ },
+ "bx.t4.DEVELOPMENT.C_DICT.hidden_leak.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.DEVELOPMENT.C_DICT.hidden_leak.blocked": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 1
+ },
+ "bx.t4.DEVELOPMENT.C_DICT.hidden_leak.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 2
+ },
+ "bx.t4.DEVELOPMENT.C_DICT.swapped.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.DEVELOPMENT.C_DICT.swapped.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 4
+ },
+ "bx.t4.DEVELOPMENT.D_RULES.hidden_leak.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.DEVELOPMENT.D_RULES.hidden_leak.blocked": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 2
+ },
+ "bx.t4.DEVELOPMENT.D_RULES.hidden_leak.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 2
+ },
+ "bx.t4.DEVELOPMENT.D_RULES.swapped.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.DEVELOPMENT.D_RULES.swapped.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 4
+ },
+ "bx.t4.DEVELOPMENT.E_FULL.hidden_leak.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.DEVELOPMENT.E_FULL.hidden_leak.blocked": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 2
+ },
+ "bx.t4.DEVELOPMENT.E_FULL.hidden_leak.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 2
+ },
+ "bx.t4.DEVELOPMENT.E_FULL.hidden_leak.verify_contradicted": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.DEVELOPMENT.E_FULL.swapped.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 1
+ },
+ "bx.t4.DEVELOPMENT.E_FULL.swapped.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 4
+ },
+ "bx.t4.DEVELOPMENT.E_FULL.swapped.verify_contradicted": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 1
+ },
+ "bx.t4.UNSEEN.C_DICT.hidden_leak.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.UNSEEN.C_DICT.hidden_leak.blocked": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 4
+ },
+ "bx.t4.UNSEEN.C_DICT.hidden_leak.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 4
+ },
+ "bx.t4.UNSEEN.C_DICT.swapped.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 1
+ },
+ "bx.t4.UNSEEN.C_DICT.swapped.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 8
+ },
+ "bx.t4.UNSEEN.D_RULES.hidden_leak.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.UNSEEN.D_RULES.hidden_leak.blocked": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 4
+ },
+ "bx.t4.UNSEEN.D_RULES.hidden_leak.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 4
+ },
+ "bx.t4.UNSEEN.D_RULES.swapped.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 0
+ },
+ "bx.t4.UNSEEN.D_RULES.swapped.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 8
+ },
+ "bx.t4.UNSEEN.E_FULL.hidden_leak.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 1
+ },
+ "bx.t4.UNSEEN.E_FULL.hidden_leak.blocked": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 3
+ },
+ "bx.t4.UNSEEN.E_FULL.hidden_leak.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 4
+ },
+ "bx.t4.UNSEEN.E_FULL.hidden_leak.verify_contradicted": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 1
+ },
+ "bx.t4.UNSEEN.E_FULL.swapped.analysis_flagged": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 8
+ },
+ "bx.t4.UNSEEN.E_FULL.swapped.n": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 8
+ },
+ "bx.t4.UNSEEN.E_FULL.swapped.verify_contradicted": {
+  "source": "outputs/study_b/t4-falsified-entries.csv",
+  "value": 7
+ },
+ "design.A.DEVELOPMENT.adversarial_instances": {
+  "source": "artifacts/study_a/instances/DEVELOPMENT.json",
+  "value": 16
+ },
+ "design.A.DEVELOPMENT.calls": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 826
+ },
+ "design.A.DEVELOPMENT.compute_hours": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 1.8192386111111112
+ },
+ "design.A.DEVELOPMENT.dataset_list": {
+  "source": "common/data.py DATASETS",
+  "value": "telco_churn, german_credit, bank_marketing, adult_income, bike_sharing, vehicle_silhouettes"
+ },
+ "design.A.DEVELOPMENT.datasets": {
+  "source": "common/data.py DATASETS",
+  "value": 6
+ },
+ "design.A.DEVELOPMENT.failed_calls": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 1
+ },
+ "design.A.DEVELOPMENT.families": {
+  "source": "artifacts/study_a/instances/DEVELOPMENT.json",
+  "value": 10
+ },
+ "design.A.DEVELOPMENT.instances": {
+  "source": "artifacts/study_a/instances/DEVELOPMENT.json",
+  "value": 69
+ },
+ "design.A.DEVELOPMENT.output_tokens": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 130979
+ },
+ "design.A.DEVELOPMENT.parse_failed_runs": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 1
+ },
+ "design.A.DEVELOPMENT.prompt_tokens": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 645053
+ },
+ "design.A.DEVELOPMENT.runs": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 276
+ },
+ "design.A.DEVELOPMENT.truncated_calls": {
+  "source": "artifacts/study_a/ledger.jsonl",
+  "value": 1
+ },
+ "design.A.UNSEEN.adversarial_instances": {
+  "source": "artifacts/study_a/instances/UNSEEN.json",
+  "value": 24
+ },
+ "design.A.UNSEEN.calls": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 3633
+ },
+ "design.A.UNSEEN.compute_hours": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 9.629176944444444
+ },
+ "design.A.UNSEEN.dataset_list": {
+  "source": "common/data.py DATASETS",
+  "value": "iranian_churn, taiwan_default, coil_caravan, diabetes_readmission, card_fraud_synth, online_shoppers, thyroid_sick, image_segment, hillstrom_email"
+ },
+ "design.A.UNSEEN.datasets": {
+  "source": "common/data.py DATASETS",
+  "value": 9
+ },
+ "design.A.UNSEEN.failed_calls": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 1
+ },
+ "design.A.UNSEEN.families": {
+  "source": "artifacts/study_a/instances/UNSEEN.json",
+  "value": 10
+ },
+ "design.A.UNSEEN.instances": {
+  "source": "artifacts/study_a/instances/UNSEEN.json",
+  "value": 101
+ },
+ "design.A.UNSEEN.output_tokens": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 584342
+ },
+ "design.A.UNSEEN.parse_failed_runs": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 1
+ },
+ "design.A.UNSEEN.prompt_tokens": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 2859918
+ },
+ "design.A.UNSEEN.runs": {
+  "source": "outputs/study_a/study-a-run-level-results.csv",
+  "value": 1212
+ },
+ "design.A.UNSEEN.truncated_calls": {
+  "source": "artifacts/study_a/ledger.jsonl",
+  "value": 1
+ },
+ "design.B.DEVELOPMENT.analysis_failed_runs": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 0
+ },
+ "design.B.DEVELOPMENT.calls": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 102
+ },
+ "design.B.DEVELOPMENT.compute_hours": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 0.8421527777777779
+ },
+ "design.B.DEVELOPMENT.dataset_list": {
+  "source": "common/data.py DATASETS",
+  "value": "telco_churn, german_credit, bank_marketing, adult_income, bike_sharing"
+ },
+ "design.B.DEVELOPMENT.datasets": {
+  "source": "common/data.py DATASETS",
+  "value": 5
+ },
+ "design.B.DEVELOPMENT.failed_calls": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 0
+ },
+ "design.B.DEVELOPMENT.output_tokens": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 58170
+ },
+ "design.B.DEVELOPMENT.prompt_tokens": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 233074
+ },
+ "design.B.DEVELOPMENT.runs": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 43
+ },
+ "design.B.DEVELOPMENT.truncated_calls": {
+  "source": "artifacts/study_b/ledger.jsonl",
+  "value": 1
+ },
+ "design.B.UNSEEN.analysis_failed_runs": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 0
+ },
+ "design.B.UNSEEN.calls": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 276
+ },
+ "design.B.UNSEEN.compute_hours": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 12.425086111111108
+ },
+ "design.B.UNSEEN.dataset_list": {
+  "source": "common/data.py DATASETS",
+  "value": "iranian_churn, taiwan_default, coil_caravan, diabetes_readmission, card_fraud_synth, online_shoppers, thyroid_sick, hillstrom_email"
+ },
+ "design.B.UNSEEN.datasets": {
+  "source": "common/data.py DATASETS",
+  "value": 8
+ },
+ "design.B.UNSEEN.failed_calls": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 2
+ },
+ "design.B.UNSEEN.output_tokens": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 187597
+ },
+ "design.B.UNSEEN.prompt_tokens": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 835379
+ },
+ "design.B.UNSEEN.runs": {
+  "source": "outputs/study_b/run-level-results.csv",
+  "value": 116
+ },
+ "design.B.UNSEEN.truncated_calls": {
+  "source": "artifacts/study_b/ledger.jsonl",
+  "value": 2
+ },
+ "design.B.superseded_v1_runs": {
+  "source": "artifacts/study_b/superseded_v1/runs_dev.jsonl",
+  "value": 16
+ },
+ "design.B.superseded_v2_runs": {
+  "source": "artifacts/study_b/superseded_v2/runs_dev.jsonl",
+  "value": 43
+ },
+ "design.ds.adult_income.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 15
+ },
+ "design.ds.adult_income.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 15000
+ },
+ "design.ds.bank_marketing.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 17
+ },
+ "design.ds.bank_marketing.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 15000
+ },
+ "design.ds.bike_sharing.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 17
+ },
+ "design.ds.bike_sharing.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 15000
+ },
+ "design.ds.card_fraud_synth.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 15
+ },
+ "design.ds.card_fraud_synth.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 14000
+ },
+ "design.ds.coil_caravan.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 86
+ },
+ "design.ds.coil_caravan.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 5822
+ },
+ "design.ds.diabetes_readmission.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 50
+ },
+ "design.ds.diabetes_readmission.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 15000
+ },
+ "design.ds.german_credit.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 21
+ },
+ "design.ds.german_credit.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 1000
+ },
+ "design.ds.hillstrom_email.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 12
+ },
+ "design.ds.hillstrom_email.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 64000
+ },
+ "design.ds.image_segment.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 20
+ },
+ "design.ds.image_segment.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 2310
+ },
+ "design.ds.iranian_churn.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 14
+ },
+ "design.ds.iranian_churn.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 3150
+ },
+ "design.ds.online_shoppers.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 18
+ },
+ "design.ds.online_shoppers.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 12330
+ },
+ "design.ds.taiwan_default.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 25
+ },
+ "design.ds.taiwan_default.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 15000
+ },
+ "design.ds.telco_churn.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 21
+ },
+ "design.ds.telco_churn.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 7043
+ },
+ "design.ds.thyroid_sick.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 28
+ },
+ "design.ds.thyroid_sick.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 2800
+ },
+ "design.ds.vehicle_silhouettes.columns": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 19
+ },
+ "design.ds.vehicle_silhouettes.rows": {
+  "source": "outputs/FREEZE_RECORD_B.json",
+  "value": 846
+ },
+ "ex.artifact_accepted.candidate_id": {
+  "source": "outputs/examples.json",
+  "value": "cand_friday"
+ },
+ "ex.artifact_accepted.condition": {
+  "source": "outputs/examples.json",
+  "value": "A_RAW"
+ },
+ "ex.artifact_accepted.correct": {
+  "source": "outputs/examples.json",
+  "value": false
+ },
+ "ex.artifact_accepted.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "thyroid_sick"
+ },
+ "ex.artifact_accepted.decision": {
+  "source": "outputs/examples.json",
+  "value": "accept"
+ },
+ "ex.artifact_accepted.description": {
+  "source": "outputs/examples.json",
+  "value": "load_weekday == Fri"
+ },
+ "ex.artifact_accepted.kind": {
+  "source": "outputs/examples.json",
+  "value": "artifact"
+ },
+ "ex.artifact_accepted.reason": {
+  "source": "outputs/examples.json",
+  "value": "The feature has a moderate univariate AUC and captures potential day-specific effects, though with a risk of leakage."
+ },
+ "ex.artifact_accepted.seed": {
+  "source": "outputs/examples.json",
+  "value": 2
+ },
+ "ex.artifact_accepted.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.artifact_accepted.truth": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.artifact_accepted.univariate_auc": {
+  "source": "outputs/examples.json",
+  "value": 0.695
+ },
+ "ex.artifact_accepted.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.artifact_rejected.candidate_id": {
+  "source": "outputs/examples.json",
+  "value": "cand_friday"
+ },
+ "ex.artifact_rejected.condition": {
+  "source": "outputs/examples.json",
+  "value": "A_RAW"
+ },
+ "ex.artifact_rejected.correct": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.artifact_rejected.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "thyroid_sick"
+ },
+ "ex.artifact_rejected.decision": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.artifact_rejected.description": {
+  "source": "outputs/examples.json",
+  "value": "load_weekday == Fri"
+ },
+ "ex.artifact_rejected.kind": {
+  "source": "outputs/examples.json",
+  "value": "artifact"
+ },
+ "ex.artifact_rejected.reason": {
+  "source": "outputs/examples.json",
+  "value": "Possible leakage and moderate univariate AUC."
+ },
+ "ex.artifact_rejected.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.artifact_rejected.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.artifact_rejected.truth": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.artifact_rejected.univariate_auc": {
+  "source": "outputs/examples.json",
+  "value": 0.695
+ },
+ "ex.artifact_rejected.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.id_trap_accepted.candidate_id": {
+  "source": "outputs/examples.json",
+  "value": "cand_key_log"
+ },
+ "ex.id_trap_accepted.condition": {
+  "source": "outputs/examples.json",
+  "value": "A_RAW"
+ },
+ "ex.id_trap_accepted.correct": {
+  "source": "outputs/examples.json",
+  "value": false
+ },
+ "ex.id_trap_accepted.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "hillstrom_email"
+ },
+ "ex.id_trap_accepted.decision": {
+  "source": "outputs/examples.json",
+  "value": "accept"
+ },
+ "ex.id_trap_accepted.description": {
+  "source": "outputs/examples.json",
+  "value": "log of record_key"
+ },
+ "ex.id_trap_accepted.kind": {
+  "source": "outputs/examples.json",
+  "value": "identifier"
+ },
+ "ex.id_trap_accepted.reason": {
+  "source": "outputs/examples.json",
+  "value": "The log of record_key has a strong univariate AUC and can provide valuable insights into the relationship between the record_key and the target."
+ },
+ "ex.id_trap_accepted.seed": {
+  "source": "outputs/examples.json",
+  "value": 2
+ },
+ "ex.id_trap_accepted.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.id_trap_accepted.truth": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.id_trap_accepted.univariate_auc": {
+  "source": "outputs/examples.json",
+  "value": 0.981
+ },
+ "ex.id_trap_accepted.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.id_trap_rejected.candidate_id": {
+  "source": "outputs/examples.json",
+  "value": "cand_key_log"
+ },
+ "ex.id_trap_rejected.condition": {
+  "source": "outputs/examples.json",
+  "value": "A_RAW"
+ },
+ "ex.id_trap_rejected.correct": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.id_trap_rejected.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "thyroid_sick"
+ },
+ "ex.id_trap_rejected.decision": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.id_trap_rejected.description": {
+  "source": "outputs/examples.json",
+  "value": "log of record_key"
+ },
+ "ex.id_trap_rejected.kind": {
+  "source": "outputs/examples.json",
+  "value": "identifier"
+ },
+ "ex.id_trap_rejected.reason": {
+  "source": "outputs/examples.json",
+  "value": "Logarithm of record_key is an artifact and not informative for the target."
+ },
+ "ex.id_trap_rejected.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.id_trap_rejected.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.id_trap_rejected.truth": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.id_trap_rejected.univariate_auc": {
+  "source": "outputs/examples.json",
+  "value": 0.987
+ },
+ "ex.id_trap_rejected.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.legit_feature_best.business_interpretation": {
+  "source": "outputs/examples.json",
+  "value": "A high sum could indicate a burst of transactions, which might be a red flag for fraud."
+ },
+ "ex.legit_feature_best.computable": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.legit_feature_best.condition": {
+  "source": "outputs/examples.json",
+  "value": "A_RAW"
+ },
+ "ex.legit_feature_best.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "card_fraud_synth"
+ },
+ "ex.legit_feature_best.generalization_test_gain": {
+  "source": "outputs/examples.json",
+  "value": 0.020763827105575228
+ },
+ "ex.legit_feature_best.inputs": {
+  "source": "outputs/examples.json",
+  "value": "txn_count_1h|txn_count_24h"
+ },
+ "ex.legit_feature_best.interpretability": {
+  "source": "outputs/examples.json",
+  "value": 1.0
+ },
+ "ex.legit_feature_best.leakage_risk": {
+  "source": "outputs/examples.json",
+  "value": "LOW"
+ },
+ "ex.legit_feature_best.model_leakage_assessment": {
+  "source": "outputs/examples.json",
+  "value": "possible"
+ },
+ "ex.legit_feature_best.name": {
+  "source": "outputs/examples.json",
+  "value": "cand_burst_share"
+ },
+ "ex.legit_feature_best.op": {
+  "source": "outputs/examples.json",
+  "value": "sum"
+ },
+ "ex.legit_feature_best.rejection_reason": {
+  "source": "outputs/examples.json",
+  "value": null
+ },
+ "ex.legit_feature_best.retained": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.legit_feature_best.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.legit_feature_best.semantic_rationale": {
+  "source": "outputs/examples.json",
+  "value": "The sum of transaction counts in the last hour and last 24 hours can indicate a burst of activity, which might be associated with fraudulent behavior if it's unusual."
+ },
+ "ex.legit_feature_best.semantic_validity": {
+  "source": "outputs/examples.json",
+  "value": "valid"
+ },
+ "ex.legit_feature_best.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.legit_feature_best.stability": {
+  "source": "outputs/examples.json",
+  "value": 0.6666666666666666
+ },
+ "ex.legit_feature_best.statistical_rationale": {
+  "source": "outputs/examples.json",
+  "value": "This feature could help identify sudden spikes in transaction activity, which might be a sign of fraud."
+ },
+ "ex.legit_feature_best.statistical_value_cv_gain": {
+  "source": "outputs/examples.json",
+  "value": 0.006272637733633513
+ },
+ "ex.legit_feature_best.statistically_strong_semantically_invalid": {
+  "source": "outputs/examples.json",
+  "value": false
+ },
+ "ex.legit_feature_best.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.post_outcome_accepted.candidate_id": {
+  "source": "outputs/examples.json",
+  "value": "cand_post_flag"
+ },
+ "ex.post_outcome_accepted.condition": {
+  "source": "outputs/examples.json",
+  "value": "A_RAW"
+ },
+ "ex.post_outcome_accepted.correct": {
+  "source": "outputs/examples.json",
+  "value": false
+ },
+ "ex.post_outcome_accepted.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "hillstrom_email"
+ },
+ "ex.post_outcome_accepted.decision": {
+  "source": "outputs/examples.json",
+  "value": "accept"
+ },
+ "ex.post_outcome_accepted.description": {
+  "source": "outputs/examples.json",
+  "value": "indicator that spend is set / positive"
+ },
+ "ex.post_outcome_accepted.kind": {
+  "source": "outputs/examples.json",
+  "value": "post_outcome"
+ },
+ "ex.post_outcome_accepted.reason": {
+  "source": "outputs/examples.json",
+  "value": "The spend column is an artifact, but the flag is a valid feature that can provide insights into non-purchasing behavior."
+ },
+ "ex.post_outcome_accepted.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.post_outcome_accepted.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.post_outcome_accepted.truth": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.post_outcome_accepted.univariate_auc": {
+  "source": "outputs/examples.json",
+  "value": 1.0
+ },
+ "ex.post_outcome_accepted.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.post_outcome_rejected.candidate_id": {
+  "source": "outputs/examples.json",
+  "value": "cand_post_flag"
+ },
+ "ex.post_outcome_rejected.condition": {
+  "source": "outputs/examples.json",
+  "value": "A_RAW"
+ },
+ "ex.post_outcome_rejected.correct": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.post_outcome_rejected.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "diabetes_readmission"
+ },
+ "ex.post_outcome_rejected.decision": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.post_outcome_rejected.description": {
+  "source": "outputs/examples.json",
+  "value": "indicator that readmission_ward_code is set / positive"
+ },
+ "ex.post_outcome_rejected.kind": {
+  "source": "outputs/examples.json",
+  "value": "post_outcome"
+ },
+ "ex.post_outcome_rejected.reason": {
+  "source": "outputs/examples.json",
+  "value": "This feature is derived from the target and thus is a form of leakage."
+ },
+ "ex.post_outcome_rejected.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.post_outcome_rejected.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.post_outcome_rejected.truth": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.post_outcome_rejected.univariate_auc": {
+  "source": "outputs/examples.json",
+  "value": 1.0
+ },
+ "ex.post_outcome_rejected.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.strong_invalid_best.business_interpretation": {
+  "source": "outputs/examples.json",
+  "value": "Customers with a higher ratio of spend to history might be more likely to convert, as they might be spending more than their historical average."
+ },
+ "ex.strong_invalid_best.computable": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.strong_invalid_best.condition": {
+  "source": "outputs/examples.json",
+  "value": "D_RULES"
+ },
+ "ex.strong_invalid_best.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "hillstrom_email"
+ },
+ "ex.strong_invalid_best.generalization_test_gain": {
+  "source": "outputs/examples.json",
+  "value": 0.004799530225426452
+ },
+ "ex.strong_invalid_best.inputs": {
+  "source": "outputs/examples.json",
+  "value": "spend|history"
+ },
+ "ex.strong_invalid_best.interpretability": {
+  "source": "outputs/examples.json",
+  "value": 1.0
+ },
+ "ex.strong_invalid_best.leakage_risk": {
+  "source": "outputs/examples.json",
+  "value": "HIGH"
+ },
+ "ex.strong_invalid_best.model_leakage_assessment": {
+  "source": "outputs/examples.json",
+  "value": "none"
+ },
+ "ex.strong_invalid_best.name": {
+  "source": "outputs/examples.json",
+  "value": "cand_history_segment_ratio_spend"
+ },
+ "ex.strong_invalid_best.op": {
+  "source": "outputs/examples.json",
+  "value": "ratio"
+ },
+ "ex.strong_invalid_best.rejection_reason": {
+  "source": "outputs/examples.json",
+  "value": "uses a column the run itself blocked"
+ },
+ "ex.strong_invalid_best.retained": {
+  "source": "outputs/examples.json",
+  "value": false
+ },
+ "ex.strong_invalid_best.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.strong_invalid_best.semantic_rationale": {
+  "source": "outputs/examples.json",
+  "value": "The ratio of spend to history might capture the customer's recent spending relative to their overall spending, which could be indicative of their current financial situation or interest in making a purchase."
+ },
+ "ex.strong_invalid_best.semantic_validity": {
+  "source": "outputs/examples.json",
+  "value": "invalid"
+ },
+ "ex.strong_invalid_best.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.strong_invalid_best.stability": {
+  "source": "outputs/examples.json",
+  "value": 1.0
+ },
+ "ex.strong_invalid_best.statistical_rationale": {
+  "source": "outputs/examples.json",
+  "value": "There is a moderate correlation between spend and history, suggesting that this ratio could provide additional predictive power."
+ },
+ "ex.strong_invalid_best.statistical_value_cv_gain": {
+  "source": "outputs/examples.json",
+  "value": 0.42021000679364295
+ },
+ "ex.strong_invalid_best.statistically_strong_semantically_invalid": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.strong_invalid_best.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.strong_invalid_retained.business_interpretation": {
+  "source": "outputs/examples.json",
+  "value": "This feature can help in understanding the purchasing behavior of the customer, which is directly related to the target variable."
+ },
+ "ex.strong_invalid_retained.computable": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.strong_invalid_retained.condition": {
+  "source": "outputs/examples.json",
+  "value": "B_SELF"
+ },
+ "ex.strong_invalid_retained.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "hillstrom_email"
+ },
+ "ex.strong_invalid_retained.generalization_test_gain": {
+  "source": "outputs/examples.json",
+  "value": 0.0009193227416565142
+ },
+ "ex.strong_invalid_retained.inputs": {
+  "source": "outputs/examples.json",
+  "value": "spend"
+ },
+ "ex.strong_invalid_retained.interpretability": {
+  "source": "outputs/examples.json",
+  "value": 1.0
+ },
+ "ex.strong_invalid_retained.leakage_risk": {
+  "source": "outputs/examples.json",
+  "value": "HIGH"
+ },
+ "ex.strong_invalid_retained.model_leakage_assessment": {
+  "source": "outputs/examples.json",
+  "value": "none"
+ },
+ "ex.strong_invalid_retained.name": {
+  "source": "outputs/examples.json",
+  "value": "cand_post_flag"
+ },
+ "ex.strong_invalid_retained.op": {
+  "source": "outputs/examples.json",
+  "value": "is_zero"
+ },
+ "ex.strong_invalid_retained.rejection_reason": {
+  "source": "outputs/examples.json",
+  "value": null
+ },
+ "ex.strong_invalid_retained.retained": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.strong_invalid_retained.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.strong_invalid_retained.semantic_rationale": {
+  "source": "outputs/examples.json",
+  "value": "The spend column indicates the amount spent by the customer. Creating a flag for whether spend is zero or positive could provide information on the customer's past purchasing behavior."
+ },
+ "ex.strong_invalid_retained.semantic_validity": {
+  "source": "outputs/examples.json",
+  "value": "invalid"
+ },
+ "ex.strong_invalid_retained.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.strong_invalid_retained.stability": {
+  "source": "outputs/examples.json",
+  "value": 1.0
+ },
+ "ex.strong_invalid_retained.statistical_rationale": {
+  "source": "outputs/examples.json",
+  "value": "The univariate AUC of 1.0 suggests that spend is a strong predictor of conversion, and the flag could capture this information."
+ },
+ "ex.strong_invalid_retained.statistical_value_cv_gain": {
+  "source": "outputs/examples.json",
+  "value": 0.4202100067936429
+ },
+ "ex.strong_invalid_retained.statistically_strong_semantically_invalid": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.strong_invalid_retained.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.target_encoding_accepted.candidate_id": {
+  "source": "outputs/examples.json",
+  "value": "cand_target_mean"
+ },
+ "ex.target_encoding_accepted.condition": {
+  "source": "outputs/examples.json",
+  "value": "C_DICT"
+ },
+ "ex.target_encoding_accepted.correct": {
+  "source": "outputs/examples.json",
+  "value": false
+ },
+ "ex.target_encoding_accepted.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "coil_caravan"
+ },
+ "ex.target_encoding_accepted.decision": {
+  "source": "outputs/examples.json",
+  "value": "accept"
+ },
+ "ex.target_encoding_accepted.description": {
+  "source": "outputs/examples.json",
+  "value": "mean of the target per value of MOSTYPE, computed on the full table including evaluation rows"
+ },
+ "ex.target_encoding_accepted.kind": {
+  "source": "outputs/examples.json",
+  "value": "target_leak"
+ },
+ "ex.target_encoding_accepted.reason": {
+  "source": "outputs/examples.json",
+  "value": "It provides demographic insights into the likelihood of owning a mobile home and can be useful for stratifying the customer base."
+ },
+ "ex.target_encoding_accepted.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.target_encoding_accepted.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.target_encoding_accepted.truth": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.target_encoding_accepted.univariate_auc": {
+  "source": "outputs/examples.json",
+  "value": 0.653
+ },
+ "ex.target_encoding_accepted.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "ex.target_encoding_rejected.candidate_id": {
+  "source": "outputs/examples.json",
+  "value": "cand_target_mean"
+ },
+ "ex.target_encoding_rejected.condition": {
+  "source": "outputs/examples.json",
+  "value": "A_RAW"
+ },
+ "ex.target_encoding_rejected.correct": {
+  "source": "outputs/examples.json",
+  "value": true
+ },
+ "ex.target_encoding_rejected.dataset_id": {
+  "source": "outputs/examples.json",
+  "value": "thyroid_sick"
+ },
+ "ex.target_encoding_rejected.decision": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.target_encoding_rejected.description": {
+  "source": "outputs/examples.json",
+  "value": "mean of the target per value of referral_source, computed on the full table including evaluation rows"
+ },
+ "ex.target_encoding_rejected.kind": {
+  "source": "outputs/examples.json",
+  "value": "target_leak"
+ },
+ "ex.target_encoding_rejected.reason": {
+  "source": "outputs/examples.json",
+  "value": "Computed on the full table and not informative for the target within the development split."
+ },
+ "ex.target_encoding_rejected.seed": {
+  "source": "outputs/examples.json",
+  "value": 1
+ },
+ "ex.target_encoding_rejected.split": {
+  "source": "outputs/examples.json",
+  "value": "UNSEEN"
+ },
+ "ex.target_encoding_rejected.truth": {
+  "source": "outputs/examples.json",
+  "value": "reject"
+ },
+ "ex.target_encoding_rejected.univariate_auc": {
+  "source": "outputs/examples.json",
+  "value": 0.794
+ },
+ "ex.target_encoding_rejected.variant": {
+  "source": "outputs/examples.json",
+  "value": "trapped"
+ },
+ "lat.A.DEVELOPMENT.COT.compute_mean": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 13.829478632308824
+ },
+ "lat.A.DEVELOPMENT.COT.compute_median": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 13.205111
+ },
+ "lat.A.DEVELOPMENT.COT.contaminated_calls": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 1
+ },
+ "lat.A.DEVELOPMENT.COT.n_known": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 68
+ },
+ "lat.A.DEVELOPMENT.COT.n_runs": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 69
+ },
+ "lat.A.DEVELOPMENT.DIRECT.compute_mean": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 3.459604028942029
+ },
+ "lat.A.DEVELOPMENT.DIRECT.compute_median": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 2.917554
+ },
+ "lat.A.DEVELOPMENT.DIRECT.contaminated_calls": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 0
+ },
+ "lat.A.DEVELOPMENT.DIRECT.n_known": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 69
+ },
+ "lat.A.DEVELOPMENT.DIRECT.n_runs": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 69
+ },
+ "lat.A.DEVELOPMENT.GOT.compute_mean": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 42.07989411922389
+ },
+ "lat.A.DEVELOPMENT.GOT.compute_median": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 39.095867
+ },
+ "lat.A.DEVELOPMENT.GOT.contaminated_calls": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 3
+ },
+ "lat.A.DEVELOPMENT.GOT.n_known": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 67
+ },
+ "lat.A.DEVELOPMENT.GOT.n_runs": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 69
+ },
+ "lat.A.DEVELOPMENT.TOT.compute_mean": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 31.152179970913046
+ },
+ "lat.A.DEVELOPMENT.TOT.compute_median": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 30.029915999999997
+ },
+ "lat.A.DEVELOPMENT.TOT.contaminated_calls": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 0
+ },
+ "lat.A.DEVELOPMENT.TOT.n_known": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 69
+ },
+ "lat.A.DEVELOPMENT.TOT.n_runs": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 69
+ },
+ "lat.A.UNSEEN.COT.compute_mean": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 14.181854429973333
+ },
+ "lat.A.UNSEEN.COT.compute_median": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 13.8385885
+ },
+ "lat.A.UNSEEN.COT.contaminated_calls": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 3
+ },
+ "lat.A.UNSEEN.COT.n_known": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 300
+ },
+ "lat.A.UNSEEN.COT.n_runs": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 303
+ },
+ "lat.A.UNSEEN.DIRECT.compute_mean": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 3.6569850933133328
+ },
+ "lat.A.UNSEEN.DIRECT.compute_median": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 3.2127054999999998
+ },
+ "lat.A.UNSEEN.DIRECT.contaminated_calls": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 3
+ },
+ "lat.A.UNSEEN.DIRECT.n_known": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 300
+ },
+ "lat.A.UNSEEN.DIRECT.n_runs": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 303
+ },
+ "lat.A.UNSEEN.GOT.compute_mean": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 44.25165493293979
+ },
+ "lat.A.UNSEEN.GOT.compute_median": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 43.312893
+ },
+ "lat.A.UNSEEN.GOT.contaminated_calls": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 13
+ },
+ "lat.A.UNSEEN.GOT.n_known": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 299
+ },
+ "lat.A.UNSEEN.GOT.n_runs": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 303
+ },
+ "lat.A.UNSEEN.TOT.compute_mean": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 32.20541523394649
+ },
+ "lat.A.UNSEEN.TOT.compute_median": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 31.644768999
+ },
+ "lat.A.UNSEEN.TOT.contaminated_calls": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 20
+ },
+ "lat.A.UNSEEN.TOT.n_known": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 299
+ },
+ "lat.A.UNSEEN.TOT.n_runs": {
+  "source": "outputs/study_a/latency-audit.csv",
+  "value": 303
+ },
+ "lat.B.DEVELOPMENT.A_RAW.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 64.9515041998
+ },
+ "lat.B.DEVELOPMENT.A_RAW.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 64.899234
+ },
+ "lat.B.DEVELOPMENT.A_RAW.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 0
+ },
+ "lat.B.DEVELOPMENT.A_RAW.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.A_RAW.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.B_SELF.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 84.7140949998
+ },
+ "lat.B.DEVELOPMENT.B_SELF.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 86.124113
+ },
+ "lat.B.DEVELOPMENT.B_SELF.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 0
+ },
+ "lat.B.DEVELOPMENT.B_SELF.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.B_SELF.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.C_DICT.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 57.1527278
+ },
+ "lat.B.DEVELOPMENT.C_DICT.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 47.275418
+ },
+ "lat.B.DEVELOPMENT.C_DICT.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 0
+ },
+ "lat.B.DEVELOPMENT.C_DICT.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.C_DICT.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.D_RULES.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 54.4553001998
+ },
+ "lat.B.DEVELOPMENT.D_RULES.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 49.716295
+ },
+ "lat.B.DEVELOPMENT.D_RULES.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 0
+ },
+ "lat.B.DEVELOPMENT.D_RULES.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.D_RULES.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.E_FULL.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 99.93956460000001
+ },
+ "lat.B.DEVELOPMENT.E_FULL.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 92.166223
+ },
+ "lat.B.DEVELOPMENT.E_FULL.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 0
+ },
+ "lat.B.DEVELOPMENT.E_FULL.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.DEVELOPMENT.E_FULL.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 5
+ },
+ "lat.B.UNSEEN.A_RAW.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 66.47418386653334
+ },
+ "lat.B.UNSEEN.A_RAW.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 59.170256
+ },
+ "lat.B.UNSEEN.A_RAW.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 2
+ },
+ "lat.B.UNSEEN.A_RAW.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 15
+ },
+ "lat.B.UNSEEN.A_RAW.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 16
+ },
+ "lat.B.UNSEEN.B_SELF.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 102.52770799993333
+ },
+ "lat.B.UNSEEN.B_SELF.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 84.569352
+ },
+ "lat.B.UNSEEN.B_SELF.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 1
+ },
+ "lat.B.UNSEEN.B_SELF.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 15
+ },
+ "lat.B.UNSEEN.B_SELF.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 16
+ },
+ "lat.B.UNSEEN.C_DICT.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 60.0659023749375
+ },
+ "lat.B.UNSEEN.C_DICT.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 52.815911500000006
+ },
+ "lat.B.UNSEEN.C_DICT.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 0
+ },
+ "lat.B.UNSEEN.C_DICT.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 16
+ },
+ "lat.B.UNSEEN.C_DICT.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 16
+ },
+ "lat.B.UNSEEN.D_RULES.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 61.5189701875
+ },
+ "lat.B.UNSEEN.D_RULES.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 60.666284000000005
+ },
+ "lat.B.UNSEEN.D_RULES.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 0
+ },
+ "lat.B.UNSEEN.D_RULES.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 16
+ },
+ "lat.B.UNSEEN.D_RULES.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 16
+ },
+ "lat.B.UNSEEN.E_FULL.compute_mean": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 115.93298833326666
+ },
+ "lat.B.UNSEEN.E_FULL.compute_median": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 97.64390699999998
+ },
+ "lat.B.UNSEEN.E_FULL.contaminated_calls": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 1
+ },
+ "lat.B.UNSEEN.E_FULL.n_known": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 15
+ },
+ "lat.B.UNSEEN.E_FULL.n_runs": {
+  "source": "outputs/study_b/latency-audit.csv",
+  "value": 16
+ },
+ "x.A.DEVELOPMENT.COT.decision_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.A.DEVELOPMENT.COT.decision_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0
+ },
+ "x.A.DEVELOPMENT.COT.decision_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.A.DEVELOPMENT.DIRECT.decision_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.2501615658062194
+ },
+ "x.A.DEVELOPMENT.DIRECT.decision_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.08695652173913038
+ },
+ "x.A.DEVELOPMENT.DIRECT.decision_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.70944857409344
+ },
+ "x.A.DEVELOPMENT.GOT.decision_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 3.042767933486345
+ },
+ "x.A.DEVELOPMENT.GOT.decision_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.05797101449275366
+ },
+ "x.A.DEVELOPMENT.GOT.decision_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 5.031824990814279
+ },
+ "x.A.DEVELOPMENT.TOT.decision_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 2.2525925090288244
+ },
+ "x.A.DEVELOPMENT.TOT.decision_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.08695652173913038
+ },
+ "x.A.DEVELOPMENT.TOT.decision_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 4.22551652016619
+ },
+ "x.A.UNSEEN.COT.decision_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.A.UNSEEN.COT.decision_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0
+ },
+ "x.A.UNSEEN.COT.decision_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.A.UNSEEN.DIRECT.decision_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.2578636744137141
+ },
+ "x.A.UNSEEN.DIRECT.decision_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0033003300330032292
+ },
+ "x.A.UNSEEN.DIRECT.decision_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.7127889732741851
+ },
+ "x.A.UNSEEN.GOT.decision_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 3.1203010263181077
+ },
+ "x.A.UNSEEN.GOT.decision_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": -0.02640264026402639
+ },
+ "x.A.UNSEEN.GOT.decision_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 5.117528102871597
+ },
+ "x.A.UNSEEN.TOT.decision_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 2.270888859631811
+ },
+ "x.A.UNSEEN.TOT.decision_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": -0.01320132013201325
+ },
+ "x.A.UNSEEN.TOT.decision_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 4.225490636656031
+ },
+ "x.B.DEVELOPMENT.A_RAW.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.B.DEVELOPMENT.A_RAW.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0
+ },
+ "x.B.DEVELOPMENT.A_RAW.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.B.DEVELOPMENT.A_RAW.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.B.DEVELOPMENT.A_RAW.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0
+ },
+ "x.B.DEVELOPMENT.A_RAW.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.B.DEVELOPMENT.B_SELF.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.304266868696489
+ },
+ "x.B.DEVELOPMENT.B_SELF.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0
+ },
+ "x.B.DEVELOPMENT.B_SELF.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.6095895911974945
+ },
+ "x.B.DEVELOPMENT.B_SELF.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.304266868696489
+ },
+ "x.B.DEVELOPMENT.B_SELF.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.11428571428571421
+ },
+ "x.B.DEVELOPMENT.B_SELF.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.6095895911974945
+ },
+ "x.B.DEVELOPMENT.C_DICT.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.8799292411179599
+ },
+ "x.B.DEVELOPMENT.C_DICT.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": -0.19999999999999996
+ },
+ "x.B.DEVELOPMENT.C_DICT.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0920407999357482
+ },
+ "x.B.DEVELOPMENT.C_DICT.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.8799292411179599
+ },
+ "x.B.DEVELOPMENT.C_DICT.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.05714285714285705
+ },
+ "x.B.DEVELOPMENT.C_DICT.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0920407999357482
+ },
+ "x.B.DEVELOPMENT.D_RULES.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.8383993699712913
+ },
+ "x.B.DEVELOPMENT.D_RULES.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0
+ },
+ "x.B.DEVELOPMENT.D_RULES.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.1234439000883463
+ },
+ "x.B.DEVELOPMENT.D_RULES.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.8383993699712913
+ },
+ "x.B.DEVELOPMENT.D_RULES.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.05714285714285705
+ },
+ "x.B.DEVELOPMENT.D_RULES.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.1234439000883463
+ },
+ "x.B.DEVELOPMENT.E_FULL.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.5386797554768217
+ },
+ "x.B.DEVELOPMENT.E_FULL.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": -0.19999999999999996
+ },
+ "x.B.DEVELOPMENT.E_FULL.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.931692233555538
+ },
+ "x.B.DEVELOPMENT.E_FULL.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.5386797554768217
+ },
+ "x.B.DEVELOPMENT.E_FULL.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.02857142857142847
+ },
+ "x.B.DEVELOPMENT.E_FULL.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.931692233555538
+ },
+ "x.B.UNSEEN.A_RAW.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.B.UNSEEN.A_RAW.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0
+ },
+ "x.B.UNSEEN.A_RAW.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.B.UNSEEN.A_RAW.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.B.UNSEEN.A_RAW.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0
+ },
+ "x.B.UNSEEN.A_RAW.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.0
+ },
+ "x.B.UNSEEN.B_SELF.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.5423688120156263
+ },
+ "x.B.UNSEEN.B_SELF.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.3125
+ },
+ "x.B.UNSEEN.B_SELF.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.6683226716027122
+ },
+ "x.B.UNSEEN.B_SELF.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.5423688120156263
+ },
+ "x.B.UNSEEN.B_SELF.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0357142857142857
+ },
+ "x.B.UNSEEN.B_SELF.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.6683226716027122
+ },
+ "x.B.UNSEEN.C_DICT.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.9035974401060363
+ },
+ "x.B.UNSEEN.C_DICT.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.375
+ },
+ "x.B.UNSEEN.C_DICT.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.1315564847938466
+ },
+ "x.B.UNSEEN.C_DICT.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.9035974401060363
+ },
+ "x.B.UNSEEN.C_DICT.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.044642857142857206
+ },
+ "x.B.UNSEEN.C_DICT.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.1315564847938466
+ },
+ "x.B.UNSEEN.D_RULES.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.9254565698921193
+ },
+ "x.B.UNSEEN.D_RULES.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.5
+ },
+ "x.B.UNSEEN.D_RULES.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.153250788840189
+ },
+ "x.B.UNSEEN.D_RULES.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.9254565698921193
+ },
+ "x.B.UNSEEN.D_RULES.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.0892857142857143
+ },
+ "x.B.UNSEEN.D_RULES.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.153250788840189
+ },
+ "x.B.UNSEEN.E_FULL.all_traps_blocked.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.7440302624254336
+ },
+ "x.B.UNSEEN.E_FULL.all_traps_blocked.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.125
+ },
+ "x.B.UNSEEN.E_FULL.all_traps_blocked.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.936787286485657
+ },
+ "x.B.UNSEEN.E_FULL.core_semantic_accuracy.latency_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.7440302624254336
+ },
+ "x.B.UNSEEN.E_FULL.core_semantic_accuracy.quality_delta": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 0.1071428571428572
+ },
+ "x.B.UNSEEN.E_FULL.core_semantic_accuracy.token_multiple": {
+  "source": "outputs/cross_study/quality-vs-cost.csv",
+  "value": 1.936787286485657
+ }
+}

@@ -1,0 +1,832 @@
+{
+ "dataset_manifest": [
+  {
+   "columns": 21,
+   "dataset_id": "telco_churn",
+   "family": "churn",
+   "frame_sha256": "b5a2f966c1760892a26c7d2d75e0461e2b3268d18595b3ba96b9cecdcb95995c",
+   "rows": 7043,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "Churn",
+   "task_type": "binary",
+   "truth_sha256": "18422468962caae8fab4da03fb7aa1b1e5d19f73fc3245e7c87dc95387bd7b11"
+  },
+  {
+   "columns": 21,
+   "dataset_id": "german_credit",
+   "family": "credit",
+   "frame_sha256": "50428913acf8e989140c34ade6f960cbb17e3e38590641ecb01d1827c4c8ef9f",
+   "rows": 1000,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "credit_risk",
+   "task_type": "binary",
+   "truth_sha256": "308ae84d1ded7f9b9f427ae04d8c82bbf138f3d4c09fdcf46be524a43370320d"
+  },
+  {
+   "columns": 17,
+   "dataset_id": "bank_marketing",
+   "family": "cross_sell",
+   "frame_sha256": "4a1325e2fd2b4fe611223715d4f92ab920a01105362469211e718223fb3b3099",
+   "rows": 15000,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "y",
+   "task_type": "binary",
+   "truth_sha256": "1f1e6f0ace402d2ccaeac13cfeaf299c11bdb6cfc90d4811d18448a6a5f3eb0a"
+  },
+  {
+   "columns": 15,
+   "dataset_id": "adult_income",
+   "family": "generic",
+   "frame_sha256": "d97cfc68414f4ddbb26cf2eb8425ab118e79a90d46a83ba453f6424d0ac0b2da",
+   "rows": 15000,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "income",
+   "task_type": "binary",
+   "truth_sha256": "2c4dd49d308f7f8ee08e5cdbdd959e26b76921fadf9ce5d1caad925e71923038"
+  },
+  {
+   "columns": 17,
+   "dataset_id": "bike_sharing",
+   "family": "demand",
+   "frame_sha256": "87d743bf34ba74ef7bdeb6a3db9725098fad302fccbb64d7f98ef342965fba05",
+   "rows": 15000,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "cnt",
+   "task_type": "regression",
+   "truth_sha256": "e19f72b5d1305037140e99463d18ca62ef777dfe4a922f22d31fe71407e055db"
+  },
+  {
+   "columns": 19,
+   "dataset_id": "vehicle_silhouettes",
+   "family": "generic",
+   "frame_sha256": "0ad07f31e86abeea490bf052c6081c102937fce8a96ea111f860f5e4c4727f72",
+   "rows": 846,
+   "split": "DEVELOPMENT",
+   "studies": "A",
+   "target": "vehicle_class",
+   "task_type": "multiclass",
+   "truth_sha256": "734f1ab34086ba9d940f54a5d236668626ca9335683219fb60f15ca3451b6d81"
+  },
+  {
+   "columns": 14,
+   "dataset_id": "iranian_churn",
+   "family": "churn",
+   "frame_sha256": "9a9dce53ea5f3a71f2ded3d4b7865ea20d27c06cd14520800ff85332906093ea",
+   "rows": 3150,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "Churn",
+   "task_type": "binary",
+   "truth_sha256": "55149bbd275ff7867e995c738274313180114bd34701a776eddef0272b9de6ba"
+  },
+  {
+   "columns": 25,
+   "dataset_id": "taiwan_default",
+   "family": "credit",
+   "frame_sha256": "74098e6f4c7edf9813e7beb686e687de868d03d9d338e8cae8297a1b5a04a0f5",
+   "rows": 15000,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "default_next_month",
+   "task_type": "binary",
+   "truth_sha256": "141df9d15c3ce4c2e43498e8695d3567391d8a60c2fec3b5c637f3ce89649c0e"
+  },
+  {
+   "columns": 86,
+   "dataset_id": "coil_caravan",
+   "family": "cross_sell",
+   "frame_sha256": "6f667453dfe3b1e9fde28f06c969ff794af231edb560efc8ac72da539071cf25",
+   "rows": 5822,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "CARAVAN",
+   "task_type": "binary",
+   "truth_sha256": "4d116752e1e6687d146331ecbc980ad395fc1817226103e414a3512e71cc769a"
+  },
+  {
+   "columns": 50,
+   "dataset_id": "diabetes_readmission",
+   "family": "medical",
+   "frame_sha256": "11de9be25ebbe0e37be4ef94d893e796cea25fe0cee32dd8212b7a2160ed7d34",
+   "rows": 15000,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "readmitted_30d",
+   "task_type": "binary",
+   "truth_sha256": "cb12629defa9fa6a980eccbaf0a1ea68c84faa201910fd438f647561d10401ba"
+  },
+  {
+   "columns": 15,
+   "dataset_id": "card_fraud_synth",
+   "family": "fraud",
+   "frame_sha256": "0ed7788681daf13aead466bb764f60e10e4a975707d9669dbb2390e042c9daf0",
+   "rows": 14000,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "is_fraud",
+   "task_type": "binary",
+   "truth_sha256": "5f98b6fde4b3cb1e1fd575deab0a80317faf335fe22c136654fe3af7de2c4332"
+  },
+  {
+   "columns": 18,
+   "dataset_id": "online_shoppers",
+   "family": "generic",
+   "frame_sha256": "41cffba0156fca450228f527a1596d1531956cc9f8541e05265255d0f6e5e3bc",
+   "rows": 12330,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "Revenue",
+   "task_type": "binary",
+   "truth_sha256": "2bd103a6ecb2c039039359a75f4c8a12926f7b2290d982092fcd326e057ede6a"
+  },
+  {
+   "columns": 28,
+   "dataset_id": "thyroid_sick",
+   "family": "medical",
+   "frame_sha256": "4781735434db5a35656cc94ea951d4bd1218b6ea28dfe75e713064f094e53dcc",
+   "rows": 2800,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "sick_diagnosis",
+   "task_type": "binary",
+   "truth_sha256": "1ac2839fdae614c5b51ebb3e7412ce6454d04f15e57de28bcad70300085d2280"
+  },
+  {
+   "columns": 20,
+   "dataset_id": "image_segment",
+   "family": "generic",
+   "frame_sha256": "d1957d847d9e46fc3d3bdabf6c0494051cdd8590161bfa5ec1fd491c78b51dc0",
+   "rows": 2310,
+   "split": "UNSEEN",
+   "studies": "A",
+   "target": "region_class",
+   "task_type": "multiclass",
+   "truth_sha256": "54ea23ee3aa5daf0a72371ae06fc0c70efd65cc0d126ae4ab7bd9d946d8062ef"
+  },
+  {
+   "columns": 12,
+   "dataset_id": "hillstrom_email",
+   "family": "uplift",
+   "frame_sha256": "e8f021c523852b29c323d30d6cf3932d1b37a40b6aecb576ff251ff6e2504baf",
+   "rows": 64000,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "conversion",
+   "task_type": "binary",
+   "truth_sha256": "6a1415cc138c1ca68846da16c5c137ba0674f26f2c70b6c5f3c4afcf42ada767"
+  }
+ ],
+ "dataset_manifest_sha256": "5e3c7548d614ba5c8d025f2da50915f184ae4d47ae84b59ac2a8baf208921c87",
+ "enum_legend": "every Study B call appends ALLOWED VALUES for every enum in its schema (conditions.enum_legend)",
+ "frozen_at": "2026-10-27T23:26:27.731172+03:00",
+ "git": {
+  "branch": "research/reasoning-semantics-ablation",
+  "dirty_paths": [
+   "M research/rs2610/JOURNAL.md",
+   " M research/rs2610/artifacts/study_a/dev_run.log",
+   " M research/rs2610/artifacts/study_a/ledger.jsonl",
+   " M research/rs2610/artifacts/study_a/runs_dev.jsonl",
+   " M research/rs2610/artifacts/study_b/dev_run.log",
+   " M research/rs2610/artifacts/study_b/ledger.jsonl",
+   " M research/rs2610/artifacts/study_b/runs_dev.jsonl",
+   "R  research/rs2610/outputs/FREEZE_RECORD_B.json -> research/rs2610/artifacts/study_b/superseded_v2/FREEZE_RECORD_B_v1.json",
+   " M research/rs2610/outputs/study_a/study-a-adversarial.csv",
+   " M research/rs2610/outputs/study_a/study-a-design.md",
+   " M research/rs2610/outputs/study_a/study-a-figures/accuracy_by_mode_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/adversarial_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/calibration_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/calls_by_mode_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/dev_vs_unseen.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/latency_by_mode_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/per_family_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/quality_vs_latency_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/quality_vs_tokens_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/tokens_by_mode_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-figures/topology_complexity_dev.png",
+   " M research/rs2610/outputs/study_a/study-a-paired-by-family.csv",
+   " M research/rs2610/outputs/study_a/study-a-paired-regret.csv",
+   " M research/rs2610/outputs/study_a/study-a-paired-tests.csv",
+   " M research/rs2610/outputs/study_a/study-a-per-family.csv",
+   " M research/rs2610/outputs/study_a/study-a-results.csv",
+   " M research/rs2610/outputs/study_a/study-a-run-level-results.csv",
+   " M research/rs2610/outputs/study_a/study-a-topology-stats.csv",
+   " M research/rs2610/outputs/study_b/candidate-judgements.csv",
+   " M research/rs2610/outputs/study_b/generated-features.csv",
+   " M research/rs2610/outputs/study_b/run-level-results.csv",
+   " M research/rs2610/outputs/study_b/semantic-decisions.csv",
+   " M research/rs2610/outputs/study_b/study-b-figures/cost_by_condition_dev.png",
+   " M research/rs2610/outputs/study_b/study-b-figures/feature_quality_by_condition_dev.png",
+   " M research/rs2610/outputs/study_b/study-b-figures/validity_vs_gain_dev.png",
+   " M research/rs2610/outputs/study_b/study-b-paired-tests.csv",
+   " M research/rs2610/outputs/study_b/study-b-per-dataset.csv",
+   " M research/rs2610/outputs/study_b/study-b-results.csv",
+   " M research/rs2610/study_a/analyze.py",
+   " M research/rs2610/study_a/scoring.py",
+   " M research/rs2610/study_a/topologies.py",
+   " M research/rs2610/study_b/analyze.py",
+   " M research/rs2610/study_b/conditions.py",
+   " M research/rs2610/study_b/score.py",
+   "?? research/rs2610/analyze_extra.py",
+   "?? research/rs2610/artifacts/study_b/superseded_v2/dev_run.log",
+   "?? research/rs2610/artifacts/study_b/superseded_v2/runs_dev.jsonl",
+   "?? research/rs2610/artifacts/study_b/superseded_v2/runs_probe_v3.jsonl",
+   "?? research/rs2610/outputs/cross_study/",
+   "?? research/rs2610/outputs/derived-facts.json",
+   "?? research/rs2610/outputs/examples.json",
+   "?? research/rs2610/outputs/study_b/t4-falsified-entries.csv"
+  ],
+  "head": "90af81fe4cc8c5755572e7c29026f8c5796f508e"
+ },
+ "model": {
+  "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "name": "qwen2.5:7b",
+  "num_ctx": 12288,
+  "runtime": "ollama (local)",
+  "structured_output": "JSON schema via Ollama `format`",
+  "temperature": 0.4
+ },
+ "packages": {
+  "catboost": "1.2.10",
+  "lightgbm": "4.7.0",
+  "matplotlib": "3.11.2",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "statsmodels": "0.15.0",
+  "xgboost": "3.4.1"
+ },
+ "pre_freeze_excluded": [
+  "artifacts/study_b/superseded_v1/ (10 Study B DEVELOPMENT runs with blind enums; harness defect discovered during development before experimental freeze)",
+  "artifacts/study_b/runs_debug.jsonl (smoke runs)"
+ ],
+ "python": "3.12.12",
+ "seed_policy": {
+  "data_seed": 20261027,
+  "llm_seed": "= repeat index",
+  "study_b": {
+   "DEVELOPMENT": [
+    1
+   ],
+   "UNSEEN": [
+    1,
+    2
+   ],
+   "grid": "all (trapped main grid + T1/T3/T4 variants)"
+  }
+ },
+ "sources": {
+  "datasets_and_truth": {
+   "common/data.py": "3b05b3f2a6f420638404fe1df71fd752d6bf5b0ed936e66e3cc5714ad47c40df",
+   "common/prep.py": "bd96ddc6eb3b17f90e722be53c83ed9b626c6bcb227586618b91eb772a095f48"
+  },
+  "harness_llm": {
+   "common/llm.py": "b2f65e820907bcbb03100006f3805885a4d833f4f2f7aedc92e13d3a5a67e9da"
+  },
+  "study_b_conditions_prompts_enum_legend": {
+   "study_b/conditions.py": "40387354965526a6158ee34f66b04b7eda2c626f4c6ae53a262fb95bb9a39c4d"
+  },
+  "study_b_fe_evaluation": {
+   "study_b/evaluate.py": "7c7acc6a35cff27bbb65166b364798c2fb5c9347d81b34ef96bb4dc2ecad3903"
+  },
+  "study_b_runner": {
+   "study_b/run.py": "c9415e3802adc2811625ec56c4467ac39ff7b43c18fd87db66a960711f524549"
+  },
+  "study_b_scoring": {
+   "study_b/score.py": "eb984aea57deee8df53885ce21a227ed223e1a3b9ee1dee7071de71a7a72bcbf"
+  },
+  "study_b_statistics": {
+   "study_b/analyze.py": "8f483814f6f3b0721e8bc2cc97976d47366369fef3216d6d3df37a38a13cd949"
+  },
+  "study_b_variants_and_traps": {
+   "study_b/profile.py": "b2b0a50286a623445e4686d46167ad95ba19f872ed9bb864c57abc20ef592228",
+   "study_b/variants.py": "8ab171ae6f53255a5615684a49ba019fbd3f4216cfcc9bd047177fc173d4ad31"
+  }
+ },
+ "study": "B",
+ "study_b_prompts": {
+  "analysis_enum_legend": "b1b9b0e95c06bed680938ac24a356a3a53f57e0d348b7622e321225f5b1f8f3c",
+  "analysis_schema": "cccf6017e4409fee675ef8e0ca6cb181945f4eb6e7d5928f5cfbf52aa0f8720d",
+  "analysis_task": "135d6bea90f91eb2a5d7e5063060e19bd17b937e92e2ed8f85cd928ce01ff67b",
+  "conditions": [
+   "A_RAW",
+   "B_SELF",
+   "C_DICT",
+   "D_RULES",
+   "E_FULL"
+  ],
+  "rendered": {
+   "adult_income::trapped::A_RAW": {
+    "analysis_prompt": "85e044c74d5d968770a4fca08eabfbf4bcb5ae57ccf79fca5217dd7463693f24",
+    "candidates": "859216e400348715db75bd34675a4aa2ee642bb06cc05575627cc66713c2b343",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::trapped::B_SELF": {
+    "analysis_prompt": "85e044c74d5d968770a4fca08eabfbf4bcb5ae57ccf79fca5217dd7463693f24",
+    "candidates": "859216e400348715db75bd34675a4aa2ee642bb06cc05575627cc66713c2b343",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::trapped::C_DICT": {
+    "analysis_prompt": "0735e742d4474d30114d6bb9d2a93cfb382572005be09f9061120d73347a47f1",
+    "candidates": "859216e400348715db75bd34675a4aa2ee642bb06cc05575627cc66713c2b343",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::trapped::D_RULES": {
+    "analysis_prompt": "e3ae6d99beae784297b77c62de721ef11d9d6d1ba4f375adeb5ba657b7668416",
+    "candidates": "859216e400348715db75bd34675a4aa2ee642bb06cc05575627cc66713c2b343",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::trapped::E_FULL": {
+    "analysis_prompt": "e3ae6d99beae784297b77c62de721ef11d9d6d1ba4f375adeb5ba657b7668416",
+    "candidates": "859216e400348715db75bd34675a4aa2ee642bb06cc05575627cc66713c2b343",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::anonymized::A_RAW": {
+    "analysis_prompt": "232430e7944ecfcbb5b01e25a43e60eda3ce08e15bc70411505df23cf14bd526",
+    "candidates": "8bed37b423f6fe76571f3174d9162e980e5fbc399a4048150e6905c36bac7ec7",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::anonymized::C_DICT": {
+    "analysis_prompt": "8109a29532e6412aadcb4eaa4a3e4579b1bfaca29c0516c2b926f25cfa185e87",
+    "candidates": "8bed37b423f6fe76571f3174d9162e980e5fbc399a4048150e6905c36bac7ec7",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::anonymized::E_FULL": {
+    "analysis_prompt": "94829cd5150f7451c27a895b8e80478564bf10f6594436fd093ff14bb4eb1ce7",
+    "candidates": "8bed37b423f6fe76571f3174d9162e980e5fbc399a4048150e6905c36bac7ec7",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::misleading::C_DICT": {
+    "analysis_prompt": "79247371627d68680e3fedc87c7e496b3c9ad36534b23f27eecf64da2a403968",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::misleading::D_RULES": {
+    "analysis_prompt": "c76ff917b7336466e0071975287e28f74d478a94a496a34bf001375019f023bb",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::misleading::E_FULL": {
+    "analysis_prompt": "c76ff917b7336466e0071975287e28f74d478a94a496a34bf001375019f023bb",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::trapped::A_RAW": {
+    "analysis_prompt": "2e6d3ff012e80296ad370841481101124777615710049704edac62e2ab7924db",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::trapped::B_SELF": {
+    "analysis_prompt": "2e6d3ff012e80296ad370841481101124777615710049704edac62e2ab7924db",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::trapped::C_DICT": {
+    "analysis_prompt": "a487c2b2abc730aed356160761b5ed94d244d66e27ecee04670ff76cf63ea01f",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::trapped::D_RULES": {
+    "analysis_prompt": "5222677b8e2ab33c7334b6da3e3ea37fd0948100f72a3ee4c2f5ea9fb17a2b64",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::trapped::E_FULL": {
+    "analysis_prompt": "5222677b8e2ab33c7334b6da3e3ea37fd0948100f72a3ee4c2f5ea9fb17a2b64",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::trapped::A_RAW": {
+    "analysis_prompt": "687540942795d2c5f81d0418949d91e4b2a67acafc152dc761a8064785f339da",
+    "candidates": "e26c97b9ca1b62f5cc5e39e636d82d4d11e2e5345b3ae52fc3db32f8d8b97d91",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::trapped::B_SELF": {
+    "analysis_prompt": "687540942795d2c5f81d0418949d91e4b2a67acafc152dc761a8064785f339da",
+    "candidates": "e26c97b9ca1b62f5cc5e39e636d82d4d11e2e5345b3ae52fc3db32f8d8b97d91",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::trapped::C_DICT": {
+    "analysis_prompt": "23797598bb55a560fb5f3efe572103cd72cf5bc7528f030d9d05c7c427a85ba7",
+    "candidates": "e26c97b9ca1b62f5cc5e39e636d82d4d11e2e5345b3ae52fc3db32f8d8b97d91",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::trapped::D_RULES": {
+    "analysis_prompt": "8738ebf23216d3aebec80b170990002ea7454ad375725e87728c9b8f9c5a6e39",
+    "candidates": "e26c97b9ca1b62f5cc5e39e636d82d4d11e2e5345b3ae52fc3db32f8d8b97d91",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::trapped::E_FULL": {
+    "analysis_prompt": "8738ebf23216d3aebec80b170990002ea7454ad375725e87728c9b8f9c5a6e39",
+    "candidates": "e26c97b9ca1b62f5cc5e39e636d82d4d11e2e5345b3ae52fc3db32f8d8b97d91",
+    "split": "DEVELOPMENT"
+   },
+   "card_fraud_synth::misleading::C_DICT": {
+    "analysis_prompt": "d0ee1dbe72726d353c1892afa622184ccf712e3ebc9394aba343a243dcec1a68",
+    "candidates": "11619ae50922cd1fcd6a5171b5fe40f7afabc527810c0d63d6170a571e85cfa4",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::misleading::D_RULES": {
+    "analysis_prompt": "e4d49bd482f8f38b5490a901fced22fc70ceabba90e90dbe689d3c32c4616c06",
+    "candidates": "11619ae50922cd1fcd6a5171b5fe40f7afabc527810c0d63d6170a571e85cfa4",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::misleading::E_FULL": {
+    "analysis_prompt": "e4d49bd482f8f38b5490a901fced22fc70ceabba90e90dbe689d3c32c4616c06",
+    "candidates": "11619ae50922cd1fcd6a5171b5fe40f7afabc527810c0d63d6170a571e85cfa4",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::trapped::A_RAW": {
+    "analysis_prompt": "bcc970281dbecb185e879e8a18d7648ab81690b8626db5a60cf89cecf78105ba",
+    "candidates": "11619ae50922cd1fcd6a5171b5fe40f7afabc527810c0d63d6170a571e85cfa4",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::trapped::B_SELF": {
+    "analysis_prompt": "bcc970281dbecb185e879e8a18d7648ab81690b8626db5a60cf89cecf78105ba",
+    "candidates": "11619ae50922cd1fcd6a5171b5fe40f7afabc527810c0d63d6170a571e85cfa4",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::trapped::C_DICT": {
+    "analysis_prompt": "ecb704a36ee75e23d6109b735a4b59b4d0fc0ae8b5b4b3558071f006049bbc9e",
+    "candidates": "11619ae50922cd1fcd6a5171b5fe40f7afabc527810c0d63d6170a571e85cfa4",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::trapped::D_RULES": {
+    "analysis_prompt": "7f00343b823e5a40cdf9bf433db50a33d61f75e08e8bf6311baf41dfd6172933",
+    "candidates": "11619ae50922cd1fcd6a5171b5fe40f7afabc527810c0d63d6170a571e85cfa4",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::trapped::E_FULL": {
+    "analysis_prompt": "7f00343b823e5a40cdf9bf433db50a33d61f75e08e8bf6311baf41dfd6172933",
+    "candidates": "11619ae50922cd1fcd6a5171b5fe40f7afabc527810c0d63d6170a571e85cfa4",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::trapped::A_RAW": {
+    "analysis_prompt": "c5a7ae030e0c77a3d38e0469fa13521f645de17fc9c675f256d0dae9f501bb52",
+    "candidates": "9685959e12a6b6342b7c35d7a2bd3dadb26e5e8095e3bf40092503c9f63c9bb9",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::trapped::B_SELF": {
+    "analysis_prompt": "c5a7ae030e0c77a3d38e0469fa13521f645de17fc9c675f256d0dae9f501bb52",
+    "candidates": "9685959e12a6b6342b7c35d7a2bd3dadb26e5e8095e3bf40092503c9f63c9bb9",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::trapped::C_DICT": {
+    "analysis_prompt": "a300e018ed7c6662dd812d9733ee2f44b12551fcadfc144473e38a3aa68f1b54",
+    "candidates": "9685959e12a6b6342b7c35d7a2bd3dadb26e5e8095e3bf40092503c9f63c9bb9",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::trapped::D_RULES": {
+    "analysis_prompt": "a126c89e2c906b62929df59cb4ac8489cfd5185d25e4173f65466f4013ea3dbf",
+    "candidates": "9685959e12a6b6342b7c35d7a2bd3dadb26e5e8095e3bf40092503c9f63c9bb9",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::trapped::E_FULL": {
+    "analysis_prompt": "a126c89e2c906b62929df59cb4ac8489cfd5185d25e4173f65466f4013ea3dbf",
+    "candidates": "9685959e12a6b6342b7c35d7a2bd3dadb26e5e8095e3bf40092503c9f63c9bb9",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::incomplete::C_DICT": {
+    "analysis_prompt": "17dcd6e2bb6adf3f491329cde65a8e70547b13b999cf6b06bf80e7cf6b07f47f",
+    "candidates": "bcbb7cb110ffaeb2ba35b912eaff5b193d6800367f002c87dd16f6701df32656",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::incomplete::D_RULES": {
+    "analysis_prompt": "49bc234c4316918c90ee153ca8606e6f15da9f9de5fed1582d8c695a13a1026c",
+    "candidates": "bcbb7cb110ffaeb2ba35b912eaff5b193d6800367f002c87dd16f6701df32656",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::incomplete::E_FULL": {
+    "analysis_prompt": "49bc234c4316918c90ee153ca8606e6f15da9f9de5fed1582d8c695a13a1026c",
+    "candidates": "bcbb7cb110ffaeb2ba35b912eaff5b193d6800367f002c87dd16f6701df32656",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::trapped::A_RAW": {
+    "analysis_prompt": "9590fe47eb5ac704b40e6cd388057f5d4bbf5f654a7ad557e29df5cde70ae5bd",
+    "candidates": "bcbb7cb110ffaeb2ba35b912eaff5b193d6800367f002c87dd16f6701df32656",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::trapped::B_SELF": {
+    "analysis_prompt": "9590fe47eb5ac704b40e6cd388057f5d4bbf5f654a7ad557e29df5cde70ae5bd",
+    "candidates": "bcbb7cb110ffaeb2ba35b912eaff5b193d6800367f002c87dd16f6701df32656",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::trapped::C_DICT": {
+    "analysis_prompt": "45288bafbd00bf8f3a30296a3e0075bc4bf7c9fa0a826d6f93caa3b65a0d3e88",
+    "candidates": "bcbb7cb110ffaeb2ba35b912eaff5b193d6800367f002c87dd16f6701df32656",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::trapped::D_RULES": {
+    "analysis_prompt": "cc5fe43bd8d5c4dbd4bf0c112ccc90a9dce7ef6d1a1a6aa467ddd65e4a904f5e",
+    "candidates": "bcbb7cb110ffaeb2ba35b912eaff5b193d6800367f002c87dd16f6701df32656",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::trapped::E_FULL": {
+    "analysis_prompt": "cc5fe43bd8d5c4dbd4bf0c112ccc90a9dce7ef6d1a1a6aa467ddd65e4a904f5e",
+    "candidates": "bcbb7cb110ffaeb2ba35b912eaff5b193d6800367f002c87dd16f6701df32656",
+    "split": "UNSEEN"
+   },
+   "german_credit::incomplete::C_DICT": {
+    "analysis_prompt": "3ffb743230e17127b9c06acad176ba0d5f62e6fc4d8cbc54eb209b2715c86c18",
+    "candidates": "0204c8e4b65b6641df6d7e7904b2648401a6ee7b6caa9a5f766e8ed97c8c5dda",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::incomplete::D_RULES": {
+    "analysis_prompt": "4b2fe026effd5e4c1f276a2124f6f9b1b2492881fa6e2820f8d9ca8757106dc8",
+    "candidates": "0204c8e4b65b6641df6d7e7904b2648401a6ee7b6caa9a5f766e8ed97c8c5dda",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::incomplete::E_FULL": {
+    "analysis_prompt": "4b2fe026effd5e4c1f276a2124f6f9b1b2492881fa6e2820f8d9ca8757106dc8",
+    "candidates": "0204c8e4b65b6641df6d7e7904b2648401a6ee7b6caa9a5f766e8ed97c8c5dda",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::trapped::A_RAW": {
+    "analysis_prompt": "1c38699e2946b5535be2a4c6cf378da720199912c988b8a4f93b580127096730",
+    "candidates": "0204c8e4b65b6641df6d7e7904b2648401a6ee7b6caa9a5f766e8ed97c8c5dda",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::trapped::B_SELF": {
+    "analysis_prompt": "1c38699e2946b5535be2a4c6cf378da720199912c988b8a4f93b580127096730",
+    "candidates": "0204c8e4b65b6641df6d7e7904b2648401a6ee7b6caa9a5f766e8ed97c8c5dda",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::trapped::C_DICT": {
+    "analysis_prompt": "4db4b991e0a6f13b30a2d9501ef6f82c08e328e7cb504e567b4ff52e2e6b66c1",
+    "candidates": "0204c8e4b65b6641df6d7e7904b2648401a6ee7b6caa9a5f766e8ed97c8c5dda",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::trapped::D_RULES": {
+    "analysis_prompt": "237c79ee14b6cf0d1d81cda02432a67da06fc9e1d910c6b13901ede0aef017cf",
+    "candidates": "0204c8e4b65b6641df6d7e7904b2648401a6ee7b6caa9a5f766e8ed97c8c5dda",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::trapped::E_FULL": {
+    "analysis_prompt": "237c79ee14b6cf0d1d81cda02432a67da06fc9e1d910c6b13901ede0aef017cf",
+    "candidates": "0204c8e4b65b6641df6d7e7904b2648401a6ee7b6caa9a5f766e8ed97c8c5dda",
+    "split": "DEVELOPMENT"
+   },
+   "hillstrom_email::trapped::A_RAW": {
+    "analysis_prompt": "4c81afd72d2f5bc2c9f9807f53d9ec0bcb3facb41234d65df0c49e416d998aed",
+    "candidates": "9717c0eee4451766a8273558f99aa836bb3829c3cc910b23733ce1418323d6e0",
+    "split": "UNSEEN"
+   },
+   "hillstrom_email::trapped::B_SELF": {
+    "analysis_prompt": "4c81afd72d2f5bc2c9f9807f53d9ec0bcb3facb41234d65df0c49e416d998aed",
+    "candidates": "9717c0eee4451766a8273558f99aa836bb3829c3cc910b23733ce1418323d6e0",
+    "split": "UNSEEN"
+   },
+   "hillstrom_email::trapped::C_DICT": {
+    "analysis_prompt": "6b136fb13f1182b4b2ab0e5a757710f0d50260775a740778c0d73482fba3ef7b",
+    "candidates": "9717c0eee4451766a8273558f99aa836bb3829c3cc910b23733ce1418323d6e0",
+    "split": "UNSEEN"
+   },
+   "hillstrom_email::trapped::D_RULES": {
+    "analysis_prompt": "10037f845c5cab4f31739a01e6e07492450633822684c02bb3c31efb1f669a7d",
+    "candidates": "9717c0eee4451766a8273558f99aa836bb3829c3cc910b23733ce1418323d6e0",
+    "split": "UNSEEN"
+   },
+   "hillstrom_email::trapped::E_FULL": {
+    "analysis_prompt": "10037f845c5cab4f31739a01e6e07492450633822684c02bb3c31efb1f669a7d",
+    "candidates": "9717c0eee4451766a8273558f99aa836bb3829c3cc910b23733ce1418323d6e0",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::anonymized::A_RAW": {
+    "analysis_prompt": "d8d1040c79cd8a429ad32c6aaca8b15a7afe9282682875930e8aabb4b3cf3ee3",
+    "candidates": "88c3500ec5e2878ed759e5ba1785a3d76f8366bafb1630ac7a498fd182872dfd",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::anonymized::C_DICT": {
+    "analysis_prompt": "438d533f04167b37124e189bc351dcd87aae2883347003497a6f81f9b002dec2",
+    "candidates": "88c3500ec5e2878ed759e5ba1785a3d76f8366bafb1630ac7a498fd182872dfd",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::anonymized::E_FULL": {
+    "analysis_prompt": "04325a151c48e32e7d715c4a3530fe3b15059977cff2acd382ba2c8c841cc32d",
+    "candidates": "88c3500ec5e2878ed759e5ba1785a3d76f8366bafb1630ac7a498fd182872dfd",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::trapped::A_RAW": {
+    "analysis_prompt": "4bb4a1e6c5de5ef5ab3f04bfb4e83c0da0ae088d8868cb3ff1308c93324824fe",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::trapped::B_SELF": {
+    "analysis_prompt": "4bb4a1e6c5de5ef5ab3f04bfb4e83c0da0ae088d8868cb3ff1308c93324824fe",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::trapped::C_DICT": {
+    "analysis_prompt": "2432dcefc81f3c90ac8ceccd8f0344dc3ea39304410ee88780120ba16d762c71",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::trapped::D_RULES": {
+    "analysis_prompt": "5bcbd846c2adf9da184f42e3ef3e55230033c0557ab3681b48f48f5af8351bd7",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::trapped::E_FULL": {
+    "analysis_prompt": "5bcbd846c2adf9da184f42e3ef3e55230033c0557ab3681b48f48f5af8351bd7",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::trapped::A_RAW": {
+    "analysis_prompt": "bc9112a5f431111fe5127d1eafbc472719984250b77ab599372270181077657d",
+    "candidates": "511d59be80840fe97c7752355e3755550901c0130ba7e3eec1b22ccc7b3e9c3d",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::trapped::B_SELF": {
+    "analysis_prompt": "bc9112a5f431111fe5127d1eafbc472719984250b77ab599372270181077657d",
+    "candidates": "511d59be80840fe97c7752355e3755550901c0130ba7e3eec1b22ccc7b3e9c3d",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::trapped::C_DICT": {
+    "analysis_prompt": "86d50f576a24bb4f17b5f3fe7be95e84da34ae93f5f9b4b02b9d9b360e3428c1",
+    "candidates": "511d59be80840fe97c7752355e3755550901c0130ba7e3eec1b22ccc7b3e9c3d",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::trapped::D_RULES": {
+    "analysis_prompt": "4028eefc509de5d12e04b0eeff88142ef0cc33e15f17a7828204b06528d39a3a",
+    "candidates": "511d59be80840fe97c7752355e3755550901c0130ba7e3eec1b22ccc7b3e9c3d",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::trapped::E_FULL": {
+    "analysis_prompt": "4028eefc509de5d12e04b0eeff88142ef0cc33e15f17a7828204b06528d39a3a",
+    "candidates": "511d59be80840fe97c7752355e3755550901c0130ba7e3eec1b22ccc7b3e9c3d",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::anonymized::A_RAW": {
+    "analysis_prompt": "6dd67d55a129f793ce3499ba25aa55f2998df4616196b28a274c4dc285970733",
+    "candidates": "1277cb28d0da2860083700349b271da20bf68073277029e64eaa08033f5da6f3",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::anonymized::C_DICT": {
+    "analysis_prompt": "82166a4345de40fb81baa8bc9b9a82b189d9054b992f9bf28cc353723d031e6d",
+    "candidates": "1277cb28d0da2860083700349b271da20bf68073277029e64eaa08033f5da6f3",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::anonymized::E_FULL": {
+    "analysis_prompt": "617f7e80b58ab871c1cea15ce37a6b932a6fbe9728919d7ef8a182e41d405496",
+    "candidates": "1277cb28d0da2860083700349b271da20bf68073277029e64eaa08033f5da6f3",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::incomplete::C_DICT": {
+    "analysis_prompt": "27222ca4f44e256806b4edcd66eafaf70e2bfa74aaac5dd8da5e0416bc293581",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::incomplete::D_RULES": {
+    "analysis_prompt": "7ff5fb7051177f62bf77ee06b840526a6edd84293fd3ee4389190cd793b857f1",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::incomplete::E_FULL": {
+    "analysis_prompt": "7ff5fb7051177f62bf77ee06b840526a6edd84293fd3ee4389190cd793b857f1",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::misleading::C_DICT": {
+    "analysis_prompt": "894990f83ee7f644721228bdf45fb67e5af9b6091bf0fe5b12fa47b5bd00c924",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::misleading::D_RULES": {
+    "analysis_prompt": "b011517832c85ed1c19c4ab579ecc7dbbfe08232eee9e137473ec40e71b1ca27",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::misleading::E_FULL": {
+    "analysis_prompt": "b011517832c85ed1c19c4ab579ecc7dbbfe08232eee9e137473ec40e71b1ca27",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::trapped::A_RAW": {
+    "analysis_prompt": "2039bdf0c000c45fdf2070bb08bba338f641c8b3a7c14b7a922ee055de131906",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::trapped::B_SELF": {
+    "analysis_prompt": "2039bdf0c000c45fdf2070bb08bba338f641c8b3a7c14b7a922ee055de131906",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::trapped::C_DICT": {
+    "analysis_prompt": "b460f148bbae9a369f4c1d1b9406b584407ee751a34d32ac39cd0dc3e8910d89",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::trapped::D_RULES": {
+    "analysis_prompt": "6b7f22b56954e9a3dbe694048282970dbccceb36461c5a124c70f5c99360b667",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::trapped::E_FULL": {
+    "analysis_prompt": "6b7f22b56954e9a3dbe694048282970dbccceb36461c5a124c70f5c99360b667",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "split": "UNSEEN"
+   },
+   "telco_churn::anonymized::A_RAW": {
+    "analysis_prompt": "f353fdb2f7121e03c77bdc30cab6988dfc2addfa6c29ec86863380ee414c217e",
+    "candidates": "5f47ceb54a5c13d89c04885eb9c16512d1f30778001630e78a8e3fb7702430e5",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::anonymized::C_DICT": {
+    "analysis_prompt": "5c4245d18605d5c75a88fff2f463c552605313ce01fa413b7e1f377c884eab83",
+    "candidates": "5f47ceb54a5c13d89c04885eb9c16512d1f30778001630e78a8e3fb7702430e5",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::anonymized::E_FULL": {
+    "analysis_prompt": "ea8735504a8bcc3d7a0eaac977ac4dd100dba0fdae00bd97c4ceec03950c21b1",
+    "candidates": "5f47ceb54a5c13d89c04885eb9c16512d1f30778001630e78a8e3fb7702430e5",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::incomplete::C_DICT": {
+    "analysis_prompt": "5396cf477dcaab5e0a2c85499e28e576f5eb9ce61bda7cdd022d8ad745ab42f6",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::incomplete::D_RULES": {
+    "analysis_prompt": "f25069567efe74e1e72a189305c2bb05ce224c8e0567498a19e708ec4664c3b0",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::incomplete::E_FULL": {
+    "analysis_prompt": "f25069567efe74e1e72a189305c2bb05ce224c8e0567498a19e708ec4664c3b0",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::misleading::C_DICT": {
+    "analysis_prompt": "522277665361b23171c09fe10cfa951b4eefd0863f54be9e5a43708bd59b7c05",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::misleading::D_RULES": {
+    "analysis_prompt": "984bc16472a67f4ebd41a3d6c017381c040b883d41708d5c2019aee8e85eef7a",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::misleading::E_FULL": {
+    "analysis_prompt": "984bc16472a67f4ebd41a3d6c017381c040b883d41708d5c2019aee8e85eef7a",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::trapped::A_RAW": {
+    "analysis_prompt": "3d1f9db1338c2fd662c6b6b13de1f7c17a03d8cd7b6a919d03d475f37157be2e",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::trapped::B_SELF": {
+    "analysis_prompt": "3d1f9db1338c2fd662c6b6b13de1f7c17a03d8cd7b6a919d03d475f37157be2e",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::trapped::C_DICT": {
+    "analysis_prompt": "2a378c3c15db11dbd4962b7ef5c53b0eb365bde69d8e9d631196a493e5abc141",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::trapped::D_RULES": {
+    "analysis_prompt": "c88551d8eb7de128d10f8f62e2ea604ef92aa8e1a80166ebfad0e9fa7554d9d3",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::trapped::E_FULL": {
+    "analysis_prompt": "c88551d8eb7de128d10f8f62e2ea604ef92aa8e1a80166ebfad0e9fa7554d9d3",
+    "candidates": "2344ee8291a16fc0ee501868226c5e7b4ffe0ba7cb23bc6530a9c0f28486718f",
+    "split": "DEVELOPMENT"
+   },
+   "thyroid_sick::trapped::A_RAW": {
+    "analysis_prompt": "4d4c472269f7d7d0085ab57a756b9ee2e8ecc6f99c8b939844689156a8712bbe",
+    "candidates": "50a44f9dfd353c05081a7092ec049a8fd9f037d442999666aa7148b86c45bf68",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::trapped::B_SELF": {
+    "analysis_prompt": "4d4c472269f7d7d0085ab57a756b9ee2e8ecc6f99c8b939844689156a8712bbe",
+    "candidates": "50a44f9dfd353c05081a7092ec049a8fd9f037d442999666aa7148b86c45bf68",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::trapped::C_DICT": {
+    "analysis_prompt": "0690031a50b8424432bd8ac2b89058dceec895ac7139d5e87e16c4c95a31d166",
+    "candidates": "50a44f9dfd353c05081a7092ec049a8fd9f037d442999666aa7148b86c45bf68",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::trapped::D_RULES": {
+    "analysis_prompt": "079e13e9bd5b1c911aab5b92f8cf858504176abeab1cc5bce41784255ff2338e",
+    "candidates": "50a44f9dfd353c05081a7092ec049a8fd9f037d442999666aa7148b86c45bf68",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::trapped::E_FULL": {
+    "analysis_prompt": "079e13e9bd5b1c911aab5b92f8cf858504176abeab1cc5bce41784255ff2338e",
+    "candidates": "50a44f9dfd353c05081a7092ec049a8fd9f037d442999666aa7148b86c45bf68",
+    "split": "UNSEEN"
+   }
+  },
+  "system": "1a681a3e8e4e50f238c6a648f367f9565ca9a04e282d14db875edc1563ef6da3"
+ }
+}

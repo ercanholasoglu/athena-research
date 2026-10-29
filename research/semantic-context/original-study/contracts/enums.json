@@ -1,0 +1,80 @@
+{
+ "analysis_intent": [
+  "predictive",
+  "causal",
+  "both"
+ ],
+ "business_problem": [
+  "churn",
+  "fraud",
+  "credit_default",
+  "cross_sell",
+  "readmission",
+  "medical_diagnosis",
+  "income_classification",
+  "demand_forecast",
+  "purchase_intent",
+  "uplift",
+  "other"
+ ],
+ "hpo_depth": [
+  "none",
+  "light",
+  "moderate",
+  "deep"
+ ],
+ "model_family": [
+  "gradient_boosting",
+  "random_forest",
+  "linear",
+  "neural_net",
+  "uplift_meta_learner"
+ ],
+ "prediction_unit": [
+  "customer",
+  "applicant",
+  "person",
+  "transaction",
+  "account",
+  "encounter",
+  "patient",
+  "session",
+  "time_period",
+  "household",
+  "other"
+ ],
+ "primary_metric": [
+  "roc_auc",
+  "pr_auc",
+  "f1",
+  "recall",
+  "precision",
+  "log_loss",
+  "brier",
+  "accuracy",
+  "expected_cost",
+  "lift",
+  "top_k_precision",
+  "rmse",
+  "mae",
+  "mape",
+  "r2",
+  "rmsle",
+  "qini",
+  "uplift_auc",
+  "ks"
+ ],
+ "split_strategy": [
+  "stratified_kfold",
+  "random_kfold",
+  "group_kfold",
+  "time_based"
+ ],
+ "temporal_structure": [
+  "none",
+  "time_ordered_rows",
+  "observation_window_then_outcome",
+  "repeated_entities",
+  "unknown"
+ ]
+}

@@ -1,0 +1,110 @@
+{
+ "properties": {
+  "features": {
+   "items": {
+    "properties": {
+     "actionability": {
+      "type": "string"
+     },
+     "business_interpretation": {
+      "type": "string"
+     },
+     "expected_stability": {
+      "enum": [
+       "high",
+       "medium",
+       "low"
+      ],
+      "type": "string"
+     },
+     "feature_name": {
+      "type": "string"
+     },
+     "leakage_assessment": {
+      "enum": [
+       "none",
+       "possible",
+       "likely"
+      ],
+      "type": "string"
+     },
+     "semantic_rationale": {
+      "type": "string"
+     },
+     "source_columns": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "spec": {
+      "properties": {
+       "inputs": {
+        "items": {
+         "type": "string"
+        },
+        "type": "array"
+       },
+       "op": {
+        "enum": [
+         "ratio",
+         "diff",
+         "product",
+         "sum",
+         "mean",
+         "min",
+         "max",
+         "std",
+         "count_positive",
+         "log1p",
+         "is_zero",
+         "gt_threshold",
+         "eq_value"
+        ],
+        "type": "string"
+       },
+       "threshold": {
+        "type": "number"
+       },
+       "value": {
+        "type": "string"
+       }
+      },
+      "required": [
+       "op",
+       "inputs",
+       "threshold",
+       "value"
+      ],
+      "type": "object"
+     },
+     "statistical_rationale": {
+      "type": "string"
+     },
+     "transformation": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "feature_name",
+     "source_columns",
+     "transformation",
+     "spec",
+     "semantic_rationale",
+     "statistical_rationale",
+     "business_interpretation",
+     "leakage_assessment",
+     "expected_stability",
+     "actionability"
+    ],
+    "type": "object"
+   },
+   "maxItems": 5,
+   "type": "array"
+  }
+ },
+ "required": [
+  "features"
+ ],
+ "type": "object"
+}

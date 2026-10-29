@@ -1,0 +1,244 @@
+{
+ "study": "B2",
+ "program": "rs2610",
+ "freeze": {
+  "original": "FREEZE_RECORD_A2B2.json",
+  "governing": "FREEZE_RECORD_A2B2_AMENDMENT2.json",
+  "git_head": "4563435f476374ed2ddeb92d8ea5d6af8ada3093",
+  "frozen_at": "2026-10-29T11:23:55.750576+03:00"
+ },
+ "arms": {
+  "baseline": {
+   "provider": "local (Ollama)",
+   "requested_model": "qwen2.5:7b",
+   "model_digest": "845dbda0ea48\u2026",
+   "temperature": 0.4,
+   "top_p": "Ollama default",
+   "seed": "= replicate index",
+   "reasoning": "none",
+   "max_output_tokens": "frozen per-call caps (260\u20133200)",
+   "structured_output": "JSON schema via Ollama `format`",
+   "runs": "new runs, replicates 1\u20132",
+   "observed": {
+    "requests": 240,
+    "successful": 239,
+    "errors": 1,
+    "resolved_model_ids": [
+     "qwen2.5:7b"
+    ],
+    "input_tokens": 514942,
+    "output_tokens": 166888,
+    "truncated_calls": 1,
+    "model_digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+    "cost_usd": null,
+    "cost_status": "NOT_APPLICABLE_LOCAL"
+   }
+  },
+  "openai": {
+   "provider": "OpenAI Responses API",
+   "requested_model": "gpt-6-luna",
+   "reasoning": {
+    "effort": "medium"
+   },
+   "temperature": "NOT_CONFIGURABLE",
+   "top_p": "NOT_CONFIGURABLE",
+   "seed": "NOT_CONFIGURABLE (replicate index enters the request hash only)",
+   "max_output_tokens": "frozen visible cap + 16000",
+   "structured_output": "json_schema strict",
+   "store": false,
+   "price_per_mtok": {
+    "input": 0.1,
+    "cached_input": 0.01,
+    "output": 0.5,
+    "source": "https://developers.openai.com/api/docs/pricing",
+    "accessed": "2026-10-29"
+   },
+   "observed": {
+    "requests": 249,
+    "successful": 249,
+    "errors": 0,
+    "resolved_model_ids": [
+     "gpt-6-luna"
+    ],
+    "input_tokens": 572246,
+    "output_tokens": 474216,
+    "truncated_calls": 0,
+    "reasoning_tokens": 303276,
+    "cost_usd": 0.2806,
+    "cost_status": "CALCULATED_FROM_PUBLISHED_PRICES",
+    "sdk": "openai-python 3.41.0",
+    "first_request_id": "req_c6f07e01faaf4746a71daa264e2c05f9"
+   }
+  },
+  "anthropic": {
+   "provider": "Anthropic Messages API",
+   "requested_model": "claude-sonnet-5-5",
+   "reasoning": {
+    "effort": "medium",
+    "thinking": "adaptive, provider default (always on)"
+   },
+   "temperature": "NOT_CONFIGURABLE",
+   "top_p": "NOT_CONFIGURABLE",
+   "seed": "NOT_CONFIGURABLE",
+   "max_output_tokens": "frozen visible cap + 16000",
+   "structured_output": "output_config.format json_schema (array minItems/maxItems removed)",
+   "replicates": [
+    1
+   ],
+   "price_per_mtok": {
+    "input": 2.0,
+    "cached_input": 0.2,
+    "output": 10.0,
+    "source": "Anthropic model table (claude-api reference, models.md), Claude Sonnet 5.5 $2 / $10 per MTok",
+    "accessed": "2026-10-29"
+   },
+   "observed": {
+    "requests": 124,
+    "successful": 124,
+    "errors": 0,
+    "resolved_model_ids": [
+     "claude-sonnet-5-5"
+    ],
+    "input_tokens": 497077,
+    "output_tokens": 145844,
+    "truncated_calls": 0,
+    "reasoning_tokens": "NOT_REPORTED_SEPARATELY",
+    "cost_usd": 2.4526,
+    "cost_status": "CALCULATED_FROM_PUBLISHED_PRICES",
+    "sdk": "anthropic-python 2.3.0",
+    "first_request_id": null
+   }
+  }
+ },
+ "datasets": [
+  {
+   "b2_frame_sha256": "05c28f99af13ec5f565be03db8f3f321c9de3ed8b6b5ae641fef3cb2b1ded828",
+   "b2_truth_sha256": "aaf906ed1aaac70f20739ede0c739c440e866f03641a94051efbd3cb9c4361b8",
+   "columns": 17,
+   "dataset_id": "bank_marketing",
+   "dev_idx_sha256": "3aa40eda9bb70d5ab10fd792a750aa35d3490834723dbd23d2ef9f2831fb71fc",
+   "frame_sha256": "4a1325e2fd2b4fe611223715d4f92ab920a01105362469211e718223fb3b3099",
+   "holdout_scheme": "stratified",
+   "in_a2": false,
+   "in_b2": true,
+   "rows": 15000,
+   "split": "DEVELOPMENT",
+   "test_idx_sha256": "1f07a69943d4da8192332bf166ab894c6f9a5987c17277e349754846ea32af37"
+  },
+  {
+   "b2_frame_sha256": "82480e61832c6b71548512291b0ff42d67cbd3201198cff5b0b4139a50660d33",
+   "b2_truth_sha256": "c4f5b59f1d66b9c2fab61a67d40246df8fa88cc1e62ac81d8e778257833a0e53",
+   "columns": 12,
+   "dataset_id": "hillstrom_email",
+   "dev_idx_sha256": "4ff5b479e39d10da3e398fc012c516ec23f6e69e5b53c4566c18c52320742b4b",
+   "frame_sha256": "e8f021c523852b29c323d30d6cf3932d1b37a40b6aecb576ff251ff6e2504baf",
+   "holdout_scheme": "stratified",
+   "in_a2": false,
+   "in_b2": true,
+   "rows": 64000,
+   "split": "UNSEEN",
+   "test_idx_sha256": "4c0e03329d5b15ca60205115f878a23af9a6beab7fade1e40269abfbdce66a11"
+  },
+  {
+   "b2_frame_sha256": "2c26c054f8913faecda4b0b54a6443c91313513826025ac43c3f0371e94818e8",
+   "b2_truth_sha256": "68279aacf2b94dc29ab26367ed4d67efd34b1462241a0c309955022ef531c166",
+   "columns": 14,
+   "dataset_id": "iranian_churn",
+   "dev_idx_sha256": "7b2d55413d030c71f7c17053f05488863b3b6dfe0283a4e8bc655b4fc4d91636",
+   "frame_sha256": "9a9dce53ea5f3a71f2ded3d4b7865ea20d27c06cd14520800ff85332906093ea",
+   "holdout_scheme": "stratified",
+   "in_a2": true,
+   "in_b2": true,
+   "rows": 3150,
+   "split": "UNSEEN",
+   "test_idx_sha256": "eaa63a4a69bc9459ae12c921fd3c074f1a68d49b465b64353ea1e57d811accf2"
+  },
+  {
+   "b2_frame_sha256": "6b82a456da7d9186389e2a95ac7fe42cf8f9345ba8ba0890061f7adbc381650b",
+   "b2_truth_sha256": "3e60f87504abead36a3b3d327e385f9fd398c7cadf691a078d9a69162499dbdd",
+   "columns": 25,
+   "dataset_id": "taiwan_default",
+   "dev_idx_sha256": "bf741e2b8ababc0f32485f15eb5ff1dfac4c4070acb749e3f0d1c848e09335e5",
+   "frame_sha256": "74098e6f4c7edf9813e7beb686e687de868d03d9d338e8cae8297a1b5a04a0f5",
+   "holdout_scheme": "stratified",
+   "in_a2": true,
+   "in_b2": true,
+   "rows": 15000,
+   "split": "UNSEEN",
+   "test_idx_sha256": "4b28ba755ef0c28e324db73f1a0187ef44edccf745dddebb376346559f138718"
+  }
+ ],
+ "design": {
+  "budget_usd": {
+   "anthropic": 4.5,
+   "openai": 9.0
+  },
+  "cells": [
+   [
+    "trapped",
+    "A_RAW"
+   ],
+   [
+    "trapped",
+    "B_SELF"
+   ],
+   [
+    "trapped",
+    "C_DICT"
+   ],
+   [
+    "trapped",
+    "D_RULES"
+   ],
+   [
+    "trapped",
+    "E_FULL"
+   ],
+   [
+    "anonymized",
+    "A_RAW"
+   ],
+   [
+    "anonymized",
+    "C_DICT"
+   ],
+   [
+    "incomplete",
+    "D_RULES"
+   ],
+   [
+    "misleading",
+    "D_RULES"
+   ],
+   [
+    "misleading",
+    "E_FULL"
+   ]
+  ],
+  "datasets": [
+   "iranian_churn",
+   "taiwan_default",
+   "bank_marketing",
+   "hillstrom_email"
+  ],
+  "high_apparent_cv": 0.005,
+  "invent_max_tokens": 2200,
+  "replicates": [
+   1,
+   2
+  ],
+  "useful_cv": 0.001
+ },
+ "code": {
+  "semantic conditions and dictionary injection": "study_b/conditions.py (frozen: run_condition, documentation)",
+  "variants and traps": "study_b/variants.py (frozen) + replication/b2/variants.py (target-derived trap, B2 grid)",
+  "feature-invention call": "replication/b2/invention.py",
+  "feature validation": "replication/b2/evaluate.py",
+  "semantic scoring": "study_b/score.py (frozen)",
+  "frontier substrate": "replication/providers.py",
+  "runner": "replication/b2/run.py",
+  "statistics": "replication/b2/analyze.py"
+ },
+ "prompts": "per-instance / per-cell SHA-256 in the governing freeze record",
+ "statistics": "PREREGISTRATION.md section 7"
+}

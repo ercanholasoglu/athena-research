@@ -1,0 +1,91 @@
+{
+ "properties": {
+  "candidate_judgements": {
+   "items": {
+    "properties": {
+     "decision": {
+      "enum": [
+       "accept",
+       "reject"
+      ],
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "reason": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "id",
+     "decision",
+     "reason"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "proposed_features": {
+   "items": {
+    "properties": {
+     "business_interpretation": {
+      "type": "string"
+     },
+     "inputs": {
+      "items": {
+       "type": "string"
+      },
+      "type": "array"
+     },
+     "leakage_assessment": {
+      "enum": [
+       "none",
+       "possible",
+       "likely"
+      ],
+      "type": "string"
+     },
+     "name": {
+      "type": "string"
+     },
+     "op": {
+      "enum": [
+       "ratio",
+       "diff",
+       "product",
+       "sum",
+       "mean",
+       "log1p",
+       "is_zero"
+      ],
+      "type": "string"
+     },
+     "semantic_rationale": {
+      "type": "string"
+     },
+     "statistical_rationale": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "name",
+     "op",
+     "inputs",
+     "semantic_rationale",
+     "statistical_rationale",
+     "leakage_assessment",
+     "business_interpretation"
+    ],
+    "type": "object"
+   },
+   "maxItems": 6,
+   "type": "array"
+  }
+ },
+ "required": [
+  "proposed_features",
+  "candidate_judgements"
+ ],
+ "type": "object"
+}

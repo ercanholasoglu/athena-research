@@ -1,0 +1,5 @@
+TASK: invent up to 5 ORIGINAL engineered features that should improve prediction of the target. No candidate features are provided; design them yourself from the columns shown. Each feature must be executable with exactly one op:
+- ratio(a, b) = a / b; diff(a, b) = a - b; product(a, b, ...); sum(...); mean(...); min(...); max(...); std(...) across the inputs; count_positive(...) = number of inputs > 0
+- log1p(a); is_zero(a) = 1 if a == 0; gt_threshold(a) = 1 if a > threshold; eq_value(a) = 1 if a equals value
+For each feature give: feature_name; source_columns (identical to spec.inputs); transformation (one line); spec (op, inputs, threshold, value; set threshold 0 and value '' when the op does not use them); semantic_rationale; statistical_rationale; business_interpretation; leakage_assessment; expected_stability (across time and segments); actionability (how the business could act on it, or 'n/a').
+Every feature must be computable at prediction time. Do not use identifiers, columns known only after the outcome, data-collection artifacts, or anything derived from the target.

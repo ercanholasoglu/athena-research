@@ -1,0 +1,2075 @@
+{
+  "analysis": {
+    "calls": {
+      "dev": 80,
+      "final": 480,
+      "repeat": 60,
+      "technical": 20,
+      "total": 640
+    },
+    "development": {
+      "EXPLANATION_MODE": {
+        "cases": 10,
+        "micro_accuracy": {
+          "jev_C": 0.7,
+          "jev_D": 0.7,
+          "jev_E": 0.7,
+          "local_bounded": 0.6,
+          "local_bounded_v2dev": 1.0,
+          "rules": 0.7
+        },
+        "operations": {
+          "jev_C": {
+            "abstention_rate": 0.0,
+            "cases": 10,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 873.2,
+            "input_tokens_total": 8732,
+            "latency_ms_p50": 116.0,
+            "latency_ms_p95": 166.573,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 66.6,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 10,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_D": {
+            "abstention_rate": 0.0,
+            "cases": 10,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 1535,
+            "input_tokens_total": 15350,
+            "latency_ms_p50": 122.0,
+            "latency_ms_p95": 154.498,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 66.6,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 10,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_E": {
+            "abstention_rate": 0.0,
+            "cases": 10,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 3763,
+            "input_tokens_total": 37630,
+            "latency_ms_p50": 267.6,
+            "latency_ms_p95": 355.047,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 231.6,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 20,
+            "retries": 0,
+            "review_rate": 0.0
+          }
+        }
+      },
+      "HPO_DEPTH": {
+        "cases": 10,
+        "micro_accuracy": {
+          "jev_C": 0.5,
+          "jev_D": 0.4,
+          "jev_E": 0.5,
+          "local_bounded": 0.3,
+          "local_bounded_v2dev": 0.6,
+          "rules": 0.3
+        },
+        "operations": {
+          "jev_C": {
+            "abstention_rate": 0.0,
+            "cases": 10,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 944.9,
+            "input_tokens_total": 9449,
+            "latency_ms_p50": 115.9,
+            "latency_ms_p95": 158.791,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 48,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 10,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_D": {
+            "abstention_rate": 0.0,
+            "cases": 10,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 1607.4,
+            "input_tokens_total": 16074,
+            "latency_ms_p50": 128.7,
+            "latency_ms_p95": 155.693,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 48.1,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 10,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_E": {
+            "abstention_rate": 0.0,
+            "cases": 10,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 3782.9,
+            "input_tokens_total": 37829,
+            "latency_ms_p50": 252.0,
+            "latency_ms_p95": 344.392,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 179,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 20,
+            "retries": 0,
+            "review_rate": 0.0
+          }
+        }
+      }
+    },
+    "final_holdout": {
+      "EXPLANATION_MODE": {
+        "accuracy": {
+          "jev_B": {
+            "macro": 0.5833,
+            "macro_ci95": [
+              0.5208,
+              0.6667
+            ],
+            "micro": 0.5833
+          },
+          "jev_C": {
+            "macro": 0.5833,
+            "macro_ci95": [
+              0.5208,
+              0.6667
+            ],
+            "micro": 0.5833
+          },
+          "jev_D": {
+            "macro": 0.5833,
+            "macro_ci95": [
+              0.5208,
+              0.6667
+            ],
+            "micro": 0.5833
+          },
+          "jev_E": {
+            "macro": 0.5833,
+            "macro_ci95": [
+              0.5208,
+              0.6667
+            ],
+            "micro": 0.5833
+          },
+          "local_bounded": {
+            "macro": 0.6667,
+            "macro_ci95": [
+              0.5833,
+              0.7708
+            ],
+            "micro": 0.6667
+          },
+          "local_bounded_v2dev": {
+            "macro": 0.9167,
+            "macro_ci95": [
+              0.8333,
+              1.0
+            ],
+            "micro": 0.9167
+          },
+          "rules": {
+            "macro": 0.5833,
+            "macro_ci95": [
+              0.5208,
+              0.6667
+            ],
+            "micro": 0.5833
+          }
+        },
+        "after_resolver_micro": {
+          "jev_B": 0.5833,
+          "jev_C": 0.5833,
+          "jev_D": 0.5833,
+          "jev_E": 0.5833,
+          "local_bounded": 0.6667,
+          "local_bounded_v2dev": 0.9167,
+          "rules": 0.5833
+        },
+        "calibration": {
+          "jev_B": {
+            "brier": 0.6416,
+            "ece": 0.2908,
+            "mean_confidence": 0.7517,
+            "n": 48
+          },
+          "jev_C": {
+            "brier": 0.6358,
+            "ece": 0.2794,
+            "mean_confidence": 0.8323,
+            "n": 48
+          },
+          "jev_D": {
+            "brier": 0.6403,
+            "ece": 0.2204,
+            "mean_confidence": 0.7929,
+            "n": 48
+          },
+          "jev_E": {
+            "brier": 0.6921,
+            "ece": 0.3315,
+            "mean_confidence": 0.9148,
+            "n": 48
+          },
+          "local_bounded": {
+            "brier": 0.4655,
+            "ece": 0.1764,
+            "mean_confidence": 0.7947,
+            "n": 48
+          },
+          "local_bounded_v2dev": {
+            "brier": 0.1508,
+            "ece": 0.203,
+            "mean_confidence": 0.7812,
+            "n": 48
+          },
+          "rules": {
+            "brier": 0.8333,
+            "ece": 0.4167,
+            "mean_confidence": 1.0,
+            "n": 48
+          }
+        },
+        "cases": 48,
+        "cases_per_dataset": {
+          "bank_marketing": 8,
+          "breast_cancer": 8,
+          "credit_approval": 8,
+          "spambase": 8,
+          "thyroid_sick": 8,
+          "vehicle": 8
+        },
+        "classification": {
+          "jev_B": {
+            "calibration_acceptable": true,
+            "failures_acceptable": true,
+            "improves_on_majority_of_datasets": false,
+            "micro_delta_vs_B": null,
+            "non_inferior_to_local": false,
+            "routing": "EXPERIMENTAL ONLY",
+            "verdict": "BASELINE",
+            "vs_B": null,
+            "vs_local": {
+              "ci95": [
+                -0.2083,
+                0.0
+              ],
+              "datasets": 6,
+              "estimate": -0.0833,
+              "p_two_sided": 0.1742
+            }
+          },
+          "jev_C": {
+            "calibration_acceptable": true,
+            "failures_acceptable": true,
+            "improves_on_majority_of_datasets": false,
+            "micro_delta_vs_B": 0.0,
+            "non_inferior_to_local": false,
+            "routing": "EXPERIMENTAL ONLY",
+            "verdict": "NO EVIDENCE",
+            "vs_B": {
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "datasets": 6,
+              "estimate": 0.0,
+              "p_two_sided": 1.0
+            },
+            "vs_local": {
+              "ci95": [
+                -0.2083,
+                0.0
+              ],
+              "datasets": 6,
+              "estimate": -0.0833,
+              "p_two_sided": 0.1742
+            }
+          },
+          "jev_D": {
+            "calibration_acceptable": true,
+            "failures_acceptable": true,
+            "improves_on_majority_of_datasets": false,
+            "micro_delta_vs_B": 0.0,
+            "non_inferior_to_local": false,
+            "routing": "EXPERIMENTAL ONLY",
+            "verdict": "NO EVIDENCE",
+            "vs_B": {
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "datasets": 6,
+              "estimate": 0.0,
+              "p_two_sided": 1.0
+            },
+            "vs_local": {
+              "ci95": [
+                -0.2083,
+                0.0
+              ],
+              "datasets": 6,
+              "estimate": -0.0833,
+              "p_two_sided": 0.1742
+            }
+          },
+          "jev_E": {
+            "calibration_acceptable": true,
+            "failures_acceptable": true,
+            "improves_on_majority_of_datasets": false,
+            "micro_delta_vs_B": 0.0,
+            "non_inferior_to_local": false,
+            "routing": "EXPERIMENTAL ONLY",
+            "verdict": "NO EVIDENCE",
+            "vs_B": {
+              "ci95": [
+                0.0,
+                0.0
+              ],
+              "datasets": 6,
+              "estimate": 0.0,
+              "p_two_sided": 1.0
+            },
+            "vs_local": {
+              "ci95": [
+                -0.2083,
+                0.0
+              ],
+              "datasets": 6,
+              "estimate": -0.0833,
+              "p_two_sided": 0.1742
+            }
+          }
+        },
+        "datasets": [
+          "bank_marketing",
+          "breast_cancer",
+          "credit_approval",
+          "spambase",
+          "thyroid_sick",
+          "vehicle"
+        ],
+        "exploratory_post_hoc": {
+          "jev_B": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.6,
+              "linear": 0.0,
+              "tree_ensemble": 1.0
+            },
+            "accuracy_by_task": {
+              "binary": 0.575,
+              "multiclass": 0.625
+            },
+            "categorical_columns": -0.16,
+            "encoded_features": 0.025,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.076,
+            "missing_fraction": -0.107,
+            "rows": -0.174
+          },
+          "jev_C": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.6,
+              "linear": 0.0,
+              "tree_ensemble": 1.0
+            },
+            "accuracy_by_task": {
+              "binary": 0.575,
+              "multiclass": 0.625
+            },
+            "categorical_columns": -0.16,
+            "encoded_features": 0.025,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.076,
+            "missing_fraction": -0.107,
+            "rows": -0.174
+          },
+          "jev_D": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.6,
+              "linear": 0.0,
+              "tree_ensemble": 1.0
+            },
+            "accuracy_by_task": {
+              "binary": 0.575,
+              "multiclass": 0.625
+            },
+            "categorical_columns": -0.16,
+            "encoded_features": 0.025,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.076,
+            "missing_fraction": -0.107,
+            "rows": -0.174
+          },
+          "jev_E": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.6,
+              "linear": 0.0,
+              "tree_ensemble": 1.0
+            },
+            "accuracy_by_task": {
+              "binary": 0.575,
+              "multiclass": 0.625
+            },
+            "categorical_columns": -0.16,
+            "encoded_features": 0.025,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.076,
+            "missing_fraction": -0.107,
+            "rows": -0.174
+          },
+          "local_bounded": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.8,
+              "linear": 0.0833,
+              "tree_ensemble": 0.9375
+            },
+            "accuracy_by_task": {
+              "binary": 0.675,
+              "multiclass": 0.625
+            },
+            "categorical_columns": -0.014,
+            "encoded_features": 0.131,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": 0.099,
+            "missing_fraction": -0.135,
+            "rows": 0.048
+          }
+        },
+        "failure_analysis": {
+          "jev_B": {
+            "explained_when_nothing_fit": 20
+          },
+          "jev_C": {
+            "explained_when_nothing_fit": 20,
+            "wrong_with_high_confidence": 8
+          },
+          "jev_D": {
+            "explained_when_nothing_fit": 20,
+            "wrong_with_high_confidence": 8
+          },
+          "jev_E": {
+            "explained_when_nothing_fit": 20,
+            "wrong_with_high_confidence": 9
+          }
+        },
+        "label_distribution": {
+          "SKIP": 20,
+          "TREE_SHAP_EXACT": 28
+        },
+        "lodo": {
+          "jev_B-vs-local_bounded": {
+            "fragile": false,
+            "full": -0.0833,
+            "without": {
+              "bank_marketing": -0.025,
+              "breast_cancer": -0.1,
+              "credit_approval": -0.1,
+              "spambase": -0.1,
+              "thyroid_sick": -0.075,
+              "vehicle": -0.1
+            }
+          },
+          "jev_C-vs-jev_B": {
+            "fragile": false,
+            "full": 0.0,
+            "without": {
+              "bank_marketing": 0.0,
+              "breast_cancer": 0.0,
+              "credit_approval": 0.0,
+              "spambase": 0.0,
+              "thyroid_sick": 0.0,
+              "vehicle": 0.0
+            }
+          },
+          "jev_C-vs-local_bounded": {
+            "fragile": false,
+            "full": -0.0833,
+            "without": {
+              "bank_marketing": -0.025,
+              "breast_cancer": -0.1,
+              "credit_approval": -0.1,
+              "spambase": -0.1,
+              "thyroid_sick": -0.075,
+              "vehicle": -0.1
+            }
+          },
+          "jev_D-vs-jev_B": {
+            "fragile": false,
+            "full": 0.0,
+            "without": {
+              "bank_marketing": 0.0,
+              "breast_cancer": 0.0,
+              "credit_approval": 0.0,
+              "spambase": 0.0,
+              "thyroid_sick": 0.0,
+              "vehicle": 0.0
+            }
+          },
+          "jev_D-vs-local_bounded": {
+            "fragile": false,
+            "full": -0.0833,
+            "without": {
+              "bank_marketing": -0.025,
+              "breast_cancer": -0.1,
+              "credit_approval": -0.1,
+              "spambase": -0.1,
+              "thyroid_sick": -0.075,
+              "vehicle": -0.1
+            }
+          },
+          "jev_E-vs-jev_B": {
+            "fragile": false,
+            "full": 0.0,
+            "without": {
+              "bank_marketing": 0.0,
+              "breast_cancer": 0.0,
+              "credit_approval": 0.0,
+              "spambase": 0.0,
+              "thyroid_sick": 0.0,
+              "vehicle": 0.0
+            }
+          },
+          "jev_E-vs-local_bounded": {
+            "fragile": false,
+            "full": -0.0833,
+            "without": {
+              "bank_marketing": -0.025,
+              "breast_cancer": -0.1,
+              "credit_approval": -0.1,
+              "spambase": -0.1,
+              "thyroid_sick": -0.075,
+              "vehicle": -0.1
+            }
+          }
+        },
+        "mcnemar": {
+          "jev_B-vs-local_bounded": {
+            "a_only": 1,
+            "b_only": 5,
+            "p": 0.21875
+          },
+          "jev_C-vs-jev_B": {
+            "a_only": 0,
+            "b_only": 0,
+            "p": 1.0
+          },
+          "jev_C-vs-local_bounded": {
+            "a_only": 1,
+            "b_only": 5,
+            "p": 0.21875
+          },
+          "jev_D-vs-jev_B": {
+            "a_only": 0,
+            "b_only": 0,
+            "p": 1.0
+          },
+          "jev_D-vs-local_bounded": {
+            "a_only": 1,
+            "b_only": 5,
+            "p": 0.21875
+          },
+          "jev_E-vs-jev_B": {
+            "a_only": 0,
+            "b_only": 0,
+            "p": 1.0
+          },
+          "jev_E-vs-local_bounded": {
+            "a_only": 1,
+            "b_only": 5,
+            "p": 0.21875
+          }
+        },
+        "operations": {
+          "jev_B": {
+            "abstention_rate": 0.0,
+            "cases": 48,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 623.8,
+            "input_tokens_total": 29942,
+            "latency_ms_p50": 114.2,
+            "latency_ms_p95": 163.748,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 66.5,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 48,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_C": {
+            "abstention_rate": 0.0,
+            "cases": 48,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 872.8,
+            "input_tokens_total": 41894,
+            "latency_ms_p50": 122.0,
+            "latency_ms_p95": 181.756,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 66.6,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 48,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_D": {
+            "abstention_rate": 0.0,
+            "cases": 48,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 1535.4,
+            "input_tokens_total": 73699,
+            "latency_ms_p50": 117.8,
+            "latency_ms_p95": 178.127,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 66.5,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 48,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_E": {
+            "abstention_rate": 0.0,
+            "cases": 48,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 3764.2,
+            "input_tokens_total": 180682,
+            "latency_ms_p50": 263.9,
+            "latency_ms_p95": 361.127,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 231.7,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 96,
+            "retries": 0,
+            "review_rate": 0.0
+          }
+        },
+        "per_dataset": {
+          "jev_B": {
+            "bank_marketing": 0.5,
+            "breast_cancer": 0.625,
+            "credit_approval": 0.5,
+            "spambase": 0.75,
+            "thyroid_sick": 0.5,
+            "vehicle": 0.625
+          },
+          "jev_C": {
+            "bank_marketing": 0.5,
+            "breast_cancer": 0.625,
+            "credit_approval": 0.5,
+            "spambase": 0.75,
+            "thyroid_sick": 0.5,
+            "vehicle": 0.625
+          },
+          "jev_D": {
+            "bank_marketing": 0.5,
+            "breast_cancer": 0.625,
+            "credit_approval": 0.5,
+            "spambase": 0.75,
+            "thyroid_sick": 0.5,
+            "vehicle": 0.625
+          },
+          "jev_E": {
+            "bank_marketing": 0.5,
+            "breast_cancer": 0.625,
+            "credit_approval": 0.5,
+            "spambase": 0.75,
+            "thyroid_sick": 0.5,
+            "vehicle": 0.625
+          },
+          "local_bounded": {
+            "bank_marketing": 0.875,
+            "breast_cancer": 0.625,
+            "credit_approval": 0.5,
+            "spambase": 0.75,
+            "thyroid_sick": 0.625,
+            "vehicle": 0.625
+          },
+          "local_bounded_v2dev": {
+            "bank_marketing": 1.0,
+            "breast_cancer": 1.0,
+            "credit_approval": 0.75,
+            "spambase": 1.0,
+            "thyroid_sick": 1.0,
+            "vehicle": 0.75
+          },
+          "rules": {
+            "bank_marketing": 0.5,
+            "breast_cancer": 0.625,
+            "credit_approval": 0.5,
+            "spambase": 0.75,
+            "thyroid_sick": 0.5,
+            "vehicle": 0.625
+          }
+        },
+        "robustness": {
+          "jev_B": {
+            "best": 0.75,
+            "best_dataset": "spambase",
+            "datasets": 6,
+            "datasets_better_than_B": 0,
+            "datasets_better_than_local": 0,
+            "datasets_worse_than_B": 0,
+            "macro": 0.5833,
+            "median": 0.5625,
+            "micro": 0.5833,
+            "std_across_datasets": 0.0932,
+            "worst": 0.5,
+            "worst_dataset": "bank_marketing"
+          },
+          "jev_C": {
+            "best": 0.75,
+            "best_dataset": "spambase",
+            "datasets": 6,
+            "datasets_better_than_B": 0,
+            "datasets_better_than_local": 0,
+            "datasets_worse_than_B": 0,
+            "macro": 0.5833,
+            "median": 0.5625,
+            "micro": 0.5833,
+            "std_across_datasets": 0.0932,
+            "worst": 0.5,
+            "worst_dataset": "bank_marketing"
+          },
+          "jev_D": {
+            "best": 0.75,
+            "best_dataset": "spambase",
+            "datasets": 6,
+            "datasets_better_than_B": 0,
+            "datasets_better_than_local": 0,
+            "datasets_worse_than_B": 0,
+            "macro": 0.5833,
+            "median": 0.5625,
+            "micro": 0.5833,
+            "std_across_datasets": 0.0932,
+            "worst": 0.5,
+            "worst_dataset": "bank_marketing"
+          },
+          "jev_E": {
+            "best": 0.75,
+            "best_dataset": "spambase",
+            "datasets": 6,
+            "datasets_better_than_B": 0,
+            "datasets_better_than_local": 0,
+            "datasets_worse_than_B": 0,
+            "macro": 0.5833,
+            "median": 0.5625,
+            "micro": 0.5833,
+            "std_across_datasets": 0.0932,
+            "worst": 0.5,
+            "worst_dataset": "bank_marketing"
+          },
+          "local_bounded": {
+            "best": 0.875,
+            "best_dataset": "bank_marketing",
+            "datasets": 6,
+            "datasets_better_than_B": 2,
+            "datasets_better_than_local": 0,
+            "datasets_worse_than_B": 0,
+            "macro": 0.6667,
+            "median": 0.625,
+            "micro": 0.6667,
+            "std_across_datasets": 0.1179,
+            "worst": 0.5,
+            "worst_dataset": "credit_approval"
+          },
+          "local_bounded_v2dev": {
+            "best": 1.0,
+            "best_dataset": "bank_marketing",
+            "datasets": 6,
+            "datasets_better_than_B": 6,
+            "datasets_better_than_local": 6,
+            "datasets_worse_than_B": 0,
+            "macro": 0.9167,
+            "median": 1.0,
+            "micro": 0.9167,
+            "std_across_datasets": 0.1179,
+            "worst": 0.75,
+            "worst_dataset": "credit_approval"
+          },
+          "rules": {
+            "best": 0.75,
+            "best_dataset": "spambase",
+            "datasets": 6,
+            "datasets_better_than_B": 0,
+            "datasets_better_than_local": 0,
+            "datasets_worse_than_B": 0,
+            "macro": 0.5833,
+            "median": 0.5625,
+            "micro": 0.5833,
+            "std_across_datasets": 0.0932,
+            "worst": 0.5,
+            "worst_dataset": "bank_marketing"
+          }
+        }
+      },
+      "HPO_DEPTH": {
+        "accuracy": {
+          "jev_B": {
+            "macro": 0.4583,
+            "macro_ci95": [
+              0.3125,
+              0.5833
+            ],
+            "micro": 0.4583
+          },
+          "jev_C": {
+            "macro": 0.4583,
+            "macro_ci95": [
+              0.2917,
+              0.6458
+            ],
+            "micro": 0.4583
+          },
+          "jev_D": {
+            "macro": 0.3958,
+            "macro_ci95": [
+              0.25,
+              0.5208
+            ],
+            "micro": 0.3958
+          },
+          "jev_E": {
+            "macro": 0.4167,
+            "macro_ci95": [
+              0.25,
+              0.5625
+            ],
+            "micro": 0.4167
+          },
+          "local_bounded": {
+            "macro": 0.4375,
+            "macro_ci95": [
+              0.2292,
+              0.625
+            ],
+            "micro": 0.4375
+          },
+          "local_bounded_v2dev": {
+            "macro": 0.2708,
+            "macro_ci95": [
+              0.1042,
+              0.4583
+            ],
+            "micro": 0.2708
+          },
+          "rules": {
+            "macro": 0.2917,
+            "macro_ci95": [
+              0.1875,
+              0.3958
+            ],
+            "micro": 0.2917
+          }
+        },
+        "after_resolver_micro": {
+          "jev_B": 0.4583,
+          "jev_C": 0.4583,
+          "jev_D": 0.3958,
+          "jev_E": 0.4167,
+          "local_bounded": 0.4375,
+          "local_bounded_v2dev": 0.2708,
+          "rules": 0.2917
+        },
+        "calibration": {
+          "jev_B": {
+            "brier": 0.7327,
+            "ece": 0.1969,
+            "mean_confidence": 0.6094,
+            "n": 48
+          },
+          "jev_C": {
+            "brier": 0.6802,
+            "ece": 0.2202,
+            "mean_confidence": 0.5481,
+            "n": 48
+          },
+          "jev_D": {
+            "brier": 0.7006,
+            "ece": 0.136,
+            "mean_confidence": 0.5127,
+            "n": 48
+          },
+          "jev_E": {
+            "brier": 0.9047,
+            "ece": 0.381,
+            "mean_confidence": 0.7977,
+            "n": 48
+          },
+          "local_bounded": {
+            "brier": 0.6767,
+            "ece": 0.1869,
+            "mean_confidence": 0.6031,
+            "n": 48
+          },
+          "local_bounded_v2dev": {
+            "brier": 0.888,
+            "ece": 0.4242,
+            "mean_confidence": 0.6441,
+            "n": 48
+          },
+          "rules": {
+            "brier": 1.4167,
+            "ece": 0.7083,
+            "mean_confidence": 1.0,
+            "n": 48
+          }
+        },
+        "cases": 48,
+        "cases_per_dataset": {
+          "bank_marketing": 8,
+          "breast_cancer": 8,
+          "credit_approval": 8,
+          "spambase": 8,
+          "thyroid_sick": 8,
+          "vehicle": 8
+        },
+        "classification": {
+          "jev_B": {
+            "calibration_acceptable": true,
+            "failures_acceptable": true,
+            "improves_on_majority_of_datasets": false,
+            "micro_delta_vs_B": null,
+            "non_inferior_to_local": false,
+            "routing": "EXPERIMENTAL ONLY",
+            "verdict": "BASELINE",
+            "vs_B": null,
+            "vs_local": {
+              "ci95": [
+                -0.1667,
+                0.1875
+              ],
+              "datasets": 6,
+              "estimate": 0.0208,
+              "p_two_sided": 0.8802
+            }
+          },
+          "jev_C": {
+            "calibration_acceptable": true,
+            "failures_acceptable": true,
+            "improves_on_majority_of_datasets": false,
+            "micro_delta_vs_B": 0.0,
+            "non_inferior_to_local": false,
+            "routing": "EXPERIMENTAL ONLY",
+            "verdict": "NO EVIDENCE",
+            "vs_B": {
+              "ci95": [
+                -0.0833,
+                0.1042
+              ],
+              "datasets": 6,
+              "estimate": 0.0,
+              "p_two_sided": 1.0
+            },
+            "vs_local": {
+              "ci95": [
+                -0.2083,
+                0.2708
+              ],
+              "datasets": 6,
+              "estimate": 0.0208,
+              "p_two_sided": 0.9486
+            }
+          },
+          "jev_D": {
+            "calibration_acceptable": true,
+            "failures_acceptable": true,
+            "improves_on_majority_of_datasets": false,
+            "micro_delta_vs_B": -0.0625,
+            "non_inferior_to_local": false,
+            "routing": "EXPERIMENTAL ONLY",
+            "verdict": "NO EVIDENCE",
+            "vs_B": {
+              "ci95": [
+                -0.1458,
+                0.0
+              ],
+              "datasets": 6,
+              "estimate": -0.0625,
+              "p_two_sided": 0.1704
+            },
+            "vs_local": {
+              "ci95": [
+                -0.2083,
+                0.1042
+              ],
+              "datasets": 6,
+              "estimate": -0.0417,
+              "p_two_sided": 0.7128
+            }
+          },
+          "jev_E": {
+            "calibration_acceptable": false,
+            "failures_acceptable": true,
+            "improves_on_majority_of_datasets": false,
+            "micro_delta_vs_B": -0.04166666666666663,
+            "non_inferior_to_local": false,
+            "routing": "EXPERIMENTAL ONLY",
+            "verdict": "NO EVIDENCE",
+            "vs_B": {
+              "ci95": [
+                -0.1458,
+                0.0417
+              ],
+              "datasets": 6,
+              "estimate": -0.0417,
+              "p_two_sided": 0.5314
+            },
+            "vs_local": {
+              "ci95": [
+                -0.2292,
+                0.125
+              ],
+              "datasets": 6,
+              "estimate": -0.0208,
+              "p_two_sided": 0.9686
+            }
+          }
+        },
+        "datasets": [
+          "bank_marketing",
+          "breast_cancer",
+          "credit_approval",
+          "spambase",
+          "thyroid_sick",
+          "vehicle"
+        ],
+        "exploratory_post_hoc": {
+          "jev_B": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.5625,
+              "linear": 0.3889,
+              "tree_ensemble": 0.4286
+            },
+            "accuracy_by_task": {
+              "binary": 0.425,
+              "multiclass": 0.625
+            },
+            "categorical_columns": -0.053,
+            "encoded_features": -0.211,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.222,
+            "missing_fraction": 0.137,
+            "rows": -0.376
+          },
+          "jev_C": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.5625,
+              "linear": 0.3889,
+              "tree_ensemble": 0.4286
+            },
+            "accuracy_by_task": {
+              "binary": 0.375,
+              "multiclass": 0.875
+            },
+            "categorical_columns": -0.225,
+            "encoded_features": -0.348,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.359,
+            "missing_fraction": -0.036,
+            "rows": -0.395
+          },
+          "jev_D": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.1875,
+              "linear": 0.3889,
+              "tree_ensemble": 0.6429
+            },
+            "accuracy_by_task": {
+              "binary": 0.35,
+              "multiclass": 0.625
+            },
+            "categorical_columns": 0.0,
+            "encoded_features": -0.127,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.192,
+            "missing_fraction": 0.134,
+            "rows": -0.224
+          },
+          "jev_E": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.25,
+              "linear": 0.3889,
+              "tree_ensemble": 0.6429
+            },
+            "accuracy_by_task": {
+              "binary": 0.375,
+              "multiclass": 0.625
+            },
+            "categorical_columns": 0.134,
+            "encoded_features": -0.176,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.16,
+            "missing_fraction": 0.284,
+            "rows": -0.371
+          },
+          "local_bounded": {
+            "accuracy_by_model_family": {
+              "gradient_boosting": 0.25,
+              "linear": 0.4444,
+              "tree_ensemble": 0.6429
+            },
+            "accuracy_by_task": {
+              "binary": 0.45,
+              "multiclass": 0.375
+            },
+            "categorical_columns": 0.027,
+            "encoded_features": 0.175,
+            "high_cardinality_columns": null,
+            "imbalance_ratio": -0.124,
+            "missing_fraction": 0.231,
+            "rows": -0.094
+          }
+        },
+        "failure_analysis": {
+          "jev_B": {
+            "adjacent_depth_boundary": 19,
+            "over_search": 8,
+            "under_search": 18
+          },
+          "jev_C": {
+            "adjacent_depth_boundary": 18,
+            "over_search": 8,
+            "under_search": 18
+          },
+          "jev_D": {
+            "adjacent_depth_boundary": 21,
+            "over_search": 16,
+            "under_search": 13
+          },
+          "jev_E": {
+            "adjacent_depth_boundary": 21,
+            "over_search": 14,
+            "under_search": 14,
+            "wrong_with_high_confidence": 14
+          }
+        },
+        "label_distribution": {
+          "DEEP": 7,
+          "LIGHT": 20,
+          "NONE": 14,
+          "STANDARD": 7
+        },
+        "lodo": {
+          "jev_B-vs-local_bounded": {
+            "fragile": true,
+            "full": 0.0208,
+            "without": {
+              "bank_marketing": 0.0,
+              "breast_cancer": -0.025,
+              "credit_approval": 0.025,
+              "spambase": 0.1,
+              "thyroid_sick": 0.05,
+              "vehicle": -0.025
+            }
+          },
+          "jev_C-vs-jev_B": {
+            "fragile": true,
+            "full": 0.0,
+            "without": {
+              "bank_marketing": 0.0,
+              "breast_cancer": 0.0,
+              "credit_approval": 0.025,
+              "spambase": 0.0,
+              "thyroid_sick": 0.025,
+              "vehicle": -0.05
+            }
+          },
+          "jev_C-vs-local_bounded": {
+            "fragile": true,
+            "full": 0.0208,
+            "without": {
+              "bank_marketing": 0.0,
+              "breast_cancer": -0.025,
+              "credit_approval": 0.05,
+              "spambase": 0.1,
+              "thyroid_sick": 0.075,
+              "vehicle": -0.075
+            }
+          },
+          "jev_D-vs-jev_B": {
+            "fragile": false,
+            "full": -0.0625,
+            "without": {
+              "bank_marketing": -0.075,
+              "breast_cancer": -0.025,
+              "credit_approval": -0.05,
+              "spambase": -0.075,
+              "thyroid_sick": -0.075,
+              "vehicle": -0.075
+            }
+          },
+          "jev_D-vs-local_bounded": {
+            "fragile": true,
+            "full": -0.0417,
+            "without": {
+              "bank_marketing": -0.075,
+              "breast_cancer": -0.05,
+              "credit_approval": -0.025,
+              "spambase": 0.025,
+              "thyroid_sick": -0.025,
+              "vehicle": -0.1
+            }
+          },
+          "jev_E-vs-jev_B": {
+            "fragile": false,
+            "full": -0.0417,
+            "without": {
+              "bank_marketing": -0.05,
+              "breast_cancer": 0.0,
+              "credit_approval": -0.05,
+              "spambase": -0.025,
+              "thyroid_sick": -0.075,
+              "vehicle": -0.05
+            }
+          },
+          "jev_E-vs-local_bounded": {
+            "fragile": true,
+            "full": -0.0208,
+            "without": {
+              "bank_marketing": -0.05,
+              "breast_cancer": -0.025,
+              "credit_approval": -0.025,
+              "spambase": 0.075,
+              "thyroid_sick": -0.025,
+              "vehicle": -0.075
+            }
+          }
+        },
+        "mcnemar": {
+          "jev_B-vs-local_bounded": {
+            "a_only": 9,
+            "b_only": 8,
+            "p": 1.0
+          },
+          "jev_C-vs-jev_B": {
+            "a_only": 2,
+            "b_only": 2,
+            "p": 1.0
+          },
+          "jev_C-vs-local_bounded": {
+            "a_only": 11,
+            "b_only": 10,
+            "p": 1.0
+          },
+          "jev_D-vs-jev_B": {
+            "a_only": 6,
+            "b_only": 9,
+            "p": 0.607239
+          },
+          "jev_D-vs-local_bounded": {
+            "a_only": 5,
+            "b_only": 7,
+            "p": 0.774414
+          },
+          "jev_E-vs-jev_B": {
+            "a_only": 5,
+            "b_only": 7,
+            "p": 0.774414
+          },
+          "jev_E-vs-local_bounded": {
+            "a_only": 6,
+            "b_only": 7,
+            "p": 1.0
+          }
+        },
+        "operations": {
+          "jev_B": {
+            "abstention_rate": 0.0,
+            "cases": 48,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 636.7,
+            "input_tokens_total": 30562,
+            "latency_ms_p50": 126.0,
+            "latency_ms_p95": 202.311,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 48.0,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 48,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_C": {
+            "abstention_rate": 0.0,
+            "cases": 48,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 943.7,
+            "input_tokens_total": 45298,
+            "latency_ms_p50": 123.0,
+            "latency_ms_p95": 222.994,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 48.2,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 48,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_D": {
+            "abstention_rate": 0.0,
+            "cases": 48,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 1606.1,
+            "input_tokens_total": 77092,
+            "latency_ms_p50": 126.6,
+            "latency_ms_p95": 200.287,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 48.3,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 48,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_E": {
+            "abstention_rate": 0.0,
+            "cases": 48,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 3780.4,
+            "input_tokens_total": 181461,
+            "latency_ms_p50": 256.2,
+            "latency_ms_p95": 461.63,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 179,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 96,
+            "retries": 0,
+            "review_rate": 0.0
+          }
+        },
+        "per_dataset": {
+          "jev_B": {
+            "bank_marketing": 0.125,
+            "breast_cancer": 0.5,
+            "credit_approval": 0.625,
+            "spambase": 0.375,
+            "thyroid_sick": 0.5,
+            "vehicle": 0.625
+          },
+          "jev_C": {
+            "bank_marketing": 0.125,
+            "breast_cancer": 0.5,
+            "credit_approval": 0.5,
+            "spambase": 0.375,
+            "thyroid_sick": 0.375,
+            "vehicle": 0.875
+          },
+          "jev_D": {
+            "bank_marketing": 0.125,
+            "breast_cancer": 0.25,
+            "credit_approval": 0.5,
+            "spambase": 0.375,
+            "thyroid_sick": 0.5,
+            "vehicle": 0.625
+          },
+          "jev_E": {
+            "bank_marketing": 0.125,
+            "breast_cancer": 0.25,
+            "credit_approval": 0.625,
+            "spambase": 0.25,
+            "thyroid_sick": 0.625,
+            "vehicle": 0.625
+          },
+          "local_bounded": {
+            "bank_marketing": 0.0,
+            "breast_cancer": 0.25,
+            "credit_approval": 0.625,
+            "spambase": 0.75,
+            "thyroid_sick": 0.625,
+            "vehicle": 0.375
+          },
+          "local_bounded_v2dev": {
+            "bank_marketing": 0.125,
+            "breast_cancer": 0.375,
+            "credit_approval": 0.125,
+            "spambase": 0.625,
+            "thyroid_sick": 0.375,
+            "vehicle": 0.0
+          },
+          "rules": {
+            "bank_marketing": 0.375,
+            "breast_cancer": 0.125,
+            "credit_approval": 0.375,
+            "spambase": 0.25,
+            "thyroid_sick": 0.5,
+            "vehicle": 0.125
+          }
+        },
+        "robustness": {
+          "jev_B": {
+            "best": 0.625,
+            "best_dataset": "credit_approval",
+            "datasets": 6,
+            "datasets_better_than_B": 0,
+            "datasets_better_than_local": 3,
+            "datasets_worse_than_B": 0,
+            "macro": 0.4583,
+            "median": 0.5,
+            "micro": 0.4583,
+            "std_across_datasets": 0.1718,
+            "worst": 0.125,
+            "worst_dataset": "bank_marketing"
+          },
+          "jev_C": {
+            "best": 0.875,
+            "best_dataset": "vehicle",
+            "datasets": 6,
+            "datasets_better_than_B": 1,
+            "datasets_better_than_local": 3,
+            "datasets_worse_than_B": 2,
+            "macro": 0.4583,
+            "median": 0.4375,
+            "micro": 0.4583,
+            "std_across_datasets": 0.2244,
+            "worst": 0.125,
+            "worst_dataset": "bank_marketing"
+          },
+          "jev_D": {
+            "best": 0.625,
+            "best_dataset": "vehicle",
+            "datasets": 6,
+            "datasets_better_than_B": 0,
+            "datasets_better_than_local": 2,
+            "datasets_worse_than_B": 2,
+            "macro": 0.3958,
+            "median": 0.4375,
+            "micro": 0.3958,
+            "std_across_datasets": 0.168,
+            "worst": 0.125,
+            "worst_dataset": "bank_marketing"
+          },
+          "jev_E": {
+            "best": 0.625,
+            "best_dataset": "credit_approval",
+            "datasets": 6,
+            "datasets_better_than_B": 1,
+            "datasets_better_than_local": 2,
+            "datasets_worse_than_B": 2,
+            "macro": 0.4167,
+            "median": 0.4375,
+            "micro": 0.4167,
+            "std_across_datasets": 0.2125,
+            "worst": 0.125,
+            "worst_dataset": "bank_marketing"
+          },
+          "local_bounded": {
+            "best": 0.75,
+            "best_dataset": "spambase",
+            "datasets": 6,
+            "datasets_better_than_B": 2,
+            "datasets_better_than_local": 0,
+            "datasets_worse_than_B": 3,
+            "macro": 0.4375,
+            "median": 0.5,
+            "micro": 0.4375,
+            "std_across_datasets": 0.2577,
+            "worst": 0.0,
+            "worst_dataset": "bank_marketing"
+          },
+          "local_bounded_v2dev": {
+            "best": 0.625,
+            "best_dataset": "spambase",
+            "datasets": 6,
+            "datasets_better_than_B": 1,
+            "datasets_better_than_local": 2,
+            "datasets_worse_than_B": 4,
+            "macro": 0.2708,
+            "median": 0.25,
+            "micro": 0.2708,
+            "std_across_datasets": 0.2094,
+            "worst": 0.0,
+            "worst_dataset": "vehicle"
+          },
+          "rules": {
+            "best": 0.5,
+            "best_dataset": "thyroid_sick",
+            "datasets": 6,
+            "datasets_better_than_B": 1,
+            "datasets_better_than_local": 1,
+            "datasets_worse_than_B": 4,
+            "macro": 0.2917,
+            "median": 0.3125,
+            "micro": 0.2917,
+            "std_across_datasets": 0.1382,
+            "worst": 0.125,
+            "worst_dataset": "breast_cancer"
+          }
+        }
+      }
+    },
+    "holm": {
+      "EXPLANATION_MODE:jev_B-vs-local_bounded": {
+        "p": 0.21875,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "EXPLANATION_MODE:jev_C-vs-jev_B": {
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "EXPLANATION_MODE:jev_C-vs-local_bounded": {
+        "p": 0.21875,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "EXPLANATION_MODE:jev_D-vs-jev_B": {
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "EXPLANATION_MODE:jev_D-vs-local_bounded": {
+        "p": 0.21875,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "EXPLANATION_MODE:jev_E-vs-jev_B": {
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "EXPLANATION_MODE:jev_E-vs-local_bounded": {
+        "p": 0.21875,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "HPO_DEPTH:jev_B-vs-local_bounded": {
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "HPO_DEPTH:jev_C-vs-jev_B": {
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "HPO_DEPTH:jev_C-vs-local_bounded": {
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "HPO_DEPTH:jev_D-vs-jev_B": {
+        "p": 0.607239,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "HPO_DEPTH:jev_D-vs-local_bounded": {
+        "p": 0.774414,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "HPO_DEPTH:jev_E-vs-jev_B": {
+        "p": 0.774414,
+        "p_holm": 1.0,
+        "significant": false
+      },
+      "HPO_DEPTH:jev_E-vs-local_bounded": {
+        "p": 1.0,
+        "p_holm": 1.0,
+        "significant": false
+      }
+    },
+    "input_tokens": {
+      "dev": 125064,
+      "final": 660630,
+      "repeat": 82576,
+      "technical": 27546
+    },
+    "output_tokens": {
+      "dev": 6399,
+      "final": 36235,
+      "repeat": 4528,
+      "technical": 1506
+    },
+    "pre_registered": {
+      "alpha": 0.05,
+      "bootstrap": 10000,
+      "bootstrap_seed": 20261021,
+      "ece_floor": 0.1,
+      "ece_tolerance": 0.05,
+      "family": [
+        "HPO_DEPTH:jev_C-vs-jev_B",
+        "HPO_DEPTH:jev_D-vs-jev_B",
+        "HPO_DEPTH:jev_E-vs-jev_B",
+        "HPO_DEPTH:jev_B-vs-local_bounded",
+        "HPO_DEPTH:jev_C-vs-local_bounded",
+        "HPO_DEPTH:jev_D-vs-local_bounded",
+        "HPO_DEPTH:jev_E-vs-local_bounded",
+        "EXPLANATION_MODE:jev_C-vs-jev_B",
+        "EXPLANATION_MODE:jev_D-vs-jev_B",
+        "EXPLANATION_MODE:jev_E-vs-jev_B",
+        "EXPLANATION_MODE:jev_B-vs-local_bounded",
+        "EXPLANATION_MODE:jev_C-vs-local_bounded",
+        "EXPLANATION_MODE:jev_D-vs-local_bounded",
+        "EXPLANATION_MODE:jev_E-vs-local_bounded"
+      ],
+      "max_failure_rate": 0.05,
+      "non_inferiority_margin": 0.05,
+      "primary": "macro accuracy on FINAL_HOLDOUT datasets"
+    },
+    "reproducibility": {
+      "jev_B": {
+        "answer_agreement": 1.0,
+        "cases": 12,
+        "max_abs_confidence_change": 0.12,
+        "mean_abs_confidence_change": 0.0333
+      },
+      "jev_C": {
+        "answer_agreement": 1.0,
+        "cases": 12,
+        "max_abs_confidence_change": 0.08,
+        "mean_abs_confidence_change": 0.0233
+      },
+      "jev_D": {
+        "answer_agreement": 0.9167,
+        "cases": 12,
+        "max_abs_confidence_change": 0.06,
+        "mean_abs_confidence_change": 0.0258
+      },
+      "jev_E": {
+        "answer_agreement": 1.0,
+        "cases": 12,
+        "max_abs_confidence_change": 0.06,
+        "mean_abs_confidence_change": 0.0217
+      }
+    },
+    "technical": {
+      "EXPLANATION_MODE": {
+        "cases": 2,
+        "micro_accuracy": {
+          "jev_B": 0.5,
+          "jev_C": 0.5,
+          "jev_D": 0.5,
+          "jev_E": 0.5,
+          "local_bounded": 0.5,
+          "local_bounded_v2dev": 1.0,
+          "rules": 0.5
+        },
+        "operations": {
+          "jev_B": {
+            "abstention_rate": 0.0,
+            "cases": 2,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 624.5,
+            "input_tokens_total": 1249,
+            "latency_ms_p50": 125.4,
+            "latency_ms_p95": 130.89,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 66,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 2,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_C": {
+            "abstention_rate": 0.0,
+            "cases": 2,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 873.5,
+            "input_tokens_total": 1747,
+            "latency_ms_p50": 134.4,
+            "latency_ms_p95": 135.313,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 66,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 2,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_D": {
+            "abstention_rate": 0.0,
+            "cases": 2,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 1535.5,
+            "input_tokens_total": 3071,
+            "latency_ms_p50": 137.4,
+            "latency_ms_p95": 156.659,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 66,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 2,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_E": {
+            "abstention_rate": 0.0,
+            "cases": 2,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 3763.5,
+            "input_tokens_total": 7527,
+            "latency_ms_p50": 264.8,
+            "latency_ms_p95": 274.668,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 231,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 4,
+            "retries": 0,
+            "review_rate": 0.0
+          }
+        }
+      },
+      "HPO_DEPTH": {
+        "cases": 2,
+        "micro_accuracy": {
+          "jev_B": 0.5,
+          "jev_C": 0.5,
+          "jev_D": 0,
+          "jev_E": 0.5,
+          "local_bounded": 0.5,
+          "local_bounded_v2dev": 0.5,
+          "rules": 0
+        },
+        "operations": {
+          "jev_B": {
+            "abstention_rate": 0.0,
+            "cases": 2,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 638.5,
+            "input_tokens_total": 1277,
+            "latency_ms_p50": 120.9,
+            "latency_ms_p95": 121.049,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 48,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 2,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_C": {
+            "abstention_rate": 0.0,
+            "cases": 2,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 945.5,
+            "input_tokens_total": 1891,
+            "latency_ms_p50": 116.1,
+            "latency_ms_p95": 120.316,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 48,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 2,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_D": {
+            "abstention_rate": 0.0,
+            "cases": 2,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 1608,
+            "input_tokens_total": 3216,
+            "latency_ms_p50": 114.5,
+            "latency_ms_p95": 115.755,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 49,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 2,
+            "retries": 0,
+            "review_rate": 0.0
+          },
+          "jev_E": {
+            "abstention_rate": 0.0,
+            "cases": 2,
+            "failure_rate": 0.0,
+            "failures": [],
+            "input_tokens_per_case": 3784,
+            "input_tokens_total": 7568,
+            "latency_ms_p50": 293.8,
+            "latency_ms_p95": 322.313,
+            "models": [
+              "jev-1.13.0"
+            ],
+            "output_tokens_per_case": 179,
+            "policy_modification_rate": 0.0,
+            "provider_calls": 4,
+            "retries": 0,
+            "review_rate": 0.0
+          }
+        }
+      }
+    }
+  },
+  "benchmark": {
+    "case_counts": {
+      "EXPLANATION_MODE": {
+        "development": 80,
+        "final_holdout": 48,
+        "label_distribution_all": {
+          "PERMUTATION_FULL": 4,
+          "PERMUTATION_SAMPLED": 8,
+          "SKIP": 44,
+          "TREE_SHAP_EXACT": 72
+        },
+        "total": 128
+      },
+      "HPO_DEPTH": {
+        "development": 80,
+        "final_holdout": 48,
+        "label_distribution_all": {
+          "DEEP": 22,
+          "LIGHT": 40,
+          "NONE": 48,
+          "STANDARD": 18
+        },
+        "total": 128
+      }
+    },
+    "datasets": 16,
+    "development": [
+      "digits",
+      "credit_sample",
+      "adult",
+      "german_credit",
+      "madelon",
+      "ozone_8hr",
+      "segment",
+      "magic_telescope",
+      "banknote",
+      "online_shoppers"
+    ],
+    "final_holdout": [
+      "breast_cancer",
+      "bank_marketing",
+      "spambase",
+      "thyroid_sick",
+      "vehicle",
+      "credit_approval"
+    ],
+    "label_hardware": {
+      "accelerator": "none used",
+      "architecture": "arm64",
+      "cpu": "Apple M2 Pro",
+      "label_generation": "sequential, one process (timings are not contended)",
+      "lightgbm": "4.7.0",
+      "numpy": "2.5.3",
+      "physical_cpus": "10",
+      "python": "3.12.7",
+      "ram_gb": 16.0,
+      "scikit_learn": "1.9.1",
+      "scipy": "1.18.1",
+      "system": "Darwin 24.6.0",
+      "threads_per_fit": 2
+    },
+    "manifest_sha256": "8eae2b9c4b97fc3d824c07c349ccdfa79e1d18a48ee930b707ceb84e0b7efeb1",
+    "version": "decision-corpus-v2"
+  },
+  "calls": {
+    "dev": 80,
+    "final": 480,
+    "repeat": 60,
+    "technical": 20,
+    "total": 640
+  },
+  "case_file": "jev-generalization-cde-cases-2026-10-21.jsonl",
+  "cost": {
+    "reason": "TypeSafe exposes token usage but no price or balance",
+    "state": "UNKNOWN"
+  },
+  "credit_refusals": 0,
+  "dataset_generalization": "tested (6 unseen datasets)",
+  "date": "2026-10-21",
+  "evidence": "REAL provider calls (TypeSafe api.typesafe.ai); not a mock",
+  "execution": {
+    "jev_calls_from": "the product's hosted backend environment (NOT PUBLIC), outside the request path; owner's USER-scoped credential resolved in memory, never exported; experiment files removed afterwards; app not redeployed",
+    "labels_from": "owner's laptop (Apple M2 Pro), sequential",
+    "phases": {
+      "dev": {
+        "cases": 20,
+        "credit_exhausted": false,
+        "duration_seconds": 12.6,
+        "jev_calls": 80,
+        "manifest": "decision-corpus-v2-manifest.json",
+        "model_discovery": {
+          "alias": "jev-latest",
+          "available": [
+            "jev-latest",
+            "jev-preview"
+          ]
+        },
+        "phase": "dev"
+      },
+      "final": {
+        "cases": 96,
+        "credit_exhausted": false,
+        "duration_seconds": 69.0,
+        "jev_calls": 480,
+        "manifest": "decision-corpus-v2-manifest.json",
+        "model_discovery": {
+          "alias": "jev-latest",
+          "available": [
+            "jev-latest",
+            "jev-preview"
+          ]
+        },
+        "phase": "final"
+      },
+      "repeat": {
+        "cases": 12,
+        "credit_exhausted": false,
+        "duration_seconds": 9.4,
+        "jev_calls": 60,
+        "manifest": "decision-corpus-v2-manifest.json",
+        "model_discovery": {
+          "alias": "jev-latest",
+          "available": [
+            "jev-latest",
+            "jev-preview"
+          ]
+        },
+        "phase": "repeat"
+      },
+      "technical": {
+        "cases": 4,
+        "credit_exhausted": false,
+        "duration_seconds": 5.4,
+        "jev_calls": 20,
+        "manifest": "decision-corpus-v2-manifest.json",
+        "model_discovery": {
+          "alias": "jev-latest",
+          "available": [
+            "jev-latest",
+            "jev-preview"
+          ]
+        },
+        "phase": "technical"
+      }
+    }
+  },
+  "experiment": "jev-generalization-cde",
+  "hardware_generalization": "not established (labels from one machine)",
+  "input_tokens": {
+    "dev": 125064,
+    "final": 660630,
+    "repeat": 82576,
+    "technical": 27546
+  },
+  "model": {
+    "alias": "jev-latest",
+    "resolved": [
+      "jev-1.13.0"
+    ]
+  },
+  "output_tokens": {
+    "dev": 6399,
+    "final": 36235,
+    "repeat": 4528,
+    "technical": 1506
+  },
+  "pre_registration": {
+    "changes_after_dev_phase": "none (development phase checked failures and contract only)",
+    "corpus_commit": "cd23a145",
+    "corpus_committed_at": "2026-10-21T17:31:31+03:00",
+    "definitions_commit": "dbf7dc9a",
+    "definitions_committed_at": "2026-10-21T16:53:00+03:00",
+    "doc": "docs/experiments/jev-athena-generalization-cde-preregistration-2026-10-21.md",
+    "pushed_before_calls": true
+  },
+  "reference_dev_majority": {
+    "EXPLANATION_MODE": {
+      "label": "TREE_SHAP_EXACT",
+      "macro": 0.5833,
+      "micro": 0.5833
+    },
+    "HPO_DEPTH": {
+      "label": "NONE",
+      "macro": 0.2917,
+      "micro": 0.2917
+    },
+    "note": "constant predictor = most common label on DEVELOPMENT datasets; uses no holdout labels; added after results as context, not part of the pre-registered family"
+  },
+  "remaining_credit": "UNKNOWN",
+  "variants": {
+    "B": {
+      "question": "single-choice",
+      "semantics": "decision-semantics-v1",
+      "semantics_sha256": "fbc7df2c020e0453bb8967c8a8b88395aa15e9b8e734d8c85f9dcbc8e4085067",
+      "state": "v1-typed-features"
+    },
+    "C": {
+      "question": "single-choice",
+      "semantics": "decision-semantics-v2",
+      "semantics_sha256": "594dcb1890ea0f58ac92dec8c7c02a0389b1b06f2b209ce281291e68a17d98f0",
+      "state": "v1-typed-features"
+    },
+    "D": {
+      "question": "single-choice",
+      "semantics": "decision-semantics-v2",
+      "semantics_sha256": "594dcb1890ea0f58ac92dec8c7c02a0389b1b06f2b209ce281291e68a17d98f0",
+      "state": "decision-state-v2",
+      "state_sha256": "9d51b45b751a7c46f525fcf205a77361b98970e8d6e66cf5cca04b2400f6594c"
+    },
+    "E": {
+      "decomposition_sha256": "4c65497f70f3677c7de4a0ff088bb03144e757a7d494d86496cde3234ccead50",
+      "question": "decision-decomposition-v1",
+      "semantics": "decision-semantics-v2",
+      "semantics_sha256": "594dcb1890ea0f58ac92dec8c7c02a0389b1b06f2b209ce281291e68a17d98f0",
+      "state": "decision-state-v2",
+      "state_sha256": "9d51b45b751a7c46f525fcf205a77361b98970e8d6e66cf5cca04b2400f6594c"
+    }
+  }
+}

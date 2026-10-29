@@ -1,0 +1,15 @@
+split,variant,condition,n_datasets,agree_business_problem,agree_split_strategy,agree_primary_metric,agree_model_family,agree_hpo_depth,agree_calibration_needed,agree_lever,agree_blocked,agree_mean
+UNSEEN,anonymized,A_RAW,2,1.0,1.0,1.0,1.0,1.0,0.5,0.5,0.5,0.8125
+UNSEEN,anonymized,C_DICT,2,1.0,1.0,1.0,1.0,1.0,0.5,0.0,1.0,0.8125
+UNSEEN,anonymized,E_FULL,2,1.0,1.0,1.0,1.0,1.0,0.5,0.0,0.0,0.6875
+UNSEEN,incomplete,C_DICT,2,1.0,1.0,1.0,1.0,1.0,0.5,0.0,0.5,0.75
+UNSEEN,incomplete,D_RULES,2,1.0,1.0,1.0,1.0,1.0,0.5,0.0,0.5,0.75
+UNSEEN,incomplete,E_FULL,2,1.0,1.0,1.0,1.0,1.0,1.0,0.0,1.0,0.875
+UNSEEN,misleading,C_DICT,2,1.0,1.0,1.0,1.0,1.0,0.5,1.0,1.0,0.9375
+UNSEEN,misleading,D_RULES,2,1.0,1.0,1.0,1.0,1.0,0.5,1.0,0.0,0.8125
+UNSEEN,misleading,E_FULL,2,1.0,1.0,1.0,1.0,1.0,0.5,0.0,0.0,0.6875
+UNSEEN,trapped,A_RAW,8,1.0,1.0,1.0,1.0,1.0,0.75,0.875,0.625,0.90625
+UNSEEN,trapped,B_SELF,8,1.0,1.0,1.0,1.0,1.0,0.625,0.5,0.375,0.8125
+UNSEEN,trapped,C_DICT,8,1.0,1.0,1.0,1.0,1.0,0.625,0.75,0.625,0.875
+UNSEEN,trapped,D_RULES,8,1.0,1.0,1.0,1.0,1.0,0.875,0.625,0.625,0.890625
+UNSEEN,trapped,E_FULL,8,1.0,1.0,1.0,1.0,1.0,0.875,0.875,0.25,0.875

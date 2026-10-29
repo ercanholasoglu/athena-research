@@ -1,0 +1,16 @@
+# environments and caches
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+catboost_info/
+# machine-local outputs
+data/raw-sha256.observed.json
+harness/rs2610/artifacts/cache/
+harness/rs2610/artifacts/replication/logs/
+harness/rs2610/outputs/.digest_probe.jsonl
+*.log
+# never commit credentials
+.env
+.env.*
+*.key

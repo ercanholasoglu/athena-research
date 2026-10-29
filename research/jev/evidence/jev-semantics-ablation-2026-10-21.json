@@ -1,0 +1,1713 @@
+{
+  "athena_sha": "NOT PUBLIC (private product repository)",
+  "comparison_vs_experiment_a": {
+    "EXECUTION_SCALE": {
+      "abstention_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "accuracy_after_resolver_with_fallback": {
+        "A": 0.6,
+        "B": 0.7333,
+        "delta_B_minus_A": 0.1333
+      },
+      "accuracy_raw": {
+        "A": 0.5778,
+        "B": 0.7333,
+        "delta_B_minus_A": 0.1555,
+        "delta_pp": 15.5,
+        "intervals_overlap": true,
+        "relative_change": 0.269,
+        "wilson95_A": [
+          0.4746,
+          0.6746
+        ],
+        "wilson95_B": [
+          0.6338,
+          0.8137
+        ]
+      },
+      "brier": {
+        "A": 0.5756,
+        "B": 0.3636,
+        "delta_B_minus_A": -0.212
+      },
+      "ece": {
+        "A": 0.1962,
+        "B": 0.1828,
+        "delta_B_minus_A": -0.0134
+      },
+      "failure_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "ground_truth": "POLICY",
+      "input_tokens_per_call": {
+        "A": 453.6,
+        "B": 807.6,
+        "ratio_B_over_A": 1.78
+      },
+      "latency_ms_p50": {
+        "A": 253.038,
+        "B": 121.337,
+        "delta_B_minus_A": -131.701
+      },
+      "latency_ms_p95": {
+        "A": 316.463,
+        "B": 227.681,
+        "delta_B_minus_A": -88.782
+      },
+      "mean_confidence": {
+        "A": 0.3113,
+        "B": 0.5196,
+        "delta_B_minus_A": 0.2083
+      },
+      "models": {
+        "A": [
+          "jev-1.13.0"
+        ],
+        "B": [
+          "jev-1.13.0"
+        ]
+      },
+      "n": 90,
+      "output_tokens_per_call": {
+        "A": 83.9,
+        "B": 82.1
+      },
+      "policy_denial_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "policy_modification_rate": {
+        "A": 0.1,
+        "B": 0.0,
+        "delta_B_minus_A": -0.1
+      },
+      "reproducibility": {
+        "A": 0.8,
+        "B": 1.0,
+        "delta_B_minus_A": 0.2
+      }
+    },
+    "EXECUTION_STRATEGY": {
+      "abstention_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "accuracy_after_resolver_with_fallback": {
+        "A": 0.4571,
+        "B": 0.6857,
+        "delta_B_minus_A": 0.2286
+      },
+      "accuracy_raw": {
+        "A": 0.4,
+        "B": 0.6857,
+        "delta_B_minus_A": 0.2857,
+        "delta_pp": 28.6,
+        "intervals_overlap": true,
+        "relative_change": 0.714,
+        "wilson95_A": [
+          0.2555,
+          0.5643
+        ],
+        "wilson95_B": [
+          0.5202,
+          0.8145
+        ]
+      },
+      "brier": {
+        "A": 0.6627,
+        "B": 0.5798,
+        "delta_B_minus_A": -0.0829
+      },
+      "ece": {
+        "A": 0.1991,
+        "B": 0.3071,
+        "delta_B_minus_A": 0.108
+      },
+      "failure_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "ground_truth": "POLICY",
+      "input_tokens_per_call": {
+        "A": 399.9,
+        "B": 586.9,
+        "ratio_B_over_A": 1.468
+      },
+      "latency_ms_p50": {
+        "A": 261.499,
+        "B": 117.138,
+        "delta_B_minus_A": -144.361
+      },
+      "latency_ms_p95": {
+        "A": 404.268,
+        "B": 158.816,
+        "delta_B_minus_A": -245.452
+      },
+      "mean_confidence": {
+        "A": 0.384,
+        "B": 0.7149,
+        "delta_B_minus_A": 0.3309
+      },
+      "models": {
+        "A": [
+          "jev-1.13.0"
+        ],
+        "B": [
+          "jev-1.13.0"
+        ]
+      },
+      "n": 35,
+      "output_tokens_per_call": {
+        "A": 46.0,
+        "B": 46.0
+      },
+      "policy_denial_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "policy_modification_rate": {
+        "A": 0.0571,
+        "B": 0.0,
+        "delta_B_minus_A": -0.0571
+      },
+      "reproducibility": {
+        "A": 1.0,
+        "B": 1.0,
+        "delta_B_minus_A": 0.0
+      }
+    },
+    "EXPLANATION_MODE": {
+      "abstention_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "accuracy_after_resolver_with_fallback": {
+        "A": 0.2258,
+        "B": 0.5806,
+        "delta_B_minus_A": 0.3548
+      },
+      "accuracy_raw": {
+        "A": 0.2258,
+        "B": 0.5806,
+        "delta_B_minus_A": 0.3548,
+        "delta_pp": 35.5,
+        "intervals_overlap": false,
+        "relative_change": 1.571,
+        "wilson95_A": [
+          0.1139,
+          0.3981
+        ],
+        "wilson95_B": [
+          0.4076,
+          0.7358
+        ]
+      },
+      "brier": {
+        "A": 0.7872,
+        "B": 0.6395,
+        "delta_B_minus_A": -0.1477
+      },
+      "ece": {
+        "A": 0.2803,
+        "B": 0.2035,
+        "delta_B_minus_A": -0.0768
+      },
+      "failure_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "ground_truth": "MEASURED",
+      "input_tokens_per_call": {
+        "A": 401.4,
+        "B": 624.4,
+        "ratio_B_over_A": 1.556
+      },
+      "latency_ms_p50": {
+        "A": 268.206,
+        "B": 114.087,
+        "delta_B_minus_A": -154.119
+      },
+      "latency_ms_p95": {
+        "A": 374.302,
+        "B": 179.345,
+        "delta_B_minus_A": -194.957
+      },
+      "mean_confidence": {
+        "A": 0.3413,
+        "B": 0.7052,
+        "delta_B_minus_A": 0.3639
+      },
+      "models": {
+        "A": [
+          "jev-1.13.0"
+        ],
+        "B": [
+          "jev-1.13.0"
+        ]
+      },
+      "n": 31,
+      "output_tokens_per_call": {
+        "A": 67.9,
+        "B": 66.5
+      },
+      "policy_denial_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "policy_modification_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "reproducibility": {
+        "A": 1.0,
+        "B": 1.0,
+        "delta_B_minus_A": 0.0
+      }
+    },
+    "HPO_DEPTH": {
+      "abstention_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "accuracy_after_resolver_with_fallback": {
+        "A": 0.1935,
+        "B": 0.2903,
+        "delta_B_minus_A": 0.0968
+      },
+      "accuracy_raw": {
+        "A": 0.1935,
+        "B": 0.2903,
+        "delta_B_minus_A": 0.0968,
+        "delta_pp": 9.7,
+        "intervals_overlap": true,
+        "relative_change": 0.5,
+        "wilson95_A": [
+          0.0918,
+          0.3628
+        ],
+        "wilson95_B": [
+          0.1609,
+          0.4659
+        ]
+      },
+      "brier": {
+        "A": 1.1344,
+        "B": 0.8786,
+        "delta_B_minus_A": -0.2558
+      },
+      "ece": {
+        "A": 0.5923,
+        "B": 0.3306,
+        "delta_B_minus_A": -0.2617
+      },
+      "failure_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "ground_truth": "MEASURED",
+      "input_tokens_per_call": {
+        "A": 386.8,
+        "B": 637.8,
+        "ratio_B_over_A": 1.649
+      },
+      "latency_ms_p50": {
+        "A": 262.954,
+        "B": 115.671,
+        "delta_B_minus_A": -147.283
+      },
+      "latency_ms_p95": {
+        "A": 523.968,
+        "B": 202.868,
+        "delta_B_minus_A": -321.1
+      },
+      "mean_confidence": {
+        "A": 0.7142,
+        "B": 0.4942,
+        "delta_B_minus_A": -0.22
+      },
+      "models": {
+        "A": [
+          "jev-1.13.0"
+        ],
+        "B": [
+          "jev-1.13.0"
+        ]
+      },
+      "n": 31,
+      "output_tokens_per_call": {
+        "A": 48.0,
+        "B": 48.0
+      },
+      "policy_denial_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "policy_modification_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "reproducibility": {
+        "A": 1.0,
+        "B": 1.0,
+        "delta_B_minus_A": 0.0
+      }
+    },
+    "HUMAN_REVIEW": {
+      "abstention_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "accuracy_after_resolver_with_fallback": {
+        "A": 0.8947,
+        "B": 0.8246,
+        "delta_B_minus_A": -0.0701
+      },
+      "accuracy_raw": {
+        "A": 0.8246,
+        "B": 0.8246,
+        "delta_B_minus_A": 0.0,
+        "delta_pp": 0.0,
+        "intervals_overlap": true,
+        "relative_change": 0.0,
+        "wilson95_A": [
+          0.7064,
+          0.9018
+        ],
+        "wilson95_B": [
+          0.7064,
+          0.9018
+        ]
+      },
+      "brier": {
+        "A": 0.2838,
+        "B": 0.3244,
+        "delta_B_minus_A": 0.0406
+      },
+      "ece": {
+        "A": 0.1232,
+        "B": 0.1646,
+        "delta_B_minus_A": 0.0414
+      },
+      "failure_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "ground_truth": "POLICY",
+      "input_tokens_per_call": {
+        "A": 382.0,
+        "B": 532.0,
+        "ratio_B_over_A": 1.393
+      },
+      "latency_ms_p50": {
+        "A": 252.484,
+        "B": 110.147,
+        "delta_B_minus_A": -142.337
+      },
+      "latency_ms_p95": {
+        "A": 335.176,
+        "B": 151.219,
+        "delta_B_minus_A": -183.957
+      },
+      "mean_confidence": {
+        "A": 0.7775,
+        "B": 0.9551,
+        "delta_B_minus_A": 0.1776
+      },
+      "models": {
+        "A": [
+          "jev-1.13.0"
+        ],
+        "B": [
+          "jev-1.13.0"
+        ]
+      },
+      "n": 57,
+      "output_tokens_per_call": {
+        "A": 35.8,
+        "B": 36.0
+      },
+      "policy_denial_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "policy_modification_rate": {
+        "A": 0.0702,
+        "B": 0.0,
+        "delta_B_minus_A": -0.0702
+      },
+      "reproducibility": {
+        "A": 1.0,
+        "B": 1.0,
+        "delta_B_minus_A": 0.0
+      }
+    },
+    "RETRY_FALLBACK": {
+      "abstention_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "accuracy_after_resolver_with_fallback": {
+        "A": 0.4286,
+        "B": 0.8571,
+        "delta_B_minus_A": 0.4285
+      },
+      "accuracy_raw": {
+        "A": 0.4,
+        "B": 0.8571,
+        "delta_B_minus_A": 0.4571,
+        "delta_pp": 45.7,
+        "intervals_overlap": false,
+        "relative_change": 1.143,
+        "wilson95_A": [
+          0.2555,
+          0.5643
+        ],
+        "wilson95_B": [
+          0.7062,
+          0.9374
+        ]
+      },
+      "brier": {
+        "A": 0.7647,
+        "B": 0.2764,
+        "delta_B_minus_A": -0.4883
+      },
+      "ece": {
+        "A": 0.3251,
+        "B": 0.1603,
+        "delta_B_minus_A": -0.1648
+      },
+      "failure_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "ground_truth": "POLICY",
+      "input_tokens_per_call": {
+        "A": 386.7,
+        "B": 595.7,
+        "ratio_B_over_A": 1.54
+      },
+      "latency_ms_p50": {
+        "A": 204.888,
+        "B": 110.566,
+        "delta_B_minus_A": -94.322
+      },
+      "latency_ms_p95": {
+        "A": 294.775,
+        "B": 185.219,
+        "delta_B_minus_A": -109.556
+      },
+      "mean_confidence": {
+        "A": 0.6346,
+        "B": 0.6703,
+        "delta_B_minus_A": 0.0357
+      },
+      "models": {
+        "A": [
+          "jev-1.13.0"
+        ],
+        "B": [
+          "jev-1.13.0"
+        ]
+      },
+      "n": 35,
+      "output_tokens_per_call": {
+        "A": 61.5,
+        "B": 60.9
+      },
+      "policy_denial_rate": {
+        "A": 0.0,
+        "B": 0.0,
+        "delta_B_minus_A": 0.0
+      },
+      "policy_modification_rate": {
+        "A": 0.0286,
+        "B": 0.0,
+        "delta_B_minus_A": -0.0286
+      },
+      "reproducibility": {
+        "A": 1.0,
+        "B": 1.0,
+        "delta_B_minus_A": 0.0
+      }
+    }
+  },
+  "contract": {
+    "forbidden_information": [
+      "expected answer or label for any case",
+      "label frequencies or class balance of any corpus split",
+      "governance rule thresholds or clause logic",
+      "corpus labelling constants (score tolerance, fidelity floor, tie margin)",
+      "evaluation results of any method",
+      "raw data rows, personal data, conversations, memory or credentials"
+    ],
+    "name": "B — typed decision semantics",
+    "question": "one choice question; instructions = the decision question; criteria = each candidate action's meaning + selection criteria from the semantics catalogue",
+    "semantics_sha256": "fbc7df2c020e0453bb8967c8a8b88395aa15e9b8e734d8c85f9dcbc8e4085067",
+    "semantics_version": "decision-semantics-v1",
+    "state": "decision description + decision purpose + typed declared features only"
+  },
+  "corpus_manifest": {
+    "build_seconds": 1400.2,
+    "corpus_version": "decision-corpus-v1",
+    "environment": {
+      "machine": "arm64",
+      "processor": "arm",
+      "python": "3.12.7",
+      "system": "Darwin"
+    },
+    "generated_at": "2026-10-20T14:56:09.900427+00:00",
+    "labelling": {
+      "explanation_fidelity_floor": 0.8,
+      "explanation_fidelity_tie": 0.02,
+      "hpo_score_tolerance": 0.002,
+      "train_fraction": 0.6
+    },
+    "quick": false,
+    "seed": 20261020,
+    "types": {
+      "EXECUTION_SCALE": {
+        "cases": 240,
+        "label_distribution": {
+          "CHUNKED": 26,
+          "FULL": 146,
+          "OUT_OF_CORE_REQUIRED": 31,
+          "SAMPLED_DISCOVERY_FULL_VALIDATION": 22,
+          "STREAMING": 15
+        },
+        "label_source": "POLICY",
+        "test": 90,
+        "train": 150
+      },
+      "EXECUTION_STRATEGY": {
+        "cases": 96,
+        "label_distribution": {
+          "AGENTIC": 68,
+          "BOUNDED": 5,
+          "HYBRID": 23
+        },
+        "label_source": "POLICY",
+        "test": 35,
+        "train": 61
+      },
+      "EXPLANATION_MODE": {
+        "cases": 90,
+        "label_distribution": {
+          "PERMUTATION_FULL": 16,
+          "PERMUTATION_SAMPLED": 10,
+          "SKIP": 28,
+          "TREE_SHAP_EXACT": 36
+        },
+        "label_source": "MEASURED",
+        "test": 31,
+        "train": 59
+      },
+      "HPO_DEPTH": {
+        "cases": 90,
+        "label_distribution": {
+          "DEEP": 4,
+          "LIGHT": 22,
+          "NONE": 42,
+          "STANDARD": 22
+        },
+        "label_source": "MEASURED",
+        "test": 31,
+        "train": 59
+      },
+      "HUMAN_REVIEW": {
+        "cases": 144,
+        "label_distribution": {
+          "NOT_REQUIRED": 38,
+          "REQUIRED": 106
+        },
+        "label_source": "POLICY",
+        "test": 57,
+        "train": 87
+      },
+      "RETRY_FALLBACK": {
+        "cases": 96,
+        "label_distribution": {
+          "ABSTAIN": 46,
+          "ESCALATE_REVIEW": 8,
+          "FALLBACK_NEXT": 18,
+          "RETRY_SAME": 24
+        },
+        "label_source": "POLICY",
+        "test": 35,
+        "train": 61
+      }
+    }
+  },
+  "cost": {
+    "reason": "TypeSafe returns token usage but no price or balance; Athena does not invent one. Output tokens are documented as free of charge.",
+    "state": "UNKNOWN"
+  },
+  "duration_seconds": 44.5,
+  "environment": {
+    "machine": "x86_64",
+    "python": "3.12.15",
+    "system": "Linux"
+  },
+  "evidence": "REAL provider calls (TypeSafe api.typesafe.ai); not a mock",
+  "experiment": "jev-athena-semantics-ablation",
+  "experiment_a_reference": {
+    "athena_sha": "NOT PUBLIC (private product repository)",
+    "evidence": "jev-ablation-2026-10-21.json",
+    "generated_at": "2026-10-21T10:45:53.101565+00:00",
+    "preserved": "unchanged; not re-run, not rewritten"
+  },
+  "generated_at": "2026-10-21T12:17:36.413711+00:00",
+  "jev_calls": 309,
+  "jev_credit_exhausted_at_call": null,
+  "jev_request_shape": {
+    "disclosure_classes": [
+      "SCHEMA",
+      "AGGREGATED_STATISTICS"
+    ],
+    "endpoint": "POST /v1/systemone",
+    "question": "one choice question; instructions = the decision question; criteria = each candidate action's meaning + selection criteria from the semantics catalogue",
+    "state": "decision description + decision purpose + typed declared features only"
+  },
+  "jev_total_calls_this_experiment": 339,
+  "limitations": [
+    "MEASURED labels (HPO_DEPTH, EXPLANATION_MODE) come from synthetic datasets on one Apple-silicon machine; they are hardware-specific.",
+    "POLICY labels are the governance rule's own answer: rules are correct by definition there; Jev is judged on how well it approximates policy, not on beating it.",
+    "Jev received the decision description, the typed features and the candidate action names — the same information the agentic method gets; no Jev-specific hints were written.",
+    "Agentic and hybrid numbers are the recorded 2026-10-20 baseline on the same split, not re-run."
+  ],
+  "per_type_cap": null,
+  "phase_b1": {
+    "credit_exhausted_at_call": null,
+    "failures": 0,
+    "jev_calls": 30,
+    "models": [
+      "jev-1.13.0"
+    ],
+    "per_type": 4,
+    "purpose": "schema validation, semantics present, no label leakage, parsing, token increase; not used to change the catalogue",
+    "reproducibility": 1,
+    "semantics_sha256": "fbc7df2c020e0453bb8967c8a8b88395aa15e9b8e734d8c85f9dcbc8e4085067"
+  },
+  "pre_registration": {
+    "catalogue_changed_after_seeing_results": false,
+    "first_experiment_b_call_after": "phase B1, after commit d24ef358/7b954cb9",
+    "semantics_commit": "9b92e0df",
+    "semantics_committed_at": "2026-10-21T15:11:56+03:00"
+  },
+  "remaining_credit": "UNKNOWN (provider exposes no balance)",
+  "results": {
+    "EXECUTION_SCALE": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.6778,
+          "accuracy_on_answered": 0.6778,
+          "accuracy_raw": 0.6778,
+          "brier": 0.579,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.2233,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 509.983,
+          "latency_ms_p95": 700.138,
+          "n": 90,
+          "paths": {
+            "agentic_llm": 90
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 27063,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 1.0,
+          "accuracy_on_answered": 0.9111,
+          "accuracy_raw": 0.9111,
+          "brier": 0.1778,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0889,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 17.59,
+          "latency_ms_p95": 16.979,
+          "n": 90,
+          "paths": {
+            "rules": 90
+          },
+          "policy_violation_rate": 0.0889,
+          "provider_dependency": "none (in-process)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9111,
+          "accuracy_on_answered": 0.9111,
+          "accuracy_raw": 0.9111,
+          "brier": 0.1645,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0577,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 36.836,
+          "latency_ms_p95": 421.966,
+          "n": 90,
+          "paths": {
+            "hybrid:agentic_llm": 7,
+            "local_bounded": 83
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 2098,
+          "tool_calls": 0
+        },
+        "jev": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.7333,
+          "accuracy_on_answered": 0.7333,
+          "accuracy_raw": 0.7333,
+          "brier": 0.3636,
+          "calls": 90,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "UNKNOWN",
+            "unknown_cost_calls": 90
+          },
+          "ece": 0.1828,
+          "errors": {},
+          "failure_rate": 0.0,
+          "input_tokens": 72685,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 136.622,
+          "latency_ms_p50": 121.337,
+          "latency_ms_p95": 227.681,
+          "mean_confidence": 0.5196,
+          "models": [
+            "jev-1.13.0"
+          ],
+          "n": 90,
+          "output_tokens": 7393,
+          "paths": {
+            "jev": 90
+          },
+          "policy_denial_rate": 0.0,
+          "policy_modification_rate": 0.0,
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "TypeSafe Jev (POST /v1/systemone), personal credential",
+          "reproducibility": 1.0,
+          "reproducibility_cases": 5,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 80078,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9333,
+          "accuracy_on_answered": 0.9222,
+          "accuracy_raw": 0.9222,
+          "brier": 0.1243,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0802,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 21.872,
+          "latency_ms_p95": 0.999,
+          "n": 90,
+          "paths": {
+            "local_bounded": 90
+          },
+          "policy_violation_rate": 0.0111,
+          "provider_dependency": "none (in-process model)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "cases_evaluated": 90,
+      "ground_truth": "POLICY",
+      "test_cases": 90
+    },
+    "EXECUTION_STRATEGY": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.2286,
+          "accuracy_on_answered": 0.0857,
+          "accuracy_raw": 0.0857,
+          "brier": 1.4591,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.746,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 459.962,
+          "latency_ms_p95": 568.486,
+          "n": 35,
+          "paths": {
+            "agentic_llm": 35
+          },
+          "policy_violation_rate": 0.4,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 9176,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 1.0,
+          "accuracy_on_answered": 1.0,
+          "accuracy_raw": 1.0,
+          "brier": 0.0,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.006,
+          "latency_ms_p95": 0.01,
+          "n": 35,
+          "paths": {
+            "rules": 35
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.8286,
+          "accuracy_on_answered": 0.8286,
+          "accuracy_raw": 0.8286,
+          "brier": 0.2994,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1265,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 24.72,
+          "latency_ms_p95": 429.627,
+          "n": 35,
+          "paths": {
+            "hybrid:agentic_llm": 2,
+            "local_bounded": 33
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 515,
+          "tool_calls": 0
+        },
+        "jev": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.6857,
+          "accuracy_on_answered": 0.6857,
+          "accuracy_raw": 0.6857,
+          "brier": 0.5798,
+          "calls": 35,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "UNKNOWN",
+            "unknown_cost_calls": 35
+          },
+          "ece": 0.3071,
+          "errors": {},
+          "failure_rate": 0.0,
+          "input_tokens": 20541,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 119.643,
+          "latency_ms_p50": 117.138,
+          "latency_ms_p95": 158.816,
+          "mean_confidence": 0.7149,
+          "models": [
+            "jev-1.13.0"
+          ],
+          "n": 35,
+          "output_tokens": 1610,
+          "paths": {
+            "jev": 35
+          },
+          "policy_denial_rate": 0.0,
+          "policy_modification_rate": 0.0,
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "TypeSafe Jev (POST /v1/systemone), personal credential",
+          "reproducibility": 1.0,
+          "reproducibility_cases": 5,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 22151,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.8857,
+          "accuracy_on_answered": 0.8857,
+          "accuracy_raw": 0.8857,
+          "brier": 0.2237,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1017,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.979,
+          "latency_ms_p95": 1.129,
+          "n": 35,
+          "paths": {
+            "local_bounded": 35
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process model)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "cases_evaluated": 35,
+      "ground_truth": "POLICY",
+      "test_cases": 35
+    },
+    "EXPLANATION_MODE": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.4839,
+          "accuracy_on_answered": 0.4839,
+          "accuracy_raw": 0.4839,
+          "brier": 1.0249,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.5161,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 481.801,
+          "latency_ms_p95": 569.623,
+          "n": 31,
+          "paths": {
+            "agentic_llm": 31
+          },
+          "policy_violation_rate": 0.2581,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 8136,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.6129,
+          "accuracy_on_answered": 0.6129,
+          "accuracy_raw": 0.6129,
+          "brier": 0.7742,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.3871,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.006,
+          "latency_ms_p95": 0.008,
+          "n": 31,
+          "paths": {
+            "rules": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.7419,
+          "accuracy_on_answered": 0.7419,
+          "accuracy_raw": 0.7419,
+          "brier": 0.4641,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.2105,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 83.426,
+          "latency_ms_p95": 545.542,
+          "n": 31,
+          "paths": {
+            "hybrid:agentic_llm": 5,
+            "local_bounded": 26
+          },
+          "policy_violation_rate": 0.0968,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 1325,
+          "tool_calls": 0
+        },
+        "jev": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.5806,
+          "accuracy_on_answered": 0.5806,
+          "accuracy_raw": 0.5806,
+          "brier": 0.6395,
+          "calls": 31,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "UNKNOWN",
+            "unknown_cost_calls": 31
+          },
+          "ece": 0.2035,
+          "errors": {},
+          "failure_rate": 0.0,
+          "input_tokens": 19355,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 119.658,
+          "latency_ms_p50": 114.087,
+          "latency_ms_p95": 179.345,
+          "mean_confidence": 0.7052,
+          "models": [
+            "jev-1.13.0"
+          ],
+          "n": 31,
+          "output_tokens": 2060,
+          "paths": {
+            "jev": 31
+          },
+          "policy_denial_rate": 0.0,
+          "policy_modification_rate": 0.0,
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "TypeSafe Jev (POST /v1/systemone), personal credential",
+          "reproducibility": 1.0,
+          "reproducibility_cases": 5,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 21415,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.7742,
+          "accuracy_on_answered": 0.7742,
+          "accuracy_raw": 0.7742,
+          "brier": 0.3247,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1377,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 1.034,
+          "latency_ms_p95": 0.829,
+          "n": 31,
+          "paths": {
+            "local_bounded": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process model)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "cases_evaluated": 31,
+      "ground_truth": "MEASURED",
+      "test_cases": 31
+    },
+    "HPO_DEPTH": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.3226,
+          "accuracy_on_answered": 0.3226,
+          "accuracy_raw": 0.3226,
+          "brier": 1.2134,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.5984,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 359.351,
+          "latency_ms_p95": 380.517,
+          "n": 31,
+          "paths": {
+            "agentic_llm": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 7352,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.0645,
+          "accuracy_on_answered": 0.0645,
+          "accuracy_raw": 0.0645,
+          "brier": 1.871,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.9355,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.007,
+          "latency_ms_p95": 0.01,
+          "n": 31,
+          "paths": {
+            "rules": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.5484,
+          "accuracy_on_answered": 0.5484,
+          "accuracy_raw": 0.5484,
+          "brier": 0.7252,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.3312,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 132.354,
+          "latency_ms_p95": 389.578,
+          "n": 31,
+          "paths": {
+            "hybrid:agentic_llm": 11,
+            "local_bounded": 20
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 2619,
+          "tool_calls": 0
+        },
+        "jev": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.2903,
+          "accuracy_on_answered": 0.2903,
+          "accuracy_raw": 0.2903,
+          "brier": 0.8786,
+          "calls": 31,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "UNKNOWN",
+            "unknown_cost_calls": 31
+          },
+          "ece": 0.3306,
+          "errors": {},
+          "failure_rate": 0.0,
+          "input_tokens": 19771,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 125.118,
+          "latency_ms_p50": 115.671,
+          "latency_ms_p95": 202.868,
+          "mean_confidence": 0.4942,
+          "models": [
+            "jev-1.13.0"
+          ],
+          "n": 31,
+          "output_tokens": 1488,
+          "paths": {
+            "jev": 31
+          },
+          "policy_denial_rate": 0.0,
+          "policy_modification_rate": 0.0,
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "TypeSafe Jev (POST /v1/systemone), personal credential",
+          "reproducibility": 1.0,
+          "reproducibility_cases": 5,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 21259,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.5161,
+          "accuracy_on_answered": 0.5161,
+          "accuracy_raw": 0.5161,
+          "brier": 0.5419,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.2318,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 1.017,
+          "latency_ms_p95": 0.777,
+          "n": 31,
+          "paths": {
+            "local_bounded": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process model)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "cases_evaluated": 31,
+      "ground_truth": "MEASURED",
+      "test_cases": 31
+    },
+    "HUMAN_REVIEW": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.7895,
+          "accuracy_on_answered": 0.7895,
+          "accuracy_raw": 0.7895,
+          "brier": 0.4211,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.2105,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 476.54,
+          "latency_ms_p95": 596.341,
+          "n": 57,
+          "paths": {
+            "agentic_llm": 57
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 13958,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 1.0,
+          "accuracy_on_answered": 1.0,
+          "accuracy_raw": 1.0,
+          "brier": 0.0,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.005,
+          "latency_ms_p95": 0.007,
+          "n": 57,
+          "paths": {
+            "rules": 57
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9298,
+          "accuracy_on_answered": 0.8947,
+          "accuracy_raw": 0.8947,
+          "brier": 0.1551,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0552,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 43.669,
+          "latency_ms_p95": 449.836,
+          "n": 57,
+          "paths": {
+            "hybrid:agentic_llm": 6,
+            "local_bounded": 51
+          },
+          "policy_violation_rate": 0.0351,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 1427,
+          "tool_calls": 0
+        },
+        "jev": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.8246,
+          "accuracy_on_answered": 0.8246,
+          "accuracy_raw": 0.8246,
+          "brier": 0.3244,
+          "calls": 57,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "UNKNOWN",
+            "unknown_cost_calls": 57
+          },
+          "ece": 0.1646,
+          "errors": {},
+          "failure_rate": 0.0,
+          "input_tokens": 30324,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 112.933,
+          "latency_ms_p50": 110.147,
+          "latency_ms_p95": 151.219,
+          "mean_confidence": 0.9551,
+          "models": [
+            "jev-1.13.0"
+          ],
+          "n": 57,
+          "output_tokens": 2050,
+          "paths": {
+            "jev": 57
+          },
+          "policy_denial_rate": 0.0,
+          "policy_modification_rate": 0.0,
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "TypeSafe Jev (POST /v1/systemone), personal credential",
+          "reproducibility": 1.0,
+          "reproducibility_cases": 5,
+          "retries": 0,
+          "review_rate": 0.0175,
+          "tokens": 32374,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9474,
+          "accuracy_on_answered": 0.8947,
+          "accuracy_raw": 0.8947,
+          "brier": 0.1661,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0659,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.842,
+          "latency_ms_p95": 0.848,
+          "n": 57,
+          "paths": {
+            "local_bounded": 57
+          },
+          "policy_violation_rate": 0.0526,
+          "provider_dependency": "none (in-process model)",
+          "retries": 0,
+          "review_rate": 0.0877,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "cases_evaluated": 57,
+      "ground_truth": "POLICY",
+      "test_cases": 57
+    },
+    "RETRY_FALLBACK": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.5714,
+          "accuracy_on_answered": 0.3143,
+          "accuracy_raw": 0.3143,
+          "brier": 1.357,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.68,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 424.365,
+          "latency_ms_p95": 554.111,
+          "n": 35,
+          "paths": {
+            "agentic_llm": 35
+          },
+          "policy_violation_rate": 0.3429,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 8529,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 1.0,
+          "accuracy_on_answered": 0.9429,
+          "accuracy_raw": 0.9429,
+          "brier": 0.1143,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0571,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.006,
+          "latency_ms_p95": 0.007,
+          "n": 35,
+          "paths": {
+            "rules": 35
+          },
+          "policy_violation_rate": 0.0571,
+          "provider_dependency": "none (in-process)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9143,
+          "accuracy_on_answered": 0.8571,
+          "accuracy_raw": 0.8571,
+          "brier": 0.2637,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1051,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 31.964,
+          "latency_ms_p95": 555.501,
+          "n": 35,
+          "paths": {
+            "hybrid:agentic_llm": 2,
+            "local_bounded": 33
+          },
+          "policy_violation_rate": 0.0571,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "source": "recorded baseline ablation-2026-10-20.json (not re-run)",
+          "tokens": 518,
+          "tool_calls": 0
+        },
+        "jev": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.8571,
+          "accuracy_on_answered": 0.8571,
+          "accuracy_raw": 0.8571,
+          "brier": 0.2764,
+          "calls": 35,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "UNKNOWN",
+            "unknown_cost_calls": 35
+          },
+          "ece": 0.1603,
+          "errors": {},
+          "failure_rate": 0.0,
+          "input_tokens": 20848,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 116.786,
+          "latency_ms_p50": 110.566,
+          "latency_ms_p95": 185.219,
+          "mean_confidence": 0.6703,
+          "models": [
+            "jev-1.13.0"
+          ],
+          "n": 35,
+          "output_tokens": 2130,
+          "paths": {
+            "jev": 35
+          },
+          "policy_denial_rate": 0.0,
+          "policy_modification_rate": 0.0,
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "TypeSafe Jev (POST /v1/systemone), personal credential",
+          "reproducibility": 1.0,
+          "reproducibility_cases": 5,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 22978,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.8857,
+          "accuracy_on_answered": 0.8571,
+          "accuracy_raw": 0.8571,
+          "brier": 0.1996,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1019,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 2.102,
+          "latency_ms_p95": 9.108,
+          "n": 35,
+          "paths": {
+            "local_bounded": 35
+          },
+          "policy_violation_rate": 0.0286,
+          "provider_dependency": "none (in-process model)",
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "cases_evaluated": 35,
+      "ground_truth": "POLICY",
+      "test_cases": 35
+    }
+  },
+  "review_confidence_floor": 0.6,
+  "run_environment_note": "Experiment B ran inside the product's hosted backend environment (NOT PUBLIC), using the owner's stored personal credential in place; experiment A ran on the owner's Apple-silicon laptop. Rules/local-bounded re-runs are identical across both, so accuracy is comparable; latency is NOT comparable (different network path).",
+  "token_accounting": {
+    "A": {
+      "evaluated_calls": 279,
+      "input_tokens": 114560,
+      "input_tokens_per_call": 410.6,
+      "output_tokens": 16947
+    },
+    "B": {
+      "evaluated_calls": 279,
+      "input_tokens": 183524,
+      "input_tokens_per_call": 657.8,
+      "output_tokens": 16731
+    },
+    "correction_to_experiment_a_doc": "Experiment A's write-up called 114,560 input tokens the total for 309 calls; it is the total for the 279 evaluated calls (repeats unsummed).",
+    "input_ratio_B_over_A": 1.602,
+    "phase_b1": {
+      "evaluated_calls": 24,
+      "input_tokens": 15135,
+      "jev_calls": 30,
+      "output_tokens": 1369
+    },
+    "scope": "sums over the 279 evaluated calls of each experiment; the 30 reproducibility repeats are not summed by the runner (in either experiment)"
+  }
+}

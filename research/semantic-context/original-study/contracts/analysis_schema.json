@@ -1,0 +1,205 @@
+{
+ "properties": {
+  "actionable_columns": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "analysis_intent": {
+   "enum": [
+    "predictive",
+    "causal",
+    "both"
+   ],
+   "type": "string"
+  },
+  "artifact_or_leakage_columns": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "business_problem": {
+   "enum": [
+    "churn",
+    "fraud",
+    "credit_default",
+    "cross_sell",
+    "readmission",
+    "medical_diagnosis",
+    "income_classification",
+    "demand_forecast",
+    "purchase_intent",
+    "uplift",
+    "other"
+   ],
+   "type": "string"
+  },
+  "calibration_needed": {
+   "type": "boolean"
+  },
+  "dictionary_contradictions": {
+   "items": {
+    "properties": {
+     "column": {
+      "type": "string"
+     },
+     "issue": {
+      "type": "string"
+     }
+    },
+    "required": [
+     "column",
+     "issue"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "excluded_columns": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "group_column": {
+   "type": "string"
+  },
+  "hpo_depth": {
+   "enum": [
+    "none",
+    "light",
+    "moderate",
+    "deep"
+   ],
+   "type": "string"
+  },
+  "id_columns": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "intervention_column": {
+   "type": "string"
+  },
+  "missing_semantics": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "model_family": {
+   "enum": [
+    "gradient_boosting",
+    "random_forest",
+    "linear",
+    "neural_net",
+    "uplift_meta_learner"
+   ],
+   "type": "string"
+  },
+  "post_outcome_columns": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  },
+  "prediction_unit": {
+   "enum": [
+    "customer",
+    "applicant",
+    "person",
+    "transaction",
+    "account",
+    "encounter",
+    "patient",
+    "session",
+    "time_period",
+    "household",
+    "other"
+   ],
+   "type": "string"
+  },
+  "primary_metric": {
+   "enum": [
+    "roc_auc",
+    "pr_auc",
+    "f1",
+    "recall",
+    "precision",
+    "log_loss",
+    "brier",
+    "accuracy",
+    "expected_cost",
+    "lift",
+    "top_k_precision",
+    "rmse",
+    "mae",
+    "mape",
+    "r2",
+    "rmsle",
+    "qini",
+    "uplift_auc",
+    "ks"
+   ],
+   "type": "string"
+  },
+  "semantic_confidence": {
+   "type": "number"
+  },
+  "split_strategy": {
+   "enum": [
+    "stratified_kfold",
+    "random_kfold",
+    "group_kfold",
+    "time_based"
+   ],
+   "type": "string"
+  },
+  "target_meaning": {
+   "type": "string"
+  },
+  "temporal_structure": {
+   "enum": [
+    "none",
+    "time_ordered_rows",
+    "observation_window_then_outcome",
+    "repeated_entities",
+    "unknown"
+   ],
+   "type": "string"
+  },
+  "time_columns": {
+   "items": {
+    "type": "string"
+   },
+   "type": "array"
+  }
+ },
+ "required": [
+  "business_problem",
+  "target_meaning",
+  "prediction_unit",
+  "temporal_structure",
+  "time_columns",
+  "id_columns",
+  "post_outcome_columns",
+  "artifact_or_leakage_columns",
+  "actionable_columns",
+  "intervention_column",
+  "analysis_intent",
+  "primary_metric",
+  "split_strategy",
+  "group_column",
+  "model_family",
+  "hpo_depth",
+  "calibration_needed",
+  "excluded_columns",
+  "missing_semantics",
+  "dictionary_contradictions",
+  "semantic_confidence"
+ ],
+ "type": "object"
+}

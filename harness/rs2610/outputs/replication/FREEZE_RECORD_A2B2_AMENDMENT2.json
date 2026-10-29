@@ -1,0 +1,855 @@
+{
+ "a2_prompts": {
+  "instances": {
+   "diabetes_readmission::ADV::calibration_conflict": {
+    "contract": "e87f85db78b7eae9aea7e28890bb825f47c9302b6e60874e84bb4543581b1100",
+    "family": "MODEL_FAMILY",
+    "prefix": "81bb9444e1e4d0131c751799bb1ed714089e91efaae7baa651bc2ca2e0b5b502",
+    "variant": "calibration_conflict"
+   },
+   "diabetes_readmission::ADV::causal_disagreement": {
+    "contract": "db0ba46c480ae227e9019862d51f9ab4e4e46c76515885330847e7c1f82ad3d3",
+    "family": "CAUSAL_VS_PREDICTIVE",
+    "prefix": "e9aa3b59bc1de0ef7ca3f5e8379b184740e126e00eb51ec0737c4f48ea490c42",
+    "variant": "causal_disagreement"
+   },
+   "diabetes_readmission::ADV::cheaper_equivalent": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "family": "MODEL_FAMILY",
+    "prefix": "812601ad5c194a997ce2afcb97c816afd53282729d02c1e8e251d1df5c6f5ae7",
+    "variant": "cheaper_equivalent"
+   },
+   "diabetes_readmission::ADV::data_quality_suspicious": {
+    "contract": "cb2a0dafedf0c529090901b9aba498bc913c781da8b3ef7b79df3be00d274a52",
+    "family": "MODEL_FAMILY",
+    "prefix": "bcfb044b0480498017fdc4bd64cfb337140e4789a723aa8191b89119a7c11b2c",
+    "variant": "data_quality_suspicious"
+   },
+   "diabetes_readmission::ADV::governance_block": {
+    "contract": "b9e68fb8521e3b48bd95a0c0a26eaa2cadaf6d14982cffef28889f12c9648422",
+    "family": "MODEL_FAMILY",
+    "prefix": "a8384c7ae21241445d230bffc574c439280201a33a302e4486b3e35e4435fe1c",
+    "variant": "governance_block"
+   },
+   "diabetes_readmission::ADV::incomplete_evidence": {
+    "contract": "8f806958accf3aa95d37796b77c907e4bb64e9b81bff7c8494054a66b4106027",
+    "family": "MODEL_FAMILY",
+    "prefix": "049808c0dd8423a0772c85d74f4f19f7af7a05df75e20585bf1437c39319e7b8",
+    "variant": "incomplete_evidence"
+   },
+   "diabetes_readmission::ADV::indistinguishable": {
+    "contract": "d2e46bd237a7519a10e887a87724a68451205d2c2a2c8b12bfdaa39cc619395f",
+    "family": "MODEL_FAMILY",
+    "prefix": "5d0ea886411dd8305c362fef963b12fa6cc72231d466d1fcb9d86f679f149800",
+    "variant": "indistinguishable"
+   },
+   "diabetes_readmission::ADV::variance_uncertain": {
+    "contract": "b7f9b6d4c12d72d1b2cca36ad9d8335fdbabb55b54ba8dc0069225b708217a04",
+    "family": "MODEL_FAMILY",
+    "prefix": "4bae15f2b56a5299882693ea2ea9dab22f09944f7464b973ef437be245ee9e84",
+    "variant": "variance_uncertain"
+   },
+   "diabetes_readmission::CALIBRATION": {
+    "contract": "3183792fcda4c4d5757d4a32011c9ce80558b70e8c4bf09587f2c92bba0d0e61",
+    "family": "CALIBRATION",
+    "prefix": "fcf328c5d756dee2c0e3dc8778ddd377d2bd5b819b7dd9e455bf4fd78e5ad4d9",
+    "variant": "base"
+   },
+   "diabetes_readmission::CAUSAL::5": {
+    "contract": "ac3d7cf067e7b01bd78b64e6f6558987ba5d335b5a0644c5c673dab9eb4dcb4c",
+    "family": "CAUSAL_VS_PREDICTIVE",
+    "prefix": "7ded932ea7ec50251c39e0b20193243342810ff6e6b0913a4b17312613cbf832",
+    "variant": "base"
+   },
+   "diabetes_readmission::EXPLANATION": {
+    "contract": "c2739b0e274239c81f1f8df216ff6e489c55b1bc154a25d49025ff12d9420d3b",
+    "family": "EXPLANATION",
+    "prefix": "f357ca80f6e4681ef54d4bf11b6a5075842250322c79e3a966a94982c750402d",
+    "variant": "base"
+   },
+   "diabetes_readmission::FE_STRATEGY": {
+    "contract": "30a0611e6ff4f7d2f4dc55cdbdfa395b29ee0dcb5e2705697c239b55f617bce9",
+    "family": "FE_STRATEGY",
+    "prefix": "b53fae8a4f57622b366720d955a59664c2e51f5583deaea44b0286728b7d53e9",
+    "variant": "base"
+   },
+   "diabetes_readmission::FS_STRATEGY": {
+    "contract": "a1cb16b2fd6033e62b11ebde5524728e7fc2d6c5c431e0e8665ed711f95bd002",
+    "family": "FS_STRATEGY",
+    "prefix": "a4b427290556be3122de02d99502cf968367b5b5e7ff5b5c77b4f6aef8224f44",
+    "variant": "base"
+   },
+   "diabetes_readmission::HPO_DEPTH": {
+    "contract": "27c1fc54f8cb1589d010aed1d5a6930f62448f538d9206cdb92ce6a86bc89adc",
+    "family": "HPO_DEPTH",
+    "prefix": "02cd27d1605f45e8f73a99a45dc7f2cafbd98a5ae3b6e553eeab69f18d33043c",
+    "variant": "base"
+   },
+   "diabetes_readmission::IMBALANCE": {
+    "contract": "cfb0f08e3c48c72a7dae6d7fd9c1f9e3b57925ee665b8c6960cfddef93c49949",
+    "family": "IMBALANCE",
+    "prefix": "c18b5aae709d65510ae6043f580ff488a2ff56f135b7bca65af49f94df341333",
+    "variant": "base"
+   },
+   "diabetes_readmission::MODEL_FAMILY": {
+    "contract": "69a0654e28bf4d32e89c21c8933dfbcbf58d5fc90a92faa728dba92862ea05ab",
+    "family": "MODEL_FAMILY",
+    "prefix": "71969d4c7def7d2368883e38e88bc2e24eca773d96c54690a0a4d75917dd5b36",
+    "variant": "base"
+   },
+   "diabetes_readmission::TRUST_PLAN": {
+    "contract": "24211974f203c1c57390bc4f7e4c27242231c37600488e233c6e12d1f4fdb261",
+    "family": "TRUST_PLAN",
+    "prefix": "ba85e277c3c6bcb4066ef4f0cc64aa5587554a52bc48a4a0b37d3c888dfd13b1",
+    "variant": "base"
+   },
+   "diabetes_readmission::VALIDATION": {
+    "contract": "2311e90f58426819ada19f850de1567255bb5f269da776951e8cd72da517340c",
+    "family": "VALIDATION",
+    "prefix": "ed6a148ae22ba8cff78d06b058f8ab76eb2c1e5a175183b63c05fe6ba70b7eeb",
+    "variant": "base"
+   },
+   "iranian_churn::ADV::calibration_conflict": {
+    "contract": "e87f85db78b7eae9aea7e28890bb825f47c9302b6e60874e84bb4543581b1100",
+    "family": "MODEL_FAMILY",
+    "prefix": "d1d5eab5accb19e161dd9517a6cef2e71ea8cfe017f05c99a9fd361d8625b5c8",
+    "variant": "calibration_conflict"
+   },
+   "iranian_churn::ADV::causal_disagreement": {
+    "contract": "db0ba46c480ae227e9019862d51f9ab4e4e46c76515885330847e7c1f82ad3d3",
+    "family": "CAUSAL_VS_PREDICTIVE",
+    "prefix": "92b11403dde51edfd435a1c7e97456d5a6d7a38b73a0ce0db7b403f0db41bbe8",
+    "variant": "causal_disagreement"
+   },
+   "iranian_churn::ADV::cheaper_equivalent": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "family": "MODEL_FAMILY",
+    "prefix": "adcac621054170fda3680348257972c1ea662bc13787684c0099e0d71a518778",
+    "variant": "cheaper_equivalent"
+   },
+   "iranian_churn::ADV::data_quality_suspicious": {
+    "contract": "9987c9c99da42539bc67e620383ea5c88a6cc8c438b5227c15a5bc6b85680c5e",
+    "family": "MODEL_FAMILY",
+    "prefix": "5ccd1083d2bb23ff758629e0d8d6b5e4acd77da355d48714cfe2154c878cf039",
+    "variant": "data_quality_suspicious"
+   },
+   "iranian_churn::ADV::governance_block": {
+    "contract": "b9e68fb8521e3b48bd95a0c0a26eaa2cadaf6d14982cffef28889f12c9648422",
+    "family": "MODEL_FAMILY",
+    "prefix": "ff6127ed457a52fc29e648a87a37e3026d5f68239c841ed0148cd22f6b11f8ca",
+    "variant": "governance_block"
+   },
+   "iranian_churn::ADV::incomplete_evidence": {
+    "contract": "8f806958accf3aa95d37796b77c907e4bb64e9b81bff7c8494054a66b4106027",
+    "family": "MODEL_FAMILY",
+    "prefix": "ae839f28388577e0fb86c67f398b78a4fb9e6ebf8c9014a6f9fc152a2a7397b0",
+    "variant": "incomplete_evidence"
+   },
+   "iranian_churn::ADV::indistinguishable": {
+    "contract": "24c536011cb491ee5c1855160bc0407240b02944b59998a19079f02a35cd2323",
+    "family": "MODEL_FAMILY",
+    "prefix": "87f729f3333312a141236f52eeb814fafa0d84ffcc20470c077a675194c10e03",
+    "variant": "indistinguishable"
+   },
+   "iranian_churn::ADV::variance_uncertain": {
+    "contract": "1cb950c7d774e5674f19169ccc3b8981b7ecc66bfe85e8ba1842cbacc1554e74",
+    "family": "MODEL_FAMILY",
+    "prefix": "186e33c9e0078bc3552e0949fb472fdf8dc72349830972fdb5541b30748126af",
+    "variant": "variance_uncertain"
+   },
+   "iranian_churn::CALIBRATION": {
+    "contract": "002c1929e2d97b87686312acb8af49743b59209d999995ef9d6e8251629b0df0",
+    "family": "CALIBRATION",
+    "prefix": "fc5a27bb73a5c81581b19c0ac0b1414d89c452e508259bd7c99047915df5b70d",
+    "variant": "base"
+   },
+   "iranian_churn::CAUSAL::7": {
+    "contract": "419166fc21e9ddcd70f0e39fe39873b35dd56fbe57e644dd9dcb1c44627159d1",
+    "family": "CAUSAL_VS_PREDICTIVE",
+    "prefix": "7eae62b55ce6f9a89e60e28ece90be8d51f4507d9fc29c2f153eba76cd386902",
+    "variant": "base"
+   },
+   "iranian_churn::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "family": "EXPLANATION",
+    "prefix": "46bdf2c7fe7205788e1bbca670b2fb71f59864cd93d0a4ecf9dc2766e8d5802c",
+    "variant": "base"
+   },
+   "iranian_churn::FE_STRATEGY": {
+    "contract": "0a38f506231b2b012cefdeccef0f66e534d35a756e59cbd8c04707fa4268f653",
+    "family": "FE_STRATEGY",
+    "prefix": "56edb1e84c71c60e7b9711325fc7040f1136df51def392d6dca995d486597099",
+    "variant": "base"
+   },
+   "iranian_churn::FS_STRATEGY": {
+    "contract": "24e981251abb4e39ab172ac47d1ff0b9225f46b87694e630c54cc394903b16c1",
+    "family": "FS_STRATEGY",
+    "prefix": "d5beaadf9578745fc09116caa3c0e6a1579e99f09372912a07909e0779b09cda",
+    "variant": "base"
+   },
+   "iranian_churn::HPO_DEPTH": {
+    "contract": "bf9e5d0cd9431d9ae94a8d077d48c184c775c62a8d696784ba577ed53d197897",
+    "family": "HPO_DEPTH",
+    "prefix": "5076e315f7c112a6c56ac6e0b482fb19dda39df2108de06c709c1f4f50c165da",
+    "variant": "base"
+   },
+   "iranian_churn::IMBALANCE": {
+    "contract": "2ffa1ccce962de13dea2cb5e57122c92f2bdde0a0400d1188c874328fa88f01a",
+    "family": "IMBALANCE",
+    "prefix": "d3781396c4a050c9a1e5ef7dc90e842b5623378ef54350b0dda5e0b68d0c77f3",
+    "variant": "base"
+   },
+   "iranian_churn::MODEL_FAMILY": {
+    "contract": "a73a243421ab6e78587ec4626056de9965733c043c803434a6090a7ba3b82d2d",
+    "family": "MODEL_FAMILY",
+    "prefix": "be44976580f87ee2c4a53b31f951fb23f2c12efc9fae40f5d7c8b5366b5b9f76",
+    "variant": "base"
+   },
+   "iranian_churn::TRUST_PLAN": {
+    "contract": "f827859bc1535d5d707a6a6863d07e3de9267cef034f0b393476b455ced91782",
+    "family": "TRUST_PLAN",
+    "prefix": "9224da9e80b62f354a153a1f2eb28cad9bc18875f711d11c402e85dd65354817",
+    "variant": "base"
+   },
+   "iranian_churn::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "family": "VALIDATION",
+    "prefix": "b6b2d836b6f82bdd274bf8b55a7dd3174a1b5bdbafbf8e54dc574ca550558c5a",
+    "variant": "base"
+   },
+   "online_shoppers::CALIBRATION": {
+    "contract": "22e54167330ea9361183bebb868eb75ac04f0dd9fe1a86750038c521959a48d4",
+    "family": "CALIBRATION",
+    "prefix": "60f28e4b13cd19893a93b8679e06f05c1331d64674e2defd131d6bd2ff4b5666",
+    "variant": "base"
+   },
+   "online_shoppers::CAUSAL::9": {
+    "contract": "ac3d7cf067e7b01bd78b64e6f6558987ba5d335b5a0644c5c673dab9eb4dcb4c",
+    "family": "CAUSAL_VS_PREDICTIVE",
+    "prefix": "c55757222e5e215a7dd2f487d9bf2862d157422f5b345d62dc30b27e4d03c265",
+    "variant": "base"
+   },
+   "online_shoppers::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "family": "EXPLANATION",
+    "prefix": "ea6fb83ac39e7954dc2bed388a892efbae2fed7509998a2fbed161d3c42e1339",
+    "variant": "base"
+   },
+   "online_shoppers::FE_STRATEGY": {
+    "contract": "d5be3e28e9b579bd7cd147663e1c7bb481786dec79104aaa339d353addb4d0c0",
+    "family": "FE_STRATEGY",
+    "prefix": "7b5b2acb3305e1c375ac0e58c52d4feb0bc4e861a65c8428467673a2795ad7d6",
+    "variant": "base"
+   },
+   "online_shoppers::FS_STRATEGY": {
+    "contract": "1f0a3b5b40d4d7bda901abfc2975db5e455f50761f3ad0f52a5e518ed475160b",
+    "family": "FS_STRATEGY",
+    "prefix": "cfcf26d0145d3d954e83d34e343298006573ddb02fa0dfc1d434f1aba50a11b9",
+    "variant": "base"
+   },
+   "online_shoppers::HPO_DEPTH": {
+    "contract": "5529e0335db937c70bdf3778ac37784e104ecc0b9e1e2500bcb5ab0ac84eb38f",
+    "family": "HPO_DEPTH",
+    "prefix": "5c2b63eca16c4ce2b339646ed88a47acd13f4fef9dd6cccdd34abbb35cc0ef9e",
+    "variant": "base"
+   },
+   "online_shoppers::IMBALANCE": {
+    "contract": "a0a570fb1086a9dfc44191f158a8d773abe7611e6debf4bca0bdf5cdbf7bd89a",
+    "family": "IMBALANCE",
+    "prefix": "50ea21a6f6b2ae715fb8ecb6d6cfd43fd0c8f7a020b1c866ecf673f621dd9812",
+    "variant": "base"
+   },
+   "online_shoppers::MODEL_FAMILY": {
+    "contract": "1689716ca2eb681c3817ca042e5246ebf3f0c5bbc42685e6a8815f1d529ec655",
+    "family": "MODEL_FAMILY",
+    "prefix": "f2f9a72954d2b25b05c086646c8d8334ec69cf55f3367d075393bbc823be9e29",
+    "variant": "base"
+   },
+   "online_shoppers::TRUST_PLAN": {
+    "contract": "fcdf6d9b7ae893be2d929e0259229b4c4d6459b2d5be9e16c9c9944d1dadbe66",
+    "family": "TRUST_PLAN",
+    "prefix": "54320cd841ba7d0e1bc12234e3a2b4fcc8f5a9545c238d99804eed82d1ffe874",
+    "variant": "base"
+   },
+   "online_shoppers::VALIDATION": {
+    "contract": "0c7843a2d830eb3ec89e0fabcc8eafbc138cc5fed171fae40856933a27856213",
+    "family": "VALIDATION",
+    "prefix": "cef68a5d9f9194cca8e613f895b5c576a844f2396211dd60743e016b26c5cb7d",
+    "variant": "base"
+   },
+   "taiwan_default::ADV::calibration_conflict": {
+    "contract": "e87f85db78b7eae9aea7e28890bb825f47c9302b6e60874e84bb4543581b1100",
+    "family": "MODEL_FAMILY",
+    "prefix": "ef6b50d259a1925f621d7d8f0a3916f38cdbf736f1ba8eef4cb4c23defb89e74",
+    "variant": "calibration_conflict"
+   },
+   "taiwan_default::ADV::causal_disagreement": {
+    "contract": "db0ba46c480ae227e9019862d51f9ab4e4e46c76515885330847e7c1f82ad3d3",
+    "family": "CAUSAL_VS_PREDICTIVE",
+    "prefix": "ec8344a1b9ff0d31a36af0285e4edbb0cb362eac8d3f7235cc3683170e21fa5f",
+    "variant": "causal_disagreement"
+   },
+   "taiwan_default::ADV::cheaper_equivalent": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "family": "MODEL_FAMILY",
+    "prefix": "e267a37297e2bb5c859237d96bd66403e8a84211ca5b740ea38a6eb5cc9fee7c",
+    "variant": "cheaper_equivalent"
+   },
+   "taiwan_default::ADV::data_quality_suspicious": {
+    "contract": "07cf99b3e14b4c311c775c760b1b14d9173b39be444f14f3f0380f4e5bf9f698",
+    "family": "MODEL_FAMILY",
+    "prefix": "a30006146233031b99ffbfb3a8a76111c94e84205daf379fd77b00cee3819be1",
+    "variant": "data_quality_suspicious"
+   },
+   "taiwan_default::ADV::governance_block": {
+    "contract": "b9e68fb8521e3b48bd95a0c0a26eaa2cadaf6d14982cffef28889f12c9648422",
+    "family": "MODEL_FAMILY",
+    "prefix": "c15238c4dd291c37fa8d114d506e719dfc6f88ea08eba6b0a3989d72e5b54201",
+    "variant": "governance_block"
+   },
+   "taiwan_default::ADV::incomplete_evidence": {
+    "contract": "8f806958accf3aa95d37796b77c907e4bb64e9b81bff7c8494054a66b4106027",
+    "family": "MODEL_FAMILY",
+    "prefix": "8abe9a9bd064183ca1125fe608ce9398a9d3312c786cb61a8e766c873b83ddbb",
+    "variant": "incomplete_evidence"
+   },
+   "taiwan_default::ADV::indistinguishable": {
+    "contract": "754408b30d85e3f0f5fa002f832174a16fac294028e26e1b6452239a27817546",
+    "family": "MODEL_FAMILY",
+    "prefix": "348bfa6b39e60bb5ab11e698926704057225074f1f428ac8f2dfe0ea74674b7b",
+    "variant": "indistinguishable"
+   },
+   "taiwan_default::ADV::variance_uncertain": {
+    "contract": "396827b005bb481240378a796536822e7fadb1745f73202916fb83c28e3983d1",
+    "family": "MODEL_FAMILY",
+    "prefix": "e48c196c44618feb2b34bce5a4551e9cfbd6c27db9d7e9148dee73c181ea790a",
+    "variant": "variance_uncertain"
+   },
+   "taiwan_default::CALIBRATION": {
+    "contract": "8f927d0f24644731e7cc377331eb8d89cab767c7ee8dc86aed018c51639d64ec",
+    "family": "CALIBRATION",
+    "prefix": "dcee0afe870cb8e6edddd19fea6a9863ab5f436a758ce12d53a62f76022de9a9",
+    "variant": "base"
+   },
+   "taiwan_default::CAUSAL::6": {
+    "contract": "d500c900580077823f20f8b0c96a34faeadd84ea92c379f9bd9e90afbae00500",
+    "family": "CAUSAL_VS_PREDICTIVE",
+    "prefix": "1377b9380726850b620d316e0ed21f2e3cedf835588108991cc63e1dcb2b289c",
+    "variant": "base"
+   },
+   "taiwan_default::EXPLANATION": {
+    "contract": "c2739b0e274239c81f1f8df216ff6e489c55b1bc154a25d49025ff12d9420d3b",
+    "family": "EXPLANATION",
+    "prefix": "9f220c8ac7de27d672d03a433ff8671b5627ac6b877236d0212600e1929c4cb7",
+    "variant": "base"
+   },
+   "taiwan_default::FE_STRATEGY": {
+    "contract": "2fb8b3ee442375bcad48505d0b6d6ecddafee69096ec9c6c91c8e9f1389621f1",
+    "family": "FE_STRATEGY",
+    "prefix": "4c91799db78be493d88cb02192769745c124682cabb39b919ab1969684f8126c",
+    "variant": "base"
+   },
+   "taiwan_default::FS_STRATEGY": {
+    "contract": "8896f7002fbf431badba5afe0be9a62ddd18b0e57580b9ce3b41b520123cd069",
+    "family": "FS_STRATEGY",
+    "prefix": "1eb8b28a5e8cbaaf77d40852cf0c5d97b3586ad019b6499bd3957fc82c488533",
+    "variant": "base"
+   },
+   "taiwan_default::HPO_DEPTH": {
+    "contract": "4c83eeddf4c3ac6c73c63d68d6b5282a631b78676324509dfb35eab9779c9070",
+    "family": "HPO_DEPTH",
+    "prefix": "9f34c524f2d955b3db70c1c68dc1a1c39133e3159cb07ad4184824c3db523d36",
+    "variant": "base"
+   },
+   "taiwan_default::IMBALANCE": {
+    "contract": "357682d09072c3cc2b6078f2617673bfb9bdda602fd9bea8e50c1b3560dc5f63",
+    "family": "IMBALANCE",
+    "prefix": "8952256b1255f859d7bdaf6dfeeec64bfb88e5b7506916ace20de2e3e8e5ed02",
+    "variant": "base"
+   },
+   "taiwan_default::MODEL_FAMILY": {
+    "contract": "9c9a819985da3004ee9f0f360ae3dae00a6731c5c5a7d1da54b220717cef1b30",
+    "family": "MODEL_FAMILY",
+    "prefix": "0ac1ad0e442f92f9bb896572d54b308a20277905a5454ddf8d8d23eece318b72",
+    "variant": "base"
+   },
+   "taiwan_default::TRUST_PLAN": {
+    "contract": "7f0f77f147c1e3c15a187776f0583d65168b3d1f5f176d7e70d631835291ac41",
+    "family": "TRUST_PLAN",
+    "prefix": "4c1bda232fee7401d54e4d727ef13db8c5bd1fe6a8a400c6e95315b369a0c4ee",
+    "variant": "base"
+   },
+   "taiwan_default::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "family": "VALIDATION",
+    "prefix": "2281ead2fb2c6ed37b602c16444cbb2c872c5963c3c55999637db2099193ca85",
+    "variant": "base"
+   }
+  },
+  "system": "031b7bf5fc6c1df0d1623f0d5fdb6d8f8b4859ee27be8c50f1972935be31ddc4"
+ },
+ "amends": "FREEZE_RECORD_A2B2_AMENDMENT1.json",
+ "b2_prompts": {
+  "analysis_schema": "cccf6017e4409fee675ef8e0ca6cb181945f4eb6e7d5928f5cfbf52aa0f8720d",
+  "analysis_task": "135d6bea90f91eb2a5d7e5063060e19bd17b937e92e2ed8f85cd928ce01ff67b",
+  "b2_mislead": "b99b93dbe8254d57f500b14e39c344160670a5a36de94e989df6024ca1214cb9",
+  "invent_schema": "6c472ba65155a9a2cad7b0a3d70403691d5a9c239f7dbd2849a09d7350882eeb",
+  "invent_task": "3fe0b76a9ab869f78a24ca353a5c9e872e696200c9a81f8878c08575d9dc0b43",
+  "rendered": {
+   "bank_marketing::anonymized::A_RAW": {
+    "analysis_prompt": "0384b0462018233ff7eb24a2312f579f9334e5b2ec1e1ae376c41bc56835c857",
+    "candidates": "72fb97aa0ce2ab9c4a1f69f585a6b0ab26421b9b4bec03eeb28c1e039d48069d",
+    "invention_prompt": "eadb9e19ba2ffc4de780ce38a82eadbf1f31b196d2980cd810dd0228d255c82f"
+   },
+   "bank_marketing::anonymized::C_DICT": {
+    "analysis_prompt": "6d0a3120b92a413ebaefe54c440f359e008d9dca1b8a3151abcc6ddd77ac00c7",
+    "candidates": "72fb97aa0ce2ab9c4a1f69f585a6b0ab26421b9b4bec03eeb28c1e039d48069d",
+    "invention_prompt": "9915dab540efffdcde07ce3046c9fca75ff8c6d722e65bd12508eae21da1210c"
+   },
+   "bank_marketing::incomplete::D_RULES": {
+    "analysis_prompt": "64255c3d93afe32a640345f0edc040838a4f97befeaa23d28ff001fa57e7701d",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "invention_prompt": "943eb5244bc0c0b5c4c2687655d263a5a3311a76606fed47662cb65b1ecf5662"
+   },
+   "bank_marketing::misleading::D_RULES": {
+    "analysis_prompt": "aa61111e09cf21cdf5a55b73015901101e74948acd908393f2ef87f14fec9421",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "invention_prompt": "718c968f22be5186d00ec2b1ff51c2eb7188cd712a474e48aac54d56c5f763d9"
+   },
+   "bank_marketing::misleading::E_FULL": {
+    "analysis_prompt": "aa61111e09cf21cdf5a55b73015901101e74948acd908393f2ef87f14fec9421",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "invention_prompt": "718c968f22be5186d00ec2b1ff51c2eb7188cd712a474e48aac54d56c5f763d9"
+   },
+   "bank_marketing::trapped::A_RAW": {
+    "analysis_prompt": "d3d40e1e4808d50b66a0fef8b688a1158a8f3f44c4224961ce922cfd574726fa",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "invention_prompt": "fc783945f6f5467de9db8768bd98e6669c5e55ce4b44ab6ce8ff616111f75734"
+   },
+   "bank_marketing::trapped::B_SELF": {
+    "analysis_prompt": "d3d40e1e4808d50b66a0fef8b688a1158a8f3f44c4224961ce922cfd574726fa",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "invention_prompt": "fc783945f6f5467de9db8768bd98e6669c5e55ce4b44ab6ce8ff616111f75734"
+   },
+   "bank_marketing::trapped::C_DICT": {
+    "analysis_prompt": "6bd2e5de9681e5c0f31b61c96e26cb606892eea7ed2cff9e9d6a2a0a28907a72",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "invention_prompt": "64076638e28065752127d8738526b4c746eefa5fd7b6429b2f4c8d4793bb007a"
+   },
+   "bank_marketing::trapped::D_RULES": {
+    "analysis_prompt": "9bf8b0ba96c0aa551dd947a5e500c5160cdd190ecddea748073f00da917b80f7",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "invention_prompt": "7f523b6d621d62fd215d9719e2e0b5e45201fc04b0817e92b408f13da7233557"
+   },
+   "bank_marketing::trapped::E_FULL": {
+    "analysis_prompt": "9bf8b0ba96c0aa551dd947a5e500c5160cdd190ecddea748073f00da917b80f7",
+    "candidates": "541e122e7e765799714e953caa44e00f2b0e0b775141c63ad875d4c5f13a2177",
+    "invention_prompt": "7f523b6d621d62fd215d9719e2e0b5e45201fc04b0817e92b408f13da7233557"
+   },
+   "hillstrom_email::anonymized::A_RAW": {
+    "analysis_prompt": "0e5e2703196ef5f1d53f0666beedac3321b5d11c390d575be10c617a3e02a4fb",
+    "candidates": "85675e435d68c6696713d90414200b6304eebf049bfe170ac330a4d467d1f82c",
+    "invention_prompt": "7c7ae13205b8d4d1b4b63ab5b6b70ed94341023333bf28bffc8896fc120df479"
+   },
+   "hillstrom_email::anonymized::C_DICT": {
+    "analysis_prompt": "084bfb223a7d3839d98de16ff78c6c94154e39f5c143474756c823755a5f13c2",
+    "candidates": "85675e435d68c6696713d90414200b6304eebf049bfe170ac330a4d467d1f82c",
+    "invention_prompt": "d19c4ad8a0c9e7fdb5f8f960d0d3a0702d91607d2d1a60178aba1f8696825964"
+   },
+   "hillstrom_email::incomplete::D_RULES": {
+    "analysis_prompt": "e7968b0e6ec3549855c5e5c02aa56812d44a497459e109463f7537bfe55f35a1",
+    "candidates": "fd61f970d1ce2b5a7ec6917977269919b9bbd76ab21a2249bce011058de04a62",
+    "invention_prompt": "453c48e46272db037b39f70dc4ae0988d3bc3202178b89267bb20f4bf25b3c62"
+   },
+   "hillstrom_email::misleading::D_RULES": {
+    "analysis_prompt": "25d2205ca1b0d354cd73d698e110f9140772c785660276652bcf495c47bc58b8",
+    "candidates": "fd61f970d1ce2b5a7ec6917977269919b9bbd76ab21a2249bce011058de04a62",
+    "invention_prompt": "31e8d7dfad0c530f4b288b27f30443463c8c7d0bbb7fb4327975dd3249e3b2a9"
+   },
+   "hillstrom_email::misleading::E_FULL": {
+    "analysis_prompt": "25d2205ca1b0d354cd73d698e110f9140772c785660276652bcf495c47bc58b8",
+    "candidates": "fd61f970d1ce2b5a7ec6917977269919b9bbd76ab21a2249bce011058de04a62",
+    "invention_prompt": "31e8d7dfad0c530f4b288b27f30443463c8c7d0bbb7fb4327975dd3249e3b2a9"
+   },
+   "hillstrom_email::trapped::A_RAW": {
+    "analysis_prompt": "d957c39ffa71770947414462acffddabe24c0053fa0e2ccd0e8c7a29c25f065a",
+    "candidates": "fd61f970d1ce2b5a7ec6917977269919b9bbd76ab21a2249bce011058de04a62",
+    "invention_prompt": "1d62b441c0621b1ed0970c296f4acb3c83a4bd685dc7cfde984a275a6d1abf1b"
+   },
+   "hillstrom_email::trapped::B_SELF": {
+    "analysis_prompt": "d957c39ffa71770947414462acffddabe24c0053fa0e2ccd0e8c7a29c25f065a",
+    "candidates": "fd61f970d1ce2b5a7ec6917977269919b9bbd76ab21a2249bce011058de04a62",
+    "invention_prompt": "1d62b441c0621b1ed0970c296f4acb3c83a4bd685dc7cfde984a275a6d1abf1b"
+   },
+   "hillstrom_email::trapped::C_DICT": {
+    "analysis_prompt": "649ffdb721b59d4be1dff3d7c5a3f78e3c59150e8db3f41a1087dace69594564",
+    "candidates": "fd61f970d1ce2b5a7ec6917977269919b9bbd76ab21a2249bce011058de04a62",
+    "invention_prompt": "86c9406c78c9377163c915047d1a0ed90262751096d90606cc9a7557166601e6"
+   },
+   "hillstrom_email::trapped::D_RULES": {
+    "analysis_prompt": "999d41a40a12da8b720e2e4564d8dd8f31af469b1bf2aa52085b256b1eb25b9e",
+    "candidates": "fd61f970d1ce2b5a7ec6917977269919b9bbd76ab21a2249bce011058de04a62",
+    "invention_prompt": "1c53dad86f5a6d3cff6fe3fdfb12a4bf04a1f40d1947757ba1d41b96a5795df7"
+   },
+   "hillstrom_email::trapped::E_FULL": {
+    "analysis_prompt": "999d41a40a12da8b720e2e4564d8dd8f31af469b1bf2aa52085b256b1eb25b9e",
+    "candidates": "fd61f970d1ce2b5a7ec6917977269919b9bbd76ab21a2249bce011058de04a62",
+    "invention_prompt": "1c53dad86f5a6d3cff6fe3fdfb12a4bf04a1f40d1947757ba1d41b96a5795df7"
+   },
+   "iranian_churn::anonymized::A_RAW": {
+    "analysis_prompt": "b6c1817fea9bba4050fc7b4119e0eff7109ba70e4744a0eeda2bd3cfd1b2b333",
+    "candidates": "7e924be53f34c8c47235eeb316baba706ae77c97869893007118766b1298dc98",
+    "invention_prompt": "46f27e8befbcee1e5aa25fa5c21ec25fbcf430864f87ffc51b12d87f56bd0eed"
+   },
+   "iranian_churn::anonymized::C_DICT": {
+    "analysis_prompt": "d5ef37402171c849237082a5c26f5270b5c52f8d55e9de3d7a69aa0fc3e46f4d",
+    "candidates": "7e924be53f34c8c47235eeb316baba706ae77c97869893007118766b1298dc98",
+    "invention_prompt": "aa81a867c326a185e9094dd6b7f6b6856a9be663faca7121d1adef28f78c5f01"
+   },
+   "iranian_churn::incomplete::D_RULES": {
+    "analysis_prompt": "0d252c3c297c358c61532ca955b7914bfa751e8b43b30321b58669d8d7e5b346",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "invention_prompt": "048b735eb0c0171a9209ba2b781e29fd02f35b7d7adf1c444a7769285e8d1bf4"
+   },
+   "iranian_churn::misleading::D_RULES": {
+    "analysis_prompt": "01ada75fe637daa70b67aa16e13e056737c92bce39cc6f3f9bb168f7a6df06e7",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "invention_prompt": "b862d8b86eba666aa39f08af5b029e35ac02eb7573d7f6d3f4294c90b73d515c"
+   },
+   "iranian_churn::misleading::E_FULL": {
+    "analysis_prompt": "01ada75fe637daa70b67aa16e13e056737c92bce39cc6f3f9bb168f7a6df06e7",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "invention_prompt": "b862d8b86eba666aa39f08af5b029e35ac02eb7573d7f6d3f4294c90b73d515c"
+   },
+   "iranian_churn::trapped::A_RAW": {
+    "analysis_prompt": "c156a2d1d960f5aba4dd0eec29ed55bdff5f252cf5afa2ebd74bf0cdc49ced96",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "invention_prompt": "19addfa1724092ec9cc4d45965993c7055a3b64ea721d94e003d18008abb8441"
+   },
+   "iranian_churn::trapped::B_SELF": {
+    "analysis_prompt": "c156a2d1d960f5aba4dd0eec29ed55bdff5f252cf5afa2ebd74bf0cdc49ced96",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "invention_prompt": "19addfa1724092ec9cc4d45965993c7055a3b64ea721d94e003d18008abb8441"
+   },
+   "iranian_churn::trapped::C_DICT": {
+    "analysis_prompt": "1862e0a472aafd6d938e0024f70347d17223319edab19c0e10b2ab2ad1781ef5",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "invention_prompt": "97c10729e43d7d695507aca37910bd1632cd67c06d17cfc67005dac6b937279d"
+   },
+   "iranian_churn::trapped::D_RULES": {
+    "analysis_prompt": "2afc14fdb2b71c0c933ef4e57ad95a433a4c73c839898f66b465b351f914bf38",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "invention_prompt": "256c4e265684c5abc73e493a7013ebb12b356c456a9a51848129bc2ec2f3eb9f"
+   },
+   "iranian_churn::trapped::E_FULL": {
+    "analysis_prompt": "2afc14fdb2b71c0c933ef4e57ad95a433a4c73c839898f66b465b351f914bf38",
+    "candidates": "1ec729be8fac0ae91d7cd45ba108d40266f7d34263cd935d6970bbf84073b1b1",
+    "invention_prompt": "256c4e265684c5abc73e493a7013ebb12b356c456a9a51848129bc2ec2f3eb9f"
+   },
+   "taiwan_default::anonymized::A_RAW": {
+    "analysis_prompt": "a8073239f223396bdf36629d3cabaaeefd1671cea0d51fb6e7aeba9147cbf7ed",
+    "candidates": "5e6f231929b3a0f1ad263b4f155d943b90df1132289c3edaa40d475142c23031",
+    "invention_prompt": "65251e86880ae1eab65e61274e1af740366a4f50f979287247affe47f0309d26"
+   },
+   "taiwan_default::anonymized::C_DICT": {
+    "analysis_prompt": "958a81eca5698cc861f26212327df431a5f9471649ec059bd78cfbdaa4adf18c",
+    "candidates": "5e6f231929b3a0f1ad263b4f155d943b90df1132289c3edaa40d475142c23031",
+    "invention_prompt": "47468294674f1e752b6b2f69e1fef37ded4586c783f6efd3765ae4f448d66d45"
+   },
+   "taiwan_default::incomplete::D_RULES": {
+    "analysis_prompt": "96661084cec580d7814f9f4ba520e3c34f35011781693f9d26374494d17f4744",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "invention_prompt": "1600e61586be49785743e20bd90c7c0ad3b894a7c6eee350c6fba4a3c3b201b5"
+   },
+   "taiwan_default::misleading::D_RULES": {
+    "analysis_prompt": "2176ce36a707d802f4ea0b5e28e5b1c5767d67da5be5ff826ef48eb999d14bb4",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "invention_prompt": "7ea6bb3113116cc973ae21cfb2c008fc047ec0534b7120f6123ed1daf533f0bf"
+   },
+   "taiwan_default::misleading::E_FULL": {
+    "analysis_prompt": "2176ce36a707d802f4ea0b5e28e5b1c5767d67da5be5ff826ef48eb999d14bb4",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "invention_prompt": "7ea6bb3113116cc973ae21cfb2c008fc047ec0534b7120f6123ed1daf533f0bf"
+   },
+   "taiwan_default::trapped::A_RAW": {
+    "analysis_prompt": "39cf582589b140b69293821b74ccf0606c7c34117b324ada10571b37fa5889c1",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "invention_prompt": "459fbe7b06831ed7161883b1847d211e017ff53ee719e580f71947e7e5d38c46"
+   },
+   "taiwan_default::trapped::B_SELF": {
+    "analysis_prompt": "39cf582589b140b69293821b74ccf0606c7c34117b324ada10571b37fa5889c1",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "invention_prompt": "459fbe7b06831ed7161883b1847d211e017ff53ee719e580f71947e7e5d38c46"
+   },
+   "taiwan_default::trapped::C_DICT": {
+    "analysis_prompt": "0e020dbe81f4d8d41addea19f45a16df32afc1794294d83a3d612b830c4eae31",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "invention_prompt": "fbf68b3989a1e69f0b150d0c999ca03bd47bb3c1ac945ce3335ae6792c5e2741"
+   },
+   "taiwan_default::trapped::D_RULES": {
+    "analysis_prompt": "30c7dc5eec9dd81f5d4855fb782f2e28c872a6b121220a3baa23417c2a71d99c",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "invention_prompt": "51a9dd7c8433fb1f2d44e6b21732e81ab787604d60dcf2abdb89139366f86b3c"
+   },
+   "taiwan_default::trapped::E_FULL": {
+    "analysis_prompt": "30c7dc5eec9dd81f5d4855fb782f2e28c872a6b121220a3baa23417c2a71d99c",
+    "candidates": "78cfcc92aa64455d0d96460db2e9ee72cc774b007a0476effec89905ff77516a",
+    "invention_prompt": "51a9dd7c8433fb1f2d44e6b21732e81ab787604d60dcf2abdb89139366f86b3c"
+   }
+  },
+  "system": "1a681a3e8e4e50f238c6a648f367f9565ca9a04e282d14db875edc1563ef6da3",
+  "td_text": "e287e7e838a8a2a6409c33c1e4ce4660bff50b502d667bf20bcaaf6ae90813b8"
+ },
+ "config": {
+  "a2": {
+   "budget_usd": {
+    "anthropic": 14.0,
+    "openai": 14.0
+   },
+   "datasets": [
+    "iranian_churn",
+    "taiwan_default",
+    "diabetes_readmission",
+    "online_shoppers"
+   ],
+   "n_instances": 64,
+   "replicates": [
+    1,
+    2,
+    3
+   ]
+  },
+  "b2": {
+   "budget_usd": {
+    "anthropic": 4.5,
+    "openai": 9.0
+   },
+   "cells": [
+    [
+     "trapped",
+     "A_RAW"
+    ],
+    [
+     "trapped",
+     "B_SELF"
+    ],
+    [
+     "trapped",
+     "C_DICT"
+    ],
+    [
+     "trapped",
+     "D_RULES"
+    ],
+    [
+     "trapped",
+     "E_FULL"
+    ],
+    [
+     "anonymized",
+     "A_RAW"
+    ],
+    [
+     "anonymized",
+     "C_DICT"
+    ],
+    [
+     "incomplete",
+     "D_RULES"
+    ],
+    [
+     "misleading",
+     "D_RULES"
+    ],
+    [
+     "misleading",
+     "E_FULL"
+    ]
+   ],
+   "datasets": [
+    "iranian_churn",
+    "taiwan_default",
+    "bank_marketing",
+    "hillstrom_email"
+   ],
+   "high_apparent_cv": 0.005,
+   "invent_max_tokens": 2200,
+   "replicates": [
+    1,
+    2
+   ],
+   "useful_cv": 0.001
+  },
+  "models": {
+   "anthropic": {
+    "b2_replicates": [
+     1
+    ],
+    "model": "claude-sonnet-5-5",
+    "studies": [
+     "B2"
+    ]
+   },
+   "baseline": {
+    "model": "qwen2.5:7b",
+    "provider": "local",
+    "temperature": 0.4
+   },
+   "openai": {
+    "model": "gpt-6-luna"
+   }
+  },
+  "prices": {
+   "claude-opus-5-5": {
+    "accessed": "2026-10-29",
+    "cached_input": 0.2,
+    "input": 4.0,
+    "output": 20.0,
+    "source": "Anthropic model table (claude-api reference, models.md), Claude Opus 5.5 $4 / $20 per MTok"
+   },
+   "claude-sonnet-5-5": {
+    "accessed": "2026-10-29",
+    "cached_input": 0.2,
+    "input": 2.0,
+    "output": 10.0,
+    "source": "Anthropic model table (claude-api reference, models.md), Claude Sonnet 5.5 $2 / $10 per MTok"
+   },
+   "gpt-6-luna": {
+    "accessed": "2026-10-29",
+    "cached_input": 0.01,
+    "input": 0.1,
+    "output": 0.5,
+    "source": "https://developers.openai.com/api/docs/pricing"
+   },
+   "gpt-6.1-sol": {
+    "accessed": "2026-10-29",
+    "cached_input": 0.1,
+    "input": 2.0,
+    "output": 10.0,
+    "source": "https://developers.openai.com/api/docs/pricing"
+   }
+  },
+  "reasoning_allowance": 16000,
+  "reasoning_effort": "medium"
+ },
+ "datasets": [
+  {
+   "b2_frame_sha256": "05c28f99af13ec5f565be03db8f3f321c9de3ed8b6b5ae641fef3cb2b1ded828",
+   "b2_truth_sha256": "aaf906ed1aaac70f20739ede0c739c440e866f03641a94051efbd3cb9c4361b8",
+   "columns": 17,
+   "dataset_id": "bank_marketing",
+   "dev_idx_sha256": "3aa40eda9bb70d5ab10fd792a750aa35d3490834723dbd23d2ef9f2831fb71fc",
+   "frame_sha256": "4a1325e2fd2b4fe611223715d4f92ab920a01105362469211e718223fb3b3099",
+   "holdout_scheme": "stratified",
+   "in_a2": false,
+   "in_b2": true,
+   "rows": 15000,
+   "split": "DEVELOPMENT",
+   "test_idx_sha256": "1f07a69943d4da8192332bf166ab894c6f9a5987c17277e349754846ea32af37"
+  },
+  {
+   "columns": 50,
+   "dataset_id": "diabetes_readmission",
+   "dev_idx_sha256": "6721d9c3b1e78337f3a6888f46f8981130d7c63220c1da8eeb546afe48570298",
+   "frame_sha256": "11de9be25ebbe0e37be4ef94d893e796cea25fe0cee32dd8212b7a2160ed7d34",
+   "holdout_scheme": "group",
+   "in_a2": true,
+   "in_b2": false,
+   "rows": 15000,
+   "split": "UNSEEN",
+   "test_idx_sha256": "4bfccee8ca68ffcf6df02d7c5402fa14f76259f4e50b28c06794c9b34ed1d370"
+  },
+  {
+   "b2_frame_sha256": "82480e61832c6b71548512291b0ff42d67cbd3201198cff5b0b4139a50660d33",
+   "b2_truth_sha256": "c4f5b59f1d66b9c2fab61a67d40246df8fa88cc1e62ac81d8e778257833a0e53",
+   "columns": 12,
+   "dataset_id": "hillstrom_email",
+   "dev_idx_sha256": "4ff5b479e39d10da3e398fc012c516ec23f6e69e5b53c4566c18c52320742b4b",
+   "frame_sha256": "e8f021c523852b29c323d30d6cf3932d1b37a40b6aecb576ff251ff6e2504baf",
+   "holdout_scheme": "stratified",
+   "in_a2": false,
+   "in_b2": true,
+   "rows": 64000,
+   "split": "UNSEEN",
+   "test_idx_sha256": "4c0e03329d5b15ca60205115f878a23af9a6beab7fade1e40269abfbdce66a11"
+  },
+  {
+   "b2_frame_sha256": "2c26c054f8913faecda4b0b54a6443c91313513826025ac43c3f0371e94818e8",
+   "b2_truth_sha256": "68279aacf2b94dc29ab26367ed4d67efd34b1462241a0c309955022ef531c166",
+   "columns": 14,
+   "dataset_id": "iranian_churn",
+   "dev_idx_sha256": "7b2d55413d030c71f7c17053f05488863b3b6dfe0283a4e8bc655b4fc4d91636",
+   "frame_sha256": "9a9dce53ea5f3a71f2ded3d4b7865ea20d27c06cd14520800ff85332906093ea",
+   "holdout_scheme": "stratified",
+   "in_a2": true,
+   "in_b2": true,
+   "rows": 3150,
+   "split": "UNSEEN",
+   "test_idx_sha256": "eaa63a4a69bc9459ae12c921fd3c074f1a68d49b465b64353ea1e57d811accf2"
+  },
+  {
+   "columns": 18,
+   "dataset_id": "online_shoppers",
+   "dev_idx_sha256": "9867fc1201dcbbc6388f346df94042853c448515af8394d06e3791c3bdf14005",
+   "frame_sha256": "41cffba0156fca450228f527a1596d1531956cc9f8541e05265255d0f6e5e3bc",
+   "holdout_scheme": "stratified",
+   "in_a2": true,
+   "in_b2": false,
+   "rows": 12330,
+   "split": "UNSEEN",
+   "test_idx_sha256": "5c87fa2650ec7a58b5d595c896cd9759542c0ac1ed2b50ca6bebbc0fa5e905c7"
+  },
+  {
+   "b2_frame_sha256": "6b82a456da7d9186389e2a95ac7fe42cf8f9345ba8ba0890061f7adbc381650b",
+   "b2_truth_sha256": "3e60f87504abead36a3b3d327e385f9fd398c7cadf691a078d9a69162499dbdd",
+   "columns": 25,
+   "dataset_id": "taiwan_default",
+   "dev_idx_sha256": "bf741e2b8ababc0f32485f15eb5ff1dfac4c4070acb749e3f0d1c848e09335e5",
+   "frame_sha256": "74098e6f4c7edf9813e7beb686e687de868d03d9d338e8cae8297a1b5a04a0f5",
+   "holdout_scheme": "stratified",
+   "in_a2": true,
+   "in_b2": true,
+   "rows": 15000,
+   "split": "UNSEEN",
+   "test_idx_sha256": "4b28ba755ef0c28e324db73f1a0187ef44edccf745dddebb376346559f138718"
+  }
+ ],
+ "frozen_at": "2026-10-29T11:23:55.750576+03:00",
+ "git": {
+  "branch": "research/reasoning-semantics-ablation",
+  "head": "4563435f476374ed2ddeb92d8ea5d6af8ada3093"
+ },
+ "reason": "Anthropic arm claude-opus-5-5 -> claude-sonnet-5-5, B2 only, replicate 1, cap 4.5 USD (owner credit 5 USD); Anthropic schema drops array bounds; before any Sonnet/Luna run",
+ "sources": {
+  "frozen_shared": {
+   "common/data.py": "3b05b3f2a6f420638404fe1df71fd752d6bf5b0ed936e66e3cc5714ad47c40df",
+   "common/llm.py": "b2f65e820907bcbb03100006f3805885a4d833f4f2f7aedc92e13d3a5a67e9da",
+   "common/prep.py": "bd96ddc6eb3b17f90e722be53c83ed9b626c6bcb227586618b91eb772a095f48"
+  },
+  "frozen_study_a": {
+   "study_a/analyze.py": "fa9ddcccdb3dfc4140856ac9d37e2752eb3390503d3d7543cbf8789edc6db9b2",
+   "study_a/evidence.py": "f9d61ca0dff08aa9e1bcdaf0d2211d39234c25bd088dd50bebc9d64bd99c12f3",
+   "study_a/scoring.py": "9e3b543226c0ceea78ea4936e3d61fdc4c345d7586dc5de9280304599c34fb8d",
+   "study_a/tasks.py": "b9ac2620cf5034d4a0416deb7d32fdb915f0c1d7c454bf6cf4367f68e19fc29a",
+   "study_a/topologies.py": "6cda875f9c0a11762f8bfdf649fc635cb5d5802f0f4d6624bec5e954f6af8dd0"
+  },
+  "frozen_study_b": {
+   "study_b/analyze.py": "8f483814f6f3b0721e8bc2cc97976d47366369fef3216d6d3df37a38a13cd949",
+   "study_b/conditions.py": "40387354965526a6158ee34f66b04b7eda2c626f4c6ae53a262fb95bb9a39c4d",
+   "study_b/evaluate.py": "7c7acc6a35cff27bbb65166b364798c2fb5c9347d81b34ef96bb4dc2ecad3903",
+   "study_b/profile.py": "b2b0a50286a623445e4686d46167ad95ba19f872ed9bb864c57abc20ef592228",
+   "study_b/score.py": "eb984aea57deee8df53885ce21a227ed223e1a3b9ee1dee7071de71a7a72bcbf",
+   "study_b/variants.py": "8ab171ae6f53255a5615684a49ba019fbd3f4216cfcc9bd047177fc173d4ad31"
+  },
+  "replication": {
+   "replication/PREREGISTRATION.md": "84b0a9c402a091bb75fb20a95b4b8ef7b90531805d6b2ece2da7eac452a26082",
+   "replication/a2/run.py": "2e2357d975758d048102b71a2938d114494bdf51916ffcf7a8a95925e579de2c",
+   "replication/b2/evaluate.py": "646bf92d32ba6acdcca277bc9cd67a63467e13b26d645c52f29827c7326bd882",
+   "replication/b2/invention.py": "0f0307d8043f0e3d9f62116937fabbfd0351823c9af9be326605a28aa0f978bd",
+   "replication/b2/run.py": "064cfd58123ab5f0e57d4655c3fdea13a4b3b12456aa033828ca2866af5812b5",
+   "replication/b2/variants.py": "25622d2f7fdf3fe617d0df2179651dd950137b08616fe918e866dc3a0be68372",
+   "replication/freeze.py": "ec042320515cc7575d235e05e11eadcd85fe14a01fcdf73608e58f661ef26455",
+   "replication/providers.py": "db5bf881344cd1d779e0c8a48a83b295f4101216e714c9fb22fccd69d830f240"
+  }
+ }
+}

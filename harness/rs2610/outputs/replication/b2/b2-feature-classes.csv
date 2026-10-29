@@ -1,0 +1,7 @@
+model,source,INVALID_HIGH_APPARENT,INVALID_LOW_GAIN,NOT_EXECUTABLE,VALID_NOT_USEFUL,VALID_USEFUL
+claude-sonnet-5-5,frozen_fe,0,11,11,187,25
+claude-sonnet-5-5,invention,5,11,5,165,14
+gpt-6-luna,frozen_fe,2,34,1,316,26
+gpt-6-luna,invention,1,32,0,317,32
+qwen2.5:7b,frozen_fe,85,13,122,87,3
+qwen2.5:7b,invention,67,54,104,131,44

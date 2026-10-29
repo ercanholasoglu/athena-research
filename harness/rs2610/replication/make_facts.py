@@ -1,0 +1,106 @@
+"""Facts for the articles from the A2/B2 result tables: ``facts-replication.json`` + ``facts-replication-index.md``.
+
+    python -m rs2610.replication.make_facts
+
+Every key maps to one cell of one result table (table, row selector, column), in the same index format as the original
+``make_facts`` so the article trace covers both. Model slugs: QWEN = qwen2.5:7b, LUNA = gpt-6-luna,
+SONNET = claude-sonnet-5-5.
+"""
+from __future__ import annotations
+
+import json
+import math
+import re
+from pathlib import Path
+
+import pandas as pd
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "outputs" / "replication"
+ART = ROOT / "artifacts" / "replication"
+SLUG = {"qwen2.5:7b": "QWEN", "gpt-6-luna": "LUNA", "claude-sonnet-5-5": "SONNET", "gpt-6.1-sol": "SOL"}
+TABLES = {
+    "a2/a2-results.csv": ("r.a2", ["model", "mode"]),
+    "a2/a2-within-model.csv": ("r.a2.w", ["model", "a", "b"]),
+    "a2/a2-model-effect.csv": ("r.a2.m", ["frontier", "mode"]),
+    "a2/a2-interaction.csv": ("r.a2.i", ["frontier", "topology"]),
+    "a2/a2-adversarial.csv": ("r.a2.adv", ["model", "variant", "mode"]),
+    "a2/a2-adversarial-tests.csv": ("r.a2.advt", ["model", "a", "b"]),
+    "a2/a2-fidelity.csv": ("r.a2.fid", ["frontier", "mode"]),
+    "a2/a2-topology-structure.csv": ("r.a2.topo", ["model", "mode"]),
+    "a2/a2-error-decomposition.csv": ("r.a2.err", ["model", "mode"]),
+    "b2/b2-results.csv": ("r.b2", ["model", "cell"]),
+    "b2/b2-model-effect.csv": ("r.b2.m", ["frontier", "metric", "cell"]),
+    "b2/b2-semantic-effect.csv": ("r.b2.s", ["model", "metric", "contrast"]),
+    "b2/b2-interaction.csv": ("r.b2.x", ["frontier", "metric", "contrast"]),
+    "b2/b2-feature-classes.csv": ("r.b2.fc", ["model", "source"]),
+    "cross-study.csv": ("r.x", ["axis", "study", "model", "metric"]),
+}
+
+
+def slug(v: object) -> str:
+    s = SLUG.get(str(v), str(v))
+    s = s.replace("anonymized:", "anon_").replace("misleading:", "mislead_").replace("incomplete:", "incompl_").replace("trapped:", "")
+    s = s.replace(" frontier - baseline", "").replace(" - ", "_vs_")
+    return re.sub(r"[^A-Za-z0-9_]+", "_", s).strip("_")
+
+
+def clean(v: object) -> object:
+    if isinstance(v, float):
+        return None if math.isnan(v) else round(v, 6)
+    if hasattr(v, "item"):
+        return clean(v.item())
+    return v
+
+
+def main() -> None:
+    facts, idx = {}, []
+    for rel, (prefix, keys) in TABLES.items():
+        p = OUT / rel
+        if not p.exists():
+            continue
+        df = pd.read_csv(p)
+        for i, row in df.iterrows():
+            base = ".".join([prefix] + [slug(row[k]) for k in keys])
+            sel = ", ".join(f"{k}={row[k]}" for k in keys)
+            for c in df.columns:
+                if c in keys:
+                    continue
+                v = clean(row[c])
+                if isinstance(v, (int, float, bool)) and v is not None:
+                    k = f"{base}.{c}"
+                    facts[k] = v
+                    idx.append(f"| `{k}` | {v} | outputs/replication/{rel} row {i} ({sel}) col {c} |")
+    from rs2610.replication.freeze import AMENDMENTS, RECORD
+    gov = AMENDMENTS[-1] if AMENDMENTS else RECORD
+    cfg = json.loads(gov.read_text())["config"]
+    for k, v in {"r.design.a2.instances": cfg["a2"]["n_instances"], "r.design.a2.datasets": len(cfg["a2"]["datasets"]),
+                 "r.design.b2.datasets": len(cfg["b2"]["datasets"]), "r.design.b2.cells": len(cfg["b2"]["cells"])}.items():
+        facts[k] = v
+        idx.append(f"| `{k}` | {v} | outputs/replication/{gov.name} config |")
+    # design and cost from the run files and ledgers
+    for study in ("a2", "b2"):
+        for arm, prov in (("LUNA", "openai"), ("SONNET", "anthropic"), ("QWEN", "local")):
+            runs, led = ART / study / f"runs_{prov}.jsonl", ART / study / f"ledger_{prov}.jsonl"
+            if runs.exists():
+                n = sum(1 for _ in runs.open())
+                facts[f"r.design.{study}.{arm}.runs"] = n
+                idx.append(f"| `r.design.{study}.{arm}.runs` | {n} | artifacts/replication/{study}/runs_{prov}.jsonl line count |")
+            if led.exists():
+                recs = [json.loads(line) for line in led.open()]
+                facts[f"r.design.{study}.{arm}.calls"] = len(recs)
+                idx.append(f"| `r.design.{study}.{arm}.calls` | {len(recs)} | artifacts/replication/{study}/ledger_{prov}.jsonl line count |")
+                if prov != "local":
+                    cost = round(sum(r.get("cost_usd") or 0 for r in recs), 4)
+                    facts[f"r.cost.{study}.{arm}.usd"] = cost
+                    idx.append(f"| `r.cost.{study}.{arm}.usd` | {cost} | artifacts/replication/{study}/ledger_{prov}.jsonl sum cost_usd |")
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "facts-replication.json").write_text(json.dumps(facts, indent=1, sort_keys=True))
+    (OUT / "facts-replication-index.md").write_text(
+        "# Fact index (replication)\n\nKey → canonical source. Generated by `python -m rs2610.replication.make_facts`.\n\n"
+        "| key | value | source |\n|---|---|---|\n" + "\n".join(idx) + "\n")
+    print(len(facts), "facts")
+
+
+if __name__ == "__main__":
+    main()

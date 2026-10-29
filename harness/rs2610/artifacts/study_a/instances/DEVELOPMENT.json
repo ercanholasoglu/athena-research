@@ -1,0 +1,5163 @@
+[
+ {
+  "instance_id": "telco_churn::MODEL_FAMILY",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "MODEL_FAMILY",
+  "question": "Which model family should be trained for production on this dataset?",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: 5-fold CV roc_auc 0.8411 \u00b1 0.0185 (folds [0.83698, 0.85897, 0.84809, 0.81103, 0.85039]), mean fit time 0.02s, out-of-fold ECE 0.013, Brier 0.1367."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: 5-fold CV roc_auc 0.8306 \u00b1 0.0165 (folds [0.82484, 0.85115, 0.83173, 0.80672, 0.83872]), mean fit time 0.28s, out-of-fold ECE 0.013, Brier 0.1402."
+   },
+   {
+    "id": "E4",
+    "text": "lightgbm: 5-fold CV roc_auc 0.8231 \u00b1 0.0160 (folds [0.82171, 0.8419, 0.81984, 0.79933, 0.83258]), mean fit time 0.74s, out-of-fold ECE 0.053, Brier 0.1464."
+   },
+   {
+    "id": "E5",
+    "text": "catboost: 5-fold CV roc_auc 0.8333 \u00b1 0.0175 (folds [0.82584, 0.8526, 0.83513, 0.80774, 0.84509]), mean fit time 0.63s, out-of-fold ECE 0.029, Brier 0.1401."
+   },
+   {
+    "id": "E6",
+    "text": "neural_net: 5-fold CV roc_auc 0.8256 \u00b1 0.0276 (folds [0.80464, 0.85639, 0.84119, 0.78961, 0.83625]), mean fit time 0.16s, out-of-fold ECE 0.011, Brier 0.1425."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "lightgbm",
+    "label": "LightGBM gradient boosting"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "neural_net",
+    "label": "MLP neural network (64-32)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "linear_model"
+   ],
+   "parsimonious": "linear_model",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "linear_model": 1.0,
+    "random_forest": 0.006946983047949957,
+    "lightgbm": 0.002868783064011202,
+    "catboost": 0.012777593171180133,
+    "neural_net": 0.04319462913065647
+   }
+  },
+  "utility": {
+   "linear_model": 0.8519488729070757,
+   "random_forest": 0.849963097676974,
+   "lightgbm": 0.8368900774121375,
+   "catboost": 0.8476678724735147,
+   "neural_net": 0.8501335433842243
+  },
+  "key_evidence": [
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::HPO_DEPTH",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "HPO_DEPTH",
+  "question": "How much hyper-parameter search should the production LightGBM model receive?",
+  "policy": [
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "LightGBM with default hyper-parameters: 3-fold CV 0.8198 \u00b1 0.0035."
+   },
+   {
+    "id": "E3",
+    "text": "A light random search (8 configurations) scored [0.79674, 0.84154, 0.83851, 0.84181, 0.79541, 0.83268, 0.79333, 0.83479] in 3-fold CV; best 0.8418, i.e. +0.0220 over defaults."
+   },
+   {
+    "id": "E4",
+    "text": "One configuration costs about 2.1s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep defaults"
+   },
+   {
+    "id": "light",
+    "label": "8 configurations"
+   },
+   {
+    "id": "moderate",
+    "label": "24 configurations"
+   },
+   {
+    "id": "deep",
+    "label": "60 configurations"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "light",
+    "moderate",
+    "deep"
+   ],
+   "parsimonious": "light",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "none": 0.8368900774121375,
+   "light": 0.8607814356492988,
+   "moderate": 0.8607814356492988,
+   "deep": 0.8607533038335392
+  },
+  "key_evidence": [
+   "E2",
+   "E3"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::FE_STRATEGY",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FE_STRATEGY",
+  "question": "Which feature-engineering strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "minimal (raw encoded features only; 45 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7821 \u00b1 0.0237 (folds [0.76052, 0.80748, 0.77821])."
+   },
+   {
+    "id": "E3",
+    "text": "semantic (raw + domain ratios/aggregates; 48 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7779 \u00b1 0.0144 (folds [0.76318, 0.79189, 0.77866])."
+   },
+   {
+    "id": "E4",
+    "text": "interaction_heavy (raw + all pairwise products of the top-7 numeric features; 48 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7827 \u00b1 0.0225 (folds [0.76278, 0.80715, 0.77821])."
+   },
+   {
+    "id": "E5",
+    "text": "dimensionality_reduction (raw + 10 PCA components; 55 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7897 \u00b1 0.0169 (folds [0.7839, 0.80876, 0.77647])."
+   }
+  ],
+  "options": [
+   {
+    "id": "minimal",
+    "label": "raw encoded features only"
+   },
+   {
+    "id": "semantic",
+    "label": "raw + domain ratios/aggregates"
+   },
+   {
+    "id": "interaction_heavy",
+    "label": "raw + all pairwise products of the top-7 numeric features"
+   },
+   {
+    "id": "dimensionality_reduction",
+    "label": "raw + 10 PCA components"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "semantic",
+    "minimal",
+    "interaction_heavy"
+   ],
+   "parsimonious": "minimal",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "semantic": 1.0,
+    "minimal": 0.2317221141547181,
+    "interaction_heavy": 0.2367857831117095,
+    "dimensionality_reduction": 0.03808576666011255
+   }
+  },
+  "utility": {
+   "minimal": 0.8368900774121375,
+   "semantic": 0.8388593045153218,
+   "interaction_heavy": 0.8390769123842873,
+   "dimensionality_reduction": 0.8409096174404019
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::FS_STRATEGY",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FS_STRATEGY",
+  "question": "Which feature-selection strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none (keep all features; 45 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7821 \u00b1 0.0237 (folds [0.76052, 0.80748, 0.77821])."
+   },
+   {
+    "id": "E3",
+    "text": "filter_mutual_info (keep top 50 % by mutual information; 22 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7726 \u00b1 0.0126 (folds [0.76475, 0.78714, 0.76592])."
+   },
+   {
+    "id": "E4",
+    "text": "embedded_importance (keep top 50 % by LightGBM importance; 22 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7778 \u00b1 0.0238 (folds [0.75555, 0.80291, 0.77493])."
+   },
+   {
+    "id": "E5",
+    "text": "l1_regularized (keep features with non-zero L1 coefficients; 19 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7675 \u00b1 0.0201 (folds [0.77818, 0.77992, 0.74435])."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep all features"
+   },
+   {
+    "id": "filter_mutual_info",
+    "label": "keep top 50 % by mutual information"
+   },
+   {
+    "id": "embedded_importance",
+    "label": "keep top 50 % by LightGBM importance"
+   },
+   {
+    "id": "l1_regularized",
+    "label": "keep features with non-zero L1 coefficients"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "filter_mutual_info",
+    "none",
+    "embedded_importance",
+    "l1_regularized"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "filter_mutual_info": 1.0,
+    "none": 0.6505270931215522,
+    "embedded_importance": 0.5667861061189975,
+    "l1_regularized": 0.5103058085228152
+   }
+  },
+  "utility": {
+   "none": 0.8368900774121375,
+   "filter_mutual_info": 0.8391108360444681,
+   "embedded_importance": 0.8344897716027523,
+   "l1_regularized": 0.8400251200566609
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::VALIDATION",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "VALIDATION",
+  "question": "Which validation scheme gives an honest estimate of production performance for this dataset?",
+  "policy": [
+   "The validation scheme must mirror how the model will be used in production."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "Structure: One row per customer; customer ids are unique; no timestamp column."
+   },
+   {
+    "id": "E3",
+    "text": "LightGBM estimated with random_kfold: roc_auc 0.8284 \u00b1 0.0235."
+   },
+   {
+    "id": "E4",
+    "text": "LightGBM estimated with stratified_kfold: roc_auc 0.8231 \u00b1 0.0160."
+   }
+  ],
+  "options": [
+   {
+    "id": "stratified_kfold",
+    "label": "stratified k-fold"
+   },
+   {
+    "id": "random_kfold",
+    "label": "shuffled k-fold"
+   },
+   {
+    "id": "group_kfold",
+    "label": "group k-fold by entity"
+   },
+   {
+    "id": "time_based_split",
+    "label": "train on past, validate on later rows"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "stratified_kfold"
+   ],
+   "parsimonious": "stratified_kfold",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "stratified_kfold": -0.013817508242487841,
+   "random_kfold": -0.00849008202451318,
+   "group_kfold": null,
+   "time_based_split": null
+  },
+  "utility_note": "negative |CV estimate \u2212 test score| of LightGBM",
+  "key_evidence": [
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::EXPLANATION",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "EXPLANATION",
+  "question": "Which explanation method should Athena produce for this model?",
+  "policy": [
+   "Per-decision explanations must be exact attributions for the deployed model.",
+   "Global importance on strongly correlated features must not split credit arbitrarily between correlated columns."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "The production model is LightGBM (tree ensemble)."
+   },
+   {
+    "id": "E3",
+    "text": "Maximum absolute pairwise feature correlation 1.000; 28 feature pairs have |r| > 0.9."
+   },
+   {
+    "id": "E4",
+    "text": "Purpose: A global explanation of what drives the model is needed for a model-risk review."
+   }
+  ],
+  "options": [
+   {
+    "id": "tree_shap",
+    "label": "TreeSHAP attributions"
+   },
+   {
+    "id": "permutation_importance",
+    "label": "permutation importance (global)"
+   },
+   {
+    "id": "linear_coefficients",
+    "label": "coefficients of a linear surrogate"
+   },
+   {
+    "id": "grouped_permutation_importance",
+    "label": "permutation importance on groups of correlated features"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "grouped_permutation_importance",
+    "tree_shap"
+   ],
+   "parsimonious": "grouped_permutation_importance",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::IMBALANCE",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "IMBALANCE",
+  "question": "How should class imbalance be handled? Decisions are made at the operating threshold; F1 is the decision metric.",
+  "policy": [
+   "Prefer the simpler remedy when remedies are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better). Minority share 0.265."
+   },
+   {
+    "id": "E2",
+    "text": "none: 5-fold CV F1 0.5728 \u00b1 0.0216 (folds [0.56634, 0.5973, 0.57356, 0.54054, 0.58614]), PR-AUC 0.6313."
+   },
+   {
+    "id": "E3",
+    "text": "class_weighting: 5-fold CV F1 0.6038 \u00b1 0.0283 (folds [0.59248, 0.6395, 0.59226, 0.56916, 0.62559]), PR-AUC 0.6368."
+   },
+   {
+    "id": "E4",
+    "text": "random_oversampling: 5-fold CV F1 0.6057 \u00b1 0.0283 (folds [0.57464, 0.6432, 0.613, 0.58033, 0.61709]), PR-AUC 0.6332."
+   },
+   {
+    "id": "E5",
+    "text": "threshold_moving: 5-fold CV F1 0.6037 \u00b1 0.0228 (folds [0.59898, 0.62069, 0.60795, 0.56703, 0.62405]), PR-AUC 0.6313."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "train as is, threshold 0.5"
+   },
+   {
+    "id": "class_weighting",
+    "label": "balanced class weights"
+   },
+   {
+    "id": "random_oversampling",
+    "label": "random oversampling of the minority class"
+   },
+   {
+    "id": "threshold_moving",
+    "label": "tune the threshold for F1 on inner folds"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "random_oversampling",
+    "class_weighting",
+    "threshold_moving"
+   ],
+   "parsimonious": "threshold_moving",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "random_oversampling": 1.0,
+    "none": 0.007544718176428801,
+    "class_weighting": 0.80040612392349,
+    "threshold_moving": 0.826244901763227
+   }
+  },
+  "utility": {
+   "none": 0.5502392344497608,
+   "class_weighting": 0.6056074766355141,
+   "random_oversampling": 0.6248794599807136,
+   "threshold_moving": 0.616593886462882
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::CALIBRATION",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "CALIBRATION",
+  "question": "Scores will be used directly as probabilities. Which calibration should be applied?",
+  "policy": [
+   "Lower Brier score is better; prefer the simpler method when methods are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none: 5-fold CV Brier 0.1465 \u00b1 0.0088 (folds [0.14655, 0.13707, 0.1501, 0.15907, 0.13947]), mean ECE 0.0544."
+   },
+   {
+    "id": "E3",
+    "text": "platt_sigmoid: 5-fold CV Brier 0.1419 \u00b1 0.0051 (folds [0.14395, 0.13599, 0.14247, 0.14899, 0.13812]), mean ECE 0.0297."
+   },
+   {
+    "id": "E4",
+    "text": "isotonic: 5-fold CV Brier 0.1417 \u00b1 0.0060 (folds [0.14505, 0.13412, 0.14259, 0.14917, 0.13747]), mean ECE 0.0331."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "use raw scores"
+   },
+   {
+    "id": "platt_sigmoid",
+    "label": "Platt / sigmoid calibration (3-fold)"
+   },
+   {
+    "id": "isotonic",
+    "label": "isotonic calibration (3-fold)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "isotonic",
+    "platt_sigmoid"
+   ],
+   "parsimonious": "platt_sigmoid",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "isotonic": 1.0,
+    "none": 0.045718492955593104,
+    "platt_sigmoid": 0.6751035257016144
+   }
+  },
+  "utility": {
+   "none": -0.14331799514153473,
+   "platt_sigmoid": -0.13701712190247872,
+   "isotonic": -0.13712340926648584
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::TRUST_PLAN",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "TRUST_PLAN",
+  "question": "Choose the complete analytical plan Athena should run for this dataset.",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable.",
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005.",
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better.",
+   "The validation scheme must mirror how the model will be used in production.",
+   "Prefer the simpler remedy when remedies are statistically indistinguishable.",
+   "Lower Brier score is better; prefer the simpler method when methods are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "[MODEL_FAMILY] linear_model: 5-fold CV roc_auc 0.8411 \u00b1 0.0185 (folds [0.83698, 0.85897, 0.84809, 0.81103, 0.85039]), mean fit time 0.02s, out-of-fold ECE 0.013, Brier 0.1367. | random_forest: 5-fold CV roc_auc 0.8306 \u00b1 0.0165 (folds [0.82484, 0.85115, 0.83173, 0.80672, 0.83872]), mean fit time 0.28s, out-of-fold ECE 0.013, Brier 0.1402. | lightgbm: 5-fold CV roc_auc 0.8231 \u00b1 0.0160 (folds [0.82171, 0.8419, 0.81984, 0.79933, 0.83258]), mean fit time 0.74s, out-of-fold ECE 0.053, Brier 0.1464. | catboost: 5-fold CV roc_auc 0.8333 \u00b1 0.0175 (folds [0.82584, 0.8526, 0.83513, 0.80774, 0.84509]), mean fit time 0.6"
+   },
+   {
+    "id": "E3",
+    "text": "[HPO_DEPTH] LightGBM with default hyper-parameters: 3-fold CV 0.8198 \u00b1 0.0035. | A light random search (8 configurations) scored [0.79674, 0.84154, 0.83851, 0.84181, 0.79541, 0.83268, 0.79333, 0.83479] in 3-fold CV; best 0.8418, i.e. +0.0220 over defaults. | One configuration costs about 2.1s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   },
+   {
+    "id": "E4",
+    "text": "[FE_STRATEGY] minimal (raw encoded features only; 45 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7821 \u00b1 0.0237 (folds [0.76052, 0.80748, 0.77821]). | semantic (raw + domain ratios/aggregates; 48 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7779 \u00b1 0.0144 (folds [0.76318, 0.79189, 0.77866]). | interaction_heavy (raw + all pairwise products of the top-7 numeric features; 48 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7827 \u00b1 0.0225 (folds [0.76278, 0.80715, 0.77821]). | dimensionality_reduction (raw + 10 PCA components; 55 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.78"
+   },
+   {
+    "id": "E5",
+    "text": "[VALIDATION] Structure: One row per customer; customer ids are unique; no timestamp column. | LightGBM estimated with random_kfold: roc_auc 0.8284 \u00b1 0.0235. | LightGBM estimated with stratified_kfold: roc_auc 0.8231 \u00b1 0.0160."
+   },
+   {
+    "id": "E6",
+    "text": "[IMBALANCE] none: 5-fold CV F1 0.5728 \u00b1 0.0216 (folds [0.56634, 0.5973, 0.57356, 0.54054, 0.58614]), PR-AUC 0.6313. | class_weighting: 5-fold CV F1 0.6038 \u00b1 0.0283 (folds [0.59248, 0.6395, 0.59226, 0.56916, 0.62559]), PR-AUC 0.6368. | random_oversampling: 5-fold CV F1 0.6057 \u00b1 0.0283 (folds [0.57464, 0.6432, 0.613, 0.58033, 0.61709]), PR-AUC 0.6332. | threshold_moving: 5-fold CV F1 0.6037 \u00b1 0.0228 (folds [0.59898, 0.62069, 0.60795, 0.56703, 0.62405]), PR-AUC 0.6313."
+   },
+   {
+    "id": "E7",
+    "text": "[CALIBRATION] none: 5-fold CV Brier 0.1465 \u00b1 0.0088 (folds [0.14655, 0.13707, 0.1501, 0.15907, 0.13947]), mean ECE 0.0544. | platt_sigmoid: 5-fold CV Brier 0.1419 \u00b1 0.0051 (folds [0.14395, 0.13599, 0.14247, 0.14899, 0.13812]), mean ECE 0.0297. | isotonic: 5-fold CV Brier 0.1417 \u00b1 0.0060 (folds [0.14505, 0.13412, 0.14259, 0.14917, 0.13747]), mean ECE 0.0331."
+   }
+  ],
+  "options": [
+   {
+    "id": "PLAN_A",
+    "label": "MODEL_FAMILY=random_forest; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=none"
+   },
+   {
+    "id": "PLAN_B",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_C",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=none"
+   },
+   {
+    "id": "PLAN_D",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=time_based_split; IMBALANCE=threshold_moving; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_E",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "PLAN_E"
+   ],
+   "parsimonious": "PLAN_E",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "PLAN_A": -3,
+   "PLAN_B": -1,
+   "PLAN_C": -2,
+   "PLAN_D": -1,
+   "PLAN_E": 0
+  },
+  "utility_note": "negative number of plan components outside the component reference sets",
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5",
+   "E6",
+   "E7"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::ADV::calibration_conflict",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "calibration_conflict",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "Scores are consumed directly as probabilities: a deployed model must have held-out ECE <= 0.05.",
+   "Post-hoc calibration fitted on a separate fold is permitted."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: CV roc_auc 0.8411 \u00b1 0.0185, out-of-fold ECE 0.142."
+   },
+   {
+    "id": "E3",
+    "text": "catboost: CV roc_auc 0.8261 \u00b1 0.0175, out-of-fold ECE 0.031; paired fold test vs linear_model: p = 0.012."
+   },
+   {
+    "id": "E4",
+    "text": "Isotonic calibration of linear_model on a separate fold: ECE 0.029, roc_auc unchanged (0.8411)."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model_raw",
+    "label": "linear_model without calibration"
+   },
+   {
+    "id": "linear_model_isotonic",
+    "label": "linear_model + isotonic calibration"
+   },
+   {
+    "id": "catboost_raw",
+    "label": "catboost without calibration"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "linear_model_isotonic"
+   ],
+   "parsimonious": "linear_model_isotonic",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E4"
+  ],
+  "conflict_evidence": [
+   "E2",
+   "E4"
+  ],
+  "perturbation": "ECE values and the second model's mean are constructed; linear_model's mean/std are measured.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "telco_churn::ADV::variance_uncertain",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "variance_uncertain",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "Report uncertainty honestly; do not force a winner that the evidence does not support."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: CV roc_auc 0.8411 \u00b1 0.0310 (folds vary widely)."
+   },
+   {
+    "id": "E3",
+    "text": "catboost: CV roc_auc 0.8381 \u00b1 0.0290."
+   },
+   {
+    "id": "E4",
+    "text": "Paired fold test linear_model vs catboost: p = 0.71; ranking flips in 2 of 5 folds."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "linear_model",
+    "catboost",
+    "UNDETERMINED"
+   ],
+   "parsimonious": "UNDETERMINED",
+   "uncertainty_expected": true
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "perturbation": "fold standard deviations and p-value constructed; means anchored on measured values.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "telco_churn::ADV::cheaper_equivalent",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "cheaper_equivalent",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "When candidates are statistically indistinguishable, deploy the one with the lower training and serving cost."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "catboost: CV roc_auc 0.8411 \u00b1 0.0040, training 640 s, p99 latency 41 ms."
+   },
+   {
+    "id": "E3",
+    "text": "linear_model: CV roc_auc 0.8391 \u00b1 0.0050, training 3.1 s, p99 latency 2 ms."
+   },
+   {
+    "id": "E4",
+    "text": "Paired fold test catboost vs linear_model: p = 0.41."
+   }
+  ],
+  "options": [
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "linear_model"
+   ],
+   "parsimonious": "linear_model",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "perturbation": "both candidates' scores and costs constructed around the measured best mean.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "telco_churn::ADV::governance_block",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "governance_block",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "Credit and medical decisions may only use model families with exact per-decision attributions: linear models and tree ensembles. Neural networks are not permitted."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "neural_net: CV roc_auc 0.8521 \u00b1 0.0040 (best)."
+   },
+   {
+    "id": "E3",
+    "text": "linear_model: CV roc_auc 0.8411 \u00b1 0.0040."
+   },
+   {
+    "id": "E4",
+    "text": "Paired fold test neural_net vs the tree ensemble: p = 0.003."
+   }
+  ],
+  "options": [
+   {
+    "id": "neural_net",
+    "label": "MLP neural network (64-32)"
+   },
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "linear_model"
+   ],
+   "parsimonious": "linear_model",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E4"
+  ],
+  "conflict_evidence": [
+   "E2"
+  ],
+  "perturbation": "neural_net score constructed to be the significant best.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "telco_churn::ADV::causal_disagreement",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "family": "CAUSAL_VS_PREDICTIVE",
+  "variant": "causal_disagreement",
+  "question": "Which lever should the business pull to reduce the bad outcome?",
+  "policy": [
+   "Interventions must be justified by causal evidence, not by predictive importance."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "Predictive importance ranks 'number_of_support_contacts' first and 'price_discount_eligible' ninth."
+   },
+   {
+    "id": "E3",
+    "text": "Randomized pilot A (proactive support outreach, n = 4,000): effect on the outcome +0.2 pp (95 % CI -1.5 to +1.9)."
+   },
+   {
+    "id": "E4",
+    "text": "Randomized pilot B (price discount, n = 4,000): effect -3.1 pp (95 % CI -5.0 to -1.2)."
+   }
+  ],
+  "options": [
+   {
+    "id": "support_outreach",
+    "label": "scale proactive support outreach"
+   },
+   {
+    "id": "price_discount",
+    "label": "scale the price discount"
+   },
+   {
+    "id": "both_equally",
+    "label": "scale both"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "price_discount"
+   ],
+   "parsimonious": "price_discount",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [
+   "E2",
+   "E3"
+  ],
+  "perturbation": "entirely constructed causal evidence attached to the dataset context.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "telco_churn::ADV::data_quality_suspicious",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "data_quality_suspicious",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "A model may not be deployed while a data-quality finding on one of its inputs is open."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: CV roc_auc 0.9970 \u00b1 0.0010."
+   },
+   {
+    "id": "E3",
+    "text": "catboost: CV roc_auc 0.8333 \u00b1 0.0175 (trained without column 'account_status_final')."
+   },
+   {
+    "id": "E4",
+    "text": "Data-quality finding (open): column 'account_status_final' is non-null for 99.6 % of positive rows and 2 % of negative rows; it is written by the account-closure workflow."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model_all_columns",
+    "label": "deploy linear_model trained on all columns"
+   },
+   {
+    "id": "catboost_clean",
+    "label": "deploy catboost trained without account_status_final"
+   },
+   {
+    "id": "investigate_first",
+    "label": "hold deployment and investigate the data-quality finding"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "investigate_first",
+    "catboost_clean"
+   ],
+   "parsimonious": "investigate_first",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E4"
+  ],
+  "conflict_evidence": [
+   "E2",
+   "E4"
+  ],
+  "perturbation": "near-perfect score and DQ finding constructed; second model's score measured.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "telco_churn::ADV::indistinguishable",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "indistinguishable",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "There is no cost or governance difference between the candidates."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: CV roc_auc 0.8411 \u00b1 0.0060."
+   },
+   {
+    "id": "E3",
+    "text": "catboost: CV roc_auc 0.8404 \u00b1 0.0060."
+   },
+   {
+    "id": "E4",
+    "text": "random_forest: CV roc_auc 0.8397 \u00b1 0.0060."
+   },
+   {
+    "id": "E5",
+    "text": "All pairwise paired fold tests: p > 0.6."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "linear_model",
+    "catboost",
+    "random_forest",
+    "UNDETERMINED"
+   ],
+   "parsimonious": "UNDETERMINED",
+   "uncertainty_expected": true
+  },
+  "utility": {},
+  "key_evidence": [
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "perturbation": "means placed within 0.0014 of each other; p-values constructed.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "telco_churn::ADV::incomplete_evidence",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "incomplete_evidence",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "Production model selection requires the standard candidate set (linear, random forest, LightGBM, CatBoost, neural network) to be evaluated."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 5282 development rows (7043 in the source), 19 raw columns / 45 encoded features, class shares [0.7346, 0.2654], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: CV roc_auc 0.8411 \u00b1 0.0185."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: CV roc_auc 0.8306 \u00b1 0.0165."
+   },
+   {
+    "id": "E4",
+    "text": "lightgbm, catboost and neural_net: evaluation jobs failed (out of memory); no scores available."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "UNDETERMINED"
+   ],
+   "parsimonious": "UNDETERMINED",
+   "uncertainty_expected": true
+  },
+  "utility": {},
+  "key_evidence": [
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "perturbation": "three families' results withheld; the two shown are measured.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "german_credit::MODEL_FAMILY",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "MODEL_FAMILY",
+  "question": "Which model family should be trained for production on this dataset?",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: 5-fold CV roc_auc 0.7803 \u00b1 0.0500 (folds [0.80275, 0.84804, 0.78624, 0.7437, 0.72085]), mean fit time 0.01s, out-of-fold ECE 0.068, Brier 0.1721."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: 5-fold CV roc_auc 0.7951 \u00b1 0.0454 (folds [0.81862, 0.85905, 0.79069, 0.74519, 0.7619]), mean fit time 0.21s, out-of-fold ECE 0.054, Brier 0.1644."
+   },
+   {
+    "id": "E4",
+    "text": "lightgbm: 5-fold CV roc_auc 0.7722 \u00b1 0.0364 (folds [0.80487, 0.80677, 0.78032, 0.72677, 0.74222]), mean fit time 0.42s, out-of-fold ECE 0.152, Brier 0.1967."
+   },
+   {
+    "id": "E5",
+    "text": "catboost: 5-fold CV roc_auc 0.7935 \u00b1 0.0375 (folds [0.81397, 0.84804, 0.78286, 0.75661, 0.76614]), mean fit time 0.35s, out-of-fold ECE 0.032, Brier 0.1632."
+   },
+   {
+    "id": "E6",
+    "text": "neural_net: 5-fold CV roc_auc 0.7303 \u00b1 0.0725 (folds [0.66561, 0.84635, 0.7473, 0.71534, 0.67683]), mean fit time 0.04s, out-of-fold ECE 0.059, Brier 0.1851."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "lightgbm",
+    "label": "LightGBM gradient boosting"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "neural_net",
+    "label": "MLP neural network (64-32)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "random_forest",
+    "linear_model",
+    "catboost",
+    "neural_net"
+   ],
+   "parsimonious": "linear_model",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "random_forest": 1.0,
+    "linear_model": 0.10352360077199438,
+    "lightgbm": 0.03837485479960335,
+    "catboost": 0.723499453304858,
+    "neural_net": 0.06111610992991481
+   }
+  },
+  "utility": {
+   "linear_model": 0.7353142857142857,
+   "random_forest": 0.7553523809523809,
+   "lightgbm": 0.7513142857142857,
+   "catboost": 0.7638095238095237,
+   "neural_net": 0.7174857142857143
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E5",
+   "E6"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::HPO_DEPTH",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "HPO_DEPTH",
+  "question": "How much hyper-parameter search should the production LightGBM model receive?",
+  "policy": [
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "LightGBM with default hyper-parameters: 3-fold CV 0.7720 \u00b1 0.0320."
+   },
+   {
+    "id": "E3",
+    "text": "A light random search (8 configurations) scored [0.75787, 0.77283, 0.76843, 0.76701, 0.76437, 0.77542, 0.76368, 0.77768] in 3-fold CV; best 0.7777, i.e. +0.0057 over defaults."
+   },
+   {
+    "id": "E4",
+    "text": "One configuration costs about 1.2s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep defaults"
+   },
+   {
+    "id": "light",
+    "label": "8 configurations"
+   },
+   {
+    "id": "moderate",
+    "label": "24 configurations"
+   },
+   {
+    "id": "deep",
+    "label": "60 configurations"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "moderate"
+   ],
+   "parsimonious": "moderate",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "none": 0.7513142857142857,
+   "light": 0.7523047619047619,
+   "moderate": 0.7739428571428572,
+   "deep": 0.7634285714285716
+  },
+  "key_evidence": [
+   "E2",
+   "E3"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::FE_STRATEGY",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FE_STRATEGY",
+  "question": "Which feature-engineering strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "minimal (raw encoded features only; 61 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7727 \u00b1 0.0415 (folds [0.7519, 0.74571, 0.82048])."
+   },
+   {
+    "id": "E3",
+    "text": "semantic (raw + domain ratios/aggregates; 64 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7658 \u00b1 0.0549 (folds [0.72857, 0.74, 0.82889])."
+   },
+   {
+    "id": "E4",
+    "text": "interaction_heavy (raw + all pairwise products of the top-7 numeric features; 76 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7347 \u00b1 0.0637 (folds [0.67714, 0.72381, 0.80318])."
+   },
+   {
+    "id": "E5",
+    "text": "dimensionality_reduction (raw + 10 PCA components; 71 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7626 \u00b1 0.0154 (folds [0.74667, 0.76381, 0.77747])."
+   }
+  ],
+  "options": [
+   {
+    "id": "minimal",
+    "label": "raw encoded features only"
+   },
+   {
+    "id": "semantic",
+    "label": "raw + domain ratios/aggregates"
+   },
+   {
+    "id": "interaction_heavy",
+    "label": "raw + all pairwise products of the top-7 numeric features"
+   },
+   {
+    "id": "dimensionality_reduction",
+    "label": "raw + 10 PCA components"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "dimensionality_reduction",
+    "minimal",
+    "semantic"
+   ],
+   "parsimonious": "minimal",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "dimensionality_reduction": 1.0,
+    "minimal": 0.4654023979633571,
+    "semantic": 0.6164078520381017,
+    "interaction_heavy": 0.003299113635601394
+   }
+  },
+  "utility": {
+   "minimal": 0.7513142857142857,
+   "semantic": 0.7642666666666668,
+   "interaction_heavy": 0.7529142857142858,
+   "dimensionality_reduction": 0.7586285714285714
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::FS_STRATEGY",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FS_STRATEGY",
+  "question": "Which feature-selection strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none (keep all features; 61 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7727 \u00b1 0.0415 (folds [0.7519, 0.74571, 0.82048])."
+   },
+   {
+    "id": "E3",
+    "text": "filter_mutual_info (keep top 50 % by mutual information; 30 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7545 \u00b1 0.0502 (folds [0.71952, 0.7319, 0.81206])."
+   },
+   {
+    "id": "E4",
+    "text": "embedded_importance (keep top 50 % by LightGBM importance; 30 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7664 \u00b1 0.0440 (folds [0.74095, 0.74095, 0.8172])."
+   },
+   {
+    "id": "E5",
+    "text": "l1_regularized (keep features with non-zero L1 coefficients; 24 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7556 \u00b1 0.0558 (folds [0.70524, 0.74595, 0.81557])."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep all features"
+   },
+   {
+    "id": "filter_mutual_info",
+    "label": "keep top 50 % by mutual information"
+   },
+   {
+    "id": "embedded_importance",
+    "label": "keep top 50 % by LightGBM importance"
+   },
+   {
+    "id": "l1_regularized",
+    "label": "keep features with non-zero L1 coefficients"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "none",
+    "embedded_importance",
+    "l1_regularized"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "none": 1.0,
+    "filter_mutual_info": 0.03180942111078111,
+    "embedded_importance": 0.37391130330347017,
+    "l1_regularized": 0.06290628772333753
+   }
+  },
+  "utility": {
+   "none": 0.7513142857142857,
+   "filter_mutual_info": 0.7469714285714286,
+   "embedded_importance": 0.7396571428571429,
+   "l1_regularized": 0.7483428571428572
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::VALIDATION",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "VALIDATION",
+  "question": "Which validation scheme gives an honest estimate of production performance for this dataset?",
+  "policy": [
+   "The validation scheme must mirror how the model will be used in production."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "Structure: One row per credit application; applicants appear once; no timestamp column."
+   },
+   {
+    "id": "E3",
+    "text": "LightGBM estimated with random_kfold: roc_auc 0.7947 \u00b1 0.0214."
+   },
+   {
+    "id": "E4",
+    "text": "LightGBM estimated with stratified_kfold: roc_auc 0.7722 \u00b1 0.0364."
+   }
+  ],
+  "options": [
+   {
+    "id": "stratified_kfold",
+    "label": "stratified k-fold"
+   },
+   {
+    "id": "random_kfold",
+    "label": "shuffled k-fold"
+   },
+   {
+    "id": "group_kfold",
+    "label": "group k-fold by entity"
+   },
+   {
+    "id": "time_based_split",
+    "label": "train on past, validate on later rows"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "stratified_kfold"
+   ],
+   "parsimonious": "stratified_kfold",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "stratified_kfold": -0.020876190476190493,
+   "random_kfold": -0.043396977156846206,
+   "group_kfold": null,
+   "time_based_split": null
+  },
+  "utility_note": "negative |CV estimate \u2212 test score| of LightGBM",
+  "key_evidence": [
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::EXPLANATION",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "EXPLANATION",
+  "question": "Which explanation method should Athena produce for this model?",
+  "policy": [
+   "Per-decision explanations must be exact attributions for the deployed model.",
+   "Global importance on strongly correlated features must not split credit arbitrarily between correlated columns."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "The production model is LightGBM (tree ensemble)."
+   },
+   {
+    "id": "E3",
+    "text": "Maximum absolute pairwise feature correlation 1.000; 2 feature pairs have |r| > 0.9."
+   },
+   {
+    "id": "E4",
+    "text": "Purpose: Explanations are needed per individual decision (adverse-action / case review)."
+   }
+  ],
+  "options": [
+   {
+    "id": "tree_shap",
+    "label": "TreeSHAP attributions"
+   },
+   {
+    "id": "permutation_importance",
+    "label": "permutation importance (global)"
+   },
+   {
+    "id": "linear_coefficients",
+    "label": "coefficients of a linear surrogate"
+   },
+   {
+    "id": "grouped_permutation_importance",
+    "label": "permutation importance on groups of correlated features"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "tree_shap"
+   ],
+   "parsimonious": "tree_shap",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::IMBALANCE",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "IMBALANCE",
+  "question": "How should class imbalance be handled? Decisions are made at the operating threshold; F1 is the decision metric.",
+  "policy": [
+   "Prefer the simpler remedy when remedies are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better). Minority share 0.300."
+   },
+   {
+    "id": "E2",
+    "text": "none: 5-fold CV F1 0.5023 \u00b1 0.0628 (folds [0.58824, 0.53333, 0.48193, 0.41975, 0.48837]), PR-AUC 0.6073."
+   },
+   {
+    "id": "E3",
+    "text": "class_weighting: 5-fold CV F1 0.5444 \u00b1 0.0663 (folds [0.62366, 0.58537, 0.54945, 0.45238, 0.51111]), PR-AUC 0.5940."
+   },
+   {
+    "id": "E4",
+    "text": "random_oversampling: 5-fold CV F1 0.5386 \u00b1 0.0318 (folds [0.54348, 0.55696, 0.55172, 0.48276, 0.55814]), PR-AUC 0.6054."
+   },
+   {
+    "id": "E5",
+    "text": "threshold_moving: 5-fold CV F1 0.5813 \u00b1 0.0296 (folds [0.61404, 0.60377, 0.58696, 0.55639, 0.54545]), PR-AUC 0.6073."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "train as is, threshold 0.5"
+   },
+   {
+    "id": "class_weighting",
+    "label": "balanced class weights"
+   },
+   {
+    "id": "random_oversampling",
+    "label": "random oversampling of the minority class"
+   },
+   {
+    "id": "threshold_moving",
+    "label": "tune the threshold for F1 on inner folds"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "threshold_moving",
+    "class_weighting",
+    "random_oversampling"
+   ],
+   "parsimonious": "threshold_moving",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "threshold_moving": 1.0,
+    "none": 0.014715595533517294,
+    "class_weighting": 0.11996498052821804,
+    "random_oversampling": 0.05211612297977516
+   }
+  },
+  "utility": {
+   "none": 0.5116279069767442,
+   "class_weighting": 0.5390070921985816,
+   "random_oversampling": 0.48854961832061067,
+   "threshold_moving": 0.5567010309278351
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::CALIBRATION",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "CALIBRATION",
+  "question": "Scores will be used directly as probabilities. Which calibration should be applied?",
+  "policy": [
+   "Lower Brier score is better; prefer the simpler method when methods are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none: 5-fold CV Brier 0.1967 \u00b1 0.0257 (folds [0.1767, 0.16499, 0.19966, 0.2167, 0.22562]), mean ECE 0.1647."
+   },
+   {
+    "id": "E3",
+    "text": "platt_sigmoid: 5-fold CV Brier 0.1674 \u00b1 0.0113 (folds [0.1578, 0.15418, 0.16818, 0.17983, 0.1769]), mean ECE 0.0755."
+   },
+   {
+    "id": "E4",
+    "text": "isotonic: 5-fold CV Brier 0.1691 \u00b1 0.0122 (folds [0.15764, 0.1575, 0.16677, 0.18216, 0.18148]), mean ECE 0.0697."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "use raw scores"
+   },
+   {
+    "id": "platt_sigmoid",
+    "label": "Platt / sigmoid calibration (3-fold)"
+   },
+   {
+    "id": "isotonic",
+    "label": "isotonic calibration (3-fold)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "platt_sigmoid",
+    "isotonic"
+   ],
+   "parsimonious": "platt_sigmoid",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "platt_sigmoid": 1.0,
+    "none": 0.011667695179011315,
+    "isotonic": 0.19224405846348488
+   }
+  },
+  "utility": {
+   "none": -0.19713837758177663,
+   "platt_sigmoid": -0.1749773464046432,
+   "isotonic": -0.17583415840938585
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::TRUST_PLAN",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "TRUST_PLAN",
+  "question": "Choose the complete analytical plan Athena should run for this dataset.",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable.",
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005.",
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better.",
+   "The validation scheme must mirror how the model will be used in production.",
+   "Prefer the simpler remedy when remedies are statistically indistinguishable.",
+   "Lower Brier score is better; prefer the simpler method when methods are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "[MODEL_FAMILY] linear_model: 5-fold CV roc_auc 0.7803 \u00b1 0.0500 (folds [0.80275, 0.84804, 0.78624, 0.7437, 0.72085]), mean fit time 0.01s, out-of-fold ECE 0.068, Brier 0.1721. | random_forest: 5-fold CV roc_auc 0.7951 \u00b1 0.0454 (folds [0.81862, 0.85905, 0.79069, 0.74519, 0.7619]), mean fit time 0.21s, out-of-fold ECE 0.054, Brier 0.1644. | lightgbm: 5-fold CV roc_auc 0.7722 \u00b1 0.0364 (folds [0.80487, 0.80677, 0.78032, 0.72677, 0.74222]), mean fit time 0.42s, out-of-fold ECE 0.152, Brier 0.1967. | catboost: 5-fold CV roc_auc 0.7935 \u00b1 0.0375 (folds [0.81397, 0.84804, 0.78286, 0.75661, 0.76614]), mean fit time 0.3"
+   },
+   {
+    "id": "E3",
+    "text": "[HPO_DEPTH] LightGBM with default hyper-parameters: 3-fold CV 0.7720 \u00b1 0.0320. | A light random search (8 configurations) scored [0.75787, 0.77283, 0.76843, 0.76701, 0.76437, 0.77542, 0.76368, 0.77768] in 3-fold CV; best 0.7777, i.e. +0.0057 over defaults. | One configuration costs about 1.2s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   },
+   {
+    "id": "E4",
+    "text": "[FE_STRATEGY] minimal (raw encoded features only; 61 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7727 \u00b1 0.0415 (folds [0.7519, 0.74571, 0.82048]). | semantic (raw + domain ratios/aggregates; 64 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7658 \u00b1 0.0549 (folds [0.72857, 0.74, 0.82889]). | interaction_heavy (raw + all pairwise products of the top-7 numeric features; 76 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7347 \u00b1 0.0637 (folds [0.67714, 0.72381, 0.80318]). | dimensionality_reduction (raw + 10 PCA components; 71 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7626 \u00b1"
+   },
+   {
+    "id": "E5",
+    "text": "[VALIDATION] Structure: One row per credit application; applicants appear once; no timestamp column. | LightGBM estimated with random_kfold: roc_auc 0.7947 \u00b1 0.0214. | LightGBM estimated with stratified_kfold: roc_auc 0.7722 \u00b1 0.0364."
+   },
+   {
+    "id": "E6",
+    "text": "[IMBALANCE] none: 5-fold CV F1 0.5023 \u00b1 0.0628 (folds [0.58824, 0.53333, 0.48193, 0.41975, 0.48837]), PR-AUC 0.6073. | class_weighting: 5-fold CV F1 0.5444 \u00b1 0.0663 (folds [0.62366, 0.58537, 0.54945, 0.45238, 0.51111]), PR-AUC 0.5940. | random_oversampling: 5-fold CV F1 0.5386 \u00b1 0.0318 (folds [0.54348, 0.55696, 0.55172, 0.48276, 0.55814]), PR-AUC 0.6054. | threshold_moving: 5-fold CV F1 0.5813 \u00b1 0.0296 (folds [0.61404, 0.60377, 0.58696, 0.55639, 0.54545]), PR-AUC 0.6073."
+   },
+   {
+    "id": "E7",
+    "text": "[CALIBRATION] none: 5-fold CV Brier 0.1967 \u00b1 0.0257 (folds [0.1767, 0.16499, 0.19966, 0.2167, 0.22562]), mean ECE 0.1647. | platt_sigmoid: 5-fold CV Brier 0.1674 \u00b1 0.0113 (folds [0.1578, 0.15418, 0.16818, 0.17983, 0.1769]), mean ECE 0.0755. | isotonic: 5-fold CV Brier 0.1691 \u00b1 0.0122 (folds [0.15764, 0.1575, 0.16677, 0.18216, 0.18148]), mean ECE 0.0697."
+   }
+  ],
+  "options": [
+   {
+    "id": "PLAN_A",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_B",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=moderate; FE_STRATEGY=interaction_heavy; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_C",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=random_kfold; IMBALANCE=threshold_moving; CALIBRATION=none"
+   },
+   {
+    "id": "PLAN_D",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=moderate; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_E",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=none"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "PLAN_D"
+   ],
+   "parsimonious": "PLAN_D",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "PLAN_A": -1,
+   "PLAN_B": -1,
+   "PLAN_C": -3,
+   "PLAN_D": 0,
+   "PLAN_E": -2
+  },
+  "utility_note": "negative number of plan components outside the component reference sets",
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5",
+   "E6",
+   "E7"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "german_credit::ADV::calibration_conflict",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "calibration_conflict",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "Scores are consumed directly as probabilities: a deployed model must have held-out ECE <= 0.05.",
+   "Post-hoc calibration fitted on a separate fold is permitted."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "random_forest: CV roc_auc 0.7951 \u00b1 0.0454, out-of-fold ECE 0.142."
+   },
+   {
+    "id": "E3",
+    "text": "catboost: CV roc_auc 0.7801 \u00b1 0.0375, out-of-fold ECE 0.031; paired fold test vs random_forest: p = 0.012."
+   },
+   {
+    "id": "E4",
+    "text": "Isotonic calibration of random_forest on a separate fold: ECE 0.029, roc_auc unchanged (0.7951)."
+   }
+  ],
+  "options": [
+   {
+    "id": "random_forest_raw",
+    "label": "random_forest without calibration"
+   },
+   {
+    "id": "random_forest_isotonic",
+    "label": "random_forest + isotonic calibration"
+   },
+   {
+    "id": "catboost_raw",
+    "label": "catboost without calibration"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "random_forest_isotonic"
+   ],
+   "parsimonious": "random_forest_isotonic",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E4"
+  ],
+  "conflict_evidence": [
+   "E2",
+   "E4"
+  ],
+  "perturbation": "ECE values and the second model's mean are constructed; random_forest's mean/std are measured.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "german_credit::ADV::variance_uncertain",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "variance_uncertain",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "Report uncertainty honestly; do not force a winner that the evidence does not support."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "random_forest: CV roc_auc 0.7951 \u00b1 0.0310 (folds vary widely)."
+   },
+   {
+    "id": "E3",
+    "text": "catboost: CV roc_auc 0.7921 \u00b1 0.0290."
+   },
+   {
+    "id": "E4",
+    "text": "Paired fold test random_forest vs catboost: p = 0.71; ranking flips in 2 of 5 folds."
+   }
+  ],
+  "options": [
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "random_forest",
+    "catboost",
+    "UNDETERMINED"
+   ],
+   "parsimonious": "UNDETERMINED",
+   "uncertainty_expected": true
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "perturbation": "fold standard deviations and p-value constructed; means anchored on measured values.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "german_credit::ADV::cheaper_equivalent",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "cheaper_equivalent",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "When candidates are statistically indistinguishable, deploy the one with the lower training and serving cost."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "catboost: CV roc_auc 0.7951 \u00b1 0.0040, training 640 s, p99 latency 41 ms."
+   },
+   {
+    "id": "E3",
+    "text": "linear_model: CV roc_auc 0.7931 \u00b1 0.0050, training 3.1 s, p99 latency 2 ms."
+   },
+   {
+    "id": "E4",
+    "text": "Paired fold test catboost vs linear_model: p = 0.41."
+   }
+  ],
+  "options": [
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "linear_model"
+   ],
+   "parsimonious": "linear_model",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "perturbation": "both candidates' scores and costs constructed around the measured best mean.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "german_credit::ADV::governance_block",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "governance_block",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "Credit and medical decisions may only use model families with exact per-decision attributions: linear models and tree ensembles. Neural networks are not permitted."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "neural_net: CV roc_auc 0.8061 \u00b1 0.0040 (best)."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: CV roc_auc 0.7951 \u00b1 0.0040."
+   },
+   {
+    "id": "E4",
+    "text": "Paired fold test neural_net vs the tree ensemble: p = 0.003."
+   }
+  ],
+  "options": [
+   {
+    "id": "neural_net",
+    "label": "MLP neural network (64-32)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "random_forest"
+   ],
+   "parsimonious": "random_forest",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E4"
+  ],
+  "conflict_evidence": [
+   "E2"
+  ],
+  "perturbation": "neural_net score constructed to be the significant best.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "german_credit::ADV::causal_disagreement",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "family": "CAUSAL_VS_PREDICTIVE",
+  "variant": "causal_disagreement",
+  "question": "Which lever should the business pull to reduce the bad outcome?",
+  "policy": [
+   "Interventions must be justified by causal evidence, not by predictive importance."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "Predictive importance ranks 'number_of_support_contacts' first and 'price_discount_eligible' ninth."
+   },
+   {
+    "id": "E3",
+    "text": "Randomized pilot A (proactive support outreach, n = 4,000): effect on the outcome +0.2 pp (95 % CI -1.5 to +1.9)."
+   },
+   {
+    "id": "E4",
+    "text": "Randomized pilot B (price discount, n = 4,000): effect -3.1 pp (95 % CI -5.0 to -1.2)."
+   }
+  ],
+  "options": [
+   {
+    "id": "support_outreach",
+    "label": "scale proactive support outreach"
+   },
+   {
+    "id": "price_discount",
+    "label": "scale the price discount"
+   },
+   {
+    "id": "both_equally",
+    "label": "scale both"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "price_discount"
+   ],
+   "parsimonious": "price_discount",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [
+   "E2",
+   "E3"
+  ],
+  "perturbation": "entirely constructed causal evidence attached to the dataset context.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "german_credit::ADV::data_quality_suspicious",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "data_quality_suspicious",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "A model may not be deployed while a data-quality finding on one of its inputs is open."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "random_forest: CV roc_auc 0.9970 \u00b1 0.0010."
+   },
+   {
+    "id": "E3",
+    "text": "catboost: CV roc_auc 0.7935 \u00b1 0.0375 (trained without column 'account_status_final')."
+   },
+   {
+    "id": "E4",
+    "text": "Data-quality finding (open): column 'account_status_final' is non-null for 99.6 % of positive rows and 2 % of negative rows; it is written by the account-closure workflow."
+   }
+  ],
+  "options": [
+   {
+    "id": "random_forest_all_columns",
+    "label": "deploy random_forest trained on all columns"
+   },
+   {
+    "id": "catboost_clean",
+    "label": "deploy catboost trained without account_status_final"
+   },
+   {
+    "id": "investigate_first",
+    "label": "hold deployment and investigate the data-quality finding"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "investigate_first",
+    "catboost_clean"
+   ],
+   "parsimonious": "investigate_first",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E4"
+  ],
+  "conflict_evidence": [
+   "E2",
+   "E4"
+  ],
+  "perturbation": "near-perfect score and DQ finding constructed; second model's score measured.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "german_credit::ADV::indistinguishable",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "indistinguishable",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "There is no cost or governance difference between the candidates."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "random_forest: CV roc_auc 0.7951 \u00b1 0.0060."
+   },
+   {
+    "id": "E3",
+    "text": "catboost: CV roc_auc 0.7944 \u00b1 0.0060."
+   },
+   {
+    "id": "E4",
+    "text": "linear_model: CV roc_auc 0.7937 \u00b1 0.0060."
+   },
+   {
+    "id": "E5",
+    "text": "All pairwise paired fold tests: p > 0.6."
+   }
+  ],
+  "options": [
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "random_forest",
+    "catboost",
+    "linear_model",
+    "UNDETERMINED"
+   ],
+   "parsimonious": "UNDETERMINED",
+   "uncertainty_expected": true
+  },
+  "utility": {},
+  "key_evidence": [
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "perturbation": "means placed within 0.0014 of each other; p-values constructed.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "german_credit::ADV::incomplete_evidence",
+  "dataset_id": "german_credit",
+  "split": "DEVELOPMENT",
+  "family": "MODEL_FAMILY",
+  "variant": "incomplete_evidence",
+  "question": "Which candidate should be deployed?",
+  "policy": [
+   "Production model selection requires the standard candidate set (linear, random forest, LightGBM, CatBoost, neural network) to be evaluated."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 750 development rows (1000 in the source), 20 raw columns / 61 encoded features, class shares [0.7, 0.3], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: CV roc_auc 0.7803 \u00b1 0.0500."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: CV roc_auc 0.7951 \u00b1 0.0454."
+   },
+   {
+    "id": "E4",
+    "text": "lightgbm, catboost and neural_net: evaluation jobs failed (out of memory); no scores available."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "UNDETERMINED"
+   ],
+   "parsimonious": "UNDETERMINED",
+   "uncertainty_expected": true
+  },
+  "utility": {},
+  "key_evidence": [
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "perturbation": "three families' results withheld; the two shown are measured.",
+  "adversarial": true
+ },
+ {
+  "instance_id": "bank_marketing::MODEL_FAMILY",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "MODEL_FAMILY",
+  "question": "Which model family should be trained for production on this dataset?",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: 5-fold CV roc_auc 0.7767 \u00b1 0.0210 (folds [0.79024, 0.80327, 0.777, 0.7617, 0.7511]), mean fit time 0.02s, out-of-fold ECE 0.010, Brier 0.0857."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: 5-fold CV roc_auc 0.7908 \u00b1 0.0248 (folds [0.80036, 0.82148, 0.79539, 0.78255, 0.75427]), mean fit time 0.44s, out-of-fold ECE 0.015, Brier 0.0829."
+   },
+   {
+    "id": "E4",
+    "text": "lightgbm: 5-fold CV roc_auc 0.7938 \u00b1 0.0205 (folds [0.80564, 0.81611, 0.79825, 0.78636, 0.76264]), mean fit time 1.23s, out-of-fold ECE 0.019, Brier 0.0839."
+   },
+   {
+    "id": "E5",
+    "text": "catboost: 5-fold CV roc_auc 0.8067 \u00b1 0.0218 (folds [0.81221, 0.83388, 0.81284, 0.80054, 0.77415]), mean fit time 1.00s, out-of-fold ECE 0.012, Brier 0.0815."
+   },
+   {
+    "id": "E6",
+    "text": "neural_net: 5-fold CV roc_auc 0.7756 \u00b1 0.0155 (folds [0.78987, 0.79113, 0.77755, 0.76098, 0.75827]), mean fit time 0.37s, out-of-fold ECE 0.014, Brier 0.0861."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "lightgbm",
+    "label": "LightGBM gradient boosting"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "neural_net",
+    "label": "MLP neural network (64-32)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "catboost"
+   ],
+   "parsimonious": "catboost",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "catboost": 1.0,
+    "linear_model": 0.0008602228361458249,
+    "random_forest": 0.0005752082017287195,
+    "lightgbm": 0.002316163150838289,
+    "neural_net": 0.003799339372100988
+   }
+  },
+  "utility": {
+   "linear_model": 0.7536998268260567,
+   "random_forest": 0.7779776259538389,
+   "lightgbm": 0.7697243892666286,
+   "catboost": 0.7852772796742119,
+   "neural_net": 0.750129180799194
+  },
+  "key_evidence": [
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::HPO_DEPTH",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "HPO_DEPTH",
+  "question": "How much hyper-parameter search should the production LightGBM model receive?",
+  "policy": [
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "LightGBM with default hyper-parameters: 3-fold CV 0.7823 \u00b1 0.0199."
+   },
+   {
+    "id": "E3",
+    "text": "A light random search (8 configurations) scored [0.76033, 0.7941, 0.79496, 0.79589, 0.75673, 0.79241, 0.76294, 0.79355] in 3-fold CV; best 0.7959, i.e. +0.0136 over defaults."
+   },
+   {
+    "id": "E4",
+    "text": "One configuration costs about 2.1s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep defaults"
+   },
+   {
+    "id": "light",
+    "label": "8 configurations"
+   },
+   {
+    "id": "moderate",
+    "label": "24 configurations"
+   },
+   {
+    "id": "deep",
+    "label": "60 configurations"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "light",
+    "moderate",
+    "deep"
+   ],
+   "parsimonious": "light",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "none": 0.7697243892666286,
+   "light": 0.7809380334893969,
+   "moderate": 0.7834243799150991,
+   "deep": 0.7793929833494995
+  },
+  "key_evidence": [
+   "E2",
+   "E3"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::FE_STRATEGY",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FE_STRATEGY",
+  "question": "Which feature-engineering strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "minimal (raw encoded features only; 50 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7281 \u00b1 0.0305 (folds [0.71436, 0.76309, 0.70693])."
+   },
+   {
+    "id": "E3",
+    "text": "semantic (raw + domain ratios/aggregates; 53 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7305 \u00b1 0.0373 (folds [0.7396, 0.76235, 0.68941])."
+   },
+   {
+    "id": "E4",
+    "text": "interaction_heavy (raw + all pairwise products of the top-7 numeric features; 65 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7321 \u00b1 0.0434 (folds [0.73837, 0.77205, 0.68601])."
+   },
+   {
+    "id": "E5",
+    "text": "dimensionality_reduction (raw + 10 PCA components; 60 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7474 \u00b1 0.0146 (folds [0.73164, 0.76039, 0.7502])."
+   }
+  ],
+  "options": [
+   {
+    "id": "minimal",
+    "label": "raw encoded features only"
+   },
+   {
+    "id": "semantic",
+    "label": "raw + domain ratios/aggregates"
+   },
+   {
+    "id": "interaction_heavy",
+    "label": "raw + all pairwise products of the top-7 numeric features"
+   },
+   {
+    "id": "dimensionality_reduction",
+    "label": "raw + 10 PCA components"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "minimal",
+    "semantic"
+   ],
+   "parsimonious": "minimal",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "minimal": 1.0,
+    "semantic": 0.4456300591803451,
+    "interaction_heavy": 0.014797320160965412,
+    "dimensionality_reduction": 0.021047583985516188
+   }
+  },
+  "utility": {
+   "minimal": 0.7697243892666286,
+   "semantic": 0.7740591985944036,
+   "interaction_heavy": 0.7720834320249611,
+   "dimensionality_reduction": 0.7673769505959382
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::FS_STRATEGY",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FS_STRATEGY",
+  "question": "Which feature-selection strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none (keep all features; 50 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7281 \u00b1 0.0305 (folds [0.71436, 0.76309, 0.70693])."
+   },
+   {
+    "id": "E3",
+    "text": "filter_mutual_info (keep top 50 % by mutual information; 25 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.6942 \u00b1 0.0305 (folds [0.68946, 0.72681, 0.6664])."
+   },
+   {
+    "id": "E4",
+    "text": "embedded_importance (keep top 50 % by LightGBM importance; 25 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7150 \u00b1 0.0319 (folds [0.72082, 0.74362, 0.68062])."
+   },
+   {
+    "id": "E5",
+    "text": "l1_regularized (keep features with non-zero L1 coefficients; 33 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7316 \u00b1 0.0261 (folds [0.7035, 0.75497, 0.73632])."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep all features"
+   },
+   {
+    "id": "filter_mutual_info",
+    "label": "keep top 50 % by mutual information"
+   },
+   {
+    "id": "embedded_importance",
+    "label": "keep top 50 % by LightGBM importance"
+   },
+   {
+    "id": "l1_regularized",
+    "label": "keep features with non-zero L1 coefficients"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "none",
+    "embedded_importance"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "none": 1.0,
+    "filter_mutual_info": 0.004293330640531788,
+    "embedded_importance": 0.05934054165627323,
+    "l1_regularized": 0.004360577581378497
+   }
+  },
+  "utility": {
+   "none": 0.7697243892666286,
+   "filter_mutual_info": 0.7611107432691173,
+   "embedded_importance": 0.7719902580271278,
+   "l1_regularized": 0.768496403756721
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::VALIDATION",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "VALIDATION",
+  "question": "Which validation scheme gives an honest estimate of production performance for this dataset?",
+  "policy": [
+   "The validation scheme must mirror how the model will be used in production."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "Structure: One row per contacted client; columns month/day give the date of the last contact; the campaign ran over 2008-2010 and rows are roughly date ordered."
+   },
+   {
+    "id": "E3",
+    "text": "LightGBM estimated with random_kfold: roc_auc 0.7892 \u00b1 0.0131."
+   },
+   {
+    "id": "E4",
+    "text": "LightGBM estimated with stratified_kfold: roc_auc 0.7938 \u00b1 0.0205."
+   },
+   {
+    "id": "E5",
+    "text": "LightGBM estimated with time_based_split: roc_auc 0.5534 \u00b1 0.0860."
+   }
+  ],
+  "options": [
+   {
+    "id": "stratified_kfold",
+    "label": "stratified k-fold"
+   },
+   {
+    "id": "random_kfold",
+    "label": "shuffled k-fold"
+   },
+   {
+    "id": "group_kfold",
+    "label": "group k-fold by entity"
+   },
+   {
+    "id": "time_based_split",
+    "label": "train on past, validate on later rows"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "stratified_kfold",
+    "time_based_split"
+   ],
+   "parsimonious": "stratified_kfold",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "stratified_kfold": -0.024074308586876203,
+   "random_kfold": -0.019438391292456503,
+   "group_kfold": null,
+   "time_based_split": -0.21629989128065275
+  },
+  "utility_note": "negative |CV estimate \u2212 test score| of LightGBM",
+  "key_evidence": [
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::EXPLANATION",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "EXPLANATION",
+  "question": "Which explanation method should Athena produce for this model?",
+  "policy": [
+   "Per-decision explanations must be exact attributions for the deployed model.",
+   "Global importance on strongly correlated features must not split credit arbitrarily between correlated columns."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "The production model is LightGBM (tree ensemble)."
+   },
+   {
+    "id": "E3",
+    "text": "Maximum absolute pairwise feature correlation 1.000; 3 feature pairs have |r| > 0.9."
+   },
+   {
+    "id": "E4",
+    "text": "Purpose: A global explanation of what drives the model is needed for a model-risk review."
+   }
+  ],
+  "options": [
+   {
+    "id": "tree_shap",
+    "label": "TreeSHAP attributions"
+   },
+   {
+    "id": "permutation_importance",
+    "label": "permutation importance (global)"
+   },
+   {
+    "id": "linear_coefficients",
+    "label": "coefficients of a linear surrogate"
+   },
+   {
+    "id": "grouped_permutation_importance",
+    "label": "permutation importance on groups of correlated features"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "grouped_permutation_importance",
+    "tree_shap"
+   ],
+   "parsimonious": "grouped_permutation_importance",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::IMBALANCE",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "IMBALANCE",
+  "question": "How should class imbalance be handled? Decisions are made at the operating threshold; F1 is the decision metric.",
+  "policy": [
+   "Prefer the simpler remedy when remedies are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better). Minority share 0.118."
+   },
+   {
+    "id": "E2",
+    "text": "none: 5-fold CV F1 0.3663 \u00b1 0.0340 (folds [0.39698, 0.38624, 0.37173, 0.36745, 0.30928]), PR-AUC 0.4423."
+   },
+   {
+    "id": "E3",
+    "text": "class_weighting: 5-fold CV F1 0.4777 \u00b1 0.0335 (folds [0.51817, 0.48923, 0.48189, 0.47343, 0.42587]), PR-AUC 0.4477."
+   },
+   {
+    "id": "E4",
+    "text": "random_oversampling: 5-fold CV F1 0.4677 \u00b1 0.0316 (folds [0.50485, 0.48562, 0.47847, 0.4366, 0.43286]), PR-AUC 0.4328."
+   },
+   {
+    "id": "E5",
+    "text": "threshold_moving: 5-fold CV F1 0.4739 \u00b1 0.0343 (folds [0.5098, 0.49662, 0.4791, 0.46228, 0.42162]), PR-AUC 0.4423."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "train as is, threshold 0.5"
+   },
+   {
+    "id": "class_weighting",
+    "label": "balanced class weights"
+   },
+   {
+    "id": "random_oversampling",
+    "label": "random oversampling of the minority class"
+   },
+   {
+    "id": "threshold_moving",
+    "label": "tune the threshold for F1 on inner folds"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "class_weighting",
+    "random_oversampling",
+    "threshold_moving"
+   ],
+   "parsimonious": "threshold_moving",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "class_weighting": 1.0,
+    "none": 4.879133792719561e-06,
+    "random_oversampling": 0.24797515444385831,
+    "threshold_moving": 0.2934527685724727
+   }
+  },
+  "utility": {
+   "none": 0.35962145110410093,
+   "class_weighting": 0.4452488687782805,
+   "random_oversampling": 0.4442361761949391,
+   "threshold_moving": 0.47568710359408034
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::CALIBRATION",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "CALIBRATION",
+  "question": "Scores will be used directly as probabilities. Which calibration should be applied?",
+  "policy": [
+   "Lower Brier score is better; prefer the simpler method when methods are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none: 5-fold CV Brier 0.0839 \u00b1 0.0046 (folds [0.08065, 0.08015, 0.08342, 0.08358, 0.09157]), mean ECE 0.0211."
+   },
+   {
+    "id": "E3",
+    "text": "platt_sigmoid: 5-fold CV Brier 0.1628 \u00b1 0.0067 (folds [0.16904, 0.17046, 0.16185, 0.15636, 0.15635]), mean ECE 0.2048."
+   },
+   {
+    "id": "E4",
+    "text": "isotonic: 5-fold CV Brier 0.1001 \u00b1 0.0015 (folds [0.1003, 0.10129, 0.10009, 0.10101, 0.09756]), mean ECE 0.0152."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "use raw scores"
+   },
+   {
+    "id": "platt_sigmoid",
+    "label": "Platt / sigmoid calibration (3-fold)"
+   },
+   {
+    "id": "isotonic",
+    "label": "isotonic calibration (3-fold)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "none"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "none": 1.0,
+    "platt_sigmoid": 7.884635325653734e-05,
+    "isotonic": 0.0037326405887928827
+   }
+  },
+  "utility": {
+   "none": -0.08513221271152993,
+   "platt_sigmoid": -0.16073509663874727,
+   "isotonic": -0.09995929459828913
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::TRUST_PLAN",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "TRUST_PLAN",
+  "question": "Choose the complete analytical plan Athena should run for this dataset.",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable.",
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005.",
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better.",
+   "The validation scheme must mirror how the model will be used in production.",
+   "Prefer the simpler remedy when remedies are statistically indistinguishable.",
+   "Lower Brier score is better; prefer the simpler method when methods are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (45211 in the source), 15 raw columns / 50 encoded features, class shares [0.8818, 0.1182], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "[MODEL_FAMILY] linear_model: 5-fold CV roc_auc 0.7767 \u00b1 0.0210 (folds [0.79024, 0.80327, 0.777, 0.7617, 0.7511]), mean fit time 0.02s, out-of-fold ECE 0.010, Brier 0.0857. | random_forest: 5-fold CV roc_auc 0.7908 \u00b1 0.0248 (folds [0.80036, 0.82148, 0.79539, 0.78255, 0.75427]), mean fit time 0.44s, out-of-fold ECE 0.015, Brier 0.0829. | lightgbm: 5-fold CV roc_auc 0.7938 \u00b1 0.0205 (folds [0.80564, 0.81611, 0.79825, 0.78636, 0.76264]), mean fit time 1.23s, out-of-fold ECE 0.019, Brier 0.0839. | catboost: 5-fold CV roc_auc 0.8067 \u00b1 0.0218 (folds [0.81221, 0.83388, 0.81284, 0.80054, 0.77415]), mean fit time 1.00s"
+   },
+   {
+    "id": "E3",
+    "text": "[HPO_DEPTH] LightGBM with default hyper-parameters: 3-fold CV 0.7823 \u00b1 0.0199. | A light random search (8 configurations) scored [0.76033, 0.7941, 0.79496, 0.79589, 0.75673, 0.79241, 0.76294, 0.79355] in 3-fold CV; best 0.7959, i.e. +0.0136 over defaults. | One configuration costs about 2.1s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   },
+   {
+    "id": "E4",
+    "text": "[FE_STRATEGY] minimal (raw encoded features only; 50 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7281 \u00b1 0.0305 (folds [0.71436, 0.76309, 0.70693]). | semantic (raw + domain ratios/aggregates; 53 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7305 \u00b1 0.0373 (folds [0.7396, 0.76235, 0.68941]). | interaction_heavy (raw + all pairwise products of the top-7 numeric features; 65 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.7321 \u00b1 0.0434 (folds [0.73837, 0.77205, 0.68601]). | dimensionality_reduction (raw + 10 PCA components; 60 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.747"
+   },
+   {
+    "id": "E5",
+    "text": "[VALIDATION] Structure: One row per contacted client; columns month/day give the date of the last contact; the campaign ran over 2008-2010 and rows are roughly date ordered. | LightGBM estimated with random_kfold: roc_auc 0.7892 \u00b1 0.0131. | LightGBM estimated with stratified_kfold: roc_auc 0.7938 \u00b1 0.0205. | LightGBM estimated with time_based_split: roc_auc 0.5534 \u00b1 0.0860."
+   },
+   {
+    "id": "E6",
+    "text": "[IMBALANCE] none: 5-fold CV F1 0.3663 \u00b1 0.0340 (folds [0.39698, 0.38624, 0.37173, 0.36745, 0.30928]), PR-AUC 0.4423. | class_weighting: 5-fold CV F1 0.4777 \u00b1 0.0335 (folds [0.51817, 0.48923, 0.48189, 0.47343, 0.42587]), PR-AUC 0.4477. | random_oversampling: 5-fold CV F1 0.4677 \u00b1 0.0316 (folds [0.50485, 0.48562, 0.47847, 0.4366, 0.43286]), PR-AUC 0.4328. | threshold_moving: 5-fold CV F1 0.4739 \u00b1 0.0343 (folds [0.5098, 0.49662, 0.4791, 0.46228, 0.42162]), PR-AUC 0.4423."
+   },
+   {
+    "id": "E7",
+    "text": "[CALIBRATION] none: 5-fold CV Brier 0.0839 \u00b1 0.0046 (folds [0.08065, 0.08015, 0.08342, 0.08358, 0.09157]), mean ECE 0.0211. | platt_sigmoid: 5-fold CV Brier 0.1628 \u00b1 0.0067 (folds [0.16904, 0.17046, 0.16185, 0.15636, 0.15635]), mean ECE 0.2048. | isotonic: 5-fold CV Brier 0.1001 \u00b1 0.0015 (folds [0.1003, 0.10129, 0.10009, 0.10101, 0.09756]), mean ECE 0.0152."
+   }
+  ],
+  "options": [
+   {
+    "id": "PLAN_A",
+    "label": "MODEL_FAMILY=catboost; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=none"
+   },
+   {
+    "id": "PLAN_B",
+    "label": "MODEL_FAMILY=catboost; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_C",
+    "label": "MODEL_FAMILY=catboost; HPO_DEPTH=light; FE_STRATEGY=interaction_heavy; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=isotonic"
+   },
+   {
+    "id": "PLAN_D",
+    "label": "MODEL_FAMILY=catboost; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_E",
+    "label": "MODEL_FAMILY=neural_net; HPO_DEPTH=none; FE_STRATEGY=dimensionality_reduction; VALIDATION=stratified_kfold; IMBALANCE=threshold_moving; CALIBRATION=none"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "PLAN_A"
+   ],
+   "parsimonious": "PLAN_A",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "PLAN_A": 0,
+   "PLAN_B": -1,
+   "PLAN_C": -2,
+   "PLAN_D": -1,
+   "PLAN_E": -3
+  },
+  "utility_note": "negative number of plan components outside the component reference sets",
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5",
+   "E6",
+   "E7"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::MODEL_FAMILY",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "MODEL_FAMILY",
+  "question": "Which model family should be trained for production on this dataset?",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: 5-fold CV roc_auc 0.9078 \u00b1 0.0059 (folds [0.91706, 0.90329, 0.90769, 0.90216, 0.90886]), mean fit time 0.04s, out-of-fold ECE 0.008, Brier 0.1017."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: 5-fold CV roc_auc 0.9152 \u00b1 0.0052 (folds [0.92348, 0.9138, 0.91278, 0.90953, 0.91649]), mean fit time 0.81s, out-of-fold ECE 0.015, Brier 0.0965."
+   },
+   {
+    "id": "E4",
+    "text": "lightgbm: 5-fold CV roc_auc 0.9211 \u00b1 0.0030 (folds [0.92498, 0.92189, 0.91961, 0.91688, 0.9223]), mean fit time 1.37s, out-of-fold ECE 0.019, Brier 0.0931."
+   },
+   {
+    "id": "E5",
+    "text": "catboost: 5-fold CV roc_auc 0.9240 \u00b1 0.0046 (folds [0.93059, 0.92171, 0.9213, 0.91959, 0.92673]), mean fit time 0.93s, out-of-fold ECE 0.006, Brier 0.0910."
+   },
+   {
+    "id": "E6",
+    "text": "neural_net: 5-fold CV roc_auc 0.9058 \u00b1 0.0067 (folds [0.91564, 0.90179, 0.90599, 0.89789, 0.90776]), mean fit time 0.43s, out-of-fold ECE 0.011, Brier 0.1034."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "lightgbm",
+    "label": "LightGBM gradient boosting"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "neural_net",
+    "label": "MLP neural network (64-32)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "catboost"
+   ],
+   "parsimonious": "catboost",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "catboost": 1.0,
+    "linear_model": 0.00011329717363544121,
+    "random_forest": 0.00013401134900539524,
+    "lightgbm": 0.048510615948509854,
+    "neural_net": 0.00016015729173703277
+   }
+  },
+  "utility": {
+   "linear_model": 0.9026719272020323,
+   "random_forest": 0.9121143625762931,
+   "lightgbm": 0.9219660025649193,
+   "catboost": 0.9235993202224485,
+   "neural_net": 0.9047389550734567
+  },
+  "key_evidence": [
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::HPO_DEPTH",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "HPO_DEPTH",
+  "question": "How much hyper-parameter search should the production LightGBM model receive?",
+  "policy": [
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "LightGBM with default hyper-parameters: 3-fold CV 0.9206 \u00b1 0.0040."
+   },
+   {
+    "id": "E3",
+    "text": "A light random search (8 configurations) scored [0.90058, 0.91443, 0.91689, 0.91602, 0.90017, 0.92114, 0.90803, 0.91937] in 3-fold CV; best 0.9211, i.e. +0.0005 over defaults."
+   },
+   {
+    "id": "E4",
+    "text": "One configuration costs about 3.4s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep defaults"
+   },
+   {
+    "id": "light",
+    "label": "8 configurations"
+   },
+   {
+    "id": "moderate",
+    "label": "24 configurations"
+   },
+   {
+    "id": "deep",
+    "label": "60 configurations"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "none",
+    "light",
+    "moderate",
+    "deep"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "none": 0.9219660025649193,
+   "light": 0.9220187090527963,
+   "moderate": 0.9220187090527963,
+   "deep": 0.9227392903722945
+  },
+  "key_evidence": [
+   "E2",
+   "E3"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::FE_STRATEGY",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FE_STRATEGY",
+  "question": "Which feature-engineering strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "minimal (raw encoded features only; 50 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9111 \u00b1 0.0038 (folds [0.9125, 0.91407, 0.90686])."
+   },
+   {
+    "id": "E3",
+    "text": "semantic (raw + domain ratios/aggregates; 53 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9096 \u00b1 0.0056 (folds [0.90983, 0.91507, 0.90394])."
+   },
+   {
+    "id": "E4",
+    "text": "interaction_heavy (raw + all pairwise products of the top-7 numeric features; 71 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9102 \u00b1 0.0022 (folds [0.91023, 0.91238, 0.90807])."
+   },
+   {
+    "id": "E5",
+    "text": "dimensionality_reduction (raw + 10 PCA components; 60 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9059 \u00b1 0.0059 (folds [0.90187, 0.91265, 0.90306])."
+   }
+  ],
+  "options": [
+   {
+    "id": "minimal",
+    "label": "raw encoded features only"
+   },
+   {
+    "id": "semantic",
+    "label": "raw + domain ratios/aggregates"
+   },
+   {
+    "id": "interaction_heavy",
+    "label": "raw + all pairwise products of the top-7 numeric features"
+   },
+   {
+    "id": "dimensionality_reduction",
+    "label": "raw + 10 PCA components"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "minimal",
+    "semantic",
+    "interaction_heavy",
+    "dimensionality_reduction"
+   ],
+   "parsimonious": "minimal",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "minimal": 1.0,
+    "semantic": 0.26746093408828236,
+    "interaction_heavy": 0.9999999999999696,
+    "dimensionality_reduction": 0.09834924982096431
+   }
+  },
+  "utility": {
+   "minimal": 0.9219660025649193,
+   "semantic": 0.921246393689847,
+   "interaction_heavy": 0.9172350604335313,
+   "dimensionality_reduction": 0.9206016630355591
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::FS_STRATEGY",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FS_STRATEGY",
+  "question": "Which feature-selection strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none (keep all features; 50 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9111 \u00b1 0.0038 (folds [0.9125, 0.91407, 0.90686])."
+   },
+   {
+    "id": "E3",
+    "text": "filter_mutual_info (keep top 50 % by mutual information; 25 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9053 \u00b1 0.0067 (folds [0.90859, 0.90984, 0.8976])."
+   },
+   {
+    "id": "E4",
+    "text": "embedded_importance (keep top 50 % by LightGBM importance; 25 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9106 \u00b1 0.0041 (folds [0.90968, 0.91512, 0.90712])."
+   },
+   {
+    "id": "E5",
+    "text": "l1_regularized (keep features with non-zero L1 coefficients; 35 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9126 \u00b1 0.0025 (folds [0.91501, 0.91284, 0.90995])."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep all features"
+   },
+   {
+    "id": "filter_mutual_info",
+    "label": "keep top 50 % by mutual information"
+   },
+   {
+    "id": "embedded_importance",
+    "label": "keep top 50 % by LightGBM importance"
+   },
+   {
+    "id": "l1_regularized",
+    "label": "keep features with non-zero L1 coefficients"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "l1_regularized",
+    "none",
+    "filter_mutual_info"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "l1_regularized": 1.0,
+    "none": 0.7761616138539674,
+    "filter_mutual_info": 0.15490551570716507,
+    "embedded_importance": 0.0055833883893951965
+   }
+  },
+  "utility": {
+   "none": 0.9219660025649193,
+   "filter_mutual_info": 0.9196173547877913,
+   "embedded_importance": 0.920215408109642,
+   "l1_regularized": 0.9206166386797161
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::VALIDATION",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "VALIDATION",
+  "question": "Which validation scheme gives an honest estimate of production performance for this dataset?",
+  "policy": [
+   "The validation scheme must mirror how the model will be used in production."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "Structure: One row per person from a single census year; no repeated entities."
+   },
+   {
+    "id": "E3",
+    "text": "LightGBM estimated with random_kfold: roc_auc 0.9225 \u00b1 0.0038."
+   },
+   {
+    "id": "E4",
+    "text": "LightGBM estimated with stratified_kfold: roc_auc 0.9211 \u00b1 0.0030."
+   }
+  ],
+  "options": [
+   {
+    "id": "stratified_kfold",
+    "label": "stratified k-fold"
+   },
+   {
+    "id": "random_kfold",
+    "label": "shuffled k-fold"
+   },
+   {
+    "id": "group_kfold",
+    "label": "group k-fold by entity"
+   },
+   {
+    "id": "time_based_split",
+    "label": "train on past, validate on later rows"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "stratified_kfold"
+   ],
+   "parsimonious": "stratified_kfold",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "stratified_kfold": -0.0008347176939333956,
+   "random_kfold": -0.0005472923048551737,
+   "group_kfold": null,
+   "time_based_split": null
+  },
+  "utility_note": "negative |CV estimate \u2212 test score| of LightGBM",
+  "key_evidence": [
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::EXPLANATION",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "EXPLANATION",
+  "question": "Which explanation method should Athena produce for this model?",
+  "policy": [
+   "Per-decision explanations must be exact attributions for the deployed model.",
+   "Global importance on strongly correlated features must not split credit arbitrarily between correlated columns."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "The production model is LightGBM (tree ensemble)."
+   },
+   {
+    "id": "E3",
+    "text": "Maximum absolute pairwise feature correlation 1.000; 1 feature pairs have |r| > 0.9."
+   },
+   {
+    "id": "E4",
+    "text": "Purpose: A global explanation of what drives the model is needed for a model-risk review."
+   }
+  ],
+  "options": [
+   {
+    "id": "tree_shap",
+    "label": "TreeSHAP attributions"
+   },
+   {
+    "id": "permutation_importance",
+    "label": "permutation importance (global)"
+   },
+   {
+    "id": "linear_coefficients",
+    "label": "coefficients of a linear surrogate"
+   },
+   {
+    "id": "grouped_permutation_importance",
+    "label": "permutation importance on groups of correlated features"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "grouped_permutation_importance",
+    "tree_shap"
+   ],
+   "parsimonious": "grouped_permutation_importance",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::IMBALANCE",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "IMBALANCE",
+  "question": "How should class imbalance be handled? Decisions are made at the operating threshold; F1 is the decision metric.",
+  "policy": [
+   "Prefer the simpler remedy when remedies are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better). Minority share 0.241."
+   },
+   {
+    "id": "E2",
+    "text": "none: 5-fold CV F1 0.7006 \u00b1 0.0067 (folds [0.69609, 0.70871, 0.69854, 0.70648, 0.69328]), PR-AUC 0.8135."
+   },
+   {
+    "id": "E3",
+    "text": "class_weighting: 5-fold CV F1 0.7157 \u00b1 0.0117 (folds [0.72084, 0.72518, 0.70734, 0.6996, 0.72557]), PR-AUC 0.8147."
+   },
+   {
+    "id": "E4",
+    "text": "random_oversampling: 5-fold CV F1 0.7163 \u00b1 0.0117 (folds [0.73102, 0.71369, 0.70173, 0.70994, 0.72496]), PR-AUC 0.8149."
+   },
+   {
+    "id": "E5",
+    "text": "threshold_moving: 5-fold CV F1 0.7221 \u00b1 0.0130 (folds [0.7373, 0.72037, 0.70696, 0.71271, 0.73328]), PR-AUC 0.8135."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "train as is, threshold 0.5"
+   },
+   {
+    "id": "class_weighting",
+    "label": "balanced class weights"
+   },
+   {
+    "id": "random_oversampling",
+    "label": "random oversampling of the minority class"
+   },
+   {
+    "id": "threshold_moving",
+    "label": "tune the threshold for F1 on inner folds"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "threshold_moving",
+    "none",
+    "class_weighting"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "threshold_moving": 1.0,
+    "none": 0.05190206506364079,
+    "class_weighting": 0.18364097907206475,
+    "random_oversampling": 0.003095144929408783
+   }
+  },
+  "utility": {
+   "none": 0.694560669456067,
+   "class_weighting": 0.7146974063400576,
+   "random_oversampling": 0.7217898832684825,
+   "threshold_moving": 0.70915907873594
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::CALIBRATION",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "CALIBRATION",
+  "question": "Scores will be used directly as probabilities. Which calibration should be applied?",
+  "policy": [
+   "Lower Brier score is better; prefer the simpler method when methods are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none: 5-fold CV Brier 0.0931 \u00b1 0.0018 (folds [0.09018, 0.0925, 0.0946, 0.09395, 0.09416]), mean ECE 0.0231."
+   },
+   {
+    "id": "E3",
+    "text": "platt_sigmoid: 5-fold CV Brier 0.0918 \u00b1 0.0014 (folds [0.08943, 0.09142, 0.0926, 0.09288, 0.09244]), mean ECE 0.0170."
+   },
+   {
+    "id": "E4",
+    "text": "isotonic: 5-fold CV Brier 0.0920 \u00b1 0.0014 (folds [0.08971, 0.09174, 0.0928, 0.093, 0.09284]), mean ECE 0.0171."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "use raw scores"
+   },
+   {
+    "id": "platt_sigmoid",
+    "label": "Platt / sigmoid calibration (3-fold)"
+   },
+   {
+    "id": "isotonic",
+    "label": "isotonic calibration (3-fold)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "platt_sigmoid"
+   ],
+   "parsimonious": "platt_sigmoid",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "platt_sigmoid": 1.0,
+    "none": 0.004589379446362882,
+    "isotonic": 0.0054623071602798254
+   }
+  },
+  "utility": {
+   "none": -0.09288576740641613,
+   "platt_sigmoid": -0.09116999781495803,
+   "isotonic": -0.09118949648984535
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "adult_income::TRUST_PLAN",
+  "dataset_id": "adult_income",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "TRUST_PLAN",
+  "question": "Choose the complete analytical plan Athena should run for this dataset.",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable.",
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005.",
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better.",
+   "The validation scheme must mirror how the model will be used in production.",
+   "Prefer the simpler remedy when remedies are statistically indistinguishable.",
+   "Lower Brier score is better; prefer the simpler method when methods are statistically indistinguishable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: binary task, 11250 development rows (32561 in the source), 14 raw columns / 50 encoded features, class shares [0.7592, 0.2408], mean missing share 0.000. Primary metric: roc_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "[MODEL_FAMILY] linear_model: 5-fold CV roc_auc 0.9078 \u00b1 0.0059 (folds [0.91706, 0.90329, 0.90769, 0.90216, 0.90886]), mean fit time 0.04s, out-of-fold ECE 0.008, Brier 0.1017. | random_forest: 5-fold CV roc_auc 0.9152 \u00b1 0.0052 (folds [0.92348, 0.9138, 0.91278, 0.90953, 0.91649]), mean fit time 0.81s, out-of-fold ECE 0.015, Brier 0.0965. | lightgbm: 5-fold CV roc_auc 0.9211 \u00b1 0.0030 (folds [0.92498, 0.92189, 0.91961, 0.91688, 0.9223]), mean fit time 1.37s, out-of-fold ECE 0.019, Brier 0.0931. | catboost: 5-fold CV roc_auc 0.9240 \u00b1 0.0046 (folds [0.93059, 0.92171, 0.9213, 0.91959, 0.92673]), mean fit time 0.93"
+   },
+   {
+    "id": "E3",
+    "text": "[HPO_DEPTH] LightGBM with default hyper-parameters: 3-fold CV 0.9206 \u00b1 0.0040. | A light random search (8 configurations) scored [0.90058, 0.91443, 0.91689, 0.91602, 0.90017, 0.92114, 0.90803, 0.91937] in 3-fold CV; best 0.9211, i.e. +0.0005 over defaults. | One configuration costs about 3.4s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   },
+   {
+    "id": "E4",
+    "text": "[FE_STRATEGY] minimal (raw encoded features only; 50 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9111 \u00b1 0.0038 (folds [0.9125, 0.91407, 0.90686]). | semantic (raw + domain ratios/aggregates; 53 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9096 \u00b1 0.0056 (folds [0.90983, 0.91507, 0.90394]). | interaction_heavy (raw + all pairwise products of the top-7 numeric features; 71 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.9102 \u00b1 0.0022 (folds [0.91023, 0.91238, 0.90807]). | dimensionality_reduction (raw + 10 PCA components; 60 features): pilot on a 30 % sample, 3-fold CV roc_auc 0.905"
+   },
+   {
+    "id": "E5",
+    "text": "[VALIDATION] Structure: One row per person from a single census year; no repeated entities. | LightGBM estimated with random_kfold: roc_auc 0.9225 \u00b1 0.0038. | LightGBM estimated with stratified_kfold: roc_auc 0.9211 \u00b1 0.0030."
+   },
+   {
+    "id": "E6",
+    "text": "[IMBALANCE] none: 5-fold CV F1 0.7006 \u00b1 0.0067 (folds [0.69609, 0.70871, 0.69854, 0.70648, 0.69328]), PR-AUC 0.8135. | class_weighting: 5-fold CV F1 0.7157 \u00b1 0.0117 (folds [0.72084, 0.72518, 0.70734, 0.6996, 0.72557]), PR-AUC 0.8147. | random_oversampling: 5-fold CV F1 0.7163 \u00b1 0.0117 (folds [0.73102, 0.71369, 0.70173, 0.70994, 0.72496]), PR-AUC 0.8149. | threshold_moving: 5-fold CV F1 0.7221 \u00b1 0.0130 (folds [0.7373, 0.72037, 0.70696, 0.71271, 0.73328]), PR-AUC 0.8135."
+   },
+   {
+    "id": "E7",
+    "text": "[CALIBRATION] none: 5-fold CV Brier 0.0931 \u00b1 0.0018 (folds [0.09018, 0.0925, 0.0946, 0.09395, 0.09416]), mean ECE 0.0231. | platt_sigmoid: 5-fold CV Brier 0.0918 \u00b1 0.0014 (folds [0.08943, 0.09142, 0.0926, 0.09288, 0.09244]), mean ECE 0.0170. | isotonic: 5-fold CV Brier 0.0920 \u00b1 0.0014 (folds [0.08971, 0.09174, 0.0928, 0.093, 0.09284]), mean ECE 0.0171."
+   }
+  ],
+  "options": [
+   {
+    "id": "PLAN_A",
+    "label": "MODEL_FAMILY=catboost; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=random_oversampling; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_B",
+    "label": "MODEL_FAMILY=catboost; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=random_oversampling; CALIBRATION=none"
+   },
+   {
+    "id": "PLAN_C",
+    "label": "MODEL_FAMILY=random_forest; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=none; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "PLAN_D",
+    "label": "MODEL_FAMILY=catboost; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=group_kfold; IMBALANCE=random_oversampling; CALIBRATION=none"
+   },
+   {
+    "id": "PLAN_E",
+    "label": "MODEL_FAMILY=catboost; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=stratified_kfold; IMBALANCE=none; CALIBRATION=platt_sigmoid"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "PLAN_E"
+   ],
+   "parsimonious": "PLAN_E",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "PLAN_A": -1,
+   "PLAN_B": -2,
+   "PLAN_C": -1,
+   "PLAN_D": -3,
+   "PLAN_E": 0
+  },
+  "utility_note": "negative number of plan components outside the component reference sets",
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5",
+   "E6",
+   "E7"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bike_sharing::MODEL_FAMILY",
+  "dataset_id": "bike_sharing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "MODEL_FAMILY",
+  "question": "Which model family should be trained for production on this dataset?",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: regression task, 11250 development rows (17379 in the source), 12 raw columns / 12 encoded features, mean missing share 0.000. Primary metric: r2 (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: 5-fold CV r2 0.3882 \u00b1 0.0212 (folds [0.42508, 0.37847, 0.38716, 0.3775, 0.37297]), mean fit time 0.02s."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: 5-fold CV r2 0.9390 \u00b1 0.0072 (folds [0.93915, 0.93977, 0.93261, 0.93291, 0.95034]), mean fit time 1.40s."
+   },
+   {
+    "id": "E4",
+    "text": "lightgbm: 5-fold CV r2 0.9502 \u00b1 0.0053 (folds [0.94884, 0.94849, 0.94682, 0.94717, 0.95956]), mean fit time 1.28s."
+   },
+   {
+    "id": "E5",
+    "text": "catboost: 5-fold CV r2 0.9502 \u00b1 0.0056 (folds [0.94812, 0.94906, 0.94966, 0.94467, 0.95958]), mean fit time 0.53s."
+   },
+   {
+    "id": "E6",
+    "text": "neural_net: 5-fold CV r2 0.8617 \u00b1 0.0336 (folds [0.89521, 0.80804, 0.87336, 0.85283, 0.87882]), mean fit time 4.52s."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "lightgbm",
+    "label": "LightGBM gradient boosting"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "neural_net",
+    "label": "MLP neural network (64-32)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "catboost",
+    "lightgbm"
+   ],
+   "parsimonious": "lightgbm",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "catboost": 1.0,
+    "linear_model": 7.422823464838635e-07,
+    "random_forest": 0.001826585033729221,
+    "lightgbm": 0.9638255661912738,
+    "neural_net": 0.0037000585295665807
+   }
+  },
+  "utility": {
+   "linear_model": 0.3100613127626958,
+   "random_forest": 0.8924582743822714,
+   "lightgbm": 0.909551932577512,
+   "catboost": 0.9056050155605366,
+   "neural_net": 0.8054570465902848
+  },
+  "key_evidence": [
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bike_sharing::HPO_DEPTH",
+  "dataset_id": "bike_sharing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "HPO_DEPTH",
+  "question": "How much hyper-parameter search should the production LightGBM model receive?",
+  "policy": [
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: regression task, 11250 development rows (17379 in the source), 12 raw columns / 12 encoded features, mean missing share 0.000. Primary metric: r2 (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "LightGBM with default hyper-parameters: 3-fold CV 0.9483 \u00b1 0.0044."
+   },
+   {
+    "id": "E3",
+    "text": "A light random search (8 configurations) scored [0.94594, 0.71067, 0.90961, 0.85258, 0.94467, 0.93169, 0.94737, 0.93557] in 3-fold CV; best 0.9474, i.e. -0.0009 over defaults."
+   },
+   {
+    "id": "E4",
+    "text": "One configuration costs about 4.0s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep defaults"
+   },
+   {
+    "id": "light",
+    "label": "8 configurations"
+   },
+   {
+    "id": "moderate",
+    "label": "24 configurations"
+   },
+   {
+    "id": "deep",
+    "label": "60 configurations"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "none",
+    "deep"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "none": 0.909551932577512,
+   "light": 0.8577243983525871,
+   "moderate": 0.9043979899742155,
+   "deep": 0.9046592390800764
+  },
+  "key_evidence": [
+   "E2",
+   "E3"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bike_sharing::FE_STRATEGY",
+  "dataset_id": "bike_sharing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FE_STRATEGY",
+  "question": "Which feature-engineering strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: regression task, 11250 development rows (17379 in the source), 12 raw columns / 12 encoded features, mean missing share 0.000. Primary metric: r2 (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "minimal (raw encoded features only; 12 features): pilot on a 30 % sample, 3-fold CV r2 0.9260 \u00b1 0.0065 (folds [0.91882, 0.93144, 0.92771])."
+   },
+   {
+    "id": "E3",
+    "text": "semantic (raw + domain ratios/aggregates; 16 features): pilot on a 30 % sample, 3-fold CV r2 0.9306 \u00b1 0.0078 (folds [0.92192, 0.93289, 0.93692])."
+   },
+   {
+    "id": "E4",
+    "text": "interaction_heavy (raw + all pairwise products of the top-7 numeric features; 33 features): pilot on a 30 % sample, 3-fold CV r2 0.9175 \u00b1 0.0043 (folds [0.91454, 0.92242, 0.91567])."
+   },
+   {
+    "id": "E5",
+    "text": "dimensionality_reduction (raw + 10 PCA components; 22 features): pilot on a 30 % sample, 3-fold CV r2 0.9205 \u00b1 0.0017 (folds [0.91852, 0.92171, 0.92129])."
+   }
+  ],
+  "options": [
+   {
+    "id": "minimal",
+    "label": "raw encoded features only"
+   },
+   {
+    "id": "semantic",
+    "label": "raw + domain ratios/aggregates"
+   },
+   {
+    "id": "interaction_heavy",
+    "label": "raw + all pairwise products of the top-7 numeric features"
+   },
+   {
+    "id": "dimensionality_reduction",
+    "label": "raw + 10 PCA components"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "semantic",
+    "minimal",
+    "interaction_heavy",
+    "dimensionality_reduction"
+   ],
+   "parsimonious": "minimal",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "semantic": 1.0,
+    "minimal": 0.9261411367538562,
+    "interaction_heavy": 0.23461483974576047,
+    "dimensionality_reduction": 0.22884711731165075
+   }
+  },
+  "utility": {
+   "minimal": 0.909551932577512,
+   "semantic": 0.9127430498449474,
+   "interaction_heavy": 0.8859915915519722,
+   "dimensionality_reduction": 0.8877613782694661
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bike_sharing::FS_STRATEGY",
+  "dataset_id": "bike_sharing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FS_STRATEGY",
+  "question": "Which feature-selection strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: regression task, 11250 development rows (17379 in the source), 12 raw columns / 12 encoded features, mean missing share 0.000. Primary metric: r2 (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none (keep all features; 12 features): pilot on a 30 % sample, 3-fold CV r2 0.9260 \u00b1 0.0065 (folds [0.91882, 0.93144, 0.92771])."
+   },
+   {
+    "id": "E3",
+    "text": "filter_mutual_info (keep top 50 % by mutual information; 6 features): pilot on a 30 % sample, 3-fold CV r2 0.6986 \u00b1 0.0431 (folds [0.66302, 0.68626, 0.74661])."
+   },
+   {
+    "id": "E4",
+    "text": "embedded_importance (keep top 50 % by LightGBM importance; 6 features): pilot on a 30 % sample, 3-fold CV r2 0.8305 \u00b1 0.0179 (folds [0.81338, 0.82909, 0.84916])."
+   },
+   {
+    "id": "E5",
+    "text": "l1_regularized (keep features with non-zero L1 coefficients; 11 features): pilot on a 30 % sample, 3-fold CV r2 0.8613 \u00b1 0.0890 (folds [0.8961, 0.76013, 0.92771])."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep all features"
+   },
+   {
+    "id": "filter_mutual_info",
+    "label": "keep top 50 % by mutual information"
+   },
+   {
+    "id": "embedded_importance",
+    "label": "keep top 50 % by LightGBM importance"
+   },
+   {
+    "id": "l1_regularized",
+    "label": "keep features with non-zero L1 coefficients"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "none"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "none": 1.0,
+    "filter_mutual_info": 2.2734602711138873e-06,
+    "embedded_importance": 2.781171172569642e-05,
+    "l1_regularized": 0.004346378148967166
+   }
+  },
+  "utility": {
+   "none": 0.909551932577512,
+   "filter_mutual_info": 0.4978716882989723,
+   "embedded_importance": 0.6395342224586711,
+   "l1_regularized": 0.9020943972667997
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bike_sharing::VALIDATION",
+  "dataset_id": "bike_sharing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "VALIDATION",
+  "question": "Which validation scheme gives an honest estimate of production performance for this dataset?",
+  "policy": [
+   "The validation scheme must mirror how the model will be used in production."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: regression task, 11250 development rows (17379 in the source), 12 raw columns / 12 encoded features, mean missing share 0.000. Primary metric: r2 (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "Structure: One row per hour, 2011-2012, strictly time ordered; the model will forecast the next day from the past."
+   },
+   {
+    "id": "E3",
+    "text": "LightGBM estimated with random_kfold: r2 0.9502 \u00b1 0.0053."
+   },
+   {
+    "id": "E4",
+    "text": "LightGBM estimated with time_based_split: r2 0.7177 \u00b1 0.2182."
+   }
+  ],
+  "options": [
+   {
+    "id": "stratified_kfold",
+    "label": "stratified k-fold"
+   },
+   {
+    "id": "random_kfold",
+    "label": "shuffled k-fold"
+   },
+   {
+    "id": "group_kfold",
+    "label": "group k-fold by entity"
+   },
+   {
+    "id": "time_based_split",
+    "label": "train on past, validate on later rows"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "time_based_split"
+   ],
+   "parsimonious": "time_based_split",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "stratified_kfold": null,
+   "random_kfold": -0.04062731956976007,
+   "group_kfold": null,
+   "time_based_split": -0.19183111121636964
+  },
+  "utility_note": "negative |CV estimate \u2212 test score| of LightGBM",
+  "key_evidence": [
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bike_sharing::EXPLANATION",
+  "dataset_id": "bike_sharing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "EXPLANATION",
+  "question": "Which explanation method should Athena produce for this model?",
+  "policy": [
+   "Per-decision explanations must be exact attributions for the deployed model.",
+   "Global importance on strongly correlated features must not split credit arbitrarily between correlated columns."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: regression task, 11250 development rows (17379 in the source), 12 raw columns / 12 encoded features, mean missing share 0.000. Primary metric: r2 (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "The production model is LightGBM (tree ensemble)."
+   },
+   {
+    "id": "E3",
+    "text": "Maximum absolute pairwise feature correlation 0.992; 1 feature pairs have |r| > 0.9."
+   },
+   {
+    "id": "E4",
+    "text": "Purpose: A global explanation of what drives the model is needed for a model-risk review."
+   }
+  ],
+  "options": [
+   {
+    "id": "tree_shap",
+    "label": "TreeSHAP attributions"
+   },
+   {
+    "id": "permutation_importance",
+    "label": "permutation importance (global)"
+   },
+   {
+    "id": "linear_coefficients",
+    "label": "coefficients of a linear surrogate"
+   },
+   {
+    "id": "grouped_permutation_importance",
+    "label": "permutation importance on groups of correlated features"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "grouped_permutation_importance",
+    "tree_shap"
+   ],
+   "parsimonious": "grouped_permutation_importance",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bike_sharing::TRUST_PLAN",
+  "dataset_id": "bike_sharing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "TRUST_PLAN",
+  "question": "Choose the complete analytical plan Athena should run for this dataset.",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable.",
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005.",
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better.",
+   "The validation scheme must mirror how the model will be used in production."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: regression task, 11250 development rows (17379 in the source), 12 raw columns / 12 encoded features, mean missing share 0.000. Primary metric: r2 (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "[MODEL_FAMILY] linear_model: 5-fold CV r2 0.3882 \u00b1 0.0212 (folds [0.42508, 0.37847, 0.38716, 0.3775, 0.37297]), mean fit time 0.02s. | random_forest: 5-fold CV r2 0.9390 \u00b1 0.0072 (folds [0.93915, 0.93977, 0.93261, 0.93291, 0.95034]), mean fit time 1.40s. | lightgbm: 5-fold CV r2 0.9502 \u00b1 0.0053 (folds [0.94884, 0.94849, 0.94682, 0.94717, 0.95956]), mean fit time 1.28s. | catboost: 5-fold CV r2 0.9502 \u00b1 0.0056 (folds [0.94812, 0.94906, 0.94966, 0.94467, 0.95958]), mean fit time 0.53s. | neural_net: 5-fold CV r2 0.8617 \u00b1 0.0336 (folds [0.89521, 0.80804, 0.87336, 0.85283, 0.87882]), mean fit time 4.52s."
+   },
+   {
+    "id": "E3",
+    "text": "[HPO_DEPTH] LightGBM with default hyper-parameters: 3-fold CV 0.9483 \u00b1 0.0044. | A light random search (8 configurations) scored [0.94594, 0.71067, 0.90961, 0.85258, 0.94467, 0.93169, 0.94737, 0.93557] in 3-fold CV; best 0.9474, i.e. -0.0009 over defaults. | One configuration costs about 4.0s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   },
+   {
+    "id": "E4",
+    "text": "[FE_STRATEGY] minimal (raw encoded features only; 12 features): pilot on a 30 % sample, 3-fold CV r2 0.9260 \u00b1 0.0065 (folds [0.91882, 0.93144, 0.92771]). | semantic (raw + domain ratios/aggregates; 16 features): pilot on a 30 % sample, 3-fold CV r2 0.9306 \u00b1 0.0078 (folds [0.92192, 0.93289, 0.93692]). | interaction_heavy (raw + all pairwise products of the top-7 numeric features; 33 features): pilot on a 30 % sample, 3-fold CV r2 0.9175 \u00b1 0.0043 (folds [0.91454, 0.92242, 0.91567]). | dimensionality_reduction (raw + 10 PCA components; 22 features): pilot on a 30 % sample, 3-fold CV r2 0.9205 \u00b1 0.0017 (folds ["
+   },
+   {
+    "id": "E5",
+    "text": "[VALIDATION] Structure: One row per hour, 2011-2012, strictly time ordered; the model will forecast the next day from the past. | LightGBM estimated with random_kfold: r2 0.9502 \u00b1 0.0053. | LightGBM estimated with time_based_split: r2 0.7177 \u00b1 0.2182."
+   }
+  ],
+  "options": [
+   {
+    "id": "PLAN_A",
+    "label": "MODEL_FAMILY=lightgbm; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=time_based_split"
+   },
+   {
+    "id": "PLAN_B",
+    "label": "MODEL_FAMILY=neural_net; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=group_kfold"
+   },
+   {
+    "id": "PLAN_C",
+    "label": "MODEL_FAMILY=random_forest; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=time_based_split"
+   },
+   {
+    "id": "PLAN_D",
+    "label": "MODEL_FAMILY=lightgbm; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=group_kfold"
+   },
+   {
+    "id": "PLAN_E",
+    "label": "MODEL_FAMILY=neural_net; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=random_kfold"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "PLAN_A"
+   ],
+   "parsimonious": "PLAN_A",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "PLAN_A": 0,
+   "PLAN_B": -3,
+   "PLAN_C": -1,
+   "PLAN_D": -1,
+   "PLAN_E": -2
+  },
+  "utility_note": "negative number of plan components outside the component reference sets",
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "vehicle_silhouettes::MODEL_FAMILY",
+  "dataset_id": "vehicle_silhouettes",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "MODEL_FAMILY",
+  "question": "Which model family should be trained for production on this dataset?",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: multiclass task, 634 development rows (846 in the source), 18 raw columns / 18 encoded features, class shares [0.2571, 0.2508, 0.2571, 0.235], mean missing share 0.000. Primary metric: macro_ovr_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "linear_model: 5-fold CV macro_ovr_auc 0.9348 \u00b1 0.0045 (folds [0.93974, 0.93142, 0.93313, 0.9393, 0.93027]), mean fit time 0.01s."
+   },
+   {
+    "id": "E3",
+    "text": "random_forest: 5-fold CV macro_ovr_auc 0.9228 \u00b1 0.0115 (folds [0.93161, 0.93738, 0.91716, 0.91901, 0.90904]), mean fit time 0.27s."
+   },
+   {
+    "id": "E4",
+    "text": "lightgbm: 5-fold CV macro_ovr_auc 0.9116 \u00b1 0.0072 (folds [0.91726, 0.92123, 0.90549, 0.90815, 0.90564]), mean fit time 2.05s."
+   },
+   {
+    "id": "E5",
+    "text": "catboost: 5-fold CV macro_ovr_auc 0.9214 \u00b1 0.0166 (folds [0.94467, 0.93332, 0.9081, 0.90977, 0.91107]), mean fit time 0.71s."
+   },
+   {
+    "id": "E6",
+    "text": "neural_net: 5-fold CV macro_ovr_auc 0.9075 \u00b1 0.0151 (folds [0.88483, 0.89954, 0.91634, 0.91519, 0.92143]), mean fit time 0.07s."
+   }
+  ],
+  "options": [
+   {
+    "id": "linear_model",
+    "label": "regularised linear model (logistic / ridge)"
+   },
+   {
+    "id": "random_forest",
+    "label": "random forest (300 trees)"
+   },
+   {
+    "id": "lightgbm",
+    "label": "LightGBM gradient boosting"
+   },
+   {
+    "id": "catboost",
+    "label": "CatBoost gradient boosting"
+   },
+   {
+    "id": "neural_net",
+    "label": "MLP neural network (64-32)"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "linear_model",
+    "random_forest",
+    "catboost"
+   ],
+   "parsimonious": "linear_model",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "linear_model": 1.0,
+    "random_forest": 0.07686974092844064,
+    "lightgbm": 0.002880646490621805,
+    "catboost": 0.13116332398180913,
+    "neural_net": 0.02578677605896388
+   }
+  },
+  "utility": {
+   "linear_model": 0.9393749904617148,
+   "random_forest": 0.9277345300149703,
+   "lightgbm": 0.9258153752795211,
+   "catboost": 0.932355910332157,
+   "neural_net": 0.8994562229263114
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "vehicle_silhouettes::HPO_DEPTH",
+  "dataset_id": "vehicle_silhouettes",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "HPO_DEPTH",
+  "question": "How much hyper-parameter search should the production LightGBM model receive?",
+  "policy": [
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: multiclass task, 634 development rows (846 in the source), 18 raw columns / 18 encoded features, class shares [0.2571, 0.2508, 0.2571, 0.235], mean missing share 0.000. Primary metric: macro_ovr_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "LightGBM with default hyper-parameters: 3-fold CV 0.9221 \u00b1 0.0078."
+   },
+   {
+    "id": "E3",
+    "text": "A light random search (8 configurations) scored [0.92565, 0.9081, 0.91282, 0.9067, 0.92013, 0.9254, 0.92507, 0.91683] in 3-fold CV; best 0.9256, i.e. +0.0036 over defaults."
+   },
+   {
+    "id": "E4",
+    "text": "One configuration costs about 8.3s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep defaults"
+   },
+   {
+    "id": "light",
+    "label": "8 configurations"
+   },
+   {
+    "id": "moderate",
+    "label": "24 configurations"
+   },
+   {
+    "id": "deep",
+    "label": "60 configurations"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "light",
+    "moderate",
+    "deep"
+   ],
+   "parsimonious": "light",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "none": 0.9258153752795211,
+   "light": 0.9272679598501984,
+   "moderate": 0.931747315300435,
+   "deep": 0.9274365816271419
+  },
+  "key_evidence": [
+   "E2",
+   "E3"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "vehicle_silhouettes::FE_STRATEGY",
+  "dataset_id": "vehicle_silhouettes",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FE_STRATEGY",
+  "question": "Which feature-engineering strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: multiclass task, 634 development rows (846 in the source), 18 raw columns / 18 encoded features, class shares [0.2571, 0.2508, 0.2571, 0.235], mean missing share 0.000. Primary metric: macro_ovr_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "minimal (raw encoded features only; 18 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.9074 \u00b1 0.0034 (folds [0.90782, 0.91055, 0.90387])."
+   },
+   {
+    "id": "E3",
+    "text": "interaction_heavy (raw + all pairwise products of the top-7 numeric features; 39 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.9151 \u00b1 0.0057 (folds [0.90972, 0.92107, 0.91442])."
+   },
+   {
+    "id": "E4",
+    "text": "dimensionality_reduction (raw + 10 PCA components; 28 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.9239 \u00b1 0.0085 (folds [0.92255, 0.93307, 0.91616])."
+   }
+  ],
+  "options": [
+   {
+    "id": "minimal",
+    "label": "raw encoded features only"
+   },
+   {
+    "id": "interaction_heavy",
+    "label": "raw + all pairwise products of the top-7 numeric features"
+   },
+   {
+    "id": "dimensionality_reduction",
+    "label": "raw + 10 PCA components"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "interaction_heavy",
+    "dimensionality_reduction"
+   ],
+   "parsimonious": "dimensionality_reduction",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "interaction_heavy": 1.0,
+    "minimal": 0.007913171603334473,
+    "dimensionality_reduction": 0.47783472280711276
+   }
+  },
+  "utility": {
+   "minimal": 0.9258153752795211,
+   "interaction_heavy": 0.9495592816167113,
+   "dimensionality_reduction": 0.935190245768962
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "vehicle_silhouettes::FS_STRATEGY",
+  "dataset_id": "vehicle_silhouettes",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "FS_STRATEGY",
+  "question": "Which feature-selection strategy should the production pipeline use?",
+  "policy": [
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: multiclass task, 634 development rows (846 in the source), 18 raw columns / 18 encoded features, class shares [0.2571, 0.2508, 0.2571, 0.235], mean missing share 0.000. Primary metric: macro_ovr_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "none (keep all features; 18 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.9074 \u00b1 0.0034 (folds [0.90782, 0.91055, 0.90387])."
+   },
+   {
+    "id": "E3",
+    "text": "filter_mutual_info (keep top 50 % by mutual information; 9 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.8940 \u00b1 0.0248 (folds [0.91207, 0.90428, 0.86567])."
+   },
+   {
+    "id": "E4",
+    "text": "embedded_importance (keep top 50 % by LightGBM importance; 9 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.8887 \u00b1 0.0234 (folds [0.86177, 0.90428, 0.89993])."
+   },
+   {
+    "id": "E5",
+    "text": "l1_regularized (keep features with non-zero L1 coefficients; 14 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.8640 \u00b1 0.0288 (folds [0.89703, 0.84398, 0.85097])."
+   }
+  ],
+  "options": [
+   {
+    "id": "none",
+    "label": "keep all features"
+   },
+   {
+    "id": "filter_mutual_info",
+    "label": "keep top 50 % by mutual information"
+   },
+   {
+    "id": "embedded_importance",
+    "label": "keep top 50 % by LightGBM importance"
+   },
+   {
+    "id": "l1_regularized",
+    "label": "keep features with non-zero L1 coefficients"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "l1_regularized",
+    "none"
+   ],
+   "parsimonious": "none",
+   "uncertainty_expected": false,
+   "pvalues": {
+    "l1_regularized": 1.0,
+    "none": 0.09725725963853839,
+    "filter_mutual_info": 0.016204463115531597,
+    "embedded_importance": 0.022025525531767745
+   }
+  },
+  "utility": {
+   "none": 0.9258153752795211,
+   "filter_mutual_info": 0.8927650364077862,
+   "embedded_importance": 0.9176910122927616,
+   "l1_regularized": 0.9319097803215989
+  },
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "vehicle_silhouettes::VALIDATION",
+  "dataset_id": "vehicle_silhouettes",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "VALIDATION",
+  "question": "Which validation scheme gives an honest estimate of production performance for this dataset?",
+  "policy": [
+   "The validation scheme must mirror how the model will be used in production."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: multiclass task, 634 development rows (846 in the source), 18 raw columns / 18 encoded features, class shares [0.2571, 0.2508, 0.2571, 0.235], mean missing share 0.000. Primary metric: macro_ovr_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "Structure: One row per silhouette image; no repeated entities or time order."
+   },
+   {
+    "id": "E3",
+    "text": "LightGBM estimated with random_kfold: macro_ovr_auc 0.9190 \u00b1 0.0217."
+   },
+   {
+    "id": "E4",
+    "text": "LightGBM estimated with stratified_kfold: macro_ovr_auc 0.9116 \u00b1 0.0072."
+   }
+  ],
+  "options": [
+   {
+    "id": "stratified_kfold",
+    "label": "stratified k-fold"
+   },
+   {
+    "id": "random_kfold",
+    "label": "shuffled k-fold"
+   },
+   {
+    "id": "group_kfold",
+    "label": "group k-fold by entity"
+   },
+   {
+    "id": "time_based_split",
+    "label": "train on past, validate on later rows"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "stratified_kfold"
+   ],
+   "parsimonious": "stratified_kfold",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "stratified_kfold": -0.014262818674884548,
+   "random_kfold": -0.006796026961691792,
+   "group_kfold": null,
+   "time_based_split": null
+  },
+  "utility_note": "negative |CV estimate \u2212 test score| of LightGBM",
+  "key_evidence": [
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "vehicle_silhouettes::EXPLANATION",
+  "dataset_id": "vehicle_silhouettes",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "EXPLANATION",
+  "question": "Which explanation method should Athena produce for this model?",
+  "policy": [
+   "Per-decision explanations must be exact attributions for the deployed model.",
+   "Global importance on strongly correlated features must not split credit arbitrarily between correlated columns."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: multiclass task, 634 development rows (846 in the source), 18 raw columns / 18 encoded features, class shares [0.2571, 0.2508, 0.2571, 0.235], mean missing share 0.000. Primary metric: macro_ovr_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "The production model is LightGBM (tree ensemble)."
+   },
+   {
+    "id": "E3",
+    "text": "Maximum absolute pairwise feature correlation 0.996; 14 feature pairs have |r| > 0.9."
+   },
+   {
+    "id": "E4",
+    "text": "Purpose: A global explanation of what drives the model is needed for a model-risk review."
+   }
+  ],
+  "options": [
+   {
+    "id": "tree_shap",
+    "label": "TreeSHAP attributions"
+   },
+   {
+    "id": "permutation_importance",
+    "label": "permutation importance (global)"
+   },
+   {
+    "id": "linear_coefficients",
+    "label": "coefficients of a linear surrogate"
+   },
+   {
+    "id": "grouped_permutation_importance",
+    "label": "permutation importance on groups of correlated features"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "grouped_permutation_importance",
+    "tree_shap"
+   ],
+   "parsimonious": "grouped_permutation_importance",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "vehicle_silhouettes::TRUST_PLAN",
+  "dataset_id": "vehicle_silhouettes",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "TRUST_PLAN",
+  "question": "Choose the complete analytical plan Athena should run for this dataset.",
+  "policy": [
+   "A candidate whose CV score is not statistically distinguishable from the best (paired fold test) is acceptable.",
+   "Extra search is justified only if it is expected to improve the held-out metric by more than 0.005.",
+   "Prefer the simpler strategy unless the more complex one is expected to be clearly better.",
+   "The validation scheme must mirror how the model will be used in production."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Dataset profile: multiclass task, 634 development rows (846 in the source), 18 raw columns / 18 encoded features, class shares [0.2571, 0.2508, 0.2571, 0.235], mean missing share 0.000. Primary metric: macro_ovr_auc (higher is better)."
+   },
+   {
+    "id": "E2",
+    "text": "[MODEL_FAMILY] linear_model: 5-fold CV macro_ovr_auc 0.9348 \u00b1 0.0045 (folds [0.93974, 0.93142, 0.93313, 0.9393, 0.93027]), mean fit time 0.01s. | random_forest: 5-fold CV macro_ovr_auc 0.9228 \u00b1 0.0115 (folds [0.93161, 0.93738, 0.91716, 0.91901, 0.90904]), mean fit time 0.27s. | lightgbm: 5-fold CV macro_ovr_auc 0.9116 \u00b1 0.0072 (folds [0.91726, 0.92123, 0.90549, 0.90815, 0.90564]), mean fit time 2.05s. | catboost: 5-fold CV macro_ovr_auc 0.9214 \u00b1 0.0166 (folds [0.94467, 0.93332, 0.9081, 0.90977, 0.91107]), mean fit time 0.71s. | neural_net: 5-fold CV macro_ovr_auc 0.9075 \u00b1 0.0151 (folds [0.88483, 0.89954, 0.9"
+   },
+   {
+    "id": "E3",
+    "text": "[HPO_DEPTH] LightGBM with default hyper-parameters: 3-fold CV 0.9221 \u00b1 0.0078. | A light random search (8 configurations) scored [0.92565, 0.9081, 0.91282, 0.9067, 0.92013, 0.9254, 0.92507, 0.91683] in 3-fold CV; best 0.9256, i.e. +0.0036 over defaults. | One configuration costs about 8.3s of CV compute. Depths: none = defaults, light = 8, moderate = 24, deep = 60 configurations."
+   },
+   {
+    "id": "E4",
+    "text": "[FE_STRATEGY] minimal (raw encoded features only; 18 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.9074 \u00b1 0.0034 (folds [0.90782, 0.91055, 0.90387]). | interaction_heavy (raw + all pairwise products of the top-7 numeric features; 39 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.9151 \u00b1 0.0057 (folds [0.90972, 0.92107, 0.91442]). | dimensionality_reduction (raw + 10 PCA components; 28 features): pilot on a 30 % sample, 3-fold CV macro_ovr_auc 0.9239 \u00b1 0.0085 (folds [0.92255, 0.93307, 0.91616])."
+   },
+   {
+    "id": "E5",
+    "text": "[VALIDATION] Structure: One row per silhouette image; no repeated entities or time order. | LightGBM estimated with random_kfold: macro_ovr_auc 0.9190 \u00b1 0.0217. | LightGBM estimated with stratified_kfold: macro_ovr_auc 0.9116 \u00b1 0.0072."
+   }
+  ],
+  "options": [
+   {
+    "id": "PLAN_A",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=light; FE_STRATEGY=dimensionality_reduction; VALIDATION=time_based_split"
+   },
+   {
+    "id": "PLAN_B",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=none; FE_STRATEGY=dimensionality_reduction; VALIDATION=stratified_kfold"
+   },
+   {
+    "id": "PLAN_C",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=light; FE_STRATEGY=dimensionality_reduction; VALIDATION=stratified_kfold"
+   },
+   {
+    "id": "PLAN_D",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=none; FE_STRATEGY=minimal; VALIDATION=random_kfold"
+   },
+   {
+    "id": "PLAN_E",
+    "label": "MODEL_FAMILY=linear_model; HPO_DEPTH=light; FE_STRATEGY=minimal; VALIDATION=group_kfold"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "PLAN_C"
+   ],
+   "parsimonious": "PLAN_C",
+   "uncertainty_expected": false
+  },
+  "utility": {
+   "PLAN_A": -1,
+   "PLAN_B": -1,
+   "PLAN_C": 0,
+   "PLAN_D": -3,
+   "PLAN_E": -2
+  },
+  "utility_note": "negative number of plan components outside the component reference sets",
+  "key_evidence": [
+   "E2",
+   "E3",
+   "E4",
+   "E5"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::CAUSAL::0",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "CAUSAL_VS_PREDICTIVE",
+  "question": "Rank customers by churn risk for next month's retention call list.",
+  "policy": [
+   "Recommend a causal method only when the data can identify the effect; otherwise say what is needed."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Historical customer snapshots with a churn label."
+   },
+   {
+    "id": "E2",
+    "text": "The call list capacity is fixed; the goal is to call the riskiest customers."
+   }
+  ],
+  "options": [
+   {
+    "id": "predictive_model",
+    "label": "train a predictive model and rank by predicted outcome"
+   },
+   {
+    "id": "uplift_model",
+    "label": "estimate heterogeneous treatment effects (uplift) from randomized data"
+   },
+   {
+    "id": "causal_effect_estimation_observational",
+    "label": "estimate the effect from observational data with confounding adjustment, reporting assumptions"
+   },
+   {
+    "id": "randomized_experiment_needed",
+    "label": "the question cannot be answered from the available data; run an experiment first"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "predictive_model"
+   ],
+   "parsimonious": "predictive_model",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E1",
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "telco_churn::CAUSAL::1",
+  "dataset_id": "telco_churn",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "CAUSAL_VS_PREDICTIVE",
+  "question": "Will moving month-to-month customers to one-year contracts reduce churn?",
+  "policy": [
+   "Recommend a causal method only when the data can identify the effect; otherwise say what is needed."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "Only historical observational data is available."
+   },
+   {
+    "id": "E2",
+    "text": "Customers chose their contract type themselves."
+   },
+   {
+    "id": "E3",
+    "text": "Contract type is the strongest single predictor of churn in the predictive model."
+   }
+  ],
+  "options": [
+   {
+    "id": "predictive_model",
+    "label": "train a predictive model and rank by predicted outcome"
+   },
+   {
+    "id": "uplift_model",
+    "label": "estimate heterogeneous treatment effects (uplift) from randomized data"
+   },
+   {
+    "id": "causal_effect_estimation_observational",
+    "label": "estimate the effect from observational data with confounding adjustment, reporting assumptions"
+   },
+   {
+    "id": "randomized_experiment_needed",
+    "label": "the question cannot be answered from the available data; run an experiment first"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "causal_effect_estimation_observational",
+    "randomized_experiment_needed"
+   ],
+   "parsimonious": "causal_effect_estimation_observational",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E1",
+   "E2",
+   "E3"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ },
+ {
+  "instance_id": "bank_marketing::CAUSAL::2",
+  "dataset_id": "bank_marketing",
+  "split": "DEVELOPMENT",
+  "variant": "base",
+  "family": "CAUSAL_VS_PREDICTIVE",
+  "question": "Decide whom to call in the next campaign to maximise the number of *additional* subscriptions caused by the call.",
+  "policy": [
+   "Recommend a causal method only when the data can identify the effect; otherwise say what is needed."
+  ],
+  "evidence": [
+   {
+    "id": "E1",
+    "text": "The historical data contains only clients who were called; there is no uncalled comparison group."
+   },
+   {
+    "id": "E2",
+    "text": "A predictive model ranks clients by probability of subscribing."
+   }
+  ],
+  "options": [
+   {
+    "id": "predictive_model",
+    "label": "train a predictive model and rank by predicted outcome"
+   },
+   {
+    "id": "uplift_model",
+    "label": "estimate heterogeneous treatment effects (uplift) from randomized data"
+   },
+   {
+    "id": "causal_effect_estimation_observational",
+    "label": "estimate the effect from observational data with confounding adjustment, reporting assumptions"
+   },
+   {
+    "id": "randomized_experiment_needed",
+    "label": "the question cannot be answered from the available data; run an experiment first"
+   },
+   {
+    "id": "UNDETERMINED",
+    "label": "the evidence does not support a defensible single choice"
+   }
+  ],
+  "reference": {
+   "accept": [
+    "randomized_experiment_needed"
+   ],
+   "parsimonious": "randomized_experiment_needed",
+   "uncertainty_expected": false
+  },
+  "utility": {},
+  "key_evidence": [
+   "E1",
+   "E2"
+  ],
+  "conflict_evidence": [],
+  "adversarial": false
+ }
+]

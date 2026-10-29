@@ -1,0 +1,425 @@
+{
+ "A": [
+  {
+   "file": "research/reasoning-topology/original-study/prompts/examples/iranian_churn__MODEL_FAMILY__DIRECT.md",
+   "ledger": "harness/rs2610/artifacts/study_a/ledger.jsonl",
+   "request_hashes": [
+    "c7d216b9125b6adef4bd8237310a38de90e0ec1b70aecb7d375ce80af50fdae9"
+   ]
+  },
+  {
+   "file": "research/reasoning-topology/original-study/prompts/examples/iranian_churn__MODEL_FAMILY__COT.md",
+   "ledger": "harness/rs2610/artifacts/study_a/ledger.jsonl",
+   "request_hashes": [
+    "93ee54e5b3a8018fa841e1c74dbf1e1ab0d9b2b8e77098d53e87fb7f1f62a51b"
+   ]
+  },
+  {
+   "file": "research/reasoning-topology/original-study/prompts/examples/iranian_churn__MODEL_FAMILY__TOT.md",
+   "ledger": "harness/rs2610/artifacts/study_a/ledger.jsonl",
+   "request_hashes": [
+    "eef64ea25a457e84fcacfdf389ac81f159156fa4727c26127551bbd7d6bb7fd4",
+    "775f1eb0045920953898d13bf02caf6005af318aaaeb36b60a4f00c186406fd7",
+    "b4f29281634d02f5df403a63383f3858a910ea99dc3a4aac0c65edf731ea0421",
+    "e7372b2884157c1d7bda370092befe9c8ba58d558998a8eba3cd8ab24ef488d7",
+    "537c2e6ff05e0238273d62d8de7401a77b20a3f28542d07b5c4fa29f62c7f75d"
+   ]
+  },
+  {
+   "file": "research/reasoning-topology/original-study/prompts/examples/iranian_churn__MODEL_FAMILY__GOT.md",
+   "ledger": "harness/rs2610/artifacts/study_a/ledger.jsonl",
+   "request_hashes": [
+    "b881adee1ae32008d1dd43603f7b6bf1ebde1ff5dbd00502eb8fde1d547b9757",
+    "bb8c01dda28667b0f6ca2ab797e273a28c5d0713bf6c7d17ac560ef466ea53fe",
+    "747f26955e9af23a41de1466ef587843afed525e9ea4291e0a39db2270d3f732",
+    "e785ac3d69669d6843fe04a4d461ec51857a8a09e3f6504b16d625f753912831",
+    "21ebd827ef7c9d4540d382f4c99625de3eb96cafae7fcfcf0f891ae7875c0eaa"
+   ]
+  }
+ ],
+ "A2": [
+  {
+   "file": "research/reasoning-topology/frontier-replication/prompts/examples/iranian_churn__MODEL_FAMILY__DIRECT__gpt-6-luna.md",
+   "ledger": "harness/rs2610/artifacts/replication/a2/ledger_openai.jsonl",
+   "request_hashes": [
+    "4ecc1431e46fa851436b650bde6b19aee778ebfbe404cc6a1117193da17ec916"
+   ]
+  },
+  {
+   "file": "research/reasoning-topology/frontier-replication/prompts/examples/iranian_churn__MODEL_FAMILY__COT__gpt-6-luna.md",
+   "ledger": "harness/rs2610/artifacts/replication/a2/ledger_openai.jsonl",
+   "request_hashes": [
+    "df914d3dc431c74a3f4087a8a55c31edb8b948af58708e784cefaef56822981b"
+   ]
+  },
+  {
+   "file": "research/reasoning-topology/frontier-replication/prompts/examples/iranian_churn__MODEL_FAMILY__TOT__gpt-6-luna.md",
+   "ledger": "harness/rs2610/artifacts/replication/a2/ledger_openai.jsonl",
+   "request_hashes": [
+    "791e53b1048e6498c4813286b673e5ad624ed1b2ee0a441bb7ca6767af891f9e",
+    "a2ea16eacc522768f8065b5eabd0a38c6e9d1f56f83f2e2a65ed46f635186f55",
+    "fdcf2e4a599ba1bcc24315a028f2928d34c58b68a85d4fdd301f9cb212578574",
+    "c3d4e6090766e01e58f98c7b371fe618bbe5aa32b829d7d2302b18abbed1ae15",
+    "73b11441f964e2e5d838cebb571d582fa51bf572c8b811c1fb4adb27200b11ad"
+   ]
+  },
+  {
+   "file": "research/reasoning-topology/frontier-replication/prompts/examples/iranian_churn__MODEL_FAMILY__GOT__gpt-6-luna.md",
+   "ledger": "harness/rs2610/artifacts/replication/a2/ledger_openai.jsonl",
+   "request_hashes": [
+    "f90615ed6c99af3a3a9a29476b37836fae8a6cfb385f57da8dc37cf8911822ab",
+    "019735754a82bc7cdba8b781739f41dc487b4a93595f81f63bd83d7b11c80fc1",
+    "4f5b09dce80badfb8f786658d325f9edc1844dae9687fe11115315eecc902540",
+    "d45730eb3fc75de9da3295f50d721572b9f640ed27b6aaa05012a73f110796d5",
+    "9ee7ea21128e4183099542b0518e7efcaa6cb7ff66ea4b4462982734ed2ace47"
+   ]
+  }
+ ],
+ "B": [
+  {
+   "file": "research/semantic-context/original-study/prompts/examples/taiwan_default__trapped__A_RAW.md",
+   "ledger": "harness/rs2610/artifacts/study_b/ledger.jsonl",
+   "request_hashes": [
+    "b1132c8e1552cc60a4b49056e6747c172191ef2898c3a27f98eb954719fbae37",
+    "d41dae14e3ca88012d1b7c01e0cf215413cabd8e2473c5fc87cf2737f64accf4"
+   ]
+  },
+  {
+   "file": "research/semantic-context/original-study/prompts/examples/taiwan_default__trapped__B_SELF.md",
+   "ledger": "harness/rs2610/artifacts/study_b/ledger.jsonl",
+   "request_hashes": [
+    "01ae8833848126107130ec8ba28a1671f037258a20c4fe663885b26a77aaa287",
+    "a95d441fe674684653e55ee309de4b3894b7613c486e7160807840d0d7e71763",
+    "c968eb4ad677a3c4c11484c8691300cb348045a22449d0a0317f4251f6a07aef"
+   ]
+  },
+  {
+   "file": "research/semantic-context/original-study/prompts/examples/taiwan_default__trapped__C_DICT.md",
+   "ledger": "harness/rs2610/artifacts/study_b/ledger.jsonl",
+   "request_hashes": [
+    "3fbd0cbf3b2862c2901fbd0ee223f8be807db08a6fc6badb083eb951f009143d",
+    "8dcc3909d8f6f5ab4f6365c728923bcc9a1004f94a25a3ecc906a572ede06043"
+   ]
+  },
+  {
+   "file": "research/semantic-context/original-study/prompts/examples/taiwan_default__trapped__D_RULES.md",
+   "ledger": "harness/rs2610/artifacts/study_b/ledger.jsonl",
+   "request_hashes": [
+    "fd228a1e1da6b4dcfc070c932f3532bc5a93f27e8f20ea45d62d29c6a6aae606",
+    "e94641e8b35b90202f9bc60e0b9f863996b3478175c0692ceca95b44e6bca914"
+   ]
+  },
+  {
+   "file": "research/semantic-context/original-study/prompts/examples/taiwan_default__trapped__E_FULL.md",
+   "ledger": "harness/rs2610/artifacts/study_b/ledger.jsonl",
+   "request_hashes": [
+    "b84ef4071410cbad201dbd16aeb1d70dd0a28b335c836a208e0ff90ab27bec0d",
+    "7f7bbf868a818d1fc9cfaa7270d5e75fdc70ed853c5c794fae456d45b1f17114",
+    "38a9f3b310154ba4d32bc1039757a7ab0351ee4b4d2089c833736e41a2acad2f"
+   ]
+  }
+ ],
+ "B2": [
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__trapped__A_RAW.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "6502487abf841fd21da92dec843a6db2762efede4d8b8c6ab02033fcaf301319",
+    "68e912073edd76f9082baffe1048f937c1f80eb3eaa1ab30cc26ab0aa707f973",
+    "e9dc622ce8d444449fe822ce003d04f94751119e5e65fb3dfe746a9dbc6799c0"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__trapped__B_SELF.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "bc8a031d5d5642cab8a382c6faea3f6fc6fac760abd304650edd7fe1b3d74608",
+    "af2d2c3edda12512508e13f6a4c43adc852e0b6c84d30f2798b6de5f4746cef6",
+    "9f181bd5c5c855c70adcfee6d7a3fbc2674997a85fbf1d8539c4b50ddfcdd189",
+    "e9dc622ce8d444449fe822ce003d04f94751119e5e65fb3dfe746a9dbc6799c0"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__trapped__C_DICT.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "e877b05f09e2d35825a247b32db7d2574519072c4d8e22f5b553f9cb3fe4d557",
+    "27a57a9197ecd113adc497ea404148a4d24c37100d2a5c4ad714f042917ecb26",
+    "dda9a3f9f6348815631761c7f84e068b126d7e98fd2626d1089d41268b1a752e"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__trapped__D_RULES.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "211f1948a8ca4e93c9a0d0dc25dc1892a63d7a5eded12939cd1bc46221516c45",
+    "2714144768825d672a8284fd783594707ee74dea2af6c45f1735138731821d39",
+    "28447a3402f3fedfd6a0d8f30ced13822675b3ee81d67c0671ca1d21479f457b"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__trapped__E_FULL.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "73c2125da843e7fdac2faeb7c8ca9b784536c06e6fe1b81fa0536ab8ea7d2cf2",
+    "d799b726e54617a7d331d3e6f09cf43e3d9006715e3a2d9704aabb769bed8f66",
+    "84d741b2d87ace102550bd1ca5d46e6f1e9b6fa2deaf591327912e814a303d9c",
+    "28447a3402f3fedfd6a0d8f30ced13822675b3ee81d67c0671ca1d21479f457b"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__anonymized__A_RAW.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "7e11c3e1618b55a96f4a40aebbd2e39265f55f8627e0b65c14d5fa98f39f3171",
+    "f7f2d998cb7169a504b0424ab81275d94dde33450da3a5c7d05372325c42d079",
+    "4ac7890be4f1c5b0fbe3a925a97278dc24793ee2f627779b68faf5cd923a0e6b"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__anonymized__C_DICT.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "b5787deac71e6dc76a4f3c15f09f9b4b28f4536f4f5bb1ba95f6b2eaebccc5d0",
+    "b7a3cdefd67f0de4cc4c8f729093abab7f602ed27e7fb5de173aa09394e5af53",
+    "deb2425acb18cd009b6f6bf8d61f14ad5a48730aab36fff14392d050087e1333"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__incomplete__D_RULES.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "be724efe4d75c6573f43425b9c46797ce05b06c217be4152fe46661ccb4d764b",
+    "095fd0b1b9551b068f77165796a1030fcbe69919937f6cc7319f6fe1d953c466",
+    "ac52ddd7949652b5ce2d0f035f3b42bd1d616a5f0c39378769ccebbd141db47c"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__misleading__D_RULES.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "6765cb5c712cae0a638ef9b461bc7bf15fda041256fbb7f9e380423cc0c11ef4",
+    "c962f810f5d8995b8261f1bacf8aadc9ebcb6c28c24f008c74e9b6746ce01d5e",
+    "e354e589504ccbab682d80bc2ae6db7826cf04828b33d3c885dcdafe6dd92d75"
+   ]
+  },
+  {
+   "file": "research/semantic-context/frontier-replication/prompts/examples/taiwan_default__misleading__E_FULL.md",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_local.jsonl",
+   "request_hashes": [
+    "c3c2051bfaf436fc6c59a2a272336620b900f468e791ea4ec52854c7878ee356",
+    "977b66e604e86d0d8faa0088fc25b6daaa213bc5eaa9dafbce129a00c502b4ff",
+    "ae96562c0059895b434d5be2d1f25168d8d92c28ab29732525c1b6a82c85be9c",
+    "e354e589504ccbab682d80bc2ae6db7826cf04828b33d3c885dcdafe6dd92d75"
+   ]
+  }
+ ],
+ "B2_hosted_identical": [
+  {
+   "cell": "trapped:A_RAW",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "58458f4d2abb21ea66d6b8be0b0775822e2a689a4e16bc9af2363b00ceca2ddf",
+    "8181cdf655fa62856589f5ec54370b652263cbc2418a388f7c2055d291143cc7",
+    "2126cd9389aec91e3487c4a777614c4454a7de2b96116e8c335fc03ee05e63d7"
+   ]
+  },
+  {
+   "cell": "trapped:A_RAW",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "5f7b1def186c91aa7269acb0f53464a605d13ee75441c9145f9224bf324c1ea7",
+    "ed46d5084a8c55488fb472aa445e2a847bfe044e084c23a292c51d9ef4d5d8b8",
+    "2c0e9c6dc52b4227ac0c2e78cd5dcdd2da64994b66b43a8bb21c0da1fd4adcde"
+   ]
+  },
+  {
+   "cell": "trapped:B_SELF",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "ef7fa0f838230c40d5b7d9621a72011084123f2ff0ea82332d6de260d9fc3603",
+    "0873444b33b92b8532157e7e0d4e9460af2a0cead804cd287c7501e14b3f4a41",
+    "d26ed302df06fbd66a9cc5527f8b050becfbf0c6d72e119538db09b20cf006fc",
+    "2126cd9389aec91e3487c4a777614c4454a7de2b96116e8c335fc03ee05e63d7"
+   ]
+  },
+  {
+   "cell": "trapped:B_SELF",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "0d437023b44c480b6ed8143cfab6136df0aba2ff26afdd3020804adca5d9d61a",
+    "194b60d81a29387166e24482e89928d45d6c99a7fbaa8522b662df5b29c311d9",
+    "2a970ed688a6fdf3bf3b3e4d38381f3d8df97b452cc9d7d80e864b679226d7e9",
+    "2c0e9c6dc52b4227ac0c2e78cd5dcdd2da64994b66b43a8bb21c0da1fd4adcde"
+   ]
+  },
+  {
+   "cell": "trapped:C_DICT",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "a554a49e379204cb8f6373724dba08a46a9e037504cdef6bc5089d6c4a0d7960",
+    "9fe4f007687f448bba90ed4721d05dcfa390f4501883c101107c9b1bbe66fccb",
+    "7ada897b9221fee1c3faac31aca69deec6155738f6ffe52c3316d159a7a94d18"
+   ]
+  },
+  {
+   "cell": "trapped:C_DICT",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "ad916bfbd7255afdcfb1304d11201a3775ce91c0e95d357738dbb581cfbf24bb",
+    "3a350c1abe4eb3bed3f7a3cc26208d1ff2b741e18822409acb2d8ec36b6c0df4",
+    "0a85926bcf7411b21cda071a1fbd39ad551371aae10856d4f0db5a5f28a94cb4"
+   ]
+  },
+  {
+   "cell": "trapped:D_RULES",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "a7b3a05fa95b85a57521ef92466d27ddb112f2fdec168a17476b1522411890d2",
+    "03c52c7d32c7c0dc924ab6b95de9a7ab0c3b6e4167585e126d6d83eb6c87e9dc",
+    "efe11368b552d2fd72ff6eacd37f3383f82d82c80cfbcecb260690655d0e6141"
+   ]
+  },
+  {
+   "cell": "trapped:D_RULES",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "070d3a1fc0bcc6fc27eb8c961b3f2dcc64cf6ab5fe95bc035673879480c5ac27",
+    "9e1e6335d2c2532e2e7720c0b7bdd1782b6124bd91d8483427b2a42aacc26b65",
+    "ab711e8cc59899acc6354e4cf5b1b00785e122f977463e14afb70ec067ea68f0"
+   ]
+  },
+  {
+   "cell": "trapped:E_FULL",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "457bf3f3bf32eeb86927144bfdbb30c7db18b03aa6fa8ef25755748f6dc32591",
+    "7ed051580a315d395f461ab2e3c42ae4238e8e35b9fd84cf413ac1601995b33a",
+    "35858a58b310f87bcf7c355d1609b4428e0a92e8f2191e79a4a6aca43daf67b5",
+    "efe11368b552d2fd72ff6eacd37f3383f82d82c80cfbcecb260690655d0e6141"
+   ]
+  },
+  {
+   "cell": "trapped:E_FULL",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "9891f9a9f241dd4b985731569f805346f8e7ca8fce58b2300bf3eb9a711bded1",
+    "b1250bdbc8acb31c5f78c98c7547327d897e492ad5538dfeccea2db8e3eb8631",
+    "d85bd38ea906a580a80385c6aad255e56a88787752b9e5e7b5333b5c37f99480",
+    "ab711e8cc59899acc6354e4cf5b1b00785e122f977463e14afb70ec067ea68f0"
+   ]
+  },
+  {
+   "cell": "anonymized:A_RAW",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "2026bd8c272e8f5f571f16c68200571b059cab2b363dc3c0878da66db15f2e9b",
+    "d536cd0e8d82cafba53f7e29283ca909c00ca79dd95110d2cf17fb7af48bd1e5",
+    "d5352762b729f6d2d3438b22989bd55d7187a841f5c244455d87f0e4c24f46fd"
+   ]
+  },
+  {
+   "cell": "anonymized:A_RAW",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "404d7fbbb53ccd6ba41bc045064d1ae70166232412f205fbc8721f2652ef91f1",
+    "bab8579c9b2df91020d8dc61cb26408d5e0771522b93ee30e521a4b52d624de7",
+    "2bbfd1d28d3ecfb64b59368f54bd66fae461f398c670ee002ea98733fdb422e1"
+   ]
+  },
+  {
+   "cell": "anonymized:C_DICT",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "232e083aa0996270cf3245f2de1e17353cb77318c9320479529363173116ff85",
+    "812ba72110bcecc353bea039d0ecbbf247ac3b867c5ea4c01b6045a27268f9ec",
+    "a1cd42bd430ca08bc64a5c5f02b6c53c36a3de8f9cd5cf7f3ee9ed8c0bd95d43"
+   ]
+  },
+  {
+   "cell": "anonymized:C_DICT",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "9e55cbbd591fe9972b392826eb188f3b995595661736a0695cd794c6c07a83fe",
+    "158a7225fdfa738777e95840779fa5dfbf13dd368285738ab6a0d4d68c1ec16d",
+    "98c7848347d0a2e9ac3f689d5f5fb69d7bb0d03efb52646783e18642ea5dd28d"
+   ]
+  },
+  {
+   "cell": "incomplete:D_RULES",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "7729ec3e3a0bacbe915e2d258f74406fc3b6f323c2e447e14eb5eef359a32ab4",
+    "fe299cc2c3300d84d681aef179e4b2f31da697bceebde86cc1f985206e489a30",
+    "7c2d24e2023ee8a4783433955953c24eb862abdf654da43f55c4e11ac2e99e20"
+   ]
+  },
+  {
+   "cell": "incomplete:D_RULES",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "0339e5af3d83ffaf98c8f2bf3cc2afd7256b14b4864d327be46da9af8fb58782",
+    "7e631beeb79ef32ad55431c6d19606d8de830d12233720dfbfc29fe0e509ca4a",
+    "57d8ed25dd3a1ecfe8f744043a2f5636c30da8d9c04520d7c06837fbd7610b44"
+   ]
+  },
+  {
+   "cell": "misleading:D_RULES",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "e651c7a2257d714c5d82c342e1548633228d8a7dfed93c803eaa924cb19d1cb7",
+    "60ae8464b579f9998df0f50efcb0b009966462d2b6af03a5d4aa06e081f18e3c",
+    "5c9496d6108b537895edf7a926eed4fd5f476e721c5fc58c2dbda9222a22144c"
+   ]
+  },
+  {
+   "cell": "misleading:D_RULES",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "00e2daf7f839b54c02d54e83ff867e780513e6abb3ad78da684def15e4993a13",
+    "a02babafff5f7a8379cdf7df42f27d0b88ec6161f646e9fa5a01aaf259812db5",
+    "75262d8bd7e1b619b2a60a9044886c61aaf278e4df137f32f4a6c9b7bc470dda"
+   ]
+  },
+  {
+   "cell": "misleading:E_FULL",
+   "model": "gpt-6-luna",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_openai.jsonl",
+   "request_hashes": [
+    "4cfa9f4304955335d9668d27cb39f40bb53f379e0ddd152ba8b9e6b9180236e6",
+    "581924a928546bb6bd3b2b9471351e1c7e29e337ed84407d5e90f1fe096bd944",
+    "bbf50e2171b187233ce107ef3f4b685de03564ee85a2bfc997e4345543441e96",
+    "5c9496d6108b537895edf7a926eed4fd5f476e721c5fc58c2dbda9222a22144c"
+   ]
+  },
+  {
+   "cell": "misleading:E_FULL",
+   "model": "claude-sonnet-5-5",
+   "ledger": "harness/rs2610/artifacts/replication/b2/ledger_anthropic.jsonl",
+   "request_hashes": [
+    "3c1cef15a0ffed86fe9780e8a368dd7a0cd936392ff5bc1727a70b6689242974",
+    "ff8bbc5458859c65d1063df3ae59172f4bd83a494b070b8055994f7b524b0351",
+    "38da0d106df294f3d81b8aa7ea39ffa5d1522a1a7cda2fc7b2cc1cf399edbd20",
+    "75262d8bd7e1b619b2a60a9044886c61aaf278e4df137f32f4a6c9b7bc470dda"
+   ]
+  }
+ ]
+}

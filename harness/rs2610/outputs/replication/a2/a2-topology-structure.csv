@@ -1,0 +1,7 @@
+model,mode,topo_nodes,topo_edges,topo_branches,topo_steps,topo_leaves,topo_pruned,topo_duplicate_proposals,topo_depth,topo_evaluated_alternatives,topo_claim_nodes,topo_candidate_nodes,topo_merged_nodes,topo_claim_conflict_edges,topo_reused_claims,topo_max_claim_fanout,topo_branching_factor,topo_discarded_candidates
+gpt-6-luna,COT,4.65625,3.65625,1.0,3.65625,,,,,,,,,,,,,
+gpt-6-luna,GOT,10.510416666666666,12.072916666666666,,,,,,,3.0,6.395833333333333,3.0,0.11458333333333333,0.0,3.625,2.6666666666666665,1.718234375,1.0
+gpt-6-luna,TOT,10.0,9.0,3.0,,6.0,1.328125,0.0,2.0,3.0,,,,,,,,
+qwen2.5:7b,COT,4.734375,3.734375,1.0,3.734375,,,,,,,,,,,,,
+qwen2.5:7b,GOT,10.625,12.098958333333334,,,,,,,3.0,6.598958333333333,3.0,0.026041666666666668,1.6979166666666667,2.6770833333333335,2.375,1.4840677083333331,1.0
+qwen2.5:7b,TOT,9.984375,8.984375,2.9947916666666665,,5.989583333333333,1.1041666666666667,0.005208333333333333,2.0,2.9947916666666665,,,,,,,,

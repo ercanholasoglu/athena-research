@@ -1,0 +1,55 @@
+split,dataset_id,condition,seed,column,verification_verdict,verification_evidence,analysis_flagged
+UNSEEN,taiwan_default,C_DICT,1,LIMIT_BAL,NO_STAGE,,False
+UNSEEN,taiwan_default,C_DICT,1,AGE,NO_STAGE,,False
+UNSEEN,taiwan_default,C_DICT,1,collections_referral_oct,NO_STAGE,,False
+UNSEEN,taiwan_default,D_RULES,1,LIMIT_BAL,NO_STAGE,,False
+UNSEEN,taiwan_default,D_RULES,1,AGE,NO_STAGE,,False
+UNSEEN,taiwan_default,D_RULES,1,collections_referral_oct,NO_STAGE,,False
+UNSEEN,taiwan_default,E_FULL,1,LIMIT_BAL,contradicted,"Doc: age, prof: int, min 10k, max 780k.",True
+UNSEEN,taiwan_default,E_FULL,1,AGE,contradicted,"Doc: age in years, prof: int, min 21, max 79.",True
+UNSEEN,taiwan_default,E_FULL,1,collections_referral_oct,plausible,"Unique 2, int, min 0, max 1.",False
+UNSEEN,taiwan_default,C_DICT,2,LIMIT_BAL,NO_STAGE,,True
+UNSEEN,taiwan_default,C_DICT,2,AGE,NO_STAGE,,False
+UNSEEN,taiwan_default,C_DICT,2,collections_referral_oct,NO_STAGE,,False
+UNSEEN,taiwan_default,D_RULES,2,LIMIT_BAL,NO_STAGE,,False
+UNSEEN,taiwan_default,D_RULES,2,AGE,NO_STAGE,,False
+UNSEEN,taiwan_default,D_RULES,2,collections_referral_oct,NO_STAGE,,False
+UNSEEN,taiwan_default,E_FULL,2,LIMIT_BAL,plausible,"Age in years, profile shows credit limit.",True
+UNSEEN,taiwan_default,E_FULL,2,AGE,contradicted,"Documented as age in years, profile shows credit limit.",True
+UNSEEN,taiwan_default,E_FULL,2,collections_referral_oct,plausible,"Binary, matches profile.",False
+UNSEEN,card_fraud_synth,C_DICT,1,amount,NO_STAGE,,False
+UNSEEN,card_fraud_synth,C_DICT,1,account_age_days,NO_STAGE,,False
+UNSEEN,card_fraud_synth,C_DICT,1,chargeback_filed,NO_STAGE,,False
+UNSEEN,card_fraud_synth,D_RULES,1,amount,NO_STAGE,,False
+UNSEEN,card_fraud_synth,D_RULES,1,account_age_days,NO_STAGE,,False
+UNSEEN,card_fraud_synth,D_RULES,1,chargeback_filed,NO_STAGE,,False
+UNSEEN,card_fraud_synth,E_FULL,1,amount,contradicted,"Not account age, but transaction amount.",True
+UNSEEN,card_fraud_synth,E_FULL,1,account_age_days,contradicted,"Not account age, but transaction amount.",True
+UNSEEN,card_fraud_synth,E_FULL,1,chargeback_filed,plausible,"Unique, low cardinality.",False
+UNSEEN,card_fraud_synth,C_DICT,2,amount,NO_STAGE,,False
+UNSEEN,card_fraud_synth,C_DICT,2,account_age_days,NO_STAGE,,False
+UNSEEN,card_fraud_synth,C_DICT,2,chargeback_filed,NO_STAGE,,False
+UNSEEN,card_fraud_synth,D_RULES,2,amount,NO_STAGE,,False
+UNSEEN,card_fraud_synth,D_RULES,2,account_age_days,NO_STAGE,,False
+UNSEEN,card_fraud_synth,D_RULES,2,chargeback_filed,NO_STAGE,,False
+UNSEEN,card_fraud_synth,E_FULL,2,amount,contradicted,"Numerical, not transaction amount, contradicts doc.",True
+UNSEEN,card_fraud_synth,E_FULL,2,account_age_days,contradicted,"Numerical, not account age, contradicts doc.",True
+UNSEEN,card_fraud_synth,E_FULL,2,chargeback_filed,contradicted,"1 if contactless payment, contradicts doc.",True
+DEVELOPMENT,telco_churn,C_DICT,1,tenure,NO_STAGE,,False
+DEVELOPMENT,telco_churn,C_DICT,1,MonthlyCharges,NO_STAGE,,False
+DEVELOPMENT,telco_churn,C_DICT,1,save_desk_outcome,NO_STAGE,,False
+DEVELOPMENT,telco_churn,D_RULES,1,tenure,NO_STAGE,,False
+DEVELOPMENT,telco_churn,D_RULES,1,MonthlyCharges,NO_STAGE,,False
+DEVELOPMENT,telco_churn,D_RULES,1,save_desk_outcome,NO_STAGE,,False
+DEVELOPMENT,telco_churn,E_FULL,1,tenure,plausible,"Numerical, wide range.",False
+DEVELOPMENT,telco_churn,E_FULL,1,MonthlyCharges,plausible,"Numerical, wide range.",False
+DEVELOPMENT,telco_churn,E_FULL,1,save_desk_outcome,plausible,"Three categories, low cardinality.",False
+DEVELOPMENT,bank_marketing,C_DICT,1,balance,NO_STAGE,,False
+DEVELOPMENT,bank_marketing,C_DICT,1,duration,NO_STAGE,,False
+DEVELOPMENT,bank_marketing,C_DICT,1,pdays,NO_STAGE,,False
+DEVELOPMENT,bank_marketing,D_RULES,1,balance,NO_STAGE,,False
+DEVELOPMENT,bank_marketing,D_RULES,1,duration,NO_STAGE,,False
+DEVELOPMENT,bank_marketing,D_RULES,1,pdays,NO_STAGE,,False
+DEVELOPMENT,bank_marketing,E_FULL,1,balance,contradicted,"High cardinality, implausible for binary classification.",True
+DEVELOPMENT,bank_marketing,E_FULL,1,duration,unverifiable,"Description mismatch, not duration of call.",False
+DEVELOPMENT,bank_marketing,E_FULL,1,pdays,plausible,"Low cardinality, balanced classes.",False

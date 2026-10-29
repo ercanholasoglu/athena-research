@@ -1,0 +1,44 @@
+{
+ "properties": {
+  "checks": {
+   "items": {
+    "properties": {
+     "column": {
+      "type": "string"
+     },
+     "evidence": {
+      "type": "string"
+     },
+     "verdict": {
+      "enum": [
+       "plausible",
+       "contradicted",
+       "unverifiable"
+      ],
+      "type": "string"
+     }
+    },
+    "required": [
+     "column",
+     "verdict",
+     "evidence"
+    ],
+    "type": "object"
+   },
+   "type": "array"
+  },
+  "overall_trust": {
+   "enum": [
+    "high",
+    "partial",
+    "low"
+   ],
+   "type": "string"
+  }
+ },
+ "required": [
+  "checks",
+  "overall_trust"
+ ],
+ "type": "object"
+}

@@ -1,0 +1,1113 @@
+{
+ "dataset_manifest": [
+  {
+   "columns": 21,
+   "dataset_id": "telco_churn",
+   "family": "churn",
+   "frame_sha256": "b5a2f966c1760892a26c7d2d75e0461e2b3268d18595b3ba96b9cecdcb95995c",
+   "rows": 7043,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "Churn",
+   "task_type": "binary",
+   "truth_sha256": "18422468962caae8fab4da03fb7aa1b1e5d19f73fc3245e7c87dc95387bd7b11"
+  },
+  {
+   "columns": 21,
+   "dataset_id": "german_credit",
+   "family": "credit",
+   "frame_sha256": "50428913acf8e989140c34ade6f960cbb17e3e38590641ecb01d1827c4c8ef9f",
+   "rows": 1000,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "credit_risk",
+   "task_type": "binary",
+   "truth_sha256": "308ae84d1ded7f9b9f427ae04d8c82bbf138f3d4c09fdcf46be524a43370320d"
+  },
+  {
+   "columns": 17,
+   "dataset_id": "bank_marketing",
+   "family": "cross_sell",
+   "frame_sha256": "4a1325e2fd2b4fe611223715d4f92ab920a01105362469211e718223fb3b3099",
+   "rows": 15000,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "y",
+   "task_type": "binary",
+   "truth_sha256": "1f1e6f0ace402d2ccaeac13cfeaf299c11bdb6cfc90d4811d18448a6a5f3eb0a"
+  },
+  {
+   "columns": 15,
+   "dataset_id": "adult_income",
+   "family": "generic",
+   "frame_sha256": "d97cfc68414f4ddbb26cf2eb8425ab118e79a90d46a83ba453f6424d0ac0b2da",
+   "rows": 15000,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "income",
+   "task_type": "binary",
+   "truth_sha256": "2c4dd49d308f7f8ee08e5cdbdd959e26b76921fadf9ce5d1caad925e71923038"
+  },
+  {
+   "columns": 17,
+   "dataset_id": "bike_sharing",
+   "family": "demand",
+   "frame_sha256": "87d743bf34ba74ef7bdeb6a3db9725098fad302fccbb64d7f98ef342965fba05",
+   "rows": 15000,
+   "split": "DEVELOPMENT",
+   "studies": "AB",
+   "target": "cnt",
+   "task_type": "regression",
+   "truth_sha256": "e19f72b5d1305037140e99463d18ca62ef777dfe4a922f22d31fe71407e055db"
+  },
+  {
+   "columns": 19,
+   "dataset_id": "vehicle_silhouettes",
+   "family": "generic",
+   "frame_sha256": "0ad07f31e86abeea490bf052c6081c102937fce8a96ea111f860f5e4c4727f72",
+   "rows": 846,
+   "split": "DEVELOPMENT",
+   "studies": "A",
+   "target": "vehicle_class",
+   "task_type": "multiclass",
+   "truth_sha256": "734f1ab34086ba9d940f54a5d236668626ca9335683219fb60f15ca3451b6d81"
+  },
+  {
+   "columns": 14,
+   "dataset_id": "iranian_churn",
+   "family": "churn",
+   "frame_sha256": "9a9dce53ea5f3a71f2ded3d4b7865ea20d27c06cd14520800ff85332906093ea",
+   "rows": 3150,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "Churn",
+   "task_type": "binary",
+   "truth_sha256": "55149bbd275ff7867e995c738274313180114bd34701a776eddef0272b9de6ba"
+  },
+  {
+   "columns": 25,
+   "dataset_id": "taiwan_default",
+   "family": "credit",
+   "frame_sha256": "74098e6f4c7edf9813e7beb686e687de868d03d9d338e8cae8297a1b5a04a0f5",
+   "rows": 15000,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "default_next_month",
+   "task_type": "binary",
+   "truth_sha256": "141df9d15c3ce4c2e43498e8695d3567391d8a60c2fec3b5c637f3ce89649c0e"
+  },
+  {
+   "columns": 86,
+   "dataset_id": "coil_caravan",
+   "family": "cross_sell",
+   "frame_sha256": "6f667453dfe3b1e9fde28f06c969ff794af231edb560efc8ac72da539071cf25",
+   "rows": 5822,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "CARAVAN",
+   "task_type": "binary",
+   "truth_sha256": "4d116752e1e6687d146331ecbc980ad395fc1817226103e414a3512e71cc769a"
+  },
+  {
+   "columns": 50,
+   "dataset_id": "diabetes_readmission",
+   "family": "medical",
+   "frame_sha256": "11de9be25ebbe0e37be4ef94d893e796cea25fe0cee32dd8212b7a2160ed7d34",
+   "rows": 15000,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "readmitted_30d",
+   "task_type": "binary",
+   "truth_sha256": "cb12629defa9fa6a980eccbaf0a1ea68c84faa201910fd438f647561d10401ba"
+  },
+  {
+   "columns": 15,
+   "dataset_id": "card_fraud_synth",
+   "family": "fraud",
+   "frame_sha256": "0ed7788681daf13aead466bb764f60e10e4a975707d9669dbb2390e042c9daf0",
+   "rows": 14000,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "is_fraud",
+   "task_type": "binary",
+   "truth_sha256": "5f98b6fde4b3cb1e1fd575deab0a80317faf335fe22c136654fe3af7de2c4332"
+  },
+  {
+   "columns": 18,
+   "dataset_id": "online_shoppers",
+   "family": "generic",
+   "frame_sha256": "41cffba0156fca450228f527a1596d1531956cc9f8541e05265255d0f6e5e3bc",
+   "rows": 12330,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "Revenue",
+   "task_type": "binary",
+   "truth_sha256": "2bd103a6ecb2c039039359a75f4c8a12926f7b2290d982092fcd326e057ede6a"
+  },
+  {
+   "columns": 28,
+   "dataset_id": "thyroid_sick",
+   "family": "medical",
+   "frame_sha256": "4781735434db5a35656cc94ea951d4bd1218b6ea28dfe75e713064f094e53dcc",
+   "rows": 2800,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "sick_diagnosis",
+   "task_type": "binary",
+   "truth_sha256": "1ac2839fdae614c5b51ebb3e7412ce6454d04f15e57de28bcad70300085d2280"
+  },
+  {
+   "columns": 20,
+   "dataset_id": "image_segment",
+   "family": "generic",
+   "frame_sha256": "d1957d847d9e46fc3d3bdabf6c0494051cdd8590161bfa5ec1fd491c78b51dc0",
+   "rows": 2310,
+   "split": "UNSEEN",
+   "studies": "A",
+   "target": "region_class",
+   "task_type": "multiclass",
+   "truth_sha256": "54ea23ee3aa5daf0a72371ae06fc0c70efd65cc0d126ae4ab7bd9d946d8062ef"
+  },
+  {
+   "columns": 12,
+   "dataset_id": "hillstrom_email",
+   "family": "uplift",
+   "frame_sha256": "e8f021c523852b29c323d30d6cf3932d1b37a40b6aecb576ff251ff6e2504baf",
+   "rows": 64000,
+   "split": "UNSEEN",
+   "studies": "AB",
+   "target": "conversion",
+   "task_type": "binary",
+   "truth_sha256": "6a1415cc138c1ca68846da16c5c137ba0674f26f2c70b6c5f3c4afcf42ada767"
+  }
+ ],
+ "dataset_manifest_sha256": "5e3c7548d614ba5c8d025f2da50915f184ae4d47ae84b59ac2a8baf208921c87",
+ "enum_legend": "Study A prompts list every option id; topology enums are named in task text",
+ "frozen_at": "2026-10-28T12:41:08.561565+03:00",
+ "git": {
+  "branch": "research/reasoning-semantics-ablation",
+  "dirty_paths": [],
+  "head": "1b87f101b44dedb79be438b6c5eba5e525a19c55"
+ },
+ "model": {
+  "digest": "845dbda0ea48ed749caafd9e6037047aa19acfcfd82e704d7ca97d631a0b697e",
+  "name": "qwen2.5:7b",
+  "num_ctx": 12288,
+  "runtime": "ollama (local)",
+  "structured_output": "JSON schema via Ollama `format`",
+  "temperature": 0.4
+ },
+ "packages": {
+  "catboost": "1.2.10",
+  "lightgbm": "4.7.0",
+  "matplotlib": "3.11.2",
+  "numpy": "2.5.4",
+  "pandas": "3.1.0",
+  "scipy": "1.18.1",
+  "sklearn": "1.9.1",
+  "statsmodels": "0.15.0",
+  "xgboost": "3.4.1"
+ },
+ "pre_freeze_excluded": [
+  "artifacts/study_a/runs_debug.jsonl (smoke runs)"
+ ],
+ "python": "3.12.12",
+ "seed_policy": {
+  "data_seed": 20261027,
+  "llm_seed": "= repeat index",
+  "study_a": {
+   "DEVELOPMENT": [
+    1
+   ],
+   "UNSEEN": [
+    1,
+    2,
+    3
+   ],
+   "order": "seed-outer, Latin-square mode rotation"
+  }
+ },
+ "sources": {
+  "datasets_and_truth": {
+   "common/data.py": "3b05b3f2a6f420638404fe1df71fd752d6bf5b0ed936e66e3cc5714ad47c40df",
+   "common/prep.py": "bd96ddc6eb3b17f90e722be53c83ed9b626c6bcb227586618b91eb772a095f48"
+  },
+  "harness_llm": {
+   "common/llm.py": "b2f65e820907bcbb03100006f3805885a4d833f4f2f7aedc92e13d3a5a67e9da"
+  },
+  "study_a_evidence": {
+   "study_a/evidence.py": "f9d61ca0dff08aa9e1bcdaf0d2211d39234c25bd088dd50bebc9d64bd99c12f3"
+  },
+  "study_a_runner": {
+   "study_a/run.py": "db46758b8e773548f3a32106c2ce068becb08d66d1f59e4d11c0c0600b8bd7b7"
+  },
+  "study_a_scoring": {
+   "study_a/scoring.py": "9e3b543226c0ceea78ea4936e3d61fdc4c345d7586dc5de9280304599c34fb8d"
+  },
+  "study_a_statistics": {
+   "study_a/analyze.py": "fa9ddcccdb3dfc4140856ac9d37e2752eb3390503d3d7543cbf8789edc6db9b2"
+  },
+  "study_a_task_contracts": {
+   "study_a/tasks.py": "b9ac2620cf5034d4a0416deb7d32fdb915f0c1d7c454bf6cf4367f68e19fc29a"
+  },
+  "study_a_topologies_and_prompts": {
+   "study_a/topologies.py": "6cda875f9c0a11762f8bfdf649fc635cb5d5802f0f4d6624bec5e954f6af8dd0"
+  }
+ },
+ "study": "A",
+ "study_a_prompts": {
+  "instances": {
+   "adult_income::CALIBRATION": {
+    "contract": "d78e77920f5c79e569ae4d19f95a921758819f5562ddc29bba0aeca0ca9bb9ae",
+    "prefix": "1e0ed05247c2f1d25b9a3e7a25ace83237ce0bba1137372326c448d5d6db97f6",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "1cf83b3f581aa245ed9512b6734310d8443770107474c22089d642f672d3955f",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::FE_STRATEGY": {
+    "contract": "b6b69463043767885d06f964d1036f1f653bbd1b494e4b01d5c8653488a553e7",
+    "prefix": "5e0de6aa8bdbb20982d04bf45569d3ab0d1a34765a8beb80f59ae30e1539d252",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::FS_STRATEGY": {
+    "contract": "8b94e3250ab1f600111e20a7976860c9629bc13ae2e3f8d9b693df01d1e6e2f4",
+    "prefix": "9e31a830e376c1e08c427f567e12b0f520a326b96e97889c9317d8d5627ee765",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::HPO_DEPTH": {
+    "contract": "5529e0335db937c70bdf3778ac37784e104ecc0b9e1e2500bcb5ab0ac84eb38f",
+    "prefix": "dbfe1a9479cada0a5c8ace7a4e842cd53932feb3738422ce707787fedcad1d19",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::IMBALANCE": {
+    "contract": "3ad0af8b4591a6b6b603cd4ec182a15c299d94a10094cec94337ab654d3dea23",
+    "prefix": "491e23a79fcb85cbccc0f16867d9d41e7a1b9752a4929151c27c1deac2283ccc",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::MODEL_FAMILY": {
+    "contract": "997b82ce975d387cd146e67c82225b04c2307a419573ca383ab27f40414a6ec0",
+    "prefix": "380908642bc42936bdca9b75e98f2845b8ee8b6080b19fd9b29e75d71d74bb1e",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::TRUST_PLAN": {
+    "contract": "7f0f77f147c1e3c15a187776f0583d65168b3d1f5f176d7e70d631835291ac41",
+    "prefix": "694fc8b540ec668176c8a924fbef9237dfe2f912d2b03fce3e75b8051cf8e82f",
+    "split": "DEVELOPMENT"
+   },
+   "adult_income::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "7a9f8acc68f59121158b21159a42180e640549ba9614df13d671658b04539627",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::CALIBRATION": {
+    "contract": "866dfd0fa0086f1453990f2fbc831156a5cd8f6117be163f44982b299ddd717a",
+    "prefix": "e13a146cfe2c225240328deb9b31ab1da2787465b52e0918434547117d8138a0",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::CAUSAL::2": {
+    "contract": "23c3d74d721044dfa54861bc4e019f0a3212d1dc031c8d51a79f9548f57de342",
+    "prefix": "8d1c0e3034533755b4149f0c2235bfe4fbd3a1304bd3b6b69dd507575ea2c698",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "18b40f805dadae82f74cc42672655b24354d94de97da13431ef58959b98845ae",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::FE_STRATEGY": {
+    "contract": "7a6bd2ac0cc2b62c9fbb5cfe3f3fe2809a1c371504159df411e6773d815f5458",
+    "prefix": "9389a7b66f8533f39fdb59314734f37f1ad0fbaed25d76d95f4ba432c1632011",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::FS_STRATEGY": {
+    "contract": "5597bb80513abf0f4c54a58ea859eac55e537efd80622dbf82e8f2146df4f264",
+    "prefix": "2d84bae10e9e2bc4573cad73d1be386633d6af68506450d823f390e4ad12a4b5",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::HPO_DEPTH": {
+    "contract": "27c1fc54f8cb1589d010aed1d5a6930f62448f538d9206cdb92ce6a86bc89adc",
+    "prefix": "a2b1fccd683fdd53beaa81728c07e7bd32b05af2e800808b905bd7057b919a06",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::IMBALANCE": {
+    "contract": "d0cdf6e34470d93c968109fdb3e573a450c5fcbc2446f490256a235176801414",
+    "prefix": "7603d59a44442127a58c9eac12d35821f2689362020950fb85fdbb269d5a6f45",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::MODEL_FAMILY": {
+    "contract": "3b3c3823325dcf80bc2c3535f73b20a79645abe3fbcfeb4af7a2fa8ab5ed7173",
+    "prefix": "a79d29bed7c2fafa4085fc1bb415bcff05d9f2be3471aa6f98c8e2e6a9c6019d",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::TRUST_PLAN": {
+    "contract": "f827859bc1535d5d707a6a6863d07e3de9267cef034f0b393476b455ced91782",
+    "prefix": "e7856513b08a03fde24b1172069b7ba4ba1ae83f5b1ecbec8634a152cca1a39b",
+    "split": "DEVELOPMENT"
+   },
+   "bank_marketing::VALIDATION": {
+    "contract": "0c7843a2d830eb3ec89e0fabcc8eafbc138cc5fed171fae40856933a27856213",
+    "prefix": "f83cac41a54d94671849160eb349fe27c2ce457fdbc87d81491dee1183be1272",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "29a4f008145afa1a2cce172a044e2b353c79c7b8766509501936754beca03044",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::FE_STRATEGY": {
+    "contract": "0de9263689f21cb63ec3370020945d05ec342f51f9d129389f7ba4ad6c43b95b",
+    "prefix": "27402e24c7dbe2b5fec23980d57c87f5e700a48994ac78ff86747699136f20ef",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::FS_STRATEGY": {
+    "contract": "557b4b133811e10faaee473f5d3e90d42398859c8e49949f9f579716dcb80b02",
+    "prefix": "05102063c48f8f7b7bf7a1798219ee40cfa46b8fb8df3a47e286337508ada2bc",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::HPO_DEPTH": {
+    "contract": "f459d494937e8e655009edb1494cbdfe3a41c476797770ea34c46ee13bc97636",
+    "prefix": "16002305b6386539038b2f90f457a25b6503889a4d309957463d6ad2f13e29ce",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::MODEL_FAMILY": {
+    "contract": "ea62ca83ad98037e440e0bd30679791f76467f44e8f5fd8222f1910d9e50521c",
+    "prefix": "430ec1085e59bae5e0f98444626948f386f6683be3e9d1f6a14190ba6a3606e8",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::TRUST_PLAN": {
+    "contract": "f827859bc1535d5d707a6a6863d07e3de9267cef034f0b393476b455ced91782",
+    "prefix": "15b3b913235d66d7f7e59deee98ff5c0f51091d1a133656792b00b3cae1202d3",
+    "split": "DEVELOPMENT"
+   },
+   "bike_sharing::VALIDATION": {
+    "contract": "e66ea8f86638a68b3cbcc61a6da9e6e83f354e51bc4d59f2ca3e79e3de99a7e3",
+    "prefix": "bb72885fd07b37ab93f03c2bf5cdc9d445a015d38102e9e544dd1431114a1f25",
+    "split": "DEVELOPMENT"
+   },
+   "card_fraud_synth::CALIBRATION": {
+    "contract": "e3b8faeaf41e22c743397b568b169a36815b3797b2eb5e0eb5bd6a4f223cb202",
+    "prefix": "b37f92834c7ccdf81628e360079a6e4852b46da03f5d614aa43412e1b9275aa6",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::CAUSAL::8": {
+    "contract": "d500c900580077823f20f8b0c96a34faeadd84ea92c379f9bd9e90afbae00500",
+    "prefix": "f33c1d9114d8822ace30730c4ddc8daa7635a0101f11ea9a575666f57a54898c",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::EXPLANATION": {
+    "contract": "c2739b0e274239c81f1f8df216ff6e489c55b1bc154a25d49025ff12d9420d3b",
+    "prefix": "83dfc82b91051b48b08af7602eb90920ca6557cabe371b667402530fc37d1515",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::FE_STRATEGY": {
+    "contract": "7e862c8379a7b16139a54b45cf501e82334b3b3d6cbc0ab61d5fe5cdf9e9cc75",
+    "prefix": "df790d6cf94e3c2144c160b417f561d0a12a2775c8d71a8cf63b473d0204ea34",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::FS_STRATEGY": {
+    "contract": "4ad57ef5ef9e9a99fdffc926ad603c44119b206991df9f42756bdf506feca100",
+    "prefix": "a14ef43504278ddb3a281d11491010614637454a746579879e2b7995e1c041cc",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::HPO_DEPTH": {
+    "contract": "4c83eeddf4c3ac6c73c63d68d6b5282a631b78676324509dfb35eab9779c9070",
+    "prefix": "84ac84c6ba991dbd98a47fb19f4320db6a499b646c3c1b55741a49f795eee2e3",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::IMBALANCE": {
+    "contract": "4e6b28f63a2f0d3cfb56ccc1ad2aa3bda7940b2068cce1d5bcb4e0983a4b5b2f",
+    "prefix": "e7b21774043f8186ff522050c74c58ec606a7490f9259292e8f8a2adbb035475",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::MODEL_FAMILY": {
+    "contract": "82062ed9a7005b97bc3f320675ec4618509c71aabeae5b1862917bb866d2c88e",
+    "prefix": "c768f9915abc18046aa2365647d6f3ae32ead4529f3588b06c73312bec609789",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::TRUST_PLAN": {
+    "contract": "7f0f77f147c1e3c15a187776f0583d65168b3d1f5f176d7e70d631835291ac41",
+    "prefix": "9778e4dc88ac42e5f64afc3abc562d0c32c5331363cf6e0a1aa2802b552bb238",
+    "split": "UNSEEN"
+   },
+   "card_fraud_synth::VALIDATION": {
+    "contract": "1b6b9598c5c28c1530db076a2d38b9c6e33c7501d6ed246ce06df8cfc97a608b",
+    "prefix": "bda3c89d6940b9ebbfa63844d05a4c51c4a26a9c769ddf99fd16f83717ad655d",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::CALIBRATION": {
+    "contract": "dc2c43a3c956f36a987a465c9fd4400f0d6b26745918aa0a6f8484a70798c987",
+    "prefix": "178d0e148d65abd7fa108ef89954075621c06d8b34c38c700b72650f7e08c34d",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "517be07b2388fa7e380bfaf49a5b21e8beeb53b79348468d72303cb9f2e33140",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::FE_STRATEGY": {
+    "contract": "dcbfbdbb7df3c1b528e538c4863cef31a156d22ab1a714e7ddb408365a6e3b86",
+    "prefix": "4269724ae8969953c13b59a2fec532a278740610a53e31d17262785be05a65fe",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::FS_STRATEGY": {
+    "contract": "e1cacd7d0b8b66459389a7d9cff4ef25696e9a4ce6b3b526f4b9b05d598c9846",
+    "prefix": "32d225622521788a7938d4a28b0864b934787be9bab20ec71ff9427eccb800f3",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::HPO_DEPTH": {
+    "contract": "6c3f0b9b0db9da82f23d137bf0f7f8860957690fc3aee5ca94e4b8a5db87f963",
+    "prefix": "a060e65758350adddcb5ccbe96eacd4e78febbbfabff4d15223327ab7de3c201",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::IMBALANCE": {
+    "contract": "601be187faf10fe4743c63e04cd8efde38213a648a604c5b0c085715c16258b4",
+    "prefix": "3b2b9379cf1a8534328a7f00855c1596675681b6b4cca67edfdaf0cea67a41a8",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::MODEL_FAMILY": {
+    "contract": "3266f08be3176082bad8ed4b9b649fbf80e56da6c3fcb579e6e8f816c3267290",
+    "prefix": "c38db95f1d7dd136f3721808edf2aa9921fd3bb6ba3402c68931f81747a2cf28",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::TRUST_PLAN": {
+    "contract": "f827859bc1535d5d707a6a6863d07e3de9267cef034f0b393476b455ced91782",
+    "prefix": "60510ef81d4a884dbf885bca61d356e7f18057e943fa0126b40548e9494a9094",
+    "split": "UNSEEN"
+   },
+   "coil_caravan::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "4b6c6f6e973d4e09c1711ccc8b6aeafcf9b4715f03ca1ddc44f45a59e7c74f09",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::ADV::calibration_conflict": {
+    "contract": "e87f85db78b7eae9aea7e28890bb825f47c9302b6e60874e84bb4543581b1100",
+    "prefix": "81bb9444e1e4d0131c751799bb1ed714089e91efaae7baa651bc2ca2e0b5b502",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::ADV::causal_disagreement": {
+    "contract": "db0ba46c480ae227e9019862d51f9ab4e4e46c76515885330847e7c1f82ad3d3",
+    "prefix": "e9aa3b59bc1de0ef7ca3f5e8379b184740e126e00eb51ec0737c4f48ea490c42",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::ADV::cheaper_equivalent": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "prefix": "812601ad5c194a997ce2afcb97c816afd53282729d02c1e8e251d1df5c6f5ae7",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::ADV::data_quality_suspicious": {
+    "contract": "cb2a0dafedf0c529090901b9aba498bc913c781da8b3ef7b79df3be00d274a52",
+    "prefix": "bcfb044b0480498017fdc4bd64cfb337140e4789a723aa8191b89119a7c11b2c",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::ADV::governance_block": {
+    "contract": "b9e68fb8521e3b48bd95a0c0a26eaa2cadaf6d14982cffef28889f12c9648422",
+    "prefix": "a8384c7ae21241445d230bffc574c439280201a33a302e4486b3e35e4435fe1c",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::ADV::incomplete_evidence": {
+    "contract": "8f806958accf3aa95d37796b77c907e4bb64e9b81bff7c8494054a66b4106027",
+    "prefix": "049808c0dd8423a0772c85d74f4f19f7af7a05df75e20585bf1437c39319e7b8",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::ADV::indistinguishable": {
+    "contract": "d2e46bd237a7519a10e887a87724a68451205d2c2a2c8b12bfdaa39cc619395f",
+    "prefix": "5d0ea886411dd8305c362fef963b12fa6cc72231d466d1fcb9d86f679f149800",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::ADV::variance_uncertain": {
+    "contract": "b7f9b6d4c12d72d1b2cca36ad9d8335fdbabb55b54ba8dc0069225b708217a04",
+    "prefix": "4bae15f2b56a5299882693ea2ea9dab22f09944f7464b973ef437be245ee9e84",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::CALIBRATION": {
+    "contract": "3183792fcda4c4d5757d4a32011c9ce80558b70e8c4bf09587f2c92bba0d0e61",
+    "prefix": "fcf328c5d756dee2c0e3dc8778ddd377d2bd5b819b7dd9e455bf4fd78e5ad4d9",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::CAUSAL::5": {
+    "contract": "ac3d7cf067e7b01bd78b64e6f6558987ba5d335b5a0644c5c673dab9eb4dcb4c",
+    "prefix": "7ded932ea7ec50251c39e0b20193243342810ff6e6b0913a4b17312613cbf832",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::EXPLANATION": {
+    "contract": "c2739b0e274239c81f1f8df216ff6e489c55b1bc154a25d49025ff12d9420d3b",
+    "prefix": "f357ca80f6e4681ef54d4bf11b6a5075842250322c79e3a966a94982c750402d",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::FE_STRATEGY": {
+    "contract": "30a0611e6ff4f7d2f4dc55cdbdfa395b29ee0dcb5e2705697c239b55f617bce9",
+    "prefix": "b53fae8a4f57622b366720d955a59664c2e51f5583deaea44b0286728b7d53e9",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::FS_STRATEGY": {
+    "contract": "a1cb16b2fd6033e62b11ebde5524728e7fc2d6c5c431e0e8665ed711f95bd002",
+    "prefix": "a4b427290556be3122de02d99502cf968367b5b5e7ff5b5c77b4f6aef8224f44",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::HPO_DEPTH": {
+    "contract": "27c1fc54f8cb1589d010aed1d5a6930f62448f538d9206cdb92ce6a86bc89adc",
+    "prefix": "02cd27d1605f45e8f73a99a45dc7f2cafbd98a5ae3b6e553eeab69f18d33043c",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::IMBALANCE": {
+    "contract": "cfb0f08e3c48c72a7dae6d7fd9c1f9e3b57925ee665b8c6960cfddef93c49949",
+    "prefix": "c18b5aae709d65510ae6043f580ff488a2ff56f135b7bca65af49f94df341333",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::MODEL_FAMILY": {
+    "contract": "69a0654e28bf4d32e89c21c8933dfbcbf58d5fc90a92faa728dba92862ea05ab",
+    "prefix": "71969d4c7def7d2368883e38e88bc2e24eca773d96c54690a0a4d75917dd5b36",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::TRUST_PLAN": {
+    "contract": "24211974f203c1c57390bc4f7e4c27242231c37600488e233c6e12d1f4fdb261",
+    "prefix": "ba85e277c3c6bcb4066ef4f0cc64aa5587554a52bc48a4a0b37d3c888dfd13b1",
+    "split": "UNSEEN"
+   },
+   "diabetes_readmission::VALIDATION": {
+    "contract": "2311e90f58426819ada19f850de1567255bb5f269da776951e8cd72da517340c",
+    "prefix": "ed6a148ae22ba8cff78d06b058f8ab76eb2c1e5a175183b63c05fe6ba70b7eeb",
+    "split": "UNSEEN"
+   },
+   "german_credit::ADV::calibration_conflict": {
+    "contract": "47b3aefa7d43f1f4b089a3f1895ab5fdd89eac4fc8b059a2e78c4f045c27c8ae",
+    "prefix": "942ea4cb0a436fe71d949cac782202c0339e9b7011fe1f2ea2d723f656a1cadc",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::ADV::causal_disagreement": {
+    "contract": "db0ba46c480ae227e9019862d51f9ab4e4e46c76515885330847e7c1f82ad3d3",
+    "prefix": "63140e74387f3db39b2400fa6057a7de5320acf710a74a749004e6d75b0d25e3",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::ADV::cheaper_equivalent": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "prefix": "a9a09a1429f0af8d406698cc55f66b391508c70a1097766f709dbeec4ee25461",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::ADV::data_quality_suspicious": {
+    "contract": "007dddba1e893f37bf755e9ce53e2c8795027a9d7c93dd133b2e627b9967c96a",
+    "prefix": "7115353e77e43b185253b473d14dda203aa47224966f4c61a1d33982c476ce44",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::ADV::governance_block": {
+    "contract": "54a1825df6610c716ab53e38f985a9252699ec7dd528ec13402b9c1d7c1ddc04",
+    "prefix": "f0e4c2eae0e3560a497ab553af1bfa74dc03771ffbc91a1a61eef32eca5cf81d",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::ADV::incomplete_evidence": {
+    "contract": "8f806958accf3aa95d37796b77c907e4bb64e9b81bff7c8494054a66b4106027",
+    "prefix": "d23442af393dbdce87e1b0b0d1b1f3b3e079be1b3264bac95158c7ec4671886c",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::ADV::indistinguishable": {
+    "contract": "da1b9cce928e4e1d230650cfcc93299850009476a3ee2bf8e4aa6146ba92481a",
+    "prefix": "bb8cae94e0f0d99b8cc0c03df37a87744faa883a1556796234451befa15b37a5",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::ADV::variance_uncertain": {
+    "contract": "903410c72f9d8af8ce1fe942dc7670ffabc09bd231e851141293dd603317ae52",
+    "prefix": "f545dfce7e6258b46b7f9abfaba3bb2add32f94cf20ef3925970cdb80781f8b8",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::CALIBRATION": {
+    "contract": "5d7ead1518d9ea0519a635286c4e8677640642b83885f195ecf6bd5463bcd7a0",
+    "prefix": "8ee44c8209e7404c99a7da87cd9bc1499b6f6a920144800be56627675377a93a",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::EXPLANATION": {
+    "contract": "c2739b0e274239c81f1f8df216ff6e489c55b1bc154a25d49025ff12d9420d3b",
+    "prefix": "de4a5309274ea82b76160db6d44f808186913ca23bbf4da413a5f024320f0553",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::FE_STRATEGY": {
+    "contract": "9a6b1023f9b4ec01532d098aa884566e216a576eab8c5c78a69fc35ac8634dae",
+    "prefix": "69f470b5603df87f9846b1a0dadbcb5c5fe30e00d416880f9939f73e361d70fa",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::FS_STRATEGY": {
+    "contract": "04f7f0a18a961b2f72d73b3a61d7948084777a36ec7b24f4e739daa41590d4a9",
+    "prefix": "e432567ab50e891ec690210b8d7339b8a740b910879888ec31dc79ff75943df5",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::HPO_DEPTH": {
+    "contract": "40bd0f9dfed87524c49af879f3f509a5ff1f43aafa366417bae24950ed053195",
+    "prefix": "a296ada8b215ad42e190234e5ab497886c7521d8288f2726f5673b00032b8980",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::IMBALANCE": {
+    "contract": "20fdade1ac2989a79d757249c129e09673d0b327c012451d10baf287110fc8fc",
+    "prefix": "bb5be962815ed4a4b931678fdc89ce4c14c7f9430d465d11be8afa8fa7f1fbfc",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::MODEL_FAMILY": {
+    "contract": "5cdee5d6e5c711f6affa01522f4f089001d09640d47599e7754f584644ba66fd",
+    "prefix": "ccc0824259c99639f4d1d2b0cf1357bfaf425be009e8e3ea9f26830cf5ced763",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::TRUST_PLAN": {
+    "contract": "fcdf6d9b7ae893be2d929e0259229b4c4d6459b2d5be9e16c9c9944d1dadbe66",
+    "prefix": "18b4b5a1e850b813c47d8a73e7d079ff56c26fdc020b847d96722db7777d6a82",
+    "split": "DEVELOPMENT"
+   },
+   "german_credit::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "6feb816aafae2b4ecfb3943b9a5790b54cb35fb931051fb85dbbc1513619294e",
+    "split": "DEVELOPMENT"
+   },
+   "hillstrom_email::CAUSAL::3": {
+    "contract": "419166fc21e9ddcd70f0e39fe39873b35dd56fbe57e644dd9dcb1c44627159d1",
+    "prefix": "70848bf3138e5fb530835060cd2392f5faecf5c44ace9e409956b0f2f281a551",
+    "split": "UNSEEN"
+   },
+   "hillstrom_email::CAUSAL::4": {
+    "contract": "d500c900580077823f20f8b0c96a34faeadd84ea92c379f9bd9e90afbae00500",
+    "prefix": "f7e47dc467d8d2b8333b90f0e89938aa08fe7ea9454398247107d434a7c06cb0",
+    "split": "UNSEEN"
+   },
+   "image_segment::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "0a1031320bdb888986475d846794347991e8f10b87de56755adfef428f628ffc",
+    "split": "UNSEEN"
+   },
+   "image_segment::FE_STRATEGY": {
+    "contract": "aeb61a6b67bbeed6a0c583e9f5de7692bc5b5d2fda9f77a3f321c38b261da8ae",
+    "prefix": "2082f8eb52c5dbb2c98cd8bef9792dabe4bc0734cc71e265b574b9a7003e56c9",
+    "split": "UNSEEN"
+   },
+   "image_segment::FS_STRATEGY": {
+    "contract": "596cbe0df40836838d14405a9d44ed873a3dfc060c592bbda941c1e690c25f92",
+    "prefix": "fa4385e830e5011023a17bd727df0d222e20dad0dd553fafc10c162bce93ee34",
+    "split": "UNSEEN"
+   },
+   "image_segment::HPO_DEPTH": {
+    "contract": "5529e0335db937c70bdf3778ac37784e104ecc0b9e1e2500bcb5ab0ac84eb38f",
+    "prefix": "eb194571b5f765d4b4187b65924a78a62b3314b8a52bcb42574d908b95420608",
+    "split": "UNSEEN"
+   },
+   "image_segment::MODEL_FAMILY": {
+    "contract": "500ee4b52ad7799aa00fafc81a21b7aab7e21e36a8dbac63429502b2f3122678",
+    "prefix": "4d84e723d06abee2a89035eee323de30c848677399dad52794ebadfcf9ad3e24",
+    "split": "UNSEEN"
+   },
+   "image_segment::TRUST_PLAN": {
+    "contract": "f827859bc1535d5d707a6a6863d07e3de9267cef034f0b393476b455ced91782",
+    "prefix": "dc13e2bfad431ca3119a0596da2b593be9d3b407c9ce315415b39a02808ccaa6",
+    "split": "UNSEEN"
+   },
+   "image_segment::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "60b621eb5c45311535a4fd795999accc354783ad23e2ab62f271066858504704",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::ADV::calibration_conflict": {
+    "contract": "e87f85db78b7eae9aea7e28890bb825f47c9302b6e60874e84bb4543581b1100",
+    "prefix": "d1d5eab5accb19e161dd9517a6cef2e71ea8cfe017f05c99a9fd361d8625b5c8",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::ADV::causal_disagreement": {
+    "contract": "db0ba46c480ae227e9019862d51f9ab4e4e46c76515885330847e7c1f82ad3d3",
+    "prefix": "92b11403dde51edfd435a1c7e97456d5a6d7a38b73a0ce0db7b403f0db41bbe8",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::ADV::cheaper_equivalent": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "prefix": "adcac621054170fda3680348257972c1ea662bc13787684c0099e0d71a518778",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::ADV::data_quality_suspicious": {
+    "contract": "9987c9c99da42539bc67e620383ea5c88a6cc8c438b5227c15a5bc6b85680c5e",
+    "prefix": "5ccd1083d2bb23ff758629e0d8d6b5e4acd77da355d48714cfe2154c878cf039",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::ADV::governance_block": {
+    "contract": "b9e68fb8521e3b48bd95a0c0a26eaa2cadaf6d14982cffef28889f12c9648422",
+    "prefix": "ff6127ed457a52fc29e648a87a37e3026d5f68239c841ed0148cd22f6b11f8ca",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::ADV::incomplete_evidence": {
+    "contract": "8f806958accf3aa95d37796b77c907e4bb64e9b81bff7c8494054a66b4106027",
+    "prefix": "ae839f28388577e0fb86c67f398b78a4fb9e6ebf8c9014a6f9fc152a2a7397b0",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::ADV::indistinguishable": {
+    "contract": "24c536011cb491ee5c1855160bc0407240b02944b59998a19079f02a35cd2323",
+    "prefix": "87f729f3333312a141236f52eeb814fafa0d84ffcc20470c077a675194c10e03",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::ADV::variance_uncertain": {
+    "contract": "1cb950c7d774e5674f19169ccc3b8981b7ecc66bfe85e8ba1842cbacc1554e74",
+    "prefix": "186e33c9e0078bc3552e0949fb472fdf8dc72349830972fdb5541b30748126af",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::CALIBRATION": {
+    "contract": "002c1929e2d97b87686312acb8af49743b59209d999995ef9d6e8251629b0df0",
+    "prefix": "fc5a27bb73a5c81581b19c0ac0b1414d89c452e508259bd7c99047915df5b70d",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::CAUSAL::7": {
+    "contract": "419166fc21e9ddcd70f0e39fe39873b35dd56fbe57e644dd9dcb1c44627159d1",
+    "prefix": "7eae62b55ce6f9a89e60e28ece90be8d51f4507d9fc29c2f153eba76cd386902",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "46bdf2c7fe7205788e1bbca670b2fb71f59864cd93d0a4ecf9dc2766e8d5802c",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::FE_STRATEGY": {
+    "contract": "0a38f506231b2b012cefdeccef0f66e534d35a756e59cbd8c04707fa4268f653",
+    "prefix": "56edb1e84c71c60e7b9711325fc7040f1136df51def392d6dca995d486597099",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::FS_STRATEGY": {
+    "contract": "24e981251abb4e39ab172ac47d1ff0b9225f46b87694e630c54cc394903b16c1",
+    "prefix": "d5beaadf9578745fc09116caa3c0e6a1579e99f09372912a07909e0779b09cda",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::HPO_DEPTH": {
+    "contract": "bf9e5d0cd9431d9ae94a8d077d48c184c775c62a8d696784ba577ed53d197897",
+    "prefix": "5076e315f7c112a6c56ac6e0b482fb19dda39df2108de06c709c1f4f50c165da",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::IMBALANCE": {
+    "contract": "2ffa1ccce962de13dea2cb5e57122c92f2bdde0a0400d1188c874328fa88f01a",
+    "prefix": "d3781396c4a050c9a1e5ef7dc90e842b5623378ef54350b0dda5e0b68d0c77f3",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::MODEL_FAMILY": {
+    "contract": "a73a243421ab6e78587ec4626056de9965733c043c803434a6090a7ba3b82d2d",
+    "prefix": "be44976580f87ee2c4a53b31f951fb23f2c12efc9fae40f5d7c8b5366b5b9f76",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::TRUST_PLAN": {
+    "contract": "f827859bc1535d5d707a6a6863d07e3de9267cef034f0b393476b455ced91782",
+    "prefix": "9224da9e80b62f354a153a1f2eb28cad9bc18875f711d11c402e85dd65354817",
+    "split": "UNSEEN"
+   },
+   "iranian_churn::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "b6b2d836b6f82bdd274bf8b55a7dd3174a1b5bdbafbf8e54dc574ca550558c5a",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::CALIBRATION": {
+    "contract": "22e54167330ea9361183bebb868eb75ac04f0dd9fe1a86750038c521959a48d4",
+    "prefix": "60f28e4b13cd19893a93b8679e06f05c1331d64674e2defd131d6bd2ff4b5666",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::CAUSAL::9": {
+    "contract": "ac3d7cf067e7b01bd78b64e6f6558987ba5d335b5a0644c5c673dab9eb4dcb4c",
+    "prefix": "c55757222e5e215a7dd2f487d9bf2862d157422f5b345d62dc30b27e4d03c265",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "ea6fb83ac39e7954dc2bed388a892efbae2fed7509998a2fbed161d3c42e1339",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::FE_STRATEGY": {
+    "contract": "d5be3e28e9b579bd7cd147663e1c7bb481786dec79104aaa339d353addb4d0c0",
+    "prefix": "7b5b2acb3305e1c375ac0e58c52d4feb0bc4e861a65c8428467673a2795ad7d6",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::FS_STRATEGY": {
+    "contract": "1f0a3b5b40d4d7bda901abfc2975db5e455f50761f3ad0f52a5e518ed475160b",
+    "prefix": "cfcf26d0145d3d954e83d34e343298006573ddb02fa0dfc1d434f1aba50a11b9",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::HPO_DEPTH": {
+    "contract": "5529e0335db937c70bdf3778ac37784e104ecc0b9e1e2500bcb5ab0ac84eb38f",
+    "prefix": "5c2b63eca16c4ce2b339646ed88a47acd13f4fef9dd6cccdd34abbb35cc0ef9e",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::IMBALANCE": {
+    "contract": "a0a570fb1086a9dfc44191f158a8d773abe7611e6debf4bca0bdf5cdbf7bd89a",
+    "prefix": "50ea21a6f6b2ae715fb8ecb6d6cfd43fd0c8f7a020b1c866ecf673f621dd9812",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::MODEL_FAMILY": {
+    "contract": "1689716ca2eb681c3817ca042e5246ebf3f0c5bbc42685e6a8815f1d529ec655",
+    "prefix": "f2f9a72954d2b25b05c086646c8d8334ec69cf55f3367d075393bbc823be9e29",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::TRUST_PLAN": {
+    "contract": "fcdf6d9b7ae893be2d929e0259229b4c4d6459b2d5be9e16c9c9944d1dadbe66",
+    "prefix": "54320cd841ba7d0e1bc12234e3a2b4fcc8f5a9545c238d99804eed82d1ffe874",
+    "split": "UNSEEN"
+   },
+   "online_shoppers::VALIDATION": {
+    "contract": "0c7843a2d830eb3ec89e0fabcc8eafbc138cc5fed171fae40856933a27856213",
+    "prefix": "cef68a5d9f9194cca8e613f895b5c576a844f2396211dd60743e016b26c5cb7d",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::ADV::calibration_conflict": {
+    "contract": "e87f85db78b7eae9aea7e28890bb825f47c9302b6e60874e84bb4543581b1100",
+    "prefix": "ef6b50d259a1925f621d7d8f0a3916f38cdbf736f1ba8eef4cb4c23defb89e74",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::ADV::causal_disagreement": {
+    "contract": "db0ba46c480ae227e9019862d51f9ab4e4e46c76515885330847e7c1f82ad3d3",
+    "prefix": "ec8344a1b9ff0d31a36af0285e4edbb0cb362eac8d3f7235cc3683170e21fa5f",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::ADV::cheaper_equivalent": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "prefix": "e267a37297e2bb5c859237d96bd66403e8a84211ca5b740ea38a6eb5cc9fee7c",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::ADV::data_quality_suspicious": {
+    "contract": "07cf99b3e14b4c311c775c760b1b14d9173b39be444f14f3f0380f4e5bf9f698",
+    "prefix": "a30006146233031b99ffbfb3a8a76111c94e84205daf379fd77b00cee3819be1",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::ADV::governance_block": {
+    "contract": "b9e68fb8521e3b48bd95a0c0a26eaa2cadaf6d14982cffef28889f12c9648422",
+    "prefix": "c15238c4dd291c37fa8d114d506e719dfc6f88ea08eba6b0a3989d72e5b54201",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::ADV::incomplete_evidence": {
+    "contract": "8f806958accf3aa95d37796b77c907e4bb64e9b81bff7c8494054a66b4106027",
+    "prefix": "8abe9a9bd064183ca1125fe608ce9398a9d3312c786cb61a8e766c873b83ddbb",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::ADV::indistinguishable": {
+    "contract": "754408b30d85e3f0f5fa002f832174a16fac294028e26e1b6452239a27817546",
+    "prefix": "348bfa6b39e60bb5ab11e698926704057225074f1f428ac8f2dfe0ea74674b7b",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::ADV::variance_uncertain": {
+    "contract": "396827b005bb481240378a796536822e7fadb1745f73202916fb83c28e3983d1",
+    "prefix": "e48c196c44618feb2b34bce5a4551e9cfbd6c27db9d7e9148dee73c181ea790a",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::CALIBRATION": {
+    "contract": "8f927d0f24644731e7cc377331eb8d89cab767c7ee8dc86aed018c51639d64ec",
+    "prefix": "dcee0afe870cb8e6edddd19fea6a9863ab5f436a758ce12d53a62f76022de9a9",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::CAUSAL::6": {
+    "contract": "d500c900580077823f20f8b0c96a34faeadd84ea92c379f9bd9e90afbae00500",
+    "prefix": "1377b9380726850b620d316e0ed21f2e3cedf835588108991cc63e1dcb2b289c",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::EXPLANATION": {
+    "contract": "c2739b0e274239c81f1f8df216ff6e489c55b1bc154a25d49025ff12d9420d3b",
+    "prefix": "9f220c8ac7de27d672d03a433ff8671b5627ac6b877236d0212600e1929c4cb7",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::FE_STRATEGY": {
+    "contract": "2fb8b3ee442375bcad48505d0b6d6ecddafee69096ec9c6c91c8e9f1389621f1",
+    "prefix": "4c91799db78be493d88cb02192769745c124682cabb39b919ab1969684f8126c",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::FS_STRATEGY": {
+    "contract": "8896f7002fbf431badba5afe0be9a62ddd18b0e57580b9ce3b41b520123cd069",
+    "prefix": "1eb8b28a5e8cbaaf77d40852cf0c5d97b3586ad019b6499bd3957fc82c488533",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::HPO_DEPTH": {
+    "contract": "4c83eeddf4c3ac6c73c63d68d6b5282a631b78676324509dfb35eab9779c9070",
+    "prefix": "9f34c524f2d955b3db70c1c68dc1a1c39133e3159cb07ad4184824c3db523d36",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::IMBALANCE": {
+    "contract": "357682d09072c3cc2b6078f2617673bfb9bdda602fd9bea8e50c1b3560dc5f63",
+    "prefix": "8952256b1255f859d7bdaf6dfeeec64bfb88e5b7506916ace20de2e3e8e5ed02",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::MODEL_FAMILY": {
+    "contract": "9c9a819985da3004ee9f0f360ae3dae00a6731c5c5a7d1da54b220717cef1b30",
+    "prefix": "0ac1ad0e442f92f9bb896572d54b308a20277905a5454ddf8d8d23eece318b72",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::TRUST_PLAN": {
+    "contract": "7f0f77f147c1e3c15a187776f0583d65168b3d1f5f176d7e70d631835291ac41",
+    "prefix": "4c1bda232fee7401d54e4d727ef13db8c5bd1fe6a8a400c6e95315b369a0c4ee",
+    "split": "UNSEEN"
+   },
+   "taiwan_default::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "2281ead2fb2c6ed37b602c16444cbb2c872c5963c3c55999637db2099193ca85",
+    "split": "UNSEEN"
+   },
+   "telco_churn::ADV::calibration_conflict": {
+    "contract": "0b94dfd07bbd88fe90307830a7bcfadbe30404506eca6516abffad0cf74c36e3",
+    "prefix": "7642b6c4ad3e0a04cd42a614f8e8d99a9ac58214fa6943052b615a72adb5abe7",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::ADV::causal_disagreement": {
+    "contract": "db0ba46c480ae227e9019862d51f9ab4e4e46c76515885330847e7c1f82ad3d3",
+    "prefix": "f053f649dc8be9a0f315ace92ae8ba189508c67e81ee41b2495cbdb3c5a69247",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::ADV::cheaper_equivalent": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "prefix": "9a0620f91dfc495fd3dfbbea4a6d5112c773ff7a3d5a387abea3cfa4313d5510",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::ADV::data_quality_suspicious": {
+    "contract": "007dddba1e893f37bf755e9ce53e2c8795027a9d7c93dd133b2e627b9967c96a",
+    "prefix": "168a46f8f9f78fd6e2acac055cfde7d6af4ea9dcd2f22a0013f5760253b5cf18",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::ADV::governance_block": {
+    "contract": "11f418a50f91e6932198ea291edfe882fc537c343dd0ed1cb0c2b2f6c3151c95",
+    "prefix": "e5e676a16b076cb6ff53e2eb7f5a6864bd8d656a4e5d548ef8157f102a4806c7",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::ADV::incomplete_evidence": {
+    "contract": "8f806958accf3aa95d37796b77c907e4bb64e9b81bff7c8494054a66b4106027",
+    "prefix": "c0fa900898b66e876a5dfbb7c5fbd7d3eb597e2d661c2a4905d58bda9fd043b7",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::ADV::indistinguishable": {
+    "contract": "abc65bc1888af8c819fb749a062924331a6ee267132d838e65a587fde40d28ea",
+    "prefix": "0f49adad737d5a37d9e29f9b9f9ef2ed8a64cd8d2e8835507b5e533cd3f32cfc",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::ADV::variance_uncertain": {
+    "contract": "3c817918c559bb82d860cab038853ade8230f3220d3c5a0e1199c5da1aa70553",
+    "prefix": "5b0614f6126c224573e8bda2fc87c2a781e83b169203d3798e6feb2477537a43",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::CALIBRATION": {
+    "contract": "843823be05db0c47d26edf77388fb1e9a873eaed0d90180d496772866eb8079e",
+    "prefix": "c3804c9f5d0c085b4c9090ecf0011d76da1dee890631206eca504715708bffc0",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::CAUSAL::0": {
+    "contract": "d500c900580077823f20f8b0c96a34faeadd84ea92c379f9bd9e90afbae00500",
+    "prefix": "db43c185ca62d05d7491be7539a75e5d810eaf0f22139991e75599a4eb83e649",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::CAUSAL::1": {
+    "contract": "ac3d7cf067e7b01bd78b64e6f6558987ba5d335b5a0644c5c673dab9eb4dcb4c",
+    "prefix": "4511c45b383ffd4a4fd8050960a16f8abf8d383125ffaa7760dc4fca12763017",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "e17d72c35ecbc3922636b00f55781304ba986c81479d9ea499bc5b259c992fd6",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::FE_STRATEGY": {
+    "contract": "964bd7f125c8412d2acc7a25c3132eb61e4d54321a497914afdc0ad38b6afa14",
+    "prefix": "6e1aca2c75ae6473a841f83319c09e29e139df48635c7f93778162d8b0f767ca",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::FS_STRATEGY": {
+    "contract": "8ae6aa29a73451708f7fad164ec8b84be5639d362dc45140663332e509f66f87",
+    "prefix": "8054ae379b450723804689778de090b54f66a280dc15ccffb51c282ec3067af0",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::HPO_DEPTH": {
+    "contract": "27c1fc54f8cb1589d010aed1d5a6930f62448f538d9206cdb92ce6a86bc89adc",
+    "prefix": "0423152faaaed4abf25c6df73f6f307c542a805765fef14e0cfacdf21671bcc5",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::IMBALANCE": {
+    "contract": "209b200e08283b750b980389dac09678f159cc3552953c400520e5326ea4f791",
+    "prefix": "88f3a3d1323f89e9a65178d47316edbf7f58b49c97572f131e0b95ecd9690667",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::MODEL_FAMILY": {
+    "contract": "d812825b95aa09676209e0892900df78531870d927a12496258e1565da9a8c75",
+    "prefix": "b0fe88a3761fe34a3e76fa28c2f2b88bf17dcb3de3e3f36e0a11746e0319085f",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::TRUST_PLAN": {
+    "contract": "7f0f77f147c1e3c15a187776f0583d65168b3d1f5f176d7e70d631835291ac41",
+    "prefix": "19b4c7fd46dfdc65da92a14a5e610eeaaba4d67301665128d60c3fe2554aa78c",
+    "split": "DEVELOPMENT"
+   },
+   "telco_churn::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "b92285a48b6ec88decc441bd7454bbd610c4993db19fd53fa1b6a75a36b588d4",
+    "split": "DEVELOPMENT"
+   },
+   "thyroid_sick::CALIBRATION": {
+    "contract": "2fb63b4d978abf3677c1c1a3352300e3980f85ef31c28899320f5d846e6eae25",
+    "prefix": "22e661f1035013d0b90bc2d6549ba1e82a3f3c6e993567c2b6f9a9138ad10add",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "2de644d6358621e62385e4cab5aef6e4f611119e75b80e4d4e39a03ae02d5f9d",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::FE_STRATEGY": {
+    "contract": "32b49e6235a71bab87d51dde3b4a4e3fad363e1c4614b26da00a16d420c4b0c1",
+    "prefix": "e1e132b1a2d73079fffe3f713f7fa26fa8a1da7a8f2b39d7d00557dc8d3b20ed",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::FS_STRATEGY": {
+    "contract": "f1aaa558f428e0812c487028f22130159a7d6ca3d8b0dcf4e7c1b1c0880864d8",
+    "prefix": "427078f1feaedcb12f1f6332534bafb6cbb17453a1215385ef197b6845b3856f",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::HPO_DEPTH": {
+    "contract": "5529e0335db937c70bdf3778ac37784e104ecc0b9e1e2500bcb5ab0ac84eb38f",
+    "prefix": "9f39b041107c6d9bd386248c5c8b3af9cfdb35cc781eb927b544a0e0a1017af3",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::IMBALANCE": {
+    "contract": "8eef4f25bcd3f1ff7a496d4da286642342095b51a1adbb59af8735a59a3350ab",
+    "prefix": "df4980d244f41c05eaf4b53d8ca7fa319e95d02871f89e6f0cc5c6c8ba70abb6",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::MODEL_FAMILY": {
+    "contract": "6338df1dba8e0f4430289bde980bb1e6fe6470facc190b34cdd26abda850a555",
+    "prefix": "449287e1e8a96650bbc2343145ffa9427ee4e9d84a7785f85aa40c607b5348af",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::TRUST_PLAN": {
+    "contract": "fcdf6d9b7ae893be2d929e0259229b4c4d6459b2d5be9e16c9c9944d1dadbe66",
+    "prefix": "c96c83e5d55ddd45d059aca57284b72782545c4a9913baa5c160503c4ec164d8",
+    "split": "UNSEEN"
+   },
+   "thyroid_sick::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "25dfd71a49959a127510587f11e794b633ca1c3c67ff1756ad4a0aad4632f170",
+    "split": "UNSEEN"
+   },
+   "vehicle_silhouettes::EXPLANATION": {
+    "contract": "7e4898829cc5208dc684560da5b126e9400843bfd26fbcded1107912151deba7",
+    "prefix": "3101787cd5f5c60159ddb5339152c4571057943fe783bd7c63a12ab25d56515f",
+    "split": "DEVELOPMENT"
+   },
+   "vehicle_silhouettes::FE_STRATEGY": {
+    "contract": "436d11592c7a30455b4afcc83197cd4dee0cd6e2881f973e97c7ef773e783ca7",
+    "prefix": "a773a7e362475fe36442717d0721ecb936478453c18beabcdde51f6522abefff",
+    "split": "DEVELOPMENT"
+   },
+   "vehicle_silhouettes::FS_STRATEGY": {
+    "contract": "5a771bf5dd26d028aadc401f9c29a8bf55901b3223ae45a595b6d72a331621c9",
+    "prefix": "813129dab9462b45e32dae176bfbe6dd7c42f0f4f38c8d33c9bff78caf02694b",
+    "split": "DEVELOPMENT"
+   },
+   "vehicle_silhouettes::HPO_DEPTH": {
+    "contract": "27c1fc54f8cb1589d010aed1d5a6930f62448f538d9206cdb92ce6a86bc89adc",
+    "prefix": "eda3210a6c01300f3f87ad29fbacf4e67a6bdf4da73cc694f8a9df6ead1ca42b",
+    "split": "DEVELOPMENT"
+   },
+   "vehicle_silhouettes::MODEL_FAMILY": {
+    "contract": "feb3a5dff687aaed03bbf7f6c82a4f9ee52592802e4847ce6cd6228f1bcb3a20",
+    "prefix": "c7488fa56b180aa1a27a510e2dde61c7f0d3b453cc2c94b6adbe98d8b46e956c",
+    "split": "DEVELOPMENT"
+   },
+   "vehicle_silhouettes::TRUST_PLAN": {
+    "contract": "24211974f203c1c57390bc4f7e4c27242231c37600488e233c6e12d1f4fdb261",
+    "prefix": "06530bc3e8f7b84d52280ccb2128f6caed873b19b459e30199e6eb22eba7e32a",
+    "split": "DEVELOPMENT"
+   },
+   "vehicle_silhouettes::VALIDATION": {
+    "contract": "89a3ce652ff673b7b0d118d5877590bf621c0e5e434f3f961b3d4b8f3949a294",
+    "prefix": "2b0cd13df252bdd87905a7af09f96e08c86440a882c7a356fd91e75fa3189619",
+    "split": "DEVELOPMENT"
+   }
+  },
+  "system": "031b7bf5fc6c1df0d1623f0d5fdb6d8f8b4859ee27be8c50f1972935be31ddc4"
+ }
+}
