@@ -16,12 +16,13 @@ seeded and may change behind the same id.
 
 ## Setup
 
-Python 3.12 (the runs used 3.12.12) and the pinned environment:
+Python 3.12.12 exactly (the Study A and B freeze records hold the interpreter version, so another patch release
+fails `freeze --verify` with drift in `python`) and the pinned environment:
 
 ```bash
-uv venv --python 3.12 .venv && source .venv/bin/activate
+uv venv --python 3.12.12 .venv && source .venv/bin/activate
 uv pip install -r requirements-lock.txt
-# without uv: python3.12 -m venv .venv && . .venv/bin/activate && pip install -r requirements-lock.txt
+# without uv, from a Python 3.12.12 interpreter: python -m venv .venv && . .venv/bin/activate && pip install -r requirements-lock.txt
 ```
 
 The harness runs from `harness/` as the package `rs2610` (`cd harness && python -m rs2610.<module>`); the tools in

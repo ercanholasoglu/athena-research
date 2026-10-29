@@ -57,7 +57,7 @@ templates/               sources of the rendered READMEs and docs
 ## Reproduce
 
 ```bash
-uv venv --python 3.12 .venv && source .venv/bin/activate
+uv venv --python 3.12.12 .venv && source .venv/bin/activate
 uv pip install -r requirements-lock.txt
 python tools/prepare_data.py        # download public datasets, verify every frozen hash
 bash tools/reproduce.sh             # freeze verification, statistics, figures, reports, traces, audit
