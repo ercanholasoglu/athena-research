@@ -1,0 +1,20 @@
+{
+ "source_repository": "Athena (private)",
+ "source_commit": "e4bf6f2c3",
+ "sha256": {
+  "docs/research/council-ablation/evidence/answers.jsonl": "e5c4b435eead4a2f2fca6eb8629d435d6636952938c661c756a0a3e0fc02fbac",
+  "docs/research/council-ablation/evidence/judge.jsonl": "68fd09d259ed74b47504a765eb709e6fa4a9de9a3c797f835086d2701bbb668f",
+  "docs/research/council-ablation/evidence/answers_budget300_archive.jsonl": "20f2031c11f5e853b47888ec3ad148b762ef4500d6d4cbc5c37955695adeab8b",
+  "docs/research/council-ablation/evidence/results.json": "fdc32fbc186d445eaa74e0ce737c767321315fe2e1281ddf45c2e9742e6bb5b2",
+  "private:athena/decision_engine/evidence/ablation-2026-10-20.json": "6e6ef84cd31571c628d22a1c5de42df40446eff1d9c53d01c6085a04867c326c",
+  "private:athena/decision_engine/evidence/jev-ablation-2026-10-21.json": "51a565917bfdb4ccaa37238d680866063fb84fe20362c6b1ee37e537432e5a32",
+  "private:athena/decision_engine/evidence/jev-semantics-ablation-2026-10-21.json": "4fb9da1822774e0c44ef288bc39e1ff7d8b2945f0c5ef6cf6bf12895b89e1190",
+  "docs/audit/athena-semantic-commercial-closure-pass06-10-report.md": "766fafca8507941172ea29bed3730bc86f07ec47c1ab06b723cefec5c39db96b",
+  "private:athena/canonical/reasoning_methods.py": "0f93120903ec495ba28f89ba28c77731d71ac2f9ebea817429f6b072bd1be727",
+  "scripts/research/council/cases.py": "7c488dd95fba79656e5999b9b637a0a1fc587840a165ae58e8e4f8af77f1f0ef",
+  "scripts/research/council/run.py": "4627ae75a13588b46d41cff851f6b025d2de5866fb91d3c4492f576b87316f1e",
+  "docs/research/council-ablation/PREREGISTRATION.md": "5502459a32e818cd48003e79219ac637d27620575860586412551df3169da53a",
+  "docs/research/council-ablation/AMENDMENTS.md": "a124ba144fc86c9edf70156d433ab562ac4138b71b585c49352778f2464007db",
+  "docs/research/council-ablation/RESULTS.md": "f945e3159bb2923a1edd8ec318cd3b90080747e857582d63f8468018f94f6c06"
+ }
+}

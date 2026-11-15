@@ -33,8 +33,12 @@ step "facts and reports"
   && "$PY" -m rs2610.replication.make_facts && "$PY" -m rs2610.replication.make_excerpts && "$PY" -m rs2610.replication.make_report)
 step "figures added for the public repository"
 "$PY" tools/replication_figures.py
-step "JEV facts, traces, rendered docs"
+step "JEV and council facts; council replay, evidence map and methodology; traces, rendered docs"
 "$PY" research/jev/tools/derive_facts.py --check
+"$PY" research/council-ablation/tools/derive_facts.py --check
+"$PY" research/council-ablation/tools/replay_analysis.py
+"$PY" research/council-ablation/tools/check_evidence_map.py
+"$PY" research/council-ablation/tools/render_methodology.py
 "$PY" tools/make_trace.py --check
 "$PY" tools/render_docs.py --check
 step "public-release audit"

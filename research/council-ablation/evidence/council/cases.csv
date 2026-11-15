@@ -1,0 +1,111 @@
+case_id,family,difficulty,consequence,split,answer,permissive,source
+feature_screening:00,feature_screening,easy,normal,calibration,LEAKAGE,OK,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+feature_screening:01,feature_screening,easy,normal,evaluation,LEAKAGE,OK,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+feature_screening:02,feature_screening,easy,normal,evaluation,LEAKAGE,OK,UCI Bank Marketing attribute information
+feature_screening:03,feature_screening,easy,normal,calibration,LEAKAGE,OK,titanic3 variable descriptions
+feature_screening:04,feature_screening,easy,normal,evaluation,LEAKAGE,OK,titanic3 variable descriptions
+feature_screening:05,feature_screening,easy,high,evaluation,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:06,feature_screening,easy,high,calibration,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:07,feature_screening,easy,high,evaluation,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:08,feature_screening,easy,high,evaluation,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:09,feature_screening,easy,normal,calibration,LEAKAGE,OK,constructed: label follows from the stated target definition
+feature_screening:10,feature_screening,adversarial,normal,evaluation,LEAKAGE,OK,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+feature_screening:11,feature_screening,adversarial,normal,evaluation,LEAKAGE,OK,UCI Bank Marketing attribute information
+feature_screening:12,feature_screening,adversarial,high,calibration,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:13,feature_screening,adversarial,high,evaluation,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:14,feature_screening,adversarial,high,evaluation,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:15,feature_screening,adversarial,high,calibration,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:16,feature_screening,adversarial,high,evaluation,LEAKAGE,OK,Lending Club LoanStats data dictionary
+feature_screening:17,feature_screening,adversarial,normal,evaluation,LEAKAGE,OK,titanic3 variable descriptions
+feature_screening:18,feature_screening,adversarial,normal,calibration,LEAKAGE,OK,constructed: label follows from the stated target definition
+feature_screening:19,feature_screening,easy,high,evaluation,PROXY,OK,Statlog German Credit attribute documentation
+feature_screening:20,feature_screening,easy,high,evaluation,PROXY,OK,Statlog German Credit attribute documentation
+feature_screening:21,feature_screening,easy,high,calibration,PROXY,OK,UCI Adult attribute information
+feature_screening:22,feature_screening,easy,high,evaluation,PROXY,OK,UCI Adult attribute information
+feature_screening:23,feature_screening,easy,high,evaluation,PROXY,OK,UCI Adult attribute information
+feature_screening:24,feature_screening,easy,high,calibration,PROXY,OK,UCI Adult attribute information
+feature_screening:25,feature_screening,easy,high,evaluation,PROXY,OK,Lending Club LoanStats data dictionary
+feature_screening:26,feature_screening,easy,high,evaluation,PROXY,OK,constructed: protected-attribute proxies per EEOC guidance
+feature_screening:27,feature_screening,easy,high,calibration,PROXY,OK,constructed: protected-attribute proxies per EEOC guidance
+feature_screening:28,feature_screening,easy,high,evaluation,PROXY,OK,Statlog German Credit attribute documentation
+feature_screening:29,feature_screening,ambiguous,normal,evaluation,REVIEW,OK,constructed: label follows from the stated target definition
+feature_screening:30,feature_screening,ambiguous,high,calibration,REVIEW,OK,constructed: label follows from the stated target definition
+feature_screening:31,feature_screening,ambiguous,normal,evaluation,REVIEW,OK,constructed: label follows from the stated target definition
+feature_screening:32,feature_screening,ambiguous,normal,evaluation,REVIEW,OK,constructed: label follows from the stated target definition
+feature_screening:33,feature_screening,ambiguous,high,calibration,REVIEW,OK,constructed: label follows from the stated target definition
+feature_screening:34,feature_screening,ambiguous,high,evaluation,REVIEW,OK,constructed: label follows from the stated target definition
+feature_screening:35,feature_screening,easy,normal,evaluation,OK,OK,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+feature_screening:36,feature_screening,easy,normal,calibration,OK,OK,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+feature_screening:37,feature_screening,easy,normal,evaluation,OK,OK,UCI Bank Marketing attribute information
+feature_screening:38,feature_screening,easy,normal,evaluation,OK,OK,titanic3 variable descriptions
+feature_screening:39,feature_screening,easy,high,calibration,OK,OK,Lending Club LoanStats data dictionary
+feature_screening:40,feature_screening,easy,high,evaluation,OK,OK,Lending Club LoanStats data dictionary
+feature_screening:41,feature_screening,easy,high,evaluation,OK,OK,Statlog German Credit attribute documentation
+feature_screening:42,feature_screening,easy,normal,calibration,OK,OK,IBM Telco churn sample dataset
+feature_screening:43,feature_screening,adversarial,normal,evaluation,OK,OK,UCI Bank Marketing attribute information
+feature_screening:44,feature_screening,adversarial,normal,evaluation,OK,OK,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+feature_screening:45,feature_screening,adversarial,high,calibration,OK,OK,Lending Club LoanStats data dictionary
+feature_screening:46,feature_screening,adversarial,high,evaluation,OK,OK,constructed: label follows from the stated target definition
+feature_screening:47,feature_screening,adversarial,high,evaluation,OK,OK,constructed: label follows from the stated target definition
+feature_screening:48,feature_screening,adversarial,high,calibration,OK,OK,UCI Adult attribute information
+feature_screening:49,feature_screening,adversarial,normal,evaluation,OK,OK,constructed: label follows from the stated target definition
+feature_screening:50,feature_screening,adversarial,normal,evaluation,OK,OK,titanic3 variable descriptions
+feature_screening:51,feature_screening,adversarial,normal,calibration,OK,OK,UCI Diabetes 130-US feature list
+feature_screening:52,feature_screening,adversarial,normal,evaluation,OK,OK,constructed: label follows from the stated target definition
+target_interpretation:00,target_interpretation,easy,normal,calibration,A,,IBM Telco churn sample dataset
+target_interpretation:01,target_interpretation,easy,normal,evaluation,A,,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+target_interpretation:02,target_interpretation,easy,normal,evaluation,B,,UCI Bank Marketing attribute information
+target_interpretation:03,target_interpretation,adversarial,high,calibration,B,,Lending Club LoanStats data dictionary
+target_interpretation:04,target_interpretation,ambiguous,normal,evaluation,D,A|B|C,constructed: the answer follows from the facts and rules stated in the case
+target_interpretation:05,target_interpretation,adversarial,normal,evaluation,B,,UCI Diabetes 130-US feature list
+target_interpretation:06,target_interpretation,adversarial,normal,calibration,A,,constructed: the answer follows from the facts and rules stated in the case
+target_interpretation:07,target_interpretation,ambiguous,high,evaluation,C,A|B,constructed: the answer follows from the facts and rules stated in the case
+missing_source:00,missing_source,easy,normal,calibration,A,D,IBM Telco churn sample dataset
+missing_source:01,missing_source,easy,high,evaluation,A,D,constructed: the answer follows from the facts and rules stated in the case
+missing_source:02,missing_source,adversarial,normal,evaluation,A,B|D,constructed: the answer follows from the facts and rules stated in the case
+missing_source:03,missing_source,easy,normal,calibration,A,B|D,UCI Diabetes 130-US feature list
+missing_source:04,missing_source,adversarial,normal,evaluation,A,,constructed: the answer follows from the facts and rules stated in the case
+missing_source:05,missing_source,easy,high,evaluation,A,B|D,constructed: the answer follows from the facts and rules stated in the case
+policy_conflict:00,policy_conflict,easy,high,calibration,CONFLICT,NO_CONFLICT,constructed: the answer follows from the facts and rules stated in the case
+policy_conflict:01,policy_conflict,adversarial,high,evaluation,NO_CONFLICT,NO_CONFLICT,constructed: the answer follows from the facts and rules stated in the case
+policy_conflict:02,policy_conflict,adversarial,high,evaluation,CONFLICT,NO_CONFLICT,Statlog German Credit attribute documentation
+policy_conflict:03,policy_conflict,easy,high,calibration,CONFLICT,NO_CONFLICT,constructed: the answer follows from the facts and rules stated in the case
+policy_conflict:04,policy_conflict,easy,high,evaluation,NO_CONFLICT,NO_CONFLICT,constructed: the answer follows from the facts and rules stated in the case
+policy_conflict:05,policy_conflict,adversarial,high,evaluation,CONFLICT,NO_CONFLICT,constructed: the answer follows from the facts and rules stated in the case
+policy_conflict:06,policy_conflict,ambiguous,high,calibration,REVIEW,NO_CONFLICT,constructed: the answer follows from the facts and rules stated in the case
+policy_conflict:07,policy_conflict,ambiguous,high,evaluation,REVIEW,NO_CONFLICT,constructed: the answer follows from the facts and rules stated in the case
+model_selection:00,model_selection,easy,normal,calibration,B,,constructed: the answer follows from the facts and rules stated in the case
+model_selection:01,model_selection,adversarial,high,evaluation,B,A,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+model_selection:02,model_selection,adversarial,normal,evaluation,A,B,constructed: the answer follows from the facts and rules stated in the case
+model_selection:03,model_selection,adversarial,high,calibration,B,A,Lending Club LoanStats data dictionary
+model_selection:04,model_selection,ambiguous,normal,evaluation,NONE,A|B,constructed: the answer follows from the facts and rules stated in the case
+model_selection:05,model_selection,adversarial,normal,evaluation,C,A,constructed: the answer follows from the facts and rules stated in the case
+model_selection:06,model_selection,adversarial,normal,calibration,B,,constructed: the answer follows from the facts and rules stated in the case
+model_selection:07,model_selection,easy,normal,evaluation,B,A,constructed: the answer follows from the facts and rules stated in the case
+validation_interpretation:00,validation_interpretation,adversarial,high,calibration,REVIEW_REQUIRED,VERIFIED,Athena Mission 1 production finding (PaySim)
+validation_interpretation:01,validation_interpretation,easy,high,evaluation,CONTRADICTED,VERIFIED,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+validation_interpretation:02,validation_interpretation,easy,normal,evaluation,VERIFIED,VERIFIED,constructed: the answer follows from the facts and rules stated in the case
+validation_interpretation:03,validation_interpretation,adversarial,normal,calibration,CONTRADICTED,VERIFIED,constructed: the answer follows from the facts and rules stated in the case
+validation_interpretation:04,validation_interpretation,easy,normal,evaluation,CONTRADICTED,VERIFIED,constructed: the answer follows from the facts and rules stated in the case
+validation_interpretation:05,validation_interpretation,adversarial,normal,evaluation,VERIFIED,VERIFIED,constructed: the answer follows from the facts and rules stated in the case
+validation_interpretation:06,validation_interpretation,easy,normal,calibration,VERIFIED,VERIFIED,constructed: the answer follows from the facts and rules stated in the case
+validation_interpretation:07,validation_interpretation,adversarial,normal,evaluation,CONTRADICTED,VERIFIED,constructed: the answer follows from the facts and rules stated in the case
+xai_interpretation:00,xai_interpretation,easy,normal,calibration,B,A,IBM Telco churn sample dataset
+xai_interpretation:01,xai_interpretation,adversarial,high,evaluation,B,A,Lending Club LoanStats data dictionary
+xai_interpretation:02,xai_interpretation,adversarial,normal,evaluation,B,A,constructed: the answer follows from the facts and rules stated in the case
+xai_interpretation:03,xai_interpretation,adversarial,normal,calibration,B,A|C,IBM Telco churn sample dataset
+xai_interpretation:04,xai_interpretation,easy,normal,evaluation,A,B,IBM Telco churn sample dataset
+xai_interpretation:05,xai_interpretation,ambiguous,high,evaluation,B,A,constructed: the answer follows from the facts and rules stated in the case
+fe_suggestion:00,fe_suggestion,easy,normal,calibration,OK,OK,constructed: the answer follows from the facts and rules stated in the case
+fe_suggestion:01,fe_suggestion,adversarial,normal,evaluation,LEAKAGE,OK,"PaySim data dictionary (Lopez-Rojas et al., Kaggle 'Synthetic Financial Datasets For Fraud Detection')"
+fe_suggestion:02,fe_suggestion,easy,high,evaluation,OK,OK,constructed: the answer follows from the facts and rules stated in the case
+fe_suggestion:03,fe_suggestion,adversarial,normal,calibration,LEAKAGE,OK,constructed: the answer follows from the facts and rules stated in the case
+fe_suggestion:04,fe_suggestion,adversarial,high,evaluation,PROXY,OK,constructed: the answer follows from the facts and rules stated in the case
+fe_suggestion:05,fe_suggestion,easy,normal,evaluation,LEAKAGE,OK,constructed: the answer follows from the facts and rules stated in the case
+fe_suggestion:06,fe_suggestion,ambiguous,high,calibration,REVIEW,OK,constructed: the answer follows from the facts and rules stated in the case
+high_consequence:00,high_consequence,easy,high,calibration,DEPLOY,DEPLOY,constructed: the answer follows from the facts and rules stated in the case
+high_consequence:01,high_consequence,adversarial,high,evaluation,HOLD_FOR_REVIEW,DEPLOY,Athena Mission 1 production finding (PaySim)
+high_consequence:02,high_consequence,easy,high,evaluation,REJECT,DEPLOY,Statlog German Credit attribute documentation
+high_consequence:03,high_consequence,easy,normal,calibration,DEPLOY,DEPLOY,constructed: the answer follows from the facts and rules stated in the case
+high_consequence:04,high_consequence,adversarial,high,evaluation,HOLD_FOR_REVIEW,DEPLOY,constructed: the answer follows from the facts and rules stated in the case
+high_consequence:05,high_consequence,adversarial,high,evaluation,REJECT,DEPLOY,constructed: the answer follows from the facts and rules stated in the case

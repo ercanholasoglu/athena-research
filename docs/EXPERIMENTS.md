@@ -1,6 +1,6 @@
 # Experiments
 
-Five experiments, in the order they ran. Each section says what was varied, what was held fixed, how it was scored and
+Six experiments, in the order they ran. Each section says what was varied, what was held fixed, how it was scored and
 where the full material is. Numbers are point estimates on held-out data; intervals and tests are in the study READMEs
 and the two reports.
 
@@ -118,3 +118,19 @@ and the two reports.
   - **Invented features were safer, not more useful.** Hosted models' features were executable and rarely leaky, but
     no more useful than the 7B model's.
 - **Material.** [research/semantic-context/frontier-replication/](../research/semantic-context/frontier-replication/).
+
+## Council ablation (frozen 2026-11-04): model councils on ML-governance questions
+
+- **Question.** Does a council of models beat one strong model on closed-answer ML-governance questions, and does
+  measured error diversity predict when it does?
+- **Cases.** 110 cases in nine families, 39 for calibration and
+  71 held out. Ground truth comes from public dataset documentation or a stated rule.
+- **Conditions.** A single model; B1 same-provider roles; B2 same-provider sampling; C multi-provider;
+  D characteristic-diverse; E judge; F adaptive routing.
+- **Result.** The single model (`claude-sonnet-5-5`) answered 70 of
+  71. 2 councils tied it, 4 scored
+  69, and none beat it. All 6 council conditions are
+  `REJECTED_ON_THIS_BENCHMARK`. The judge cost 2.5× the single model per decision.
+- **Scope.** A ceiling-bounded negative result. It does not show that councils never help.
+- **Material.** [research/council-ablation/](../research/council-ablation/): write-ups (EN, TR), evidence map,
+  notebooks, and the research plans for the methods not yet measured.

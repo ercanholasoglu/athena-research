@@ -1,0 +1,6 @@
+{
+ "replay": "harness/run.py analyze over evidence/council/member_calls.jsonl + judge_calls.jsonl",
+ "identical_to_frozen_results": true,
+ "differing_top_level_keys": [],
+ "bootstrap_seed": 11
+}

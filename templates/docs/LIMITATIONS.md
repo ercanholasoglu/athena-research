@@ -18,6 +18,9 @@ complete lists:
   judgements against a hand-built truth (B, B2). Results need not transfer to open-ended tasks.
 - **Orchestrations.** One implementation each of CoT, ToT and GoT, with one wording and one set of caps. Other
   designs could behave differently. "Topology never helps" is not claimed.
+- **Council ablation.** {{council:cases.evaluation}} held-out governance cases at a ceiling (the single model missed
+  one). Two provider families, the second much weaker. The harness called models directly, not through a product
+  council. Its limits are listed in [research/council-ablation/LIMITATIONS.md](../research/council-ablation/LIMITATIONS.md).
 - **Datasets.** Public tabular datasets: 9 unseen in Study A, 8 in Study B, 4 in A2 and B2. `bank_marketing` was a
   Study B development dataset. Per-dataset effects are not claimed.
 
@@ -52,5 +55,8 @@ complete lists:
 - **JEV is not reproducible end to end.** Its harness ran inside the private product and is not published. Its
   evidence files, their derivation into the article facts, and the per-case rows for C/D/E are public; per-call
   requests are not ([research/jev](../research/jev/README.md#what-is-not-public)).
+- **The council ablation replays, it does not re-sample.** Its parsed answers reproduce the frozen analysis exactly.
+  Raw completions are not published, and a new collection at the provider-enforced temperature of 1 would be a new
+  experiment.
 - **The B2 data-cache incident** forced a scoped freeze verification for the last 5 local B2 runs
   ([HISTORY](HISTORY.md#the-disk-full-and-data-cache-incident-b2-qwen257b)).
