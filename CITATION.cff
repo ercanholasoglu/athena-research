@@ -4,7 +4,8 @@ title: "Athena Research — Tabular AI Decision-Making"
 abstract: >-
   Controlled experiments on reasoning topology, semantic context, and model capability in LLM-assisted
   decisions for tabular machine learning: a retrospective on a typed bounded-decision model (JEV), Studies A and B
-  with a local 7B model, their frontier replications A2 and B2, and a cross-study comparison.
+  with a local 7B model, their frontier replications A2 and B2, a cross-study comparison, and a pre-registered
+  council ablation (model councils against a strong single model on ML-governance questions).
 type: software
 authors:
   - name: "Let's Optimize Something"
@@ -21,3 +22,5 @@ keywords:
   - reasoning topology
   - semantic context
   - reproducibility
+  - LLM council
+  - pre-registration

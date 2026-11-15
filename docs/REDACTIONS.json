@@ -43,5 +43,19 @@
    ]
   }
  ],
- "jev_derivation_source_script_sha256": "aac071be85044f86969849420477d843097c88fec874cec8696c9dadc47242ff"
+ "jev_derivation_source_script_sha256": "aac071be85044f86969849420477d843097c88fec874cec8696c9dadc47242ff",
+ "council_ablation_evidence": [
+  {
+   "file": "research/council-ablation/evidence/SOURCE_MANIFEST.json",
+   "original_sha256": "4db09438ddd6e17a5ded0a925821980958bf6633c55bdc2e435757abf2829700",
+   "public_sha256": "7771501e17938bb51ce05e8833e7b6ea956451ac8c06a7b3fab562d432775b85",
+   "change": "4 backend product source paths written with a 'private:' prefix (private product repository); hashes and every other value unchanged"
+  },
+  {
+   "file": "research/council-ablation/evidence/reasoning_methods/reasoning_methods_registry.json",
+   "original_sha256": "91154ff825dd06e995c7c46818ac340f9264296c314852bdb69043a877b9cb98",
+   "public_sha256": "0f6a376ccad276ab4ce41e0196ebbba16d9e28c7cc4af7ce2b6bf615732a0e59",
+   "change": "29 backend and 2 frontend product source paths written with a 'private:' prefix (private product repository); hashes and every other value unchanged"
+  }
+ ]
 }

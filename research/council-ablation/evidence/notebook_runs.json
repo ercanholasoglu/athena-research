@@ -1,0 +1,71 @@
+{
+ "recorded_at": "2026-11-15T17:46:24+00:00",
+ "mode": "clean kernel, Restart + Run All",
+ "environment": {
+  "python": "3.12.12",
+  "system": "Darwin",
+  "machine": "arm64",
+  "pandas": "3.1.0",
+  "numpy": "2.5.4",
+  "nbclient": "0.10.2"
+ },
+ "seed": 11,
+ "runs": [
+  {
+   "notebook": "notebooks/00_protocol_and_datasets.ipynb",
+   "result": "PASS",
+   "code_cells": 8,
+   "seconds": 1.04,
+   "error": null
+  },
+  {
+   "notebook": "notebooks/01_routing_and_jev.ipynb",
+   "result": "PASS",
+   "code_cells": 9,
+   "seconds": 0.81,
+   "error": null
+  },
+  {
+   "notebook": "notebooks/02_cot_tot_got.ipynb",
+   "result": "PASS",
+   "code_cells": 5,
+   "seconds": 0.92,
+   "error": null
+  },
+  {
+   "notebook": "notebooks/03_council_judge_critic.ipynb",
+   "result": "PASS",
+   "code_cells": 11,
+   "seconds": 0.8,
+   "error": null
+  },
+  {
+   "notebook": "notebooks/04_react_reflexion_pot.ipynb",
+   "result": "PASS",
+   "code_cells": 4,
+   "seconds": 0.77,
+   "error": null
+  },
+  {
+   "notebook": "notebooks/05_mcts_feature_strategy.ipynb",
+   "result": "PASS",
+   "code_cells": 4,
+   "seconds": 0.93,
+   "error": null
+  },
+  {
+   "notebook": "notebooks/06_cost_latency_calibration.ipynb",
+   "result": "PASS",
+   "code_cells": 5,
+   "seconds": 0.8,
+   "error": null
+  },
+  {
+   "notebook": "notebooks/07_results_and_recommendations.ipynb",
+   "result": "PASS",
+   "code_cells": 4,
+   "seconds": 0.93,
+   "error": null
+  }
+ ]
+}

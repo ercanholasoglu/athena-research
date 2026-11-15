@@ -19,6 +19,7 @@ not typed by hand.
 | [Study A2](research/reasoning-topology/frontier-replication/) | Does that change with a stronger hosted model? | `qwen2.5:7b`, `gpt-6-luna` | frozen 2026-10-29, 2 amendments before the amended arms ran |
 | [Study B](research/semantic-context/original-study/) | Do data dictionaries, business rules and a verification pass make semantic decisions safer and more correct? | `qwen2.5:7b` | frozen 2026-10-27, evaluated once |
 | [Study B2](research/semantic-context/frontier-replication/) | Do stronger models use semantics better, resist false or incomplete dictionaries, and invent valid features? | `qwen2.5:7b`, `gpt-6-luna`, `claude-sonnet-5-5` | frozen 2026-10-29, 2 amendments |
+| [Council ablation](research/council-ablation/) | Does a council of models (roles, sampling, providers, diversity, a judge, adaptive routing) beat one strong model on closed-answer ML-governance questions? | `{{council:solo.model}}`, `{{council:haiku.model}}`, `qwen2.5:7b`, `qwen2.5:1.5b` | frozen 2026-11-04, 2 amendments before any result was read, evaluated once |
 | [Cross-study](research/cross-study/) | Capability, structure or semantics: which moved decisions most, within these tests? | all of the above | analysis of the completed studies |
 
 ## Headline results
@@ -36,6 +37,7 @@ only; each study README gives the full table, intervals and what is not claimed.
 | B2 | Anonymized columns, `gpt-6-luna`: dictionary raises all-traps-blocked from {{r.b2.LUNA.anon_A_RAW.all_traps_blocked|pct}} to {{r.b2.LUNA.anon_C_DICT.all_traps_blocked|pct}} | Holm p {{r.b2.s.LUNA.all_traps_blocked.anon_C_DICT_vs_anon_A_RAW.p_holm_sign|p}} |
 | B2 | Falsified dictionary entries detected: `gpt-6-luna` {{r.b2.LUNA.mislead_D_RULES.falsified_detected_recall|pct}} vs `qwen2.5:7b` {{r.b2.QWEN.mislead_D_RULES.falsified_detected_recall|pct}} | Holm p {{r.b2.m.LUNA.falsified_detected_recall.mislead_D_RULES.p_holm|p}} |
 | B2 | Invented features: rarely leaky on hosted models, but no more useful; the highest valid-and-useful share in any model × cell was {{r.b2.QWEN.mislead_D_RULES.inv_valid_useful_share|pct}} (`qwen2.5:7b`) | descriptive |
+| Council | Single model {{council:solo.correct}}/{{council:cases.evaluation}}; {{council:conditions.tied}} councils tied, {{council:conditions.below}} scored {{council:conditions.below_correct}}/{{council:cases.evaluation}}; all {{council:conditions.rejected}} `REJECTED_ON_THIS_BENCHMARK` (ceiling: the single model left one error to fix) | pre-registered rule, paired bootstrap CI |
 | JEV | Semantic descriptions: EXPLANATION_MODE {{jev:ab.expl.a|1}}% → {{jev:ab.expl.b|1}}% on the original benchmark; on 6 unseen datasets richer semantics, structured state and decomposition added nothing | 0 of {{jev:v2.tests}} tests significant after Holm |
 
 Ordinal reading across studies (section 8 of the replication report): **capability > semantics > structure**. Different

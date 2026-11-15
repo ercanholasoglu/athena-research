@@ -38,6 +38,10 @@ recorded as amendments (before the amended arm ran) or reported as post-freeze f
 | 2026-10-29 ~12:50–15:10 | **Disk full and data-cache deletion** during the local `qwen2.5:7b` B2 run (below) | B2 qwen at 75/80 |
 | 2026-10-29 ~16:00 | B2 `qwen2.5:7b` complete, {{r.design.b2.QWEN.runs|int}}/{{r.design.b2.QWEN.runs|int}} | — |
 | 2026-10-29 evening | Analyses, cross-study comparison, reports | after all runs |
+| 2026-11-04 | Council ablation pre-registered and frozen ([PREREGISTRATION](../research/council-ablation/protocol/PREREGISTRATION.md)) | — |
+| 2026-11-04 | Council **Amendment 1**: Claude members at the provider-enforced temperature 1 ([AMENDMENTS](../research/council-ablation/protocol/AMENDMENTS.md)) | yes: before any result was read |
+| 2026-11-04 | Council **Amendment 2**: truncated answers re-asked with a larger output budget, after collection and before any accuracy was computed | yes |
+| 2026-11-15 | Council cost **correction**: an internal total of USD {{council:cost.double_counted_usd|2}} counted the archived 300-token pass twice; the distinct calls cost USD {{council:cost.total_usd|2}} | after; no result depended on the figure |
 
 Why the amendments happened: the pre-registered hosted models could not be run. The OpenAI account stopped billing
 during the `gpt-6.1-sol` pilot, and the Anthropic account did not have credit for the planned `claude-opus-5-5` arm.

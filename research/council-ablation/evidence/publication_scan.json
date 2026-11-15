@@ -1,0 +1,84 @@
+{
+ "recorded_at": "2026-11-15T17:48:27+00:00",
+ "files_scanned": 52,
+ "patterns": [
+  "absolute_user_path",
+  "anthropic_key",
+  "aws_key",
+  "bearer_token",
+  "email",
+  "env_var_value",
+  "first_person_plural_en",
+  "first_person_plural_tr",
+  "github_token",
+  "google_key",
+  "internal_host",
+  "openai_key",
+  "private_ipv4",
+  "private_key",
+  "private_tmp_path",
+  "raw_model_output_field",
+  "secret_assignment",
+  "slack_token"
+ ],
+ "result": "PASS",
+ "findings": [],
+ "allowed": [
+  {
+   "pattern": "raw_model_output_field",
+   "file": "harness/run.py",
+   "line": 96,
+   "match": "<pattern list>",
+   "reason": "harness source that stores the completion when collecting; the published evidence files carry no raw field"
+  },
+  {
+   "pattern": "raw_model_output_field",
+   "file": "harness/run.py",
+   "line": 107,
+   "match": "<pattern list>",
+   "reason": "harness source that stores the completion when collecting; the published evidence files carry no raw field"
+  },
+  {
+   "pattern": "private_tmp_path",
+   "file": "tools/scan_publication.py",
+   "line": 23,
+   "match": "<pattern list>",
+   "reason": "the scanner's own pattern list"
+  },
+  {
+   "pattern": "private_tmp_path",
+   "file": "tools/scan_publication.py",
+   "line": 23,
+   "match": "<pattern list>",
+   "reason": "the scanner's own pattern list"
+  },
+  {
+   "pattern": "internal_host",
+   "file": "tools/scan_publication.py",
+   "line": 26,
+   "match": "<pattern list>",
+   "reason": "the scanner's own generic pattern list (no names)"
+  },
+  {
+   "pattern": "internal_host",
+   "file": "tools/scan_publication.py",
+   "line": 26,
+   "match": "<pattern list>",
+   "reason": "the scanner's own generic pattern list (no names)"
+  },
+  {
+   "pattern": "internal_host",
+   "file": "tools/scan_publication.py",
+   "line": 26,
+   "match": "<pattern list>",
+   "reason": "the scanner's own generic pattern list (no names)"
+  }
+ ],
+ "licence_checks": {
+  "LICENSE (Apache-2.0, repository root)": true,
+  "LICENSE-CC-BY-4.0.md (repository root)": true,
+  "DATA_AND_MODEL_LICENSES.md": true,
+  "CITATION.cff (repository root)": true,
+  "no_dataset_rows_included": true
+ }
+}

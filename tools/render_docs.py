@@ -4,7 +4,8 @@
     python tools/render_docs.py --check   # fails if a rendered file differs from its template + facts
 
 Keys resolve from `harness/rs2610/outputs/facts.json` (Studies A, B), `.../replication/facts-replication.json` (`r.*`,
-A2, B2) and `research/jev/results/facts.json` (prefix `jev:`). Formatting is the harness's own
+A2, B2), `research/jev/results/facts.json` (prefix `jev:`) and `research/council-ablation/results/facts.json` (prefix
+`council:`). Formatting is the harness's own
 (`rs2610.make_facts.fmt`): `pct`, `pp`, `p`, `int`, `0`–`4` decimals. An unknown key fails. Write `\\{\\{x\\}\\}` for
 literal double braces.
 """
@@ -27,6 +28,7 @@ def facts() -> dict:
     f = json.loads((OUT / "facts.json").read_text())
     f.update(json.loads((OUT / "replication" / "facts-replication.json").read_text()))
     f.update({f"jev:{k}": v for k, v in json.loads((REPO / "research" / "jev" / "results" / "facts.json").read_text()).items()})
+    f.update({f"council:{k}": v for k, v in json.loads((REPO / "research" / "council-ablation" / "results" / "facts.json").read_text()).items()})
     return f
 
 

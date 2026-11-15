@@ -49,6 +49,8 @@ PRIVATE = {
 # Reviewed exceptions: (pattern name, path glob, required substring of the match context, reason).
 ALLOW: list[tuple[str, str, str, str]] = [
     # filled only after each hit has been reviewed by hand
+    ("temp_path", "research/council-ablation/tools/scan_publication.py", "private_tmp_path",
+     "the study scanner's own pattern list (a regular expression, not a path)"),
 ]
 FORBIDDEN_FILES = re.compile(r"(^|/)(\.env(\..*)?|.*\.pem|.*\.key|id_rsa.*|.*\.gguf|.*\.safetensors|.*\.bin|catboost_info|node_modules|\.venv)(/|$)")
 MAX_FILE = 10_000_000

@@ -1,0 +1,952 @@
+{
+  "ablation_version": "decision-ablation-v1",
+  "arms": {
+    "agentic": {
+      "cost_state": "CUSTOMER_MANAGED",
+      "dependency": "generative model ollama/qwen2.5:1.5b"
+    },
+    "deterministic": {
+      "cost_state": "NOT_APPLICABLE",
+      "dependency": "none (in-process)"
+    },
+    "hybrid": {
+      "cost_state": "CUSTOMER_MANAGED",
+      "dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence"
+    },
+    "local_bounded": {
+      "cost_state": "CUSTOMER_MANAGED",
+      "dependency": "none (in-process model)"
+    }
+  },
+  "corpus_manifest": {
+    "build_seconds": 1400.2,
+    "corpus_version": "decision-corpus-v1",
+    "environment": {
+      "machine": "arm64",
+      "processor": "arm",
+      "python": "3.12.7",
+      "system": "Darwin"
+    },
+    "generated_at": "2026-10-20T14:56:09.900427+00:00",
+    "labelling": {
+      "explanation_fidelity_floor": 0.8,
+      "explanation_fidelity_tie": 0.02,
+      "hpo_score_tolerance": 0.002,
+      "train_fraction": 0.6
+    },
+    "quick": false,
+    "seed": 20261020,
+    "types": {
+      "EXECUTION_SCALE": {
+        "cases": 240,
+        "label_distribution": {
+          "CHUNKED": 26,
+          "FULL": 146,
+          "OUT_OF_CORE_REQUIRED": 31,
+          "SAMPLED_DISCOVERY_FULL_VALIDATION": 22,
+          "STREAMING": 15
+        },
+        "label_source": "POLICY",
+        "test": 90,
+        "train": 150
+      },
+      "EXECUTION_STRATEGY": {
+        "cases": 96,
+        "label_distribution": {
+          "AGENTIC": 68,
+          "BOUNDED": 5,
+          "HYBRID": 23
+        },
+        "label_source": "POLICY",
+        "test": 35,
+        "train": 61
+      },
+      "EXPLANATION_MODE": {
+        "cases": 90,
+        "label_distribution": {
+          "PERMUTATION_FULL": 16,
+          "PERMUTATION_SAMPLED": 10,
+          "SKIP": 28,
+          "TREE_SHAP_EXACT": 36
+        },
+        "label_source": "MEASURED",
+        "test": 31,
+        "train": 59
+      },
+      "HPO_DEPTH": {
+        "cases": 90,
+        "label_distribution": {
+          "DEEP": 4,
+          "LIGHT": 22,
+          "NONE": 42,
+          "STANDARD": 22
+        },
+        "label_source": "MEASURED",
+        "test": 31,
+        "train": 59
+      },
+      "HUMAN_REVIEW": {
+        "cases": 144,
+        "label_distribution": {
+          "NOT_REQUIRED": 38,
+          "REQUIRED": 106
+        },
+        "label_source": "POLICY",
+        "test": 57,
+        "train": 87
+      },
+      "RETRY_FALLBACK": {
+        "cases": 96,
+        "label_distribution": {
+          "ABSTAIN": 46,
+          "ESCALATE_REVIEW": 8,
+          "FALLBACK_NEXT": 18,
+          "RETRY_SAME": 24
+        },
+        "label_source": "POLICY",
+        "test": 35,
+        "train": 61
+      }
+    }
+  },
+  "duration_seconds": 1145.5,
+  "environment": {
+    "machine": "arm64",
+    "python": "3.12.7",
+    "system": "Darwin"
+  },
+  "generated_at": "2026-10-20T15:17:09.290021+00:00",
+  "limitations": [
+    "MEASURED labels (HPO_DEPTH, EXPLANATION_MODE) come from synthetic classification datasets on one machine; times and therefore labels are hardware-specific.",
+    "POLICY labels are the governance rule's own answer: deterministic rules are correct by definition there, and other methods can only approximate them.",
+    "The agentic arm uses one small local model; a larger model may score differently.",
+    "Jev was not evaluated because it is not configured here; no Jev claim is made."
+  ],
+  "not_run": {
+    "jev": "ATHENA_JEV_BASE_URL is not set: Jev is not configured in this environment, so no Jev result exists. The adapter contract is covered by tests against a local HTTP stand-in; that stand-in is not Jev and is not reported as a Jev result."
+  },
+  "results": {
+    "EXECUTION_SCALE": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.6778,
+          "accuracy_on_answered": 0.6778,
+          "accuracy_raw": 0.6778,
+          "brier": 0.579,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.2233,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 509.983,
+          "latency_ms_p95": 700.138,
+          "n": 90,
+          "paths": {
+            "agentic_llm": 90
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 27063,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 1.0,
+          "accuracy_on_answered": 0.9111,
+          "accuracy_raw": 0.9111,
+          "brier": 0.1778,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0889,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 11.712,
+          "latency_ms_p95": 12.104,
+          "n": 90,
+          "paths": {
+            "rules": 90
+          },
+          "policy_violation_rate": 0.0889,
+          "provider_dependency": "none (in-process)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9111,
+          "accuracy_on_answered": 0.9111,
+          "accuracy_raw": 0.9111,
+          "brier": 0.1645,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0577,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 36.836,
+          "latency_ms_p95": 421.966,
+          "n": 90,
+          "paths": {
+            "hybrid:agentic_llm": 7,
+            "local_bounded": 83
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 2098,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9333,
+          "accuracy_on_answered": 0.9222,
+          "accuracy_raw": 0.9222,
+          "brier": 0.1243,
+          "cases_evaluated": 90,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0802,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 13.324,
+          "latency_ms_p95": 0.128,
+          "n": 90,
+          "paths": {
+            "local_bounded": 90
+          },
+          "policy_violation_rate": 0.0111,
+          "provider_dependency": "none (in-process model)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "ground_truth": "POLICY",
+      "observations": [
+        "Policy-defined: the deterministic rule is the definition; use it, and treat any other method's disagreement as a policy violation the resolver corrects.",
+        "Highest raw accuracy on this class: local_bounded (0.922)."
+      ],
+      "test_cases": 90
+    },
+    "EXECUTION_STRATEGY": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.2286,
+          "accuracy_on_answered": 0.0857,
+          "accuracy_raw": 0.0857,
+          "brier": 1.4591,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.746,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 459.962,
+          "latency_ms_p95": 568.486,
+          "n": 35,
+          "paths": {
+            "agentic_llm": 35
+          },
+          "policy_violation_rate": 0.4,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 9176,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 1.0,
+          "accuracy_on_answered": 1.0,
+          "accuracy_raw": 1.0,
+          "brier": 0.0,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.002,
+          "latency_ms_p95": 0.004,
+          "n": 35,
+          "paths": {
+            "rules": 35
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.8286,
+          "accuracy_on_answered": 0.8286,
+          "accuracy_raw": 0.8286,
+          "brier": 0.2994,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1265,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 24.72,
+          "latency_ms_p95": 429.627,
+          "n": 35,
+          "paths": {
+            "hybrid:agentic_llm": 2,
+            "local_bounded": 33
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 515,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.8857,
+          "accuracy_on_answered": 0.8857,
+          "accuracy_raw": 0.8857,
+          "brier": 0.2237,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1017,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.263,
+          "latency_ms_p95": 0.199,
+          "n": 35,
+          "paths": {
+            "local_bounded": 35
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process model)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "ground_truth": "POLICY",
+      "observations": [
+        "Policy-defined: the deterministic rule is the definition; use it, and treat any other method's disagreement as a policy violation the resolver corrects.",
+        "Highest raw accuracy on this class: deterministic (1.000)."
+      ],
+      "test_cases": 35
+    },
+    "EXPLANATION_MODE": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.4839,
+          "accuracy_on_answered": 0.4839,
+          "accuracy_raw": 0.4839,
+          "brier": 1.0249,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.5161,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 481.801,
+          "latency_ms_p95": 569.623,
+          "n": 31,
+          "paths": {
+            "agentic_llm": 31
+          },
+          "policy_violation_rate": 0.2581,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 8136,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.6129,
+          "accuracy_on_answered": 0.6129,
+          "accuracy_raw": 0.6129,
+          "brier": 0.7742,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.3871,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.003,
+          "latency_ms_p95": 0.005,
+          "n": 31,
+          "paths": {
+            "rules": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.7419,
+          "accuracy_on_answered": 0.7419,
+          "accuracy_raw": 0.7419,
+          "brier": 0.4641,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.2105,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 83.426,
+          "latency_ms_p95": 545.542,
+          "n": 31,
+          "paths": {
+            "hybrid:agentic_llm": 5,
+            "local_bounded": 26
+          },
+          "policy_violation_rate": 0.0968,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 1325,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.7742,
+          "accuracy_on_answered": 0.7742,
+          "accuracy_raw": 0.7742,
+          "brier": 0.3247,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1377,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.385,
+          "latency_ms_p95": 0.278,
+          "n": 31,
+          "paths": {
+            "local_bounded": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process model)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "ground_truth": "MEASURED",
+      "observations": [
+        "Highest raw accuracy on this class: local_bounded (0.774)."
+      ],
+      "test_cases": 31
+    },
+    "HPO_DEPTH": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.3226,
+          "accuracy_on_answered": 0.3226,
+          "accuracy_raw": 0.3226,
+          "brier": 1.2134,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.5984,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 359.351,
+          "latency_ms_p95": 380.517,
+          "n": 31,
+          "paths": {
+            "agentic_llm": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 7352,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.0645,
+          "accuracy_on_answered": 0.0645,
+          "accuracy_raw": 0.0645,
+          "brier": 1.871,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.9355,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.002,
+          "latency_ms_p95": 0.004,
+          "n": 31,
+          "paths": {
+            "rules": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.5484,
+          "accuracy_on_answered": 0.5484,
+          "accuracy_raw": 0.5484,
+          "brier": 0.7252,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.3312,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 132.354,
+          "latency_ms_p95": 389.578,
+          "n": 31,
+          "paths": {
+            "hybrid:agentic_llm": 11,
+            "local_bounded": 20
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 2619,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.5161,
+          "accuracy_on_answered": 0.5161,
+          "accuracy_raw": 0.5161,
+          "brier": 0.5419,
+          "cases_evaluated": 31,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.2318,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.227,
+          "latency_ms_p95": 0.152,
+          "n": 31,
+          "paths": {
+            "local_bounded": 31
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process model)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "ground_truth": "MEASURED",
+      "observations": [
+        "Highest raw accuracy on this class: hybrid (0.548)."
+      ],
+      "test_cases": 31
+    },
+    "HUMAN_REVIEW": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.7895,
+          "accuracy_on_answered": 0.7895,
+          "accuracy_raw": 0.7895,
+          "brier": 0.4211,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.2105,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 476.54,
+          "latency_ms_p95": 596.341,
+          "n": 57,
+          "paths": {
+            "agentic_llm": 57
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 13958,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 1.0,
+          "accuracy_on_answered": 1.0,
+          "accuracy_raw": 1.0,
+          "brier": 0.0,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.003,
+          "latency_ms_p95": 0.006,
+          "n": 57,
+          "paths": {
+            "rules": 57
+          },
+          "policy_violation_rate": 0.0,
+          "provider_dependency": "none (in-process)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9298,
+          "accuracy_on_answered": 0.8947,
+          "accuracy_raw": 0.8947,
+          "brier": 0.1551,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0552,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 43.669,
+          "latency_ms_p95": 449.836,
+          "n": 57,
+          "paths": {
+            "hybrid:agentic_llm": 6,
+            "local_bounded": 51
+          },
+          "policy_violation_rate": 0.0351,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 1427,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9474,
+          "accuracy_on_answered": 0.8947,
+          "accuracy_raw": 0.8947,
+          "brier": 0.1661,
+          "cases_evaluated": 57,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0659,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.29,
+          "latency_ms_p95": 0.257,
+          "n": 57,
+          "paths": {
+            "local_bounded": 57
+          },
+          "policy_violation_rate": 0.0526,
+          "provider_dependency": "none (in-process model)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0877,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "ground_truth": "POLICY",
+      "observations": [
+        "Policy-defined: the deterministic rule is the definition; use it, and treat any other method's disagreement as a policy violation the resolver corrects.",
+        "Highest raw accuracy on this class: deterministic (1.000)."
+      ],
+      "test_cases": 57
+    },
+    "RETRY_FALLBACK": {
+      "arms": {
+        "agentic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.5714,
+          "accuracy_on_answered": 0.3143,
+          "accuracy_raw": 0.3143,
+          "brier": 1.357,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.68,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 424.365,
+          "latency_ms_p95": 554.111,
+          "n": 35,
+          "paths": {
+            "agentic_llm": 35
+          },
+          "policy_violation_rate": 0.3429,
+          "provider_dependency": "generative model ollama/qwen2.5:1.5b",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 8529,
+          "tool_calls": 0
+        },
+        "deterministic": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 1.0,
+          "accuracy_on_answered": 0.9429,
+          "accuracy_raw": 0.9429,
+          "brier": 0.1143,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "NOT_APPLICABLE",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.0571,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.002,
+          "latency_ms_p95": 0.003,
+          "n": 35,
+          "paths": {
+            "rules": 35
+          },
+          "policy_violation_rate": 0.0571,
+          "provider_dependency": "none (in-process)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        },
+        "hybrid": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.9143,
+          "accuracy_on_answered": 0.8571,
+          "accuracy_raw": 0.8571,
+          "brier": 0.2637,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1051,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 31.964,
+          "latency_ms_p95": 555.501,
+          "n": 35,
+          "paths": {
+            "hybrid:agentic_llm": 2,
+            "local_bounded": 33
+          },
+          "policy_violation_rate": 0.0571,
+          "provider_dependency": "in-process model + ollama/qwen2.5:1.5b on low confidence",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 518,
+          "tool_calls": 0
+        },
+        "local_bounded": {
+          "abstention_rate": 0.0,
+          "accuracy_after_resolver_with_fallback": 0.8857,
+          "accuracy_on_answered": 0.8571,
+          "accuracy_raw": 0.8571,
+          "brier": 0.1996,
+          "cases_evaluated": 35,
+          "cost": {
+            "amount_usd": null,
+            "state": "CUSTOMER_MANAGED",
+            "unknown_cost_calls": 0
+          },
+          "ece": 0.1019,
+          "invalid_rate": 0.0,
+          "latency_ms_mean": 0.245,
+          "latency_ms_p95": 0.175,
+          "n": 35,
+          "paths": {
+            "local_bounded": 35
+          },
+          "policy_violation_rate": 0.0286,
+          "provider_dependency": "none (in-process model)",
+          "reproducibility": 1.0,
+          "retries": 0,
+          "review_rate": 0.0,
+          "tokens": 0,
+          "tool_calls": 0
+        }
+      },
+      "ground_truth": "POLICY",
+      "observations": [
+        "Policy-defined: the deterministic rule is the definition; use it, and treat any other method's disagreement as a policy violation the resolver corrects.",
+        "Highest raw accuracy on this class: deterministic (0.943)."
+      ],
+      "test_cases": 35
+    }
+  },
+  "review_confidence_floor": 0.6,
+  "scenarios": {
+    "air_gap": {
+      "BOUNDED_DECISION": {
+        "blocked_external": [
+          "jev"
+        ],
+        "eligible": [
+          "rules",
+          "local_bounded"
+        ],
+        "unavailable_reason": null
+      },
+      "EMBED": {
+        "blocked_external": [
+          "dashscope",
+          "gemini",
+          "huggingface",
+          "openai",
+          "openai_compatible",
+          "zhipu"
+        ],
+        "eligible": [
+          "lm_studio",
+          "ollama"
+        ],
+        "unavailable_reason": null
+      },
+      "GENERATE_TEXT": {
+        "blocked_external": [
+          "anthropic",
+          "cerebras",
+          "dashscope",
+          "deepseek",
+          "gemini",
+          "huggingface",
+          "moonshot",
+          "openai",
+          "openai_compatible",
+          "zhipu"
+        ],
+        "eligible": [
+          "lm_studio",
+          "ollama"
+        ],
+        "unavailable_reason": null
+      },
+      "JUDGE": {
+        "blocked_external": [
+          "anthropic",
+          "cerebras",
+          "dashscope",
+          "deepseek",
+          "gemini",
+          "huggingface",
+          "moonshot",
+          "openai",
+          "openai_compatible",
+          "zhipu"
+        ],
+        "eligible": [],
+        "unavailable_reason": "no eligible provider for JUDGE: openai: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: OPENAI_API_KEY is not set; anthropic: air-gapped (deployment), not air-gap compatible; gemini: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: GEMINI_API_KEY is not set; deepseek: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: DEEPSEEK_API_KEY is not set; dashscope: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: no credential mapping for this provider in the router; moonshot: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: no credential mapping for this provider in the router; zhipu: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: no credential mapping for this provider in the router; cerebras: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: no credential mapping for this provider in the router; huggingface: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: no credential mapping for this provider in the router; openai_compatible: air-gapped (deployment), not air-gap compatible, not_configured / not_checked: no credential mapping for this provider in the router"
+      }
+    },
+    "provider_failure": {
+      "description": "Jev configured, endpoint unreachable; preferred provider jev.",
+      "outcomes": {
+        "fallback_allowed": {
+          "attempt_chains": [
+            "jev \u2192 rules"
+          ],
+          "correct_after_recovery": 20,
+          "decisions": 20,
+          "recovered": 20
+        },
+        "fallback_forbidden_external": {
+          "attempt_chains": [
+            "jev \u2192 rules"
+          ],
+          "correct_after_recovery": 20,
+          "decisions": 20,
+          "recovered": 20
+        }
+      }
+    }
+  }
+}

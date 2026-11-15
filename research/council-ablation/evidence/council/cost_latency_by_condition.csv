@@ -1,0 +1,9 @@
+condition,accuracy,calls,tokens,latency_s,cost_usd,tokens_x_solo,latency_x_solo,cost_x_solo
+A_solo:sonnet,0.9859,1.0,431.6,2.31,0.001994,1.0,1.0,1.0
+A_solo:haiku,0.9859,1.0,489.8,1.77,0.000129,1.13,0.77,0.06
+B1_same_provider_roles,0.9718,3.0,1786.3,2.43,0.00049,4.14,1.05,0.25
+B2_same_provider_sampling,0.9718,3.0,1458.6,2.1,0.000381,3.38,0.91,0.19
+C_multi_provider,0.9859,3.0,1187.4,2.71,0.002122,2.75,1.17,1.06
+D_characteristic_diverse,0.9718,3.0,1344.2,2.72,0.002177,3.11,1.18,1.09
+E_judge,0.9859,4.0,1927.0,5.26,0.004899,4.46,2.28,2.46
+F_adaptive_routing,0.9718,3.35,1500.6,3.07,0.002029,3.48,1.33,1.02

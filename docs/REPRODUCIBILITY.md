@@ -74,7 +74,8 @@ In order, the script:
 3. reruns every analysis (Study A, Study B, A2, B2, cross-study);
 4. replays the prompt examples against the ledgers;
 5. regenerates the facts, configs, code excerpts and reports, then the figures added for this release;
-6. checks the JEV derivation, the traces and the rendered docs;
+6. checks the JEV and council derivations, replays the council analysis, recomputes the council evidence map, and
+   checks the traces and the rendered docs;
 7. runs the release audit;
 8. prints `git status` for the result files.
 
@@ -160,6 +161,8 @@ to its canonical file:
 - [semantic-context/original-study/TRACE.md](../research/semantic-context/original-study/TRACE.md)
 - [semantic-context/frontier-replication/TRACE.md](../research/semantic-context/frontier-replication/TRACE.md)
 - [jev/TRACE.md](../research/jev/TRACE.md): coarser, because JEV has per-case rows but no public request ledger
+- [council-ablation/TRACE.md](../research/council-ablation/TRACE.md): fact keys to per-call parsed answers; the
+  write-up numbers are recomputed claim by claim in [EVIDENCE_MAP.md](../research/council-ablation/EVIDENCE_MAP.md)
 
 `python tools/make_trace.py --check` fails if a TRACE file is stale or a cited key has no canonical source.
 
@@ -170,6 +173,10 @@ to its canonical file:
 - The runs were made on one Apple-silicon laptop (macOS) with Ollama serving `qwen2.5:7b` locally.
 - Hosted SDKs: `openai` 3.41.0, `anthropic` 2.3.0.
 - JEV experiments A and B ran under Python 3.12.7 and 3.12.15 respectively, as recorded in their evidence files.
+- The council-ablation notebooks run in this environment plus a pinned Jupyter runner
+  ([`research/council-ablation/requirements-notebooks.txt`](../research/council-ablation/requirements-notebooks.txt)).
+  Their Restart + Run All results are in
+  [`research/council-ablation/evidence/notebook_runs.json`](../research/council-ablation/evidence/notebook_runs.json).
 
 ## Release checks
 
